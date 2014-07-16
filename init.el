@@ -30,30 +30,33 @@
 ;; Add .emacs.d to load-path
 (setq dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
-                    (add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path dotfiles-dir)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
 
 (setq larsen-pkg-full
-      '(larsen-env
+      '(
+        larsen-env
         larsen-theme
         larsen-style
         larsen-iswitchb
         larsen-package
         larsen-auto-complete
         larsen-spell
-        larsen-snippets
         larsen-perl
         larsen-haskell
         larsen-orgmode
         larsen-markdown
-        ;; larsen-smarttab
+        larsen-smarttab
         larsen-tramp
         larsen-helm
         larsen-sql
-        larsen-w3m))
+        larsen-w3m
+        larsen-snippets
+        larsen-keyfreq
+        ))
 
 ;; Now load other things
 (dolist (file larsen-pkg-full)
