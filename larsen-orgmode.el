@@ -51,4 +51,10 @@
 
 (setq org-agenda-span 30)
 
+; Org Babel
+
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((perl . t)))
+
 (provide 'larsen-orgmode)
