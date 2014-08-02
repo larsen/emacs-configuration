@@ -22,7 +22,7 @@
   (when (file-directory-p path)
     (add-to-list 'custom-theme-load-path path)))
 
-(load-theme 'bubbleberry t)
+(load-theme 'ritchie t)
 
 ; (powerline-center-theme)
 
