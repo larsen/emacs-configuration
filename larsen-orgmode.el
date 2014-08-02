@@ -8,13 +8,16 @@
 (setq org-log-done t)
 
 (setq org-return-follows-link t)
-(setq org-agenda-files (list "~/org/index.org"
-                             "~/org/work.org"
-                             "~/org/home.org"
-                             "~/org/errand.org"
-                             "~/org/report-2013q3.org"
-                             "~/org/datascienza.com.org"
-                             "~/org/stefanorodighiero.net.org"))
+;(setq org-agenda-files (list "~/org/index.org"
+;                             "~/org/work.org"
+;                             "~/org/home.org"
+;                             "~/org/errand.org"
+;                             "~/org/report-2013q3.org"
+;                             "~/org/datascienza.com.org"
+;                             "~/org/stefanorodighiero.net.org"
+;                             "~/org/mxm-*.org"))
+
+(setq org-agenda-files (file-expand-wildcards "~/org"))
 
 (setq org-publish-project-alist
       '(("orgfiles"
@@ -42,5 +45,10 @@
 
         ("wiki" 
          :components ("orgfiles" "css" "js"))))
+
+(setq org-default-notes-file (concat org-directory "/notes.org"))
+(define-key global-map "\C-cc" 'org-capture)
+
+(setq org-agenda-span 30)
 
 (provide 'larsen-orgmode)
