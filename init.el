@@ -1,5 +1,5 @@
 ;;;
-;;; init.el
+;;; Init.el
 ;;;
 
 (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
@@ -38,24 +38,25 @@
 
 (setq larsen-pkg-full
       '(
+        larsen-orgmode
         larsen-env
         larsen-theme
         larsen-style
         larsen-iswitchb
         larsen-package
+        larsen-snippets
         larsen-auto-complete
         larsen-spell
         larsen-perl
         larsen-haskell
-        larsen-orgmode
         larsen-markdown
         larsen-smarttab
         larsen-tramp
         larsen-helm
         larsen-sql
         larsen-w3m
-        larsen-snippets
         larsen-keyfreq
+        larsen-latex
         ))
 
 ;; Now load other things
