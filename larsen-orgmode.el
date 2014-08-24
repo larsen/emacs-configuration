@@ -7,6 +7,9 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+(setq org-todo-keywords
+        '((sequence "TODO" "ANALYSED" "DELEGATED" "DONE")))
+
 (setq org-return-follows-link t)
 ;(setq org-agenda-files (list "~/org/index.org"
 ;                             "~/org/work.org"
