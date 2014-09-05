@@ -7,7 +7,7 @@
 ; (custom-set-variables
 ;   '(custom-enabled-themes (quote (deeper-blue))))
 
-(set-face-attribute 'default nil :family "Monaco" :height 100)
+(set-face-attribute 'default nil :family "Monaco" :height 120)
 
 ;; No splash screen
 (setq inhibit-startup-message t)
