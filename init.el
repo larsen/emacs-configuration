@@ -32,6 +32,14 @@
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
+(add-to-list 'exec-path "/Users/larsen/bin")
+(add-to-list 'exec-path "/usr/local/bin")
+(add-to-list 'exec-path "/usr/bin")
+
+(custom-set-variables
+ '(browse-url-browser-function (quote eww-browse-url))
+ '(org-support-shift-select (quote always)))
+
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
@@ -40,11 +48,11 @@
       '(
         larsen-orgmode
         larsen-env
+        ; larsen-dired
         larsen-theme
         larsen-style
         larsen-iswitchb
         larsen-package
-        larsen-snippets
         larsen-auto-complete
         larsen-spell
         larsen-perl
@@ -57,6 +65,9 @@
         larsen-w3m
         larsen-keyfreq
         larsen-latex
+        larsen-erc
+        larsen-web-mode
+        ; larsen-snippets
         ))
 
 ;; Now load other things
