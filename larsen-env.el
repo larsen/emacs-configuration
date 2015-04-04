@@ -50,6 +50,9 @@
 (require 'project-explorer)
 (setq-default pe/width 28)
 
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+
 ;; Open project explorer with swipe from left margin
 (global-set-key
  (kbd "<left-margin> <drag-mouse-1>")
@@ -57,5 +60,7 @@
    (-if-let (win (car (-keep 'get-buffer-window (pe/get-project-explorer-buffers))))
        (delete-window win)
      (project-explorer-open))))
+
+(display-time-mode 1)
 
 (provide 'larsen-env)
