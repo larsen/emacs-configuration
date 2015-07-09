@@ -37,6 +37,8 @@
 (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
 
 (global-set-key (kbd "<s-escape>") 'helm-mini)
+(global-set-key (kbd "C-c o") 'helm-occur)
+
 (global-set-key (kbd "<f13>") 'helm-mini) ; on Code keyboard
 ; (global-set-key (kbd "M-p") 'helm-projectile)
 (global-set-key (kbd "<print>") 'helm-mini)
