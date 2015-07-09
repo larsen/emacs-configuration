@@ -46,9 +46,9 @@
 
 (setq larsen-pkg-full
       '(
-        larsen-orgmode
+        ; larsen-orgmode
         larsen-env
-        ; larsen-dired
+        larsen-dired
         larsen-theme
         larsen-style
         larsen-iswitchb
