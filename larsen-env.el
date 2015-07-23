@@ -38,6 +38,15 @@
 
 (global-set-key (kbd "<s-escape>") 'helm-mini)
 (global-set-key (kbd "C-c o") 'helm-occur)
+(global-set-key (kbd "C-c s") 'helm-swoop)
+
+;; (key-chord-mode 1)
+
+;; (defvar key-chord-two-keys-delay 0.00015)
+
+;; (key-chord-define-global "xh"'helm-mini)
+;; (key-chord-define-global "cs" 'helm-occur)
+;; (key-chord-define-global "xo" 'switch-window)
 
 (global-set-key (kbd "<f13>") 'helm-mini) ; on Code keyboard
 ; (global-set-key (kbd "M-p") 'helm-projectile)
