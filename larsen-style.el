@@ -12,5 +12,10 @@
 (require 'anzu)
 (global-anzu-mode 1)
 
+; Not sure why I need this
+(setq ansi-term-color-vector
+  [term term-color-black term-color-red term-color-green term-color-yellow 
+    term-color-blue term-color-magenta term-color-cyan term-color-white])
+
 (provide 'larsen-style)
 
