@@ -49,7 +49,7 @@
 ;; (key-chord-define-global "xo" 'switch-window)
 
 (global-set-key (kbd "<f13>") 'helm-mini) ; on Code keyboard
-(global-set-key (kbd "C-M-y") 'helm-mini)q ; on Atreus
+(global-set-key (kbd "C-M-y") 'helm-mini) ; on Atreus
 (global-set-key (kbd "<print>") 'helm-mini)
 
 ;; terminal
