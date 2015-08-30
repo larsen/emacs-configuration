@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: post
+# key: post
+# --
+---
+title: $1
+tags: $2
+---
+
+$0

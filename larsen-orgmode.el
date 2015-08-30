@@ -38,6 +38,13 @@
          :publishing-function org-publish-attachment
          )
 
+        ("images"
+         :base-directory "~/src/stefanorodighiero.net/wiki/images/"
+         :base-extension "png\\|jpg\\|JPG\\|gif"
+         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/images/"
+         :publishing-function org-publish-attachment
+         )
+
         ("js"
          :base-directory "~/src/stefanorodighiero.net/wiki/MathJax/"
          :base-extension "js"
