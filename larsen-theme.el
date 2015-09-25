@@ -27,4 +27,14 @@
 
 ; (powerline-center-theme)
 
+(defun switch-theme (theme)
+  (interactive
+   (list
+    (intern (completing-read "Switch to custom theme: "
+                             (mapcar 'symbol-name
+                                     (custom-available-themes))))))
+  (dolist (curr custom-enabled-themes) (disable-theme curr))
+  (load-theme theme))
+
+
 (provide 'larsen-theme)
