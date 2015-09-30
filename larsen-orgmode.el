@@ -54,12 +54,47 @@
          )
 
         ("wiki" 
-         :components ("orgfiles" "css" "js"))))
+         :components ("orgfiles" "css" "js" "images"))
+
+        ("stream-orgfiles"
+         :base-directory "~/src/stefanorodighiero.net/stream/"
+         :base-extension "org"
+         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/"
+                                        ; :publishing-function org-html-publish-to-html
+         :publishing-function org-twbs-publish-to-html
+         :org-html-postamble nil
+         ; :with-toc nil
+         )
+
+        ("stream-images"
+         :base-directory "~/src/stefanorodighiero.net/stream/images/"
+         :base-extension "png\\|jpg\\|JPG\\|gif\\|svg"
+         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/images/"
+         :publishing-function org-publish-attachment
+         )
+
+        ("stream-feed"
+         :title "Stefano Rodighiero's stream"
+         :base-directory "~/src/stefanorodighiero.net/stream/"
+         :base-extension "org"
+         :html-link-home: "http://stefanorodighiero.net/stream/"
+         :html-link-use-abs-url t
+         :rss-extension "xml"
+         :publishing-function (org-rss-publish-to-rss)
+         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/"
+         :table-of-contents nil
+         )
+        
+        ("stream" 
+         :components ("stream-orgfiles" "stream-images" "stream-feed"))
+
+        ))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
-
-(setq org-agenda-span 30)
+(setq org-refile-targets (quote ((nil :maxlevel . 9)
+                                 (org-agenda-files :maxlevel . 9))))
+(setq org-agenda-span 14)
 
 ; Org Babel
 
