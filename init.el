@@ -67,7 +67,8 @@
         larsen-latex
         larsen-erc
         larsen-web-mode
-        ; larsen-snippets
+        larsen-snippets
+        larsen-functions
         ))
 
 ;; Now load other things
