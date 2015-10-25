@@ -57,6 +57,9 @@
  (kbd "C-c t")
  (lambda () (interactive) (ansi-term "/bin/bash")))
 
+(add-hook 'term-mode-hook (lambda()
+        (setq yas-dont-activate t)))
+
 
 (require 'project-explorer)
 (setq-default pe/width 28)
