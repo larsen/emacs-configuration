@@ -7,6 +7,10 @@
 
 (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 
+(global-set-key [(f2)] 'slime-hyperspec-lookup) 
+
+(load "/Users/larsen/quicklisp/clhs-use-local.el" t)
+
 (provide 'larsen-slime)
 
 
