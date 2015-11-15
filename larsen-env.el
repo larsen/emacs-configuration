@@ -4,7 +4,6 @@
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 
-
 ;; Transpose (rotate if multiple) windows
 (defun rotate-windows ()
   "Rotate your windows"
@@ -49,6 +48,7 @@
 ;; (key-chord-define-global "xo" 'switch-window)
 
 (global-set-key (kbd "<f13>") 'helm-mini) ; on Code keyboard
+(global-set-key (kbd "C-<f12>") 'slime-selector)
 (global-set-key (kbd "C-M-y") 'helm-mini) ; on Atreus
 (global-set-key (kbd "<print>") 'helm-mini)
 
@@ -60,21 +60,14 @@
 (add-hook 'term-mode-hook (lambda()
         (setq yas-dont-activate t)))
 
+(global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
-(require 'project-explorer)
-(setq-default pe/width 28)
-
-(require 'neotree)
-(global-set-key [f8] 'neotree-toggle)
-
-;; Open project explorer with swipe from left margin
-(global-set-key
- (kbd "<left-margin> <drag-mouse-1>")
- (lambda () (interactive)
-   (-if-let (win (car (-keep 'get-buffer-window (pe/get-project-explorer-buffers))))
-       (delete-window win)
-     (project-explorer-open))))
+(when (eq system-type 'darwin)
+  (setq mac-right-option-modifier 'none))
 
 (display-time-mode 1)
+
+;; JS2mode
+(setq-default js2-basic-offset 2)
 
 (provide 'larsen-env)
