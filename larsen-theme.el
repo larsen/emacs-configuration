@@ -2,13 +2,7 @@
 ;;; larsen-theme.el
 ;;;
 
-(package-require 'powerline)
-
-; (custom-set-variables
-;   '(custom-enabled-themes (quote (deeper-blue))))
-
-
-(set-face-attribute 'default nil :family "Inconsolata" :height 80)
+(set-face-attribute 'default nil :family "Inconsolata for Powerline" :height 120)
 
 ;; No splash screen
 (setq inhibit-startup-message t)
@@ -23,9 +17,7 @@
   (when (file-directory-p path)
     (add-to-list 'custom-theme-load-path path)))
 
-(load-theme 'ritchie t)
-
-; (powerline-center-theme)
+'(load-theme 'spacegray t)
 
 (defun switch-theme (theme)
   (interactive
