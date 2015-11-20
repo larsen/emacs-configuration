@@ -1,5 +1,13 @@
+;; ERC notifications
+
 (defun osx-notify (title message)
   (start-process "osx-notify" nil "terminal-notifier" "-title" title "-message" message))
+
+(defun my-erc-notify-hook (match-type nick message)
+  (when (eq match-type 'current-nick)
+    (unless (posix-string-match "^\\** *Users on #" message)
+      (osx-notify (concat "ERC " (buffer-name (current-buffer)))
+       message))))
 
 ;; Windows layout
 
