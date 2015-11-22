@@ -46,7 +46,6 @@
 
 (setq larsen-pkg-full
       '(
-        ; larsen-orgmode
         larsen-env
         larsen-dired
         larsen-theme
@@ -56,19 +55,23 @@
         larsen-auto-complete
         larsen-spell
         larsen-perl
-        larsen-haskell
+        larsen-clojure
+        ; larsen-haskell
         larsen-markdown
         larsen-smarttab
         larsen-tramp
         larsen-helm
         larsen-sql
         larsen-w3m
-        larsen-keyfreq
+        ; larsen-keyfreq
         larsen-latex
-        larsen-erc
         larsen-web-mode
         larsen-snippets
         larsen-functions
+        larsen-orgmode
+        larsen-slime
+        larsen-magit
+        larsen-erc
         ))
 
 ;; Now load other things
