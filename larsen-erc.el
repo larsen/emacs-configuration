@@ -9,12 +9,12 @@
 ;; (define-key erc-mode-map (kbd "RET") nil)
 ;; (define-key erc-mode-map (kbd "C-c RET") 'erc-send-current-line)
 ;; (define-key erc-mode-map (kbd "C-c C-RET") 'erc-send-current-line)
-
-;; (require 'erc-image)
-;; (add-to-list 'erc-modules 'image)
-;; (erc-update-modules)
+1
+(require 'erc-image)
+(add-to-list 'erc-modules 'image)
+(erc-update-modules)
 
 (setq erc-fill-function 'erc-fill-static)
-(setq erc-fill-static-center 15)
+(setq erc-fill-static-center 16)
 
 (provide 'larsen-erc)
