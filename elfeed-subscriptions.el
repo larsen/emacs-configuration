@@ -5,6 +5,7 @@
         ("http://blog.thimbleweedpark.com/rss" games programming adventures)
         ("http://technomancy.us/feed/atom.xml" programming)
         ("http://wadler.blogspot.it/atom.xml" cs fp programming)
+        ("http://conscientiousprogrammer.com/atom.xml" programming)
         
         ;; Programming – Haskell
         ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
@@ -33,9 +34,11 @@
         ("http://jeremykun.wordpress.com/feed/" math programming cs)
         ("https://jeltsch.wordpress.com/feed/" math cs programming)
         ("http://mathlesstraveled.com" math)
+        ("http://blog.stephenwolfram.com/feed/" math science)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
+        ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
         
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema)
@@ -51,6 +54,7 @@
         ("http://lennesimoblogdellafantascienza.wordpress.com/feed/" sf)
         ("http://www.tor.com/index.php?option=com_content&amp;view=all&amp;format=feed&amp;type=rss&amp;content=frontpage" sf)
         ("http://whatever.scalzi.com/feed/" sf)
+        ("http://www.sfsignal.com/index.rdf" sf)
 
         ;; Chess
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
@@ -59,6 +63,7 @@
         ("http://feeds.feedburner.com/butshesagirl")
         ("http://cartesianfaith.com/feed/")
         ("http://jasmcole.com/feed/")
+        ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
         
         ;; misc stuff
         ("http://boingboing.net/index.xml")
