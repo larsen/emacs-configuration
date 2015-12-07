@@ -15,7 +15,7 @@
       (x-set-selection 'PRIMARY titlelink)
       (message "Yanked: %s" titlelink))))
 
-(define-key elfeed-search-mode-map "l"
+(define-key elfeed-show-mode-map "l"
   (lambda ()
     (interactive)
     (elfeed-link-title elfeed-show-entry)))
