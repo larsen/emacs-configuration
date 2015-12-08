@@ -72,6 +72,7 @@
         larsen-slime
         larsen-magit
         larsen-erc
+        larsen-elfeed
         ))
 
 ;; Now load other things
