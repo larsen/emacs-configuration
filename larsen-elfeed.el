@@ -2,6 +2,20 @@
 
 (load "elfeed-subscriptions")
 
+(defface interesting-elfeed-entry
+  '((t :foreground "#f77"))
+  "interesting elfeed entry")
+
+(push '(interesting interesting-elfeed-entry)
+      elfeed-search-face-alist)
+
+(defface personal-elfeed-entry
+  '((t :foreground "#3C913C"))
+  "personal elfeed entry")
+
+(push '(personal personal-elfeed-entry)
+      elfeed-search-face-alist)
+
 ;; From http://heikkil.github.io/blog/2015/05/09/notes-from-elfeed-entries/
 
 (defun elfeed-link-title (entry)
