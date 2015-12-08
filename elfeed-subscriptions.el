@@ -35,10 +35,13 @@
         ("https://jeltsch.wordpress.com/feed/" math cs programming)
         ("http://mathlesstraveled.com" math)
         ("http://blog.stephenwolfram.com/feed/" math science)
+        ("http://blog.ifem.co.uk/feed/" math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
         ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
+        ("http://www.masteringemacs.org/feed/" emacs)
+        ("https://emacs.wordpress.com/feed/" emacs)
         
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema)
@@ -46,6 +49,7 @@
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
         ("http://xkcd.com/atom.xml" comics dailycomic)
+        ("http://blog.xkcd.com/feed/" comics books)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
@@ -66,9 +70,10 @@
         ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
         
         ;; misc stuff
-        ("http://boingboing.net/index.xml")
+        ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
         ("http://usesthis.com/feed/" setup)
         ("http://chneukirchen.org/trivium/index.atom")
-
+        ("http://www.bytecellar.com/feed/" retrocomputing)
+        
         ))
