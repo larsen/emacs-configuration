@@ -1,3 +1,4 @@
+
 (setq elfeed-feeds
       '(
         ;; Programming
@@ -6,6 +7,7 @@
         ("http://technomancy.us/feed/atom.xml" programming)
         ("http://wadler.blogspot.it/atom.xml" cs fp programming)
         ("http://conscientiousprogrammer.com/atom.xml" programming)
+        ("http://tratt.net/laurie/blog/entries.rss" programming)
         
         ;; Programming – Haskell
         ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
@@ -20,6 +22,7 @@
         ("http://chrisdone.com/rss.xml" haskell fp programming)
         ("https://byorgey.wordpress.com/feed/" haskell fp programming math)
         ("http://joeyh.name/blog/index.rss" haskell fp programming)
+        ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
         
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
@@ -36,6 +39,7 @@
         ("http://mathlesstraveled.com" math)
         ("http://blog.stephenwolfram.com/feed/" math science)
         ("http://blog.ifem.co.uk/feed/" math)
+        ("https://egtheory.wordpress.com/feed/" cs evolution gametheory)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
