@@ -1,4 +1,5 @@
-(setq-default elfeed-search-filter "@1-week-ago +unread")
+(setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
+(setq url-queue-timeout 30)
 
 (load "elfeed-subscriptions")
 
@@ -34,6 +35,21 @@
     (interactive)
     (elfeed-link-title elfeed-show-entry)))
 
+;; (defun my-elfeed-show-entry (buff)
+;;   (popwin:popup-buffer buff
+;;                        :position 'right
+;;                        :width 0.5
+;;                        :dedicated t
+;;                        :stick t))
+
+;; (defun my-elfeed-kill-buffer ()
+;;   (interactive)
+;;   (let ((window (get-buffer-window (get-buffer "*elfeed-entry*"))))
+;;     (kill-buffer (get-buffer "*elfeed-entry*"))
+;;     (delete-window window)))
+
+;; (setq-default elfeed-show-entry-switch #'my-elfeed-show-entry
+;;               elfeed-show-entry-delete #'my-elfeed-kill-buffer)
 
 ;; Found in the upstream repo
 ;; https://github.com/skeeto/elfeed/commit/d773794ae8a24048aac4a5e3146a884b4b4cdd63
