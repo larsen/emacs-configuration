@@ -17,7 +17,7 @@
   (when (file-directory-p path)
     (add-to-list 'custom-theme-load-path path)))
 
-'(load-theme 'spacegray t)
+(load-theme 'leuven t)
 
 (defun switch-theme (theme)
   (interactive
