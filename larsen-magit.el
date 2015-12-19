@@ -1,3 +1,5 @@
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; from http://whattheemacsd.com/setup-magit.el-01.html
 ;; full screen magit-status
 
