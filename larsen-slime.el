@@ -9,7 +9,7 @@
 
 (global-set-key [(f2)] 'slime-hyperspec-lookup) 
 
-(load "/Users/larsen/quicklisp/clhs-use-local.el" t)
+(load "~/quicklisp/clhs-use-local.el" t)
 
 (provide 'larsen-slime)
 

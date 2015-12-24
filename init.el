@@ -32,7 +32,7 @@
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
-(add-to-list 'exec-path "/Users/larsen/bin")
+(add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/bin")
 
