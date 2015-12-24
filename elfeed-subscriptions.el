@@ -8,6 +8,9 @@
         ("http://wadler.blogspot.it/atom.xml" cs fp programming)
         ("http://conscientiousprogrammer.com/atom.xml" programming)
         ("http://tratt.net/laurie/blog/entries.rss" programming)
+        ("http://nakkaya.com/rss-feed" programming)
+        ("http://feeds.feedburner.com/ArcaneSentiment" programming)
+        ("http://matt.might.net/articles/feed.rss" programming cs)
         
         ;; Programming – Haskell
         ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
@@ -60,7 +63,7 @@
         ("http://www.antipope.org/charlie/blog-static/atom.xml" sf )
         ("http://scifistorm.org/scifistorm.rdf" sf)
         ("http://lennesimoblogdellafantascienza.wordpress.com/feed/" sf)
-        ("http://www.tor.com/index.php?option=com_content&amp;view=all&amp;format=feed&amp;type=rss&amp;content=frontpage" sf)
+        ("http://www.tor.com/feed" sf)
         ("http://whatever.scalzi.com/feed/" sf)
         ("http://www.sfsignal.com/index.rdf" sf)
 
