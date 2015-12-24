@@ -8,7 +8,7 @@
 (setq org-log-done t)
 
 (setq org-todo-keywords
-        '((sequence "TODO" "ANALYSED" "DELEGATED" "DONE")))
+        '((sequence "TODO" "ANALYSED" "DELEGATED" "|" "DONE" "CANCELED")))
 
 (setq org-return-follows-link t)
 ;(setq org-agenda-files (list "~/org/index.org"
