@@ -11,6 +11,10 @@
         ("http://nakkaya.com/rss-feed" programming)
         ("http://feeds.feedburner.com/ArcaneSentiment" programming)
         ("http://matt.might.net/articles/feed.rss" programming cs)
+
+        ;; Programming – Perl
+        ("http://pl6anet.org/atom.xml" perl programming)
+        ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss")
         
         ;; Programming – Haskell
         ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
@@ -43,6 +47,7 @@
         ("http://blog.stephenwolfram.com/feed/" math science)
         ("http://blog.ifem.co.uk/feed/" math)
         ("https://egtheory.wordpress.com/feed/" cs evolution gametheory)
+        ("http://math.andrej.com/feed/" cs math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
@@ -82,5 +87,6 @@
         ("http://usesthis.com/feed/" setup)
         ("http://chneukirchen.org/trivium/index.atom")
         ("http://www.bytecellar.com/feed/" retrocomputing)
+        ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         
         ))
