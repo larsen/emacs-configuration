@@ -62,7 +62,8 @@
         ("http://www.fumettologica.it/feed/" comics)
         ("http://xkcd.com/atom.xml" comics dailycomic)
         ("http://blog.xkcd.com/feed/" comics books)
-        
+        ("http://www.smbc-comics.com/rss.php" comics)
+
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
         ("http://www.antipope.org/charlie/blog-static/atom.xml" sf )
