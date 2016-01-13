@@ -48,6 +48,7 @@
         ("http://blog.ifem.co.uk/feed/" math)
         ("https://egtheory.wordpress.com/feed/" cs evolution gametheory)
         ("http://math.andrej.com/feed/" cs math)
+        ("http://blog.acolyer.org/feed/" cs)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
@@ -72,6 +73,7 @@
         ("http://www.tor.com/feed" sf)
         ("http://whatever.scalzi.com/feed/" sf)
         ("http://www.sfsignal.com/index.rdf" sf)
+        ("http://auxiliarymemory.com/feed/" sf)
 
         ;; Chess
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
