@@ -7,6 +7,9 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+(require 'org-bullets)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
+
 (setq org-todo-keywords
         '((sequence "TODO" "ANALYSED" "DELEGATED" "|" "DONE" "CANCELED")))
 
