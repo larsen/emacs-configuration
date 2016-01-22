@@ -2,7 +2,7 @@
 ;;; larsen-theme.el
 ;;;
 
-(set-face-attribute 'default nil :family "Inconsolata for Powerline" :height 120)
+(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 140) 
 
 ;; No splash screen
 (setq inhibit-startup-message t)
@@ -17,7 +17,7 @@
   (when (file-directory-p path)
     (add-to-list 'custom-theme-load-path path)))
 
-(load-theme 'leuven t)
+(load-theme 'bubbleberry t)
 
 (defun switch-theme (theme)
   (interactive
