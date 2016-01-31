@@ -79,7 +79,7 @@
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
 
         ;; Personal blogs
-        ("http://feeds.feedburner.com/butshesagirl")
+        ("http://www.rousette.org.uk/blog/index.xml")
         ("http://cartesianfaith.com/feed/")
         ("http://jasmcole.com/feed/")
         ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
