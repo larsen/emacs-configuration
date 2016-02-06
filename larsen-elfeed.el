@@ -1,6 +1,8 @@
 (setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
 (setq url-queue-timeout 30)
 
+(setq browse-url-browser-function 'eww-browse-url)
+
 (load "elfeed-subscriptions")
 
 (defface interesting-elfeed-entry
