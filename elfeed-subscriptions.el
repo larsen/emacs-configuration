@@ -30,6 +30,7 @@
         ("https://byorgey.wordpress.com/feed/" haskell fp programming math)
         ("http://joeyh.name/blog/index.rss" haskell fp programming)
         ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
+        ("http://comonad.com/reader/feed/" haskell programming cs)
         
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
@@ -83,6 +84,8 @@
         ("http://cartesianfaith.com/feed/")
         ("http://jasmcole.com/feed/")
         ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
+        ("http://www.joachim-breitner.de/blog_feed.rss")
+        ("http://stephenramsay.us/atom.xml")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
