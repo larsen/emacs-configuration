@@ -39,6 +39,8 @@
 (global-set-key (kbd "C-c o") 'helm-occur)
 (global-set-key (kbd "C-c s") 'helm-swoop)
 
+(sml/setup)
+
 ;; (key-chord-mode 1)
 
 ;; (defvar key-chord-two-keys-delay 0.00015)
