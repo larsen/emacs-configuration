@@ -11,7 +11,8 @@
         ("http://nakkaya.com/rss-feed" programming)
         ("http://feeds.feedburner.com/ArcaneSentiment" programming)
         ("http://matt.might.net/articles/feed.rss" programming cs)
-
+        ("http://programmingisterrible.com/rss" programming)
+        
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
         ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss")
@@ -56,6 +57,9 @@
         ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
         ("http://www.masteringemacs.org/feed/" emacs)
         ("https://emacs.wordpress.com/feed/" emacs)
+
+        ;; Vim
+        ("http://howivim.com/feed.xml" vim)
         
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema)
