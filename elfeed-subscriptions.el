@@ -56,6 +56,7 @@
         ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
         ("http://www.masteringemacs.org/feed/" emacs)
         ("https://emacs.wordpress.com/feed/" emacs)
+        ("http://pragmaticemacs.com/" emacs)
         
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema)
@@ -65,7 +66,8 @@
         ("http://xkcd.com/atom.xml" comics dailycomic)
         ("http://blog.xkcd.com/feed/" comics books)
         ("http://www.smbc-comics.com/rss.php" comics)
-
+        ("http://feeds.feedburner.com/wondermark" comics)
+        
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
         ("http://www.antipope.org/charlie/blog-static/atom.xml" sf )
