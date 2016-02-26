@@ -12,6 +12,7 @@
         ("http://feeds.feedburner.com/ArcaneSentiment" programming)
         ("http://matt.might.net/articles/feed.rss" programming cs)
         ("http://programmingisterrible.com/rss" programming)
+        ("http://aegisknight.org/feed" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
