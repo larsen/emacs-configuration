@@ -25,9 +25,13 @@
 
 (setq org-agenda-files (file-expand-wildcards "~/org"))
 
+(defvar personal-website-directory-prefix "~/Dropbox/stefanorodighiero.net/")
+(defun personal-website-absolute-directory (directory)
+  (concat personal-website-directory-prefix directory))
+  
 (setq org-publish-project-alist
-      '(("orgfiles" 
-         :base-directory "~/www/stefanorodighiero.net/wiki/"
+      `(("orgfiles" 
+         :base-directory ,(personal-website-absolute-directory "wiki/")
          :base-extension "org"
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/"
          :publishing-function org-html-publish-to-html
@@ -35,21 +39,21 @@
          )
 
         ("css"
-         :base-directory "~/www/stefanorodighiero.net/wiki/css/"
+         :base-directory ,(personal-website-absolute-directory "wiki/css/")
          :base-extension "css"
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/css/"
          :publishing-function org-publish-attachment
          )
 
         ("images"
-         :base-directory "~/www/stefanorodighiero.net/wiki/images/"
+         :base-directory ,(personal-website-absolute-directory "wiki/images/")
          :base-extension "png\\|jpg\\|JPG\\|gif"
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/images/"
          :publishing-function org-publish-attachment
          )
 
         ("js"
-         :base-directory "~/www/stefanorodighiero.net/wiki/MathJax/"
+         :base-directory ,(personal-website-absolute-directory "wiki/MathJax/")
          :base-extension "js"
          :recursive t
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/js/"
@@ -60,7 +64,7 @@
          :components ("orgfiles" "css" "js" "images"))
 
         ("stream-orgfiles"
-         :base-directory "~/www/stefanorodighiero.net/stream/"
+         :base-directory ,(personal-website-absolute-directory "stream/")
          :base-extension "org"
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/"
                                         ; :publishing-function org-html-publish-to-html
@@ -70,7 +74,7 @@
          )
 
         ("stream-images"
-         :base-directory "~/www/stefanorodighiero.net/stream/images/"
+         :base-directory ,(personal-website-absolute-directory "stream/images/")
          :base-extension "png\\|jpg\\|JPG\\|gif\\|svg"
          :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/images/"
          :publishing-function org-publish-attachment
@@ -78,7 +82,7 @@
 
         ("stream-feed"
          :title "Stefano Rodighiero's stream"
-         :base-directory "~/www/stefanorodighiero.net/stream/"
+         :base-directory ,(personal-website-absolute-directory "stream/")
          :base-extension "org"
          :html-link-home: "http://stefanorodighiero.net/stream/"
          :html-link-use-abs-url t
