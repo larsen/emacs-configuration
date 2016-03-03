@@ -28,12 +28,16 @@
 (defvar personal-website-directory-prefix "~/Dropbox/stefanorodighiero.net/")
 (defun personal-website-absolute-directory (directory)
   (concat personal-website-directory-prefix directory))
-  
+
+(defvar personal-website-remote-directory-prefix "/ssh:larsen@home:/srv/www/stefanorodighiero.net/")
+(defun personal-website-remote-absolute-directory (directory)
+  (concat personal-website-remote-directory-prefix directory))
+
 (setq org-publish-project-alist
       `(("orgfiles" 
          :base-directory ,(personal-website-absolute-directory "wiki/")
          :base-extension "org"
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
          :publishing-function org-html-publish-to-html
          ; :with-toc nil
          )
@@ -41,14 +45,14 @@
         ("css"
          :base-directory ,(personal-website-absolute-directory "wiki/css/")
          :base-extension "css"
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/css/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/css/")
          :publishing-function org-publish-attachment
          )
 
         ("images"
          :base-directory ,(personal-website-absolute-directory "wiki/images/")
          :base-extension "png\\|jpg\\|JPG\\|gif"
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/images/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/images/")
          :publishing-function org-publish-attachment
          )
 
@@ -56,7 +60,7 @@
          :base-directory ,(personal-website-absolute-directory "wiki/MathJax/")
          :base-extension "js"
          :recursive t
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/wiki/js/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/js/")
          :publishing-function org-publish-attachment
          )
 
@@ -66,17 +70,15 @@
         ("stream-orgfiles"
          :base-directory ,(personal-website-absolute-directory "stream/")
          :base-extension "org"
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/"
-                                        ; :publishing-function org-html-publish-to-html
+         :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
          :publishing-function org-twbs-publish-to-html
          :org-html-postamble nil
-         ; :with-toc nil
          )
 
         ("stream-images"
          :base-directory ,(personal-website-absolute-directory "stream/images/")
          :base-extension "png\\|jpg\\|JPG\\|gif\\|svg"
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/images/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "stream/images/")
          :publishing-function org-publish-attachment
          )
 
@@ -88,7 +90,7 @@
          :html-link-use-abs-url t
          :rss-extension "xml"
          :publishing-function (org-rss-publish-to-rss)
-         :publishing-directory "/ssh:larsen@home:/srv/www/stefanorodighiero.net/stream/"
+         :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
          :table-of-contents nil
          )
         
