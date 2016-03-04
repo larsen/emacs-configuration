@@ -7,6 +7,10 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+(defun my-org-confirm-babel-evaluate (lang body)
+            (not (string= lang "emacs-elisp")))
+(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
+
 (require 'org-bullets)
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
