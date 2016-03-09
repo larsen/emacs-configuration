@@ -37,6 +37,11 @@
     (interactive)
     (elfeed-link-title elfeed-show-entry)))
 
+(define-key elfeed-show-mode-map "D"
+  (lambda ()
+    (interactive)
+    (shr-download-image)))
+
 ;; (defun my-elfeed-show-entry (buff)
 ;;   (popwin:popup-buffer buff
 ;;                        :position 'right

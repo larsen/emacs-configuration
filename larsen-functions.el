@@ -59,5 +59,25 @@
                   (point))))
       (buffer-substring start end))))
 
+
+;; utility to use with shr (eww, elfeed entry view, ...)
+
+(defun shr-download-image ()
+  "Downloads to /tmp the image under point"
+  (interactive)
+  (lexical-let ((url (get-text-property (point) 'image-url)))
+    (if (not url)
+        (message "No image under point!")
+      (url-retrieve url
+                    (lambda (status)
+                      (re-search-forward "\r?\n\r?\n")
+                      (write-region
+                       (point) (point-max)
+                       (concat "/tmp/"
+                               (f-filename
+                                (url-filename
+                                 (url-generic-parse-url url))))))))))
+
+
 (provide 'larsen-functions)
 
