@@ -13,6 +13,7 @@
         ("http://matt.might.net/articles/feed.rss" programming cs)
         ("http://programmingisterrible.com/rss" programming)
         ("http://aegisknight.org/feed" programming)
+        ("http://www.lunaryorn.com/feed.atom" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
