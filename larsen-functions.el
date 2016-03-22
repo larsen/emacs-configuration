@@ -62,6 +62,8 @@
 
 ;; utility to use with shr (eww, elfeed entry view, ...)
 
+(require 'f)
+(require 'cl)
 (defun shr-download-image ()
   "Downloads to /tmp the image under point"
   (interactive)
