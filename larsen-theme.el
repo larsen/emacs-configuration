@@ -11,13 +11,14 @@
 (setq column-number-mode t)
 
 ;; Set custom theme path
-(setq custom-theme-directory (concat dotfiles-dir "themes"))
-(dolist
-    (path (directory-files custom-theme-directory t "\\w+"))
-  (when (file-directory-p path)
-    (add-to-list 'custom-theme-load-path path)))
+;; (setq custom-theme-directory (concat dotfiles-dir "themes"))
+;; (dolist
+;;     (path (directory-files custom-theme-directory t "\\w+"))
+;;   (when (file-directory-p path)
+;;     (add-to-list 'custom-theme-load-path path)))
 
-(load-theme 'bubbleberry t)
+;; (load-theme 'bubbleberry t)
+(load-theme 'danneskjold t)
 
 (defun switch-theme (theme)
   (interactive
