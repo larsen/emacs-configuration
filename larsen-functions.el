@@ -81,5 +81,14 @@
                                  (url-generic-parse-url url))))))))))
 
 
+;; Generic function to get JSON data from a URI
+
+(defun get-json-data (url)
+  (with-current-buffer
+      (url-retrieve-synchronously url)
+    (goto-char (+ 1 url-http-end-of-headers))
+    (json-read-object)))
+
+
 (provide 'larsen-functions)
 

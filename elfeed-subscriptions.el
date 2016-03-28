@@ -94,6 +94,7 @@
         ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
         ("http://www.joachim-breitner.de/blog_feed.rss")
         ("http://stephenramsay.us/atom.xml")
+        ("https://alexschroeder.ch/wiki/feed/full/")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
