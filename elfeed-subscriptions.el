@@ -42,6 +42,9 @@
         ("http://xach.livejournal.com/data/atom" lisp fp programming)
         ("http://funcall.blogspot.com/feeds/posts/default" lisp fp programming)
 
+        ;; Programming – Clojure
+        ("http://planet.clojure.in/atom.xml" clojure programming)
+        
         ;; Math
         ("http://blogs.ams.org/visualinsight/feed/" math)
         ("http://blogs.ams.org/blogonmathblogs/" math)
