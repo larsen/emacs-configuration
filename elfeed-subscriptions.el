@@ -14,6 +14,7 @@
         ("http://programmingisterrible.com/rss" programming)
         ("http://aegisknight.org/feed" programming)
         ("http://www.lunaryorn.com/feed.atom" programming)
+        ("https://rkrishnan.org/atom.xml" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
@@ -82,7 +83,7 @@
         ("http://www.antipope.org/charlie/blog-static/atom.xml" sf )
         ("http://scifistorm.org/scifistorm.rdf" sf)
         ("http://lennesimoblogdellafantascienza.wordpress.com/feed/" sf)
-        ("http://www.tor.com/feed" sf)
+        ("http://www.tor.com/feed" sf clutter)
         ("http://whatever.scalzi.com/feed/" sf)
         ("http://www.sfsignal.com/index.rdf" sf)
         ("http://auxiliarymemory.com/feed/" sf)
