@@ -15,6 +15,7 @@
         ("http://aegisknight.org/feed" programming)
         ("http://www.lunaryorn.com/feed.atom" programming)
         ("https://rkrishnan.org/atom.xml" programming)
+        ("http://chromakode.com/recent.atom" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
