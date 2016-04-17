@@ -88,10 +88,8 @@
   (let ((url (get-text-property (point) 'image-url)))
     (if (not url)
         (message "No image under point!")
-      (url-copy-file url (concat "~/Pictures/elfeed/"
-                                 (f-filename
-                                  (url-filename
-                                   (url-generic-parse-url url))))))))
+      (url-copy-file url (expand-file-name (url-file-nondirectory url)
+                                           "~/Pictures/elfeed/")))))
 
 ;; Generic function to get JSON data from a URI
 
