@@ -53,6 +53,7 @@
 (global-set-key (kbd "C-<f12>") 'slime-selector)
 (global-set-key (kbd "C-M-y") 'helm-mini) ; on Atreus
 (global-set-key (kbd "<print>") 'helm-mini)
+(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 ;; terminal
 (global-set-key

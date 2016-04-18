@@ -63,26 +63,37 @@
 ;; utility to use with shr (eww, elfeed entry view, ...)
 
 (require 'f)
-(require 'cl)
+;; (defun shr-download-image ()
+;;   "Downloads to /tmp the image under point"
+;;   (interactive)
+;;   (let ((url (get-text-property (point) 'image-url)))
+;;     (if (not url)
+;;         (message "No image under point!")
+;;       (url-retrieve url
+;;                     (lambda (cbargs)
+;;                       (progn (
+;;                               (re-search-forward "\r?\n\r?\n")
+;;                               (write-region
+;;                                (point) (point-max)
+;;                                (concat "~/Pictures/elfeed/"
+;;                                        (f-filename
+;;                                         (url-filename
+;;                                          (url-generic-parse-url
+;;                                           (plist-get cbargs 'image-url)))))))))
+;;                     '(image-url url)))))
+
 (defun shr-download-image ()
-  "Downloads to /tmp the image under point"
+  "Downloads the image under point"
   (interactive)
-  (lexical-let ((url (get-text-property (point) 'image-url)))
+  (let ((url (get-text-property (point) 'image-url)))
     (if (not url)
         (message "No image under point!")
-      (url-retrieve url
-                    (lambda (status)
-                      (re-search-forward "\r?\n\r?\n")
-                      (write-region
-                       (point) (point-max)
-                       (concat "/tmp/"
-                               (f-filename
-                                (url-filename
-                                 (url-generic-parse-url url))))))))))
-
+      (url-copy-file url (expand-file-name (url-file-nondirectory url)
+                                           "~/Pictures/elfeed/")))))
 
 ;; Generic function to get JSON data from a URI
 
+(require 'json)
 (defun get-json-data (url)
   (with-current-buffer
       (url-retrieve-synchronously url)
