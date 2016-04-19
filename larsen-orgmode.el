@@ -37,14 +37,8 @@
 (defun personal-website-remote-absolute-directory (directory)
   (concat personal-website-remote-directory-prefix directory))
 
-(setq org-publish-project-alist
-      `(("orgfiles" 
-         :base-directory ,(personal-website-absolute-directory "wiki/")
-         :base-extension "org"
-         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
-         :publishing-function org-html-publish-to-html
-         :recursive t
-         :html-preamble "        <div id=\"header\">
+(defvar personal-website-navigation-header
+  "        <div id=\"header\">
             <div id=\"logo\">
                 <a href=\"/\">stefanorodighiero.net</a>
             </div>
@@ -56,7 +50,16 @@
                 <a href=\"//stefanorodighiero.net/talks.html\">Talks</a>
                 <a href=\"//stefanorodighiero.net/wiki/\">Notes</a>
             </div>
-        </div>"
+        </div>"  )
+
+(setq org-publish-project-alist
+      `(("orgfiles" 
+         :base-directory ,(personal-website-absolute-directory "wiki/")
+         :base-extension "org"
+         :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
+         :publishing-function org-html-publish-to-html
+         :recursive t
+         :html-preamble personal-website-navigation-header
          )
 
         ("css"
@@ -90,19 +93,7 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
          :publishing-function org-twbs-publish-to-html
          :org-html-postamble nil
-         :html-preamble "        <div id=\"header\">
-            <div id=\"logo\">
-                <a href=\"/\">stefanorodighiero.net</a>
-            </div>
-            <div id=\"navigation\">
-                <a href=\"//stefanorodighiero.net/\">Home</a>
-                <a href=\"//stefanorodighiero.net/about.html\">About</a>
-                <a href=\"//stefanorodighiero.net/stream\">Stream</a>
-                <a href=\"//stefanorodighiero.net/archive.html\">Archive</a>
-                <a href=\"//stefanorodighiero.net/talks.html\">Talks</a>
-                <a href=\"//stefanorodighiero.net/wiki/\">Notes</a>
-            </div>
-        </div>"
+         :html-preamble personal-website-navigation-header
          )
 
         ("stream-images"
