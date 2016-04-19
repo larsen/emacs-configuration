@@ -43,7 +43,20 @@
          :base-extension "org"
          :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
          :publishing-function org-html-publish-to-html
-         ; :with-toc nil
+         :recursive t
+         :html-preamble "        <div id=\"header\">
+            <div id=\"logo\">
+                <a href=\"/\">stefanorodighiero.net</a>
+            </div>
+            <div id=\"navigation\">
+                <a href=\"//stefanorodighiero.net/\">Home</a>
+                <a href=\"//stefanorodighiero.net/about.html\">About</a>
+                <a href=\"//stefanorodighiero.net/stream\">Stream</a>
+                <a href=\"//stefanorodighiero.net/archive.html\">Archive</a>
+                <a href=\"//stefanorodighiero.net/talks.html\">Talks</a>
+                <a href=\"//stefanorodighiero.net/wiki/\">Notes</a>
+            </div>
+        </div>"
          )
 
         ("css"
@@ -77,6 +90,19 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
          :publishing-function org-twbs-publish-to-html
          :org-html-postamble nil
+         :html-preamble "        <div id=\"header\">
+            <div id=\"logo\">
+                <a href=\"/\">stefanorodighiero.net</a>
+            </div>
+            <div id=\"navigation\">
+                <a href=\"//stefanorodighiero.net/\">Home</a>
+                <a href=\"//stefanorodighiero.net/about.html\">About</a>
+                <a href=\"//stefanorodighiero.net/stream\">Stream</a>
+                <a href=\"//stefanorodighiero.net/archive.html\">Archive</a>
+                <a href=\"//stefanorodighiero.net/talks.html\">Talks</a>
+                <a href=\"//stefanorodighiero.net/wiki/\">Notes</a>
+            </div>
+        </div>"
          )
 
         ("stream-images"
@@ -99,9 +125,7 @@
          )
         
         ("stream" 
-         :components ("stream-orgfiles" "stream-images" "stream-feed"))
-
-        ))
+         :components ("stream-orgfiles" "stream-images" "stream-feed")) ))
 
 (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
