@@ -59,7 +59,7 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
          :publishing-function org-html-publish-to-html
          :recursive t
-         :html-preamble personal-website-navigation-header
+         :html-preamble ,personal-website-navigation-header
          )
 
         ("css"
@@ -93,7 +93,7 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
          :publishing-function org-twbs-publish-to-html
          :org-html-postamble nil
-         :html-preamble personal-website-navigation-header
+         :html-preamble ,personal-website-navigation-header
          )
 
         ("stream-images"
