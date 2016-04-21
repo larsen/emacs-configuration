@@ -100,6 +100,7 @@
         ("http://www.joachim-breitner.de/blog_feed.rss")
         ("http://stephenramsay.us/atom.xml")
         ("https://alexschroeder.ch/wiki/feed/full/")
+        ("https://mcristi.wordpress.com/feed/")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
