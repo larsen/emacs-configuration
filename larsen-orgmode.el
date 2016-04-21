@@ -74,6 +74,7 @@
          :base-extension "png\\|jpg\\|JPG\\|gif"
          :publishing-directory ,(personal-website-remote-absolute-directory "wiki/images/")
          :publishing-function org-publish-attachment
+         :recursive t
          )
 
         ("js"
