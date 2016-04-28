@@ -112,5 +112,6 @@
         ("http://www.bytecellar.com/feed/" retrocomputing)
         ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         ("http://ilovetypography.com/feed")
+        ("http://www.ericrochester.com/atom.xml")
         
         ))
