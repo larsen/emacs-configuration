@@ -113,5 +113,6 @@
         ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         ("http://ilovetypography.com/feed")
         ("http://www.ericrochester.com/atom.xml")
+        ("http://blog.datadive.net/feed/")
         
         ))
