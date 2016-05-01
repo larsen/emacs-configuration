@@ -115,5 +115,6 @@
         ("http://ilovetypography.com/feed")
         ("http://www.ericrochester.com/atom.xml")
         ("http://blog.datadive.net/feed/")
+        ("https://rpgcharacters.wordpress.com/feed/" rpg maps)
         
         ))
