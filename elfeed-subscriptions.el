@@ -104,6 +104,7 @@
         ("http://stephenramsay.us/atom.xml")
         ("https://alexschroeder.ch/wiki/feed/full/")
         ("https://mcristi.wordpress.com/feed/")
+        ("http://www.charlespetzold.com/rss.xml")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
