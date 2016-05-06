@@ -81,6 +81,7 @@
         ("http://blog.xkcd.com/feed/" comics books)
         ("http://www.smbc-comics.com/rss.php" comics)
         ("http://feeds.feedburner.com/wondermark" comics)
+        ("http://www.phdcomics.com/gradfeed.php" comics)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
