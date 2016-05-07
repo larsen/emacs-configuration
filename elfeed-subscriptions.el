@@ -82,6 +82,7 @@
         ("http://www.smbc-comics.com/rss.php" comics)
         ("http://feeds.feedburner.com/wondermark" comics)
         ("http://www.phdcomics.com/gradfeed.php" comics)
+        ("http://abstrusegoose.com/atomfeed.xml" comics)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
