@@ -61,6 +61,8 @@
         ("https://egtheory.wordpress.com/feed/" cs evolution gametheory)
         ("http://math.andrej.com/feed/" cs math)
         ("http://blog.acolyer.org/feed/" cs)
+        ("http://www.scottaaronson.com/blog/?feed=rss2" cs)
+        ("https://golem.ph.utexas.edu/category/atom10.xml" math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
