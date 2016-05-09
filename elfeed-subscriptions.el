@@ -61,6 +61,8 @@
         ("https://egtheory.wordpress.com/feed/" cs evolution gametheory)
         ("http://math.andrej.com/feed/" cs math)
         ("http://blog.acolyer.org/feed/" cs)
+        ("http://www.scottaaronson.com/blog/?feed=rss2" cs)
+        ("https://golem.ph.utexas.edu/category/atom10.xml" math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
@@ -82,6 +84,7 @@
         ("http://www.smbc-comics.com/rss.php" comics)
         ("http://feeds.feedburner.com/wondermark" comics)
         ("http://www.phdcomics.com/gradfeed.php" comics)
+        ("http://abstrusegoose.com/atomfeed.xml" comics)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
