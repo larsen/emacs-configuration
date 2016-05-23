@@ -76,6 +76,7 @@
         larsen-magit
         larsen-erc
         larsen-elfeed
+        larsen-paredit
         ))
 
 ;; Now load other things

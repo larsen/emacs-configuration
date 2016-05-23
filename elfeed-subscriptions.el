@@ -123,4 +123,21 @@
         ("http://blog.datadive.net/feed/")
         ("https://rpgcharacters.wordpress.com/feed/" rpg maps)
         ("https://damiengwalter.com/feed/")
+
+        ;; suggested by Dan Luu -- 2016/05/03
+        ("http://blog.nullspace.io/feed.xml" danluu)
+        ("http://akaptur.com/atom.xml" danluu)
+        ("http://www.chrisfenton.com/feed/" danluu)
+        ("https://codewords.recurse.com/feed.xml" danluu)
+        ("http://mcfunley.com/feed/atom" danluu)
+        ("http://davidad.github.io/atom.xml" danluu)
+        ("http://eli.thegreenplace.net/feeds/all.atom.xml" danluu)
+        ("http://www.evanjones.ca/index.rss" danluu)
+        ("https://blog.lse.epita.fr/rssfeed.xml" danluu)
+        ("http://neverworkintheory.org/feed.xml" danluu)
+        ("http://feeds.feedburner.com/GustavoDuarte" danluu)
+        ("https://www.blogger.com/feeds/4534865332750558938/posts/default" danluu)
+        ("http://blog.regehr.org/comments/feed" danluu)
+        ("https://www.snellman.net/blog/rss-index.xml" danluu)
+        
         ))
