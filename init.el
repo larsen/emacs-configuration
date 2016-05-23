@@ -17,6 +17,9 @@
 ;; If there is a tab, make it the size of 2 spaces
 (setq-default tab-width 2)
 
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
 (require 'package)
 (package-initialize)
 (defun package-require (pkg)
