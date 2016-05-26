@@ -4,6 +4,7 @@
 
 (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
   (when (fboundp mode) (funcall mode -1)))
+(setq scroll-margin 3)
 
 ;; Always ALWAYS use UTF-8
 ;; (borrowed from bodil's configuration)
