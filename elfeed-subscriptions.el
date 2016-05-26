@@ -124,6 +124,7 @@
         ("http://blog.datadive.net/feed/")
         ("https://rpgcharacters.wordpress.com/feed/" rpg maps)
         ("https://lovecraftianscience.wordpress.com/feed/")
+        ("https://damiengwalter.com/feed/")
 
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
