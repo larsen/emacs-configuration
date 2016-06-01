@@ -128,6 +128,7 @@
 
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
+        ("http://adereth.github.io/atom.xml" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
