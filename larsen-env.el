@@ -73,4 +73,7 @@
 ;; JS2mode
 (setq-default js2-basic-offset 2)
 
+;; Projectile
+(projectile-global-mode)
+
 (provide 'larsen-env)
