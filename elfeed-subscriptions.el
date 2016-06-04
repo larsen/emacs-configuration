@@ -125,6 +125,7 @@
         ("https://rpgcharacters.wordpress.com/feed/" rpg maps)
         ("https://lovecraftianscience.wordpress.com/feed/")
         ("https://damiengwalter.com/feed/")
+        ("http://themacro.com/feed.xml")
 
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
