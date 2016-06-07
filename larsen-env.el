@@ -39,6 +39,7 @@
 (global-set-key (kbd "C-c o") 'helm-occur)
 (global-set-key (kbd "C-c s") 'helm-swoop)
 
+(setq sml/no-confirm-load-theme t)
 (sml/setup)
 
 ;; (key-chord-mode 1)
