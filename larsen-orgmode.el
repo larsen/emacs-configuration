@@ -44,16 +44,37 @@
             </div>
             <div id=\"navigation\">
                 <a href=\"//stefanorodighiero.net/\">Home</a>
-                <a href=\"//stefanorodighiero.net/about.html\">About</a>
+                <a href=\"//stefanorodighiero.net/personal.html\">About</a>
                 <a href=\"//stefanorodighiero.net/stream\">Stream</a>
-                <a href=\"//stefanorodighiero.net/archive.html\">Archive</a>
-                <a href=\"//stefanorodighiero.net/talks.html\">Talks</a>
-                <a href=\"//stefanorodighiero.net/wiki/\">Notes</a>
             </div>
         </div>"  )
 
 (setq org-publish-project-alist
-      `(("orgfiles" 
+      `(
+        ("website" 
+         :components ("website-pages" "website-images"))
+        
+        ("website-pages"
+         ;; :base-directory ,(personal-website-absolute-directory "")
+         :base-directory "/home/larsen/www/stefanorodighiero.net/"
+         :base-extension "org"
+         :exclude "posts"
+         :publishing-function org-twbs-publish-to-html
+         :publishing-directory ,(personal-website-remote-absolute-directory "/")
+         :recursive t
+         :html-preamble ,personal-website-navigation-header
+         )
+
+        ("website-images"
+         ;; :base-directory ,(personal-website-absolute-directory "")
+         :base-directory "/home/larsen/www/stefanorodighiero.net/images/"
+         :base-extension "png\\|jpg\\|JPG\\|gif"
+         :publishing-function org-publish-attachment
+         :recursive t
+         :publishing-directory ,(personal-website-remote-absolute-directory "images/")
+         )
+
+        ("orgfiles" 
          :base-directory ,(personal-website-absolute-directory "wiki/")
          :base-extension "org"
          :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
