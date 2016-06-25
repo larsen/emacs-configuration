@@ -28,6 +28,8 @@
 ;                             "~/org/mxm-*.org"))
 
 (setq org-agenda-files (file-expand-wildcards "~/org"))
+(custom-set-variables
+ '(org-twbs-htmlize-output-type 'css))
 
 (defvar personal-website-directory-prefix "~/Dropbox/stefanorodighiero.net/")
 (defun personal-website-absolute-directory (directory)
