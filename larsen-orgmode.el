@@ -152,6 +152,7 @@
 
 (org-babel-do-load-languages
       'org-babel-load-languages
-      '((perl . t)))
+      '((perl . t)
+        (gnuplot . t)))
 
 (provide 'larsen-orgmode)
