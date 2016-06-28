@@ -101,5 +101,19 @@
     (json-read-object)))
 
 
+(defun get-webjump-sites ()
+  (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
+    (delq nil
+          (mapcar
+           (lambda (i)
+             (let ((item-string (cdr (assoc "ITEM" i)))
+                   (regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
+               (if (posix-string-match regex item-string)
+                   `(,(match-string 2 item-string) . ,(match-string 1 item-string)))))
+           (org-map-entries 'org-entry-properties nil 'file)))))
+
+(setq webjump-sites (get-webjump-sites))
+
+
 (provide 'larsen-functions)
 
