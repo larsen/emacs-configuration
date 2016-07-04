@@ -101,19 +101,27 @@
     (json-read-object)))
 
 
+;; (defun get-webjump-sites ()
+;;   (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
+;;     (delq nil
+;;           (mapcar
+;;            (lambda (i)
+;;              (let ((item-string (cdr (assoc "ITEM" i)))
+;;                    (regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
+;;                (if (posix-string-match regex item-string)
+;;                    `(,(match-string 2 item-string) . ,(match-string 1 item-string)))))
+;;            (org-map-entries 'org-entry-properties nil 'file)))))
+
+(require 'cl)
 (defun get-webjump-sites ()
-  (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
-    (delq nil
-          (mapcar
-           (lambda (i)
-             (let ((item-string (cdr (assoc "ITEM" i)))
-                   (regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
-               (if (posix-string-match regex item-string)
-                   `(,(match-string 2 item-string) . ,(match-string 1 item-string)))))
-           (org-map-entries 'org-entry-properties nil 'file)))))
+  (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
+    (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
+      (loop for i in (org-map-entries 'org-entry-properties nil 'file)
+            for item-string = (cdr (assoc "ITEM" i))
+            if (string-match regex item-string)
+            collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
 (setq webjump-sites (get-webjump-sites))
-
 
 (provide 'larsen-functions)
 
