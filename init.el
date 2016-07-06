@@ -71,16 +71,17 @@
         larsen-latex
         larsen-web-mode
         larsen-snippets
-        larsen-functions
         larsen-orgmode
         larsen-slime
         larsen-magit
         larsen-erc
         larsen-elfeed
         larsen-paredit
+        larsen-functions
         ))
 
 ;; Now load other things
 (dolist (file larsen-pkg-full)
+  (message (pp file))
   (require file))
 
