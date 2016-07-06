@@ -121,7 +121,10 @@
             if (string-match regex item-string)
             collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
-(setq webjump-sites (get-webjump-sites))
+(setq webjump-sites
+      (append (get-webjump-sites) webjump-sample-sites))
+
+(global-set-key (kbd "C-c j") 'webjump)
 
 (provide 'larsen-functions)
 
