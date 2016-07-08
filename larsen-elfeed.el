@@ -79,4 +79,7 @@
                     (volatile)
                     (elfeed-db-get-all-tags)))))
 
+(require 'elfeed-goodies)
+(elfeed-goodies/setup)
+
 (provide 'larsen-elfeed)
