@@ -113,6 +113,7 @@
 ;;            (org-map-entries 'org-entry-properties nil 'file)))))
 
 (require 'cl)
+(require 'webjump)
 (defun get-webjump-sites ()
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
     (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
