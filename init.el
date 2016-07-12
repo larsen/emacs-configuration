@@ -56,7 +56,6 @@
         larsen-style
         larsen-iswitchb
         larsen-package
-        larsen-auto-complete
         larsen-spell
         larsen-perl
         larsen-clojure
@@ -71,6 +70,7 @@
         larsen-latex
         larsen-web-mode
         larsen-snippets
+        larsen-auto-complete
         larsen-orgmode
         larsen-slime
         larsen-magit
