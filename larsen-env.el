@@ -38,6 +38,8 @@
 (global-set-key (kbd "<s-escape>") 'helm-mini)
 (global-set-key (kbd "C-c o") 'helm-occur)
 (global-set-key (kbd "C-c s") 'helm-swoop)
+(global-set-key (kbd "C-c v") 'helm-show-kill-ring)
+
 
 (setq sml/no-confirm-load-theme t)
 (sml/setup)
