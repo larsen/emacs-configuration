@@ -3,7 +3,7 @@
 (defun linux-notify (title &optional message)
   (start-process "linux-notify" nil "notify-send" title))
 
-(defun osx-notify (title message)
+(defun osx-notify (title &optional message)
   (start-process "osx-notify" nil "terminal-notifier" "-title" title "-message" message))
 
 (defalias 'notify
