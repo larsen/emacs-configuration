@@ -1,4 +1,6 @@
 ; (package-require 'dired+)
+
+(package-require 'dired+)
 (require 'dired+)
 (set-face-foreground 'diredp-file-name nil)
 (setq-default diredp-hide-details-initially-flag nil)

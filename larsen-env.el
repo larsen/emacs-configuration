@@ -2,6 +2,9 @@
 ;;; larsen-env.el
 ;;;
 
+(require 'helm)
+(require 'helm-swoop)
+
 (add-to-list 'exec-path "~/.cabal/bin/")
 
 ;; Transpose (rotate if multiple) windows
@@ -39,7 +42,6 @@
 (global-set-key (kbd "C-c o") 'helm-occur)
 (global-set-key (kbd "C-c s") 'helm-swoop)
 (global-set-key (kbd "C-c v") 'helm-show-kill-ring)
-
 
 (setq sml/no-confirm-load-theme t)
 (sml/setup)
