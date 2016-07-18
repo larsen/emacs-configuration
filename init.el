@@ -58,7 +58,6 @@
         larsen-package
         larsen-spell
         larsen-perl
-        larsen-clojure
         ; larsen-haskell
         larsen-markdown
         larsen-smarttab

@@ -1,12 +1,21 @@
 ;; ERC notifications
 
-(defun osx-notify (title message)
+(defun linux-notify (title &optional message)
+  (start-process "linux-notify" nil "notify-send"
+                 "-i" "/usr/local/share/emacs/25.0.92/etc/images/icons/hicolor/48x48/apps/emacs.png" title message))
+
+(defun osx-notify (title &optional message)
   (start-process "osx-notify" nil "terminal-notifier" "-title" title "-message" message))
+
+(defalias 'notify
+  (if (eq system-type 'darwin)
+      (apply-partially 'osx-notify)
+    (apply-partially 'linux-notify)))
 
 (defun my-erc-notify-hook (match-type nick message)
   (when (eq match-type 'current-nick)
     (unless (posix-string-match "^\\** *Users on #" message)
-      (osx-notify (concat "ERC " (buffer-name (current-buffer)))
+      (notify (concat "ERC " (buffer-name (current-buffer)))
        message))))
 
 ;; Windows layout
