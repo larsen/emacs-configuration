@@ -38,10 +38,6 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
 
-(global-set-key (kbd "<s-escape>") 'helm-mini)
-(global-set-key (kbd "C-c s") 'helm-swoop)
-(global-set-key (kbd "C-c v") 'helm-show-kill-ring)
-
 (setq sml/no-confirm-load-theme t)
 (sml/setup)
 
@@ -53,11 +49,7 @@
 ;; (key-chord-define-global "cs" 'helm-occur)
 ;; (key-chord-define-global "xo" 'switch-window)
 
-(global-set-key (kbd "<f13>") 'helm-mini) ; on Code keyboard
 (global-set-key (kbd "C-<f12>") 'slime-selector)
-(global-set-key (kbd "C-M-y") 'helm-mini) ; on Atreus
-(global-set-key (kbd "<print>") 'helm-mini)
-(global-set-key (kbd "C-x C-f") #'helm-find-files)
 
 ;; terminal
 (global-set-key
