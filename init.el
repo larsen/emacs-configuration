@@ -12,12 +12,6 @@
 (set-keyboard-coding-system 'utf-8)
 (prefer-coding-system 'utf-8)
 
-;; Spaces instead of tabs
-(setq-default indent-tabs-mode nil)
-
-;; If there is a tab, make it the size of 2 spaces
-(setq-default tab-width 2)
-
 ;; Auto refresh buffers
 (global-auto-revert-mode 1)
 
