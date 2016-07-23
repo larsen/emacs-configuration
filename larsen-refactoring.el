@@ -8,7 +8,7 @@
             (set-mark (point))
             (insert "(defun ")
             (insert function-name)
-            (insert "()")
+            (insert " ()")
             (newline)
             (insert body)
             (insert ")")
@@ -40,8 +40,7 @@ current point"
       (save-excursion
         (progn
           (move-to-empty-point)
-          (insert-new-function-definition function-name code)
-          (newline)))
+          (insert-new-function-definition function-name code)))
       (insert "(" function-name " )"))))
 
 (provide 'larsen-refactoring)
