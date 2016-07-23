@@ -27,7 +27,9 @@
 (defun move-to-empty-point ()
   "Move point to the first point outside of a form, before the
 current point"
-  (while (current-line-empty-p) (previous-line)))
+  (interactive)
+  (while (not (current-line-empty-p))
+    (previous-line)))
 
 (defun create-new-function (function-name)
   "Creates a new function definition, given a selection. Removes
