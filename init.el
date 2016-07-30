@@ -71,6 +71,7 @@
         larsen-elfeed
         larsen-paredit
         larsen-functions
+        larsen-elisp
         larsen-refactoring
         ))
 
