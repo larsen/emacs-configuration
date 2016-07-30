@@ -61,6 +61,8 @@
 
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
+(global-set-key (kbd "C-c e m") 'macrostep-mode)
+
 (when (eq system-type 'darwin)
   (setq mac-right-option-modifier 'none))
 
