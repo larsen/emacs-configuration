@@ -17,4 +17,6 @@
 (setq erc-fill-function 'erc-fill-static)
 (setq erc-fill-static-center 16)
 
+(setq erc-prompt (lambda () (concat "[" (buffer-name) "]")))
+
 (provide 'larsen-erc)
