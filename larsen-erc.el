@@ -9,7 +9,7 @@
 ;; (define-key erc-mode-map (kbd "RET") nil)
 ;; (define-key erc-mode-map (kbd "C-c RET") 'erc-send-current-line)
 ;; (define-key erc-mode-map (kbd "C-c C-RET") 'erc-send-current-line)
-1
+
 (require 'erc-image)
 (add-to-list 'erc-modules 'image)
 (erc-update-modules)
