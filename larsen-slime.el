@@ -8,6 +8,7 @@
 (slime-setup '(slime-fancy))
 
 ; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
+(add-hook 'lisp-mode-hook #'paredit-mode)
 
 ;; (load "~/quicklisp/clhs-use-local.el" t)
 

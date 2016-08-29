@@ -154,5 +154,29 @@
       'org-babel-load-languages
       '((perl . t)
         (gnuplot . t)))
+;; Special functions to insert week-based object entries
+
+(require 'cal-iso)
+(require 'cl)
+
+(defun my-calendar-iso-day-to-gregorian (week-number week-day)
+  "Given a week number and a week day (expressed as an integer in
+the range 0..6 (1 = Monday, 2 = Tuesday, ..., 0 = Sunday), returns
+the corresponding gregorian date"
+  (calendar-gregorian-from-absolute
+   (calendar-iso-to-absolute (list week-number week-day 2016))))
+
+(defun my-gregorian-date-as-string (date)
+  (cl-destructuring-bind (month day year) date
+  (format "%4d-%02d-%d" year month day)))
+
+(defun my-insert-current-week-item (week-number)
+  (interactive "P")
+  (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
+        (week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
+    (insert (format "* Week %d (%s - %s)"
+                    week-number
+                    (my-gregorian-date-as-string week-begin-date)
+                    (my-gregorian-date-as-string week-end-date)))))
 
 (provide 'larsen-orgmode)

@@ -86,6 +86,7 @@
         ("http://feeds.feedburner.com/wondermark" comics)
         ("http://www.phdcomics.com/gradfeed.php" comics)
         ("http://abstrusegoose.com/atomfeed.xml" comics)
+        ("http://www.casualvillain.com/Unsounded/feed/" comics)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
@@ -126,12 +127,15 @@
         ("https://rpgcharacters.wordpress.com/feed/" rpg maps)
         ("https://lovecraftianscience.wordpress.com/feed/")
         ("https://damiengwalter.com/feed/")
+        ("http://themacro.com/feed.xml")
+        ("http://www.datatau.com/rss")
 
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
         ("http://adereth.github.io/atom.xml" maybe)
         ("https://eight2late.wordpress.com/feed/" maybe)
         ("http://feeds.akkartik.name/kartiks-scrapbook" maybe)
+        ("https://backchannel.com/feed" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
