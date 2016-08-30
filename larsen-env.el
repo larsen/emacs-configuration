@@ -68,6 +68,8 @@
 
 (display-time-mode 1)
 
+(setq calendar-week-start-day 1)
+
 ;; Week number in calendar
 (copy-face font-lock-constant-face 'calendar-iso-week-face)
 (set-face-attribute 'calendar-iso-week-face nil
