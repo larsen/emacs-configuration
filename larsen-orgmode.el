@@ -168,7 +168,7 @@ the corresponding gregorian date"
 
 (defun my-gregorian-date-as-string (date)
   (cl-destructuring-bind (month day year) date
-  (format "%4d-%02d-%d" year month day)))
+  (format "%4d-%02d-%02d" year month day)))
 
 (defun my-insert-current-week-item (week-number)
   (interactive "P")
