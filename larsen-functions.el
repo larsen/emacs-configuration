@@ -125,7 +125,7 @@
 (require 'webjump)
 (defun get-webjump-sites ()
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
-    (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
+    (with-current-buffer (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
       (loop for i in (org-map-entries 'org-entry-properties nil 'file)
             for item-string = (cdr (assoc "ITEM" i))
             if (string-match regex item-string)
