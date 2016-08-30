@@ -179,4 +179,12 @@ the corresponding gregorian date"
                     (my-gregorian-date-as-string week-begin-date)
                     (my-gregorian-date-as-string week-end-date)))))
 
+(defun my-org-set-item-deadline (week-number)
+  (let ((week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
+    (org-deadline nil (my-gregorian-date-as-string week-end-date))))
+
+(defun my-org-set-tree-deadline (week-number)
+  (interactive "P")
+  (org-map-entries (lambda () (my-org-set-item-deadline week-number)) nil 'tree))
+
 (provide 'larsen-orgmode)
