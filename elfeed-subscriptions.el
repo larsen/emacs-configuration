@@ -97,7 +97,8 @@
         ("http://whatever.scalzi.com/feed/" sf)
         ("http://www.sfsignal.com/index.rdf" sf)
         ("http://auxiliarymemory.com/feed/" sf)
-
+        ("http://andromedasf.altervista.org/feed/" sf)
+        
         ;; Chess
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
 
@@ -132,6 +133,8 @@
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
         ("http://adereth.github.io/atom.xml" maybe)
+        ("https://eight2late.wordpress.com/feed/" maybe)
+        ("http://feeds.akkartik.name/kartiks-scrapbook" maybe)
         ("https://backchannel.com/feed" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03

@@ -174,7 +174,7 @@ the corresponding gregorian date"
 
 (defun my-gregorian-date-as-string (date)
   (cl-destructuring-bind (month day year) date
-  (format "%4d-%02d-%d" year month day)))
+  (format "%4d-%02d-%02d" year month day)))
 
 (defun my-insert-current-week-item (week-number)
   (interactive "P")
@@ -184,5 +184,13 @@ the corresponding gregorian date"
                     week-number
                     (my-gregorian-date-as-string week-begin-date)
                     (my-gregorian-date-as-string week-end-date)))))
+
+(defun my-org-set-item-deadline (week-number)
+  (let ((week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
+    (org-deadline nil (my-gregorian-date-as-string week-end-date))))
+
+(defun my-org-set-tree-deadline (week-number)
+  (interactive "P")
+  (org-map-entries (lambda () (my-org-set-item-deadline week-number)) nil 'tree))
 
 (provide 'larsen-orgmode)
