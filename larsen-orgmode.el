@@ -174,10 +174,12 @@ the corresponding gregorian date"
   (interactive "P")
   (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
         (week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
-    (insert (format "* Week %d (%s - %s)"
+    (insert (format "* Week %d (%s - %s)\n"
                     week-number
                     (my-gregorian-date-as-string week-begin-date)
-                    (my-gregorian-date-as-string week-end-date)))))
+                    (my-gregorian-date-as-string week-end-date)))
+    (dolist (week-day-name '(Monday Tuesday Wednesday Thursday Friday Saturday Sunday))
+      (insert (format "** %s\n" week-day-name)))))
 
 (defun my-org-set-item-deadline (week-number)
   (let ((week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
