@@ -27,7 +27,13 @@
 ;                             "~/org/stefanorodighiero.net.org"
 ;                             "~/org/mxm-*.org"))
 
-(setq org-agenda-files (file-expand-wildcards "~/org"))
+;; (setq org-agenda-files (file-expand-wildcards "~/org"))
+
+(setq org-agenda-files (list "~/org/"
+                             "~/org/personal/"
+                             "~/org/work/"
+                             "~/org/work/mxm/"))
+
 (custom-set-variables
  '(org-twbs-htmlize-output-type 'css))
 
