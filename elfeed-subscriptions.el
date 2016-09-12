@@ -136,6 +136,7 @@
         ("https://eight2late.wordpress.com/feed/" maybe)
         ("http://feeds.akkartik.name/kartiks-scrapbook" maybe)
         ("https://backchannel.com/feed" maybe)
+        ("http://realworldclojure.com/feed.xml" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
