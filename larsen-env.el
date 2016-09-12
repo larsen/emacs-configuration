@@ -4,6 +4,7 @@
 
 (require 'helm)
 (require 'helm-swoop)
+(require 'rotate)
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 
@@ -33,7 +34,7 @@
              (set-window-start w2 s1)
              (setq i (1+ i)))))))
 
-(global-set-key (kbd "C-x C-o") 'rotate-windows)
+(global-set-key (kbd "C-x C-o") 'rotate-layout)
 
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu

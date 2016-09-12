@@ -72,24 +72,6 @@
 ;; utility to use with shr (eww, elfeed entry view, ...)
 
 (require 'f)
-;; (defun shr-download-image ()
-;;   "Downloads to /tmp the image under point"
-;;   (interactive)
-;;   (let ((url (get-text-property (point) 'image-url)))
-;;     (if (not url)
-;;         (message "No image under point!")
-;;       (url-retrieve url
-;;                     (lambda (cbargs)
-;;                       (progn (
-;;                               (re-search-forward "\r?\n\r?\n")
-;;                               (write-region
-;;                                (point) (point-max)
-;;                                (concat "~/Pictures/elfeed/"
-;;                                        (f-filename
-;;                                         (url-filename
-;;                                          (url-generic-parse-url
-;;                                           (plist-get cbargs 'image-url)))))))))
-;;                     '(image-url url)))))
 
 (defun shr-download-image ()
   "Downloads the image under point"
@@ -108,18 +90,6 @@
       (url-retrieve-synchronously url)
     (goto-char (+ 1 url-http-end-of-headers))
     (json-read-object)))
-
-
-;; (defun get-webjump-sites ()
-;;   (with-current-buffer (get-file-buffer "~/Dropbox/stefanorodighiero.net/links.org")
-;;     (delq nil
-;;           (mapcar
-;;            (lambda (i)
-;;              (let ((item-string (cdr (assoc "ITEM" i)))
-;;                    (regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
-;;                (if (posix-string-match regex item-string)
-;;                    `(,(match-string 2 item-string) . ,(match-string 1 item-string)))))
-;;            (org-map-entries 'org-entry-properties nil 'file)))))
 
 (require 'cl)
 (require 'webjump)
