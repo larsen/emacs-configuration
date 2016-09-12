@@ -1,3 +1,4 @@
+(require 'elfeed)
 (setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
 (setq url-queue-timeout 30)
 (setq elfeed-use-curl t)
