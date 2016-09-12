@@ -2,7 +2,7 @@
 ;;; larsen-theme.el
 ;;;
 
-(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 140) 
+(set-face-attribute 'default nil :family "DejaVu Sans Mono" :height 120) 
 
 ;; No splash screen
 (setq inhibit-startup-message t)
