@@ -34,7 +34,6 @@
         ("http://lambda.jstolarek.com/feed/" programming haskell)
         ("http://sigfpe.blogspot.com/feeds/posts/default" cs programming haskell)
         ("http://matthiasnehlsen.com/atom.xml" fp programming)
-        ("http://stefanorodighiero.net/atom.xml" personal programming)
         ("http://chrisdone.com/rss.xml" haskell fp programming)
         ("https://byorgey.wordpress.com/feed/" haskell fp programming math)
         ("http://joeyh.name/blog/index.rss" haskell fp programming)
