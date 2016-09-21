@@ -46,7 +46,8 @@
         ("http://lispy.wordpress.com/feed/" lisp pf programmin)
         ("http://xach.livejournal.com/data/atom" lisp fp programming)
         ("http://funcall.blogspot.com/feeds/posts/default" lisp fp programming)
-
+        ("http://feeds2.feedburner.com/stevelosh" lisp fp programming)
+        
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
         
@@ -63,6 +64,7 @@
         ("http://blog.acolyer.org/feed/" cs)
         ("http://www.scottaaronson.com/blog/?feed=rss2" cs)
         ("https://golem.ph.utexas.edu/category/atom10.xml" math)
+        ("https://mathbabe.org/feed/" math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
