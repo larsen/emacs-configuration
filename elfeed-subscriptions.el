@@ -63,8 +63,9 @@
         ("http://math.andrej.com/feed/" cs math)
         ("http://blog.acolyer.org/feed/" cs)
         ("http://www.scottaaronson.com/blog/?feed=rss2" cs)
-        ("https://golem.ph.utexas.edu/category/atom10.xml" math)
+        ("https://golem.ph.utexas.edu/category/atom11.xml" math)
         ("https://mathbabe.org/feed/" math)
+        ("https://terrytao.wordpress.com/feed/" math)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
