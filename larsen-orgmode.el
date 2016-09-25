@@ -51,7 +51,6 @@
                 <a href=\"/\">stefanorodighiero.net</a>
             </div>
             <div id=\"navigation\">
-                <a href=\"//stefanorodighiero.net/\">Home</a>
                 <a href=\"//stefanorodighiero.net/personal.html\">About</a>
                 <a href=\"//stefanorodighiero.net/stream\">Stream</a>
             </div>
