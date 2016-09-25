@@ -7,6 +7,8 @@
 
 (load "elfeed-subscriptions")
 
+(setq shr-width 80)
+
 (defface interesting-elfeed-entry
   '((t :foreground "#f77"))
   "interesting elfeed entry")
