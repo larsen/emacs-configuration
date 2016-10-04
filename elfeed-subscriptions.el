@@ -131,7 +131,8 @@
         ("https://damiengwalter.com/feed/")
         ("http://themacro.com/feed.xml")
         ("http://www.datatau.com/rss")
-
+        ("https://jasmcole.com/feed/")
+        
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
         ("http://adereth.github.io/atom.xml" maybe)
