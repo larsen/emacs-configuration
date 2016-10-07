@@ -15,7 +15,8 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (setq org-todo-keywords
-        '((sequence "TODO" "ANALYSED" "DELEGATED" "|" "DONE" "CANCELED")))
+      '((sequence "TODO(!)" "ANALYSED" "IN PROGRESS(!)" "DELEGATED" "|" "DONE(!)" "CANCELED(!)")))
+(setq org-log-into-drawer t)
 
 (setq org-return-follows-link t)
 ;(setq org-agenda-files (list "~/org/index.org"
