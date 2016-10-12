@@ -15,7 +15,7 @@
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (setq org-todo-keywords
-      '((sequence "TODO(!)" "ANALYSED" "IN PROGRESS(!)" "DELEGATED" "|" "DONE(!)" "CANCELED(!)")))
+      '((sequence "TODO(!)" "ANALYSED" "DELEGATED" "IN PROGRESS(!)" "|" "DONE(!)" "CANCELED(!)")))
 (setq org-log-into-drawer t)
 
 (setq org-return-follows-link t)
