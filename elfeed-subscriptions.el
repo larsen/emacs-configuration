@@ -133,6 +133,7 @@
         ("http://themacro.com/feed.xml")
         ("http://www.datatau.com/rss")
         ("https://jasmcole.com/feed/")
+        ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
