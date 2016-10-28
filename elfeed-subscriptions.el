@@ -134,6 +134,7 @@
         ("http://themacro.com/feed.xml")
         ("http://www.datatau.com/rss")
         ("https://jasmcole.com/feed/")
+        ("http://www.netflixlovers.it/rss" netflix)
         ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
         ("http://onethingwell.org/rss" software)
         
