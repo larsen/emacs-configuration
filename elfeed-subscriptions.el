@@ -135,6 +135,7 @@
         ("http://www.datatau.com/rss")
         ("https://jasmcole.com/feed/")
         ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
+        ("http://onethingwell.org/rss" software)
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
