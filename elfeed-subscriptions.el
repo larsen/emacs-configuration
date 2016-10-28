@@ -20,6 +20,7 @@
         ("http://aliquote.org/memos/rss/" programming)
         ("http://blog.racket-lang.org/feeds/posts/default" programming racket)
         ("http://belkadan.com/blog/atom" programming)
+        ("http://blog.fogus.me/feed/" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
