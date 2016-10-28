@@ -122,7 +122,7 @@
         ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
         ("http://usesthis.com/feed/" setup)
-        ("http://chneukirchen.org/trivium/index.atom")
+        ("http://chneukirchen.org/trivium/index.atom" links)
         ("http://www.bytecellar.com/feed/" retrocomputing)
         ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         ("http://ilovetypography.com/feed")
