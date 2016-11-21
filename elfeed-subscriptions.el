@@ -118,6 +118,7 @@
         ("https://mcristi.wordpress.com/feed/")
         ("http://www.charlespetzold.com/rss.xml")
         ("https://cartesianproduct.wordpress.com/feed/")
+        ("http://ariis.it/static/stream/rss.xml")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
