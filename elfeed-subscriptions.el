@@ -117,6 +117,7 @@
         ("https://mcristi.wordpress.com/feed/")
         ("http://www.charlespetzold.com/rss.xml")
         ("https://cartesianproduct.wordpress.com/feed/")
+        ("http://regex.info/blog/feed" maybe)
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
