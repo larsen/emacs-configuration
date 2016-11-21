@@ -21,6 +21,7 @@
         ("http://blog.racket-lang.org/feeds/posts/default" programming racket)
         ("http://belkadan.com/blog/atom" programming)
         ("http://blog.fogus.me/feed/" programming)
+        ("https://www.thanassis.space/rss.xml" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
@@ -80,7 +81,7 @@
         ("http://howivim.com/feed.xml" vim)
         
         ;; Cinema
-        ("http://www.i400calci.com/feed/" cinema)
+        ("http://www.i400calci.com/feed/" cinema interesting)
         
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
@@ -118,12 +119,13 @@
         ("http://www.charlespetzold.com/rss.xml")
         ("https://cartesianproduct.wordpress.com/feed/")
         ("http://regex.info/blog/feed" maybe)
-        
+        ("http://ariis.it/static/stream/rss.xml")
+
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
         ("http://usesthis.com/feed/" setup)
-        ("http://chneukirchen.org/trivium/index.atom" links)
+        ("http://chneukirchen.org/trivium/index.atom" links interesting)
         ("http://www.bytecellar.com/feed/" retrocomputing)
         ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         ("http://ilovetypography.com/feed")

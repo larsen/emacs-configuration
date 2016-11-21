@@ -12,6 +12,7 @@
 
 (require 'erc-image)
 (add-to-list 'erc-modules 'image)
+(setq erc-image-inline-rescale 300)
 (erc-update-modules)
 
 (setq erc-fill-function 'erc-fill-static)
