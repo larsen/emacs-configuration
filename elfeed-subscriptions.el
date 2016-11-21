@@ -81,7 +81,7 @@
         ("http://howivim.com/feed.xml" vim)
         
         ;; Cinema
-        ("http://www.i400calci.com/feed/" cinema)
+        ("http://www.i400calci.com/feed/" cinema interesting)
         
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
@@ -124,7 +124,7 @@
         ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
         ("http://usesthis.com/feed/" setup)
-        ("http://chneukirchen.org/trivium/index.atom" links)
+        ("http://chneukirchen.org/trivium/index.atom" links interesting)
         ("http://www.bytecellar.com/feed/" retrocomputing)
         ("http://basalgangster.macgui.com/RetroMacComputing/The_Long_View/rss.xml")
         ("http://ilovetypography.com/feed")
