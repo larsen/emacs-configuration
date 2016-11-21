@@ -67,7 +67,7 @@
          :base-directory "/home/larsen/www/stefanorodighiero.net/"
          :base-extension "org"
          :exclude "posts"
-         :publishing-function org-twbs-publish-to-html
+         :publishing-function org-html-publish-to-html
          :publishing-directory ,(personal-website-remote-absolute-directory "/")
          :recursive t
          :html-preamble ,personal-website-navigation-header
@@ -121,7 +121,7 @@
          :base-directory ,(personal-website-absolute-directory "stream/")
          :base-extension "org"
          :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
-         :publishing-function org-twbs-publish-to-html
+         :publishing-function org-html-publish-to-html
          :org-html-postamble nil
          :html-preamble ,personal-website-navigation-header
          )
