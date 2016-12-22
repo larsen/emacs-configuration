@@ -22,6 +22,7 @@
         ("http://belkadan.com/blog/atom" programming)
         ("http://blog.fogus.me/feed/" programming)
         ("https://www.thanassis.space/rss.xml" programming)
+        ("http://steve-yegge.blogspot.com/atom.xml" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
@@ -137,7 +138,7 @@
         ("http://themacro.com/feed.xml")
         ("http://www.datatau.com/rss")
         ("https://jasmcole.com/feed/")
-        ("http://www.netflixlovers.it/rss" netflix)
+        ("http://www.netflixlovers.it/rss" netflix clutter)
         ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
         ("http://onethingwell.org/rss" software)
         
@@ -148,6 +149,7 @@
         ("http://feeds.akkartik.name/kartiks-scrapbook" maybe)
         ("https://backchannel.com/feed" maybe)
         ("http://realworldclojure.com/feed.xml" maybe)
+        ("http://www.shortscience.org/rss.xml" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
