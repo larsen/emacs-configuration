@@ -106,5 +106,22 @@
 
 (global-set-key (kbd "C-c j") 'webjump)
 
+;; uzbl interface (experimental)
+
+(defun my-socat (message socket)
+  (shell-command
+   (format "echo '%s' | socat - unix-connect:%s" message socket)))
+
+(defun my-uzbl-socket ()
+  (first (directory-files "/tmp" t "uzbl_socket")))
+
+(defun my-uzbl-open-in-new-tab (uri &optional new-window)
+  (let ((socket (my-uzbl-socket)))
+    (when socket
+      (my-socat (format "event NEW_TAB %s" uri)
+                socket))))
+
+(setq browse-url-browser-function 'my-uzbl-open-in-new-tab)
+
 (provide 'larsen-functions)
 
