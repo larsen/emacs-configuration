@@ -51,6 +51,7 @@
         ("http://funcall.blogspot.com/feeds/posts/default" lisp fp programming)
         ("http://feeds2.feedburner.com/stevelosh" lisp fp programming)
         ("http://planet.emacs-es.org/rss20.xml" lisp fp programming es)
+        ("http://www.scheme.dk/planet/atom.xml" scheme)
         
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
