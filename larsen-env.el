@@ -39,8 +39,8 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
 
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
+;; (setq sml/no-confirm-load-theme t)
+;; (sml/setup)
 
 ;; (key-chord-mode 1)
 
