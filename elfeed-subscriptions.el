@@ -23,6 +23,7 @@
         ("http://blog.fogus.me/feed/" programming)
         ("https://www.thanassis.space/rss.xml" programming)
         ("http://steve-yegge.blogspot.com/atom.xml" programming)
+        ("http://journal.stuffwithstuff.com/atom.xml" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
