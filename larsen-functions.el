@@ -121,7 +121,8 @@
       (my-socat (format "event NEW_TAB %s" uri)
                 socket))))
 
-(setq browse-url-browser-function 'my-uzbl-open-in-new-tab)
+(setq browse-url-browser-function 'my-uzbl-open-in-new-tab
+      browse-url-generic-program "uzbl-tabbed")
 
 (provide 'larsen-functions)
 
