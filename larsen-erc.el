@@ -20,4 +20,6 @@
 
 (setq erc-prompt (lambda () (concat "[" (buffer-name) "]")))
 
+(load "~/.ercpass")
+
 (provide 'larsen-erc)
