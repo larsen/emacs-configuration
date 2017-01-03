@@ -98,11 +98,12 @@
     (with-current-buffer (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
       (loop for i in (org-map-entries 'org-entry-properties nil 'file)
             for item-string = (cdr (assoc "ITEM" i))
-            if (string-match regex item-string)
+            if (and (not (null item-string))
+                    (string-match regex item-string))
+            do (insert i)
             collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
-(setq webjump-sites
-      (append (get-webjump-sites) webjump-sample-sites))
+(setq webjump-sites (get-webjump-sites))
 
 (global-set-key (kbd "C-c j") 'webjump)
 
