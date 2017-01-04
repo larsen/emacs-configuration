@@ -53,6 +53,7 @@
         
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
+        ("http://gigasquidsoftware.com/atom.xml" clojure programming)
         
         ;; Math
         ("http://blogs.ams.org/visualinsight/feed/" math)
