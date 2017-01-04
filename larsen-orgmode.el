@@ -133,22 +133,10 @@
          :publishing-function org-publish-attachment
          )
 
-        ("stream-feed"
-         :title "Stefano Rodighiero's stream"
-         :base-directory ,(personal-website-absolute-directory "stream/")
-         :base-extension "org"
-         :html-link-home: "http://stefanorodighiero.net/stream/"
-         :html-link-use-abs-url t
-         :rss-extension "xml"
-         :publishing-function (org-rss-publish-to-rss)
-         :publishing-directory ,(personal-website-remote-absolute-directory "stream/")
-         :table-of-contents nil
-         )
-        
         ("stream" 
-         :components ("stream-orgfiles" "stream-images" "stream-feed")) ))
+         :components ("stream-orgfiles" "stream-images")) ))
 
-(setq org-default-notes-file (concat org-directory "/notes.org"))
+;; (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))

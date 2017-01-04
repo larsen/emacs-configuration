@@ -3,7 +3,7 @@
 (setq url-queue-timeout 30)
 (setq elfeed-use-curl t)
 
-(setq browse-url-browser-function 'eww-browse-url)
+;; (setq browse-url-browser-function 'eww-browse-url)
 
 (load "elfeed-subscriptions")
 

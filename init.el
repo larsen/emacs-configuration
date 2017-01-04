@@ -34,9 +34,8 @@
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/bin")
 
-(custom-set-variables
- '(browse-url-browser-function (quote eww-browse-url))
- '(org-support-shift-select (quote always)))
+(setq custom-file "~/.emacs-custom.el")
+(load custom-file)
 
 ;; Write backup files to own directory
 (setq backup-directory-alist

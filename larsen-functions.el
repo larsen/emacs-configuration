@@ -98,13 +98,32 @@
     (with-current-buffer (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
       (loop for i in (org-map-entries 'org-entry-properties nil 'file)
             for item-string = (cdr (assoc "ITEM" i))
-            if (string-match regex item-string)
+            if (and (not (null item-string))
+                    (string-match regex item-string))
+            do (insert i)
             collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
-(setq webjump-sites
-      (append (get-webjump-sites) webjump-sample-sites))
+(setq webjump-sites (get-webjump-sites))
 
 (global-set-key (kbd "C-c j") 'webjump)
+
+;; uzbl interface (experimental)
+
+(defun my-socat (message socket)
+  (shell-command
+   (format "echo '%s' | socat - unix-connect:%s" message socket)))
+
+(defun my-uzbl-socket ()
+  (first (directory-files "/tmp" t "uzbl_socket")))
+
+(defun my-uzbl-open-in-new-tab (uri &optional new-window)
+  (let ((socket (my-uzbl-socket)))
+    (when socket
+      (my-socat (format "event NEW_TAB %s" uri)
+                socket))))
+
+(setq browse-url-browser-function 'my-uzbl-open-in-new-tab
+      browse-url-generic-program "uzbl-tabbed")
 
 (provide 'larsen-functions)
 

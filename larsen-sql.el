@@ -1,4 +1,8 @@
 (require 'sql)
+
+(eval-after-load "sql"
+  (load-library "sql-indent"))
+
 (setq sql-mysql-program "/usr/local/mysql/bin/mysql")
 (defun my-sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)

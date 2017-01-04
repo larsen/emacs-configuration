@@ -39,8 +39,8 @@
 (global-set-key (kbd "C-x o") 'switch-window)
 (global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
 
-(setq sml/no-confirm-load-theme t)
-(sml/setup)
+;; (setq sml/no-confirm-load-theme t)
+;; (sml/setup)
 
 ;; (key-chord-mode 1)
 
@@ -87,6 +87,6 @@
 (setq-default js2-basic-offset 2)
 
 ;; Projectile
-(projectile-global-mode)
+;; (projectile-global-mode)
 
 (provide 'larsen-env)
