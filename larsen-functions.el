@@ -100,12 +100,22 @@
             for item-string = (cdr (assoc "ITEM" i))
             if (and (not (null item-string))
                     (string-match regex item-string))
-            do (insert i)
             collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
-(setq webjump-sites (get-webjump-sites))
+(defun update-webjump-sites ()
+  (interactive)
+  (setq webjump-sites (get-webjump-sites)))
 
 (global-set-key (kbd "C-c j") 'webjump)
+
+;; plumbing for file-notify
+(defun cb/update-webjump-sites (event)
+  (update-webjump-sites))
+
+(file-notify-add-watch "~/www/stefanorodighiero.net/links.org"
+                       '(change)
+                       #'cb/update-webjump-sites)
+
 
 ;; uzbl interface (experimental)
 
