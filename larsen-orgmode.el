@@ -145,9 +145,11 @@
 
 ; Org Babel
 
+(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((perl . t)
+        (ditaa . t)
         (gnuplot . t)))
 ;; Special functions to insert week-based object entries
 
