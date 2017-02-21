@@ -148,7 +148,12 @@
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((perl . t)
-        (gnuplot . t)))
+        (gnuplot . t)
+        (R . t)))
+
+(custom-set-variables
+ '(org-confirm-babel-evaluate nil))
+
 ;; Special functions to insert week-based object entries
 
 (require 'cal-iso)
