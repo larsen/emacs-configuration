@@ -57,9 +57,6 @@
  (kbd "C-c t")
  (lambda () (interactive) (ansi-term "/bin/bash")))
 
-(add-hook 'term-mode-hook (lambda()
-        (setq yas-dont-activate t)))
-
 (global-set-key (kbd "C-c m c") 'mc/edit-lines)
 
 (global-set-key (kbd "C-c e m") 'macrostep-mode)

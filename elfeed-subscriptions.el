@@ -153,6 +153,8 @@
         ("https://backchannel.com/feed" maybe)
         ("http://realworldclojure.com/feed.xml" maybe)
         ("http://www.shortscience.org/rss.xml" maybe)
+        ("https://interi.org/feed/" maybe)
+        ("http://www.camilletalk.com/whilefalse?format=RSS" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)

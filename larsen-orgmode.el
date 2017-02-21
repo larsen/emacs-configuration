@@ -145,6 +145,7 @@
 
 ; Org Babel
 
+(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((perl . t)
