@@ -96,6 +96,7 @@
         ("http://www.phdcomics.com/gradfeed.php" comics)
         ("http://abstrusegoose.com/atomfeed.xml" comics)
         ("http://www.casualvillain.com/Unsounded/feed/" comics)
+        ("http://feeds.feedburner.com/zenpencils" comics)
         
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
