@@ -156,6 +156,7 @@
         ("http://www.shortscience.org/rss.xml" maybe)
         ("https://interi.org/feed/" maybe)
         ("http://www.camilletalk.com/whilefalse?format=RSS" maybe)
+        ("http://vicsydev.blogspot.com/feeds/posts/default?alt=rss" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
