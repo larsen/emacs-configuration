@@ -13,4 +13,12 @@
 (add-to-list 'auto-mode-alist '("\\.pod$" . pod-mode))
 (add-to-list 'auto-mode-alist '("\\.tt$" . tt-mode))
 
+(defun my-open-module (module)
+  (interactive (list (cperl-word-at-point)))
+  (let* ((module-file (shell-command-to-string (format "perldoc -ml %s" module)))
+         (module-file-normalized (replace-regexp-in-string "\\(\n*\\)$" "" module-file)))
+    (if (not (string-match "^No module found" module-file))
+        (find-file module-file-normalized)
+      (message "No module found!"))))
+
 (provide 'larsen-perl)
