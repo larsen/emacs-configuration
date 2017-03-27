@@ -92,6 +92,7 @@
     (json-read-object)))
 
 (require 'cl)
+(require 'filenotify)
 (require 'webjump)
 (defun get-webjump-sites ()
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
