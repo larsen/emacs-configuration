@@ -155,6 +155,18 @@
 (custom-set-variables
  '(org-confirm-babel-evaluate nil))
 
+;; Experimental
+;; a more natural way to use indirect buffers
+;; not sure about the keybinding
+
+(defun open-subtree-in-another-window ()
+  (interactive)
+  (org-tree-to-indirect-buffer)
+  (windmove-right))
+
+(global-set-key (kbd "C-M-l") 'open-subtree-in-another-window)
+
+
 ;; Special functions to insert week-based object entries
 
 (require 'cal-iso)
