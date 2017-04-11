@@ -72,6 +72,7 @@
         larsen-functions
         larsen-elisp
         larsen-refactoring
+        larsen-clojure
         ))
 
 ;; Now load other things
