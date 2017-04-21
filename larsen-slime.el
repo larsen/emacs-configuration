@@ -5,7 +5,10 @@
 
 ; (require 'slime)
 (require 'slime-autoloads)
-(slime-setup '(slime-fancy))
+(slime-setup '(slime-fancy
+               slime-asdf
+               slime-tramp
+               slime-indentation))
 
 ; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 (add-hook 'lisp-mode-hook #'paredit-mode)
