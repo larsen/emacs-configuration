@@ -88,4 +88,6 @@
 
 (eyebrowse-mode t)
 
+(pdf-tools-install)
+
 (provide 'larsen-env)
