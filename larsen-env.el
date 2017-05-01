@@ -86,4 +86,6 @@
 ;; Projectile
 ;; (projectile-global-mode)
 
+(eyebrowse-mode t)
+
 (provide 'larsen-env)
