@@ -11,6 +11,10 @@
 (show-paren-mode 1) ; turn on paren match highlighting
 (setq show-paren-style 'expression) ; highlight entire bracket expression
 
+;; scrolling in a more Vim-like fashion
+(setq scroll-step            1
+      scroll-conservatively  10000)
+
 ; Not sure why I need this
 (setq ansi-term-color-vector
   [term term-color-black term-color-red term-color-green term-color-yellow 
