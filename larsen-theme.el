@@ -8,11 +8,11 @@
 
 (set-face-attribute 'font-lock-comment-face nil
                     :family "FreeSerif"
-                    :height 140)
+                    :height 1.1)
 
 (set-face-attribute 'font-lock-doc-face nil
                     :family "FreeSerif"
-                    :height 140)
+                    :height 1.1)
 
 ;; No splash screen
 (setq inhibit-startup-message t)
