@@ -125,7 +125,10 @@
         ("https://cartesianproduct.wordpress.com/feed/")
         ("http://regex.info/blog/feed" maybe)
         ("http://ariis.it/static/stream/rss.xml")
-
+        ("http://babbagefiles.blogspot.com/feeds/posts/default" maybe)
+        ("http://bactra.org/notebooks/index.rss")
+        ("http://bactra.org/weblog/index.rss")
+        
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
