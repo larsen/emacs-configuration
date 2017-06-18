@@ -125,7 +125,11 @@
    (format "echo '%s' | socat - unix-connect:%s" message socket)))
 
 (defun my-uzbl-socket ()
-  (first (directory-files "/tmp" t "uzbl_socket")))
+  (first (sort 
+          (directory-files "/tmp" t "uzbl_socket")
+          (lambda (a b)
+            (time-less-p (nth 5 (file-attributes a))
+                         (nth 5 (file-attributes b)))))))
 
 (defun my-uzbl-open-in-new-tab (uri &optional new-window)
   (let ((socket (my-uzbl-socket)))
