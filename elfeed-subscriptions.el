@@ -73,6 +73,9 @@
         ("https://golem.ph.utexas.edu/category/atom11.xml" math)
         ("https://mathbabe.org/feed/" math)
         ("https://terrytao.wordpress.com/feed/" math)
+
+        ;; R
+        ("https://4dpiecharts.com/feed/" R)
         
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
