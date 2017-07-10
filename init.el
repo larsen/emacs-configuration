@@ -46,7 +46,6 @@
         larsen-env
         larsen-dired
         larsen-theme
-        larsen-style
         larsen-iswitchb
         larsen-package
         larsen-spell
