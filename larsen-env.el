@@ -66,14 +66,6 @@
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
 
-;; (key-chord-mode 1)
-
-;; (defvar key-chord-two-keys-delay 0.00015)
-
-;; (key-chord-define-global "xh"'helm-mini)
-;; (key-chord-define-global "cs" 'helm-occur)
-;; (key-chord-define-global "xo" 'switch-window)
-
 (global-set-key (kbd "C-<f12>") 'slime-selector)
 
 ;; terminal
