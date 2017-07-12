@@ -6,6 +6,7 @@
 (require 'helm-swoop)
 (require 'rotate)
 (require 'nlinum)
+(require 'whole-line-or-region)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -17,6 +18,8 @@
 (delete-selection-mode 1) ; delete seleted text when typing
 (show-paren-mode 1) ; turn on paren match highlighting
 (setq show-paren-style 'expression) ; highlight entire bracket expression
+
+(whole-line-or-region-mode)
 
 ;; scrolling in a more Vim-like fashion
 (setq scroll-step            1
