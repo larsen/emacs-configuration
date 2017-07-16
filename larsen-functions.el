@@ -45,8 +45,6 @@
              (setq *larsen/split-layout-type* nil)
            (setq *larsen/split-layout-type* t))))
 
-(global-set-key (kbd "M-<f1>") 'toggle-split-layout)
-
 
 ;; from https://github.com/magnars/.emacs.d/blob/master/defuns/file-defuns.el
 
@@ -106,8 +104,6 @@
 (defun update-webjump-sites ()
   (interactive)
   (setq webjump-sites (get-webjump-sites)))
-
-(global-set-key (kbd "C-c j") 'webjump)
 
 ;; plumbing for file-notify
 (defun cb/update-webjump-sites (event)

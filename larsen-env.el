@@ -6,6 +6,7 @@
 (require 'helm-swoop)
 (require 'rotate)
 (require 'nlinum)
+(require 'whole-line-or-region)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -17,6 +18,8 @@
 (delete-selection-mode 1) ; delete seleted text when typing
 (show-paren-mode 1) ; turn on paren match highlighting
 (setq show-paren-style 'expression) ; highlight entire bracket expression
+
+(whole-line-or-region-mode)
 
 ;; scrolling in a more Vim-like fashion
 (setq scroll-step            1
@@ -55,32 +58,8 @@
              (set-window-start w2 s1)
              (setq i (1+ i)))))))
 
-(global-set-key (kbd "C-x C-o") 'rotate-layout)
-
-(global-set-key (kbd "C-x o") 'switch-window)
-(global-set-key (kbd "C-S-f") 'imenu) ;; use iMenu
-
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
-
-;; (key-chord-mode 1)
-
-;; (defvar key-chord-two-keys-delay 0.00015)
-
-;; (key-chord-define-global "xh"'helm-mini)
-;; (key-chord-define-global "cs" 'helm-occur)
-;; (key-chord-define-global "xo" 'switch-window)
-
-(global-set-key (kbd "C-<f12>") 'slime-selector)
-
-;; terminal
-(global-set-key
- (kbd "C-c t")
- (lambda () (interactive) (ansi-term "/bin/bash")))
-
-(global-set-key (kbd "C-c m c") 'mc/edit-lines)
-
-(global-set-key (kbd "C-c e m") 'macrostep-mode)
 
 (when (eq system-type 'darwin)
   (setq mac-right-option-modifier 'none))

@@ -72,6 +72,7 @@
         larsen-elisp
         larsen-refactoring
         larsen-clojure
+        larsen-keys
         ))
 
 ;; Now load other things

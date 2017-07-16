@@ -1,5 +1,3 @@
-(global-set-key (kbd "C-h P") 'cperl-perldoc-at-point)
-
 (let ((indent-level 2))
   (setq cperl-indent-level indent-level
         cperl-close-paren-offset (* -1 indent-level)

@@ -16,7 +16,6 @@
 ;; (load "~/quicklisp/clhs-use-local.el" t)
 
 (load "/home/larsen/quicklisp/clhs-use-local.el" t)
-(global-set-key [(f2)] 'slime-hyperspec-lookup) 
 
 (provide 'larsen-slime)
 

@@ -164,9 +164,6 @@
   (org-tree-to-indirect-buffer)
   (windmove-right))
 
-(global-set-key (kbd "C-M-l") 'open-subtree-in-another-window)
-
-
 ;; Special functions to insert week-based object entries
 
 (require 'cal-iso)
