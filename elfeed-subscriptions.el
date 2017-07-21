@@ -151,6 +151,7 @@
         ("http://www.netflixlovers.it/rss" netflix clutter)
         ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
         ("http://onethingwell.org/rss" software)
+        ("https://functionaljobs.com/jobs/search/?q=berlin&format=rss" jobs fp)
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
@@ -163,6 +164,8 @@
         ("https://interi.org/feed/" maybe)
         ("http://www.camilletalk.com/whilefalse?format=RSS" maybe)
         ("http://vicsydev.blogspot.com/feeds/posts/default?alt=rss" maybe)
+        ("http://dannyreviews.com/rss.xml" maybe books)
+        ("http://bravenewgeek.com/feed/" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
