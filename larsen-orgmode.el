@@ -155,6 +155,15 @@
 (custom-set-variables
  '(org-confirm-babel-evaluate nil))
 
+(add-to-list 'org-latex-classes
+             '("tufte-handout"
+               "\\documentclass{tufte-book}"
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+
 ;; Experimental
 ;; a more natural way to use indirect buffers
 ;; not sure about the keybinding
