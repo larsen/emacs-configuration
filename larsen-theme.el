@@ -7,11 +7,11 @@
                     :height 120) 
 
 (set-face-attribute 'font-lock-comment-face nil
-                    :family "FreeSerif"
+                    :family "DejaVu Serif"
                     :height 1.1)
 
 (set-face-attribute 'font-lock-doc-face nil
-                    :family "FreeSerif"
+                    :family "DejaVu Serif"
                     :height 1.1)
 
 ;; No splash screen
