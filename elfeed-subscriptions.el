@@ -131,6 +131,7 @@
         ("http://babbagefiles.blogspot.com/feeds/posts/default" maybe)
         ("http://bactra.org/notebooks/index.rss")
         ("http://bactra.org/weblog/index.rss")
+        ("http://emacsninja.com/feed.atom")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
@@ -163,6 +164,7 @@
         ("https://interi.org/feed/" maybe)
         ("http://www.camilletalk.com/whilefalse?format=RSS" maybe)
         ("http://vicsydev.blogspot.com/feeds/posts/default?alt=rss" maybe)
+        (" http://www.the2bears.com/?p=614" maybe gaming)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
