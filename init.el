@@ -50,7 +50,7 @@
         larsen-package
         larsen-spell
         larsen-perl
-        ; larsen-haskell
+        larsen-haskell
         larsen-markdown
         larsen-smarttab
         larsen-tramp
