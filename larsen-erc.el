@@ -11,8 +11,8 @@
 ;; (define-key erc-mode-map (kbd "C-c C-RET") 'erc-send-current-line)
 
 (require 'erc-image)
-(add-to-list 'erc-modules 'image)
-(setq erc-image-inline-rescale 300)
+;; (add-to-list 'erc-modules 'image)
+;; (setq erc-image-inline-rescale 300)
 (erc-update-modules)
 
 (setq erc-fill-function 'erc-fill-static)
