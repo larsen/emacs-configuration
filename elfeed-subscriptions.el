@@ -132,6 +132,8 @@
         ("http://bactra.org/notebooks/index.rss")
         ("http://bactra.org/weblog/index.rss")
         ("http://emacsninja.com/feed.atom")
+        ("http://r6.ca/blog/feed.atom" maybe)
+        ("https://fare.livejournal.com/data/atom" maybe)
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
