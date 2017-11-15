@@ -18,6 +18,7 @@
        (,(kbd "C-c t") (lambda () (interactive) (ansi-term "/bin/bash")))
        (,(kbd "C-c m c") mc/edit-lines)
        (,(kbd "C-c e m") macrostep-mode)))
+       (,(kbd "C-c m a") mc/mark-all-like-this)
 
    ;; TAB special behaviour
    (when (featurep 'larsen-smarttab)
