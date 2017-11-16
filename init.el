@@ -49,6 +49,7 @@
         larsen-iswitchb
         larsen-package
         larsen-spell
+        larsen-clojure
         larsen-perl
         larsen-haskell
         larsen-markdown
@@ -71,7 +72,6 @@
         larsen-functions
         larsen-elisp
         larsen-refactoring
-        larsen-clojure
         larsen-keys
         ))
 
