@@ -28,7 +28,9 @@
 ;;     (add-to-list 'custom-theme-load-path path)))
 
 ;; (load-theme 'bubbleberry t)
-(load-theme 'danneskjold t)
+;; (load-theme 'danneskjold t)
+(load-theme 'zerodark t)
+(zerodark-setup-modeline-format)
 
 (defun switch-theme (theme)
   (interactive
