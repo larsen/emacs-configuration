@@ -3,7 +3,7 @@
 ;;;
 
 (set-face-attribute 'default nil
-                    :family "DejaVu Sans Mono"
+                    :family "IBM Plex Mono"
                     :height 120) 
 
 (set-face-attribute 'font-lock-comment-face nil
