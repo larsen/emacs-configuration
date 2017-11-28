@@ -33,6 +33,7 @@
 (add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
 (add-to-list 'exec-path "/usr/bin")
+(add-to-list 'exec-path "~/.local/bin")
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
