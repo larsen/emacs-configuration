@@ -14,6 +14,22 @@
                     :family "DejaVu Serif"
                     :height 1.1)
 
+(defun increase-text-scale-in-buffer-group (major-mode-name)
+  "Increment text scale for all buffers matching a give major mode name"
+  (interactive
+   (list (intern (completing-read
+                  "Select major mode from the list: "
+                  (remove-duplicates (mapcar (lambda (b)
+                                               (buffer-local-value
+                                                'major-mode (get-buffer b)))
+                                             (buffer-list)))))))
+  (cl-loop for buffer in (buffer-list)
+           when (string= (buffer-local-value
+                          'major-mode (get-buffer buffer))
+                         major-mode-name)
+           do (with-current-buffer buffer
+                (text-scale-increase 1))))
+
 ;; No splash screen
 (setq inhibit-startup-message t)
 
