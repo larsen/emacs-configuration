@@ -4,15 +4,12 @@
 
 (require 'helm)
 (require 'helm-swoop)
-(require 'flycheck)
 (require 'rotate)
 (require 'nlinum)
 (require 'whole-line-or-region)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
-
-(global-flycheck-mode 1)
 
 (global-hl-line-mode 1) ; turn on highlighting current line
 (nlinum-mode)
