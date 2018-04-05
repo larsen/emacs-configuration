@@ -4,7 +4,6 @@
   (load-library "sql-indent"))
 
 (require 'cl)
-(require 'cl-loop)
 
 ;; Gets PG connections details from ~/.pgpass file
 (setq sql-connection-alist
