@@ -14,7 +14,6 @@
 (global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
 
 (require 'cl)
-(require 'cl-loop)
 
 ;; Gets PG connections details from ~/.pgpass file
 (setq sql-connection-alist
