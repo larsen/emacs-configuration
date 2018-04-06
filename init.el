@@ -46,6 +46,7 @@
       '(
         larsen-env
         larsen-dired
+        larsen-flycheck
         larsen-theme
         larsen-iswitchb
         larsen-package
