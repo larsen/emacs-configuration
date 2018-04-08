@@ -147,3 +147,16 @@
 
 (provide 'larsen-functions)
 
+;; dired util
+;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
+
+(defun my-dired-frame (directory)
+  "Open up a dired frame which closes on exit."
+  (interactive)
+  (switch-to-buffer (dired directory))
+  (local-set-key
+   (kbd "C-x C-c")
+   (lambda ()
+     (interactive)
+     (kill-this-buffer)
+     (delete-frame))))
