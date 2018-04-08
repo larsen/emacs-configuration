@@ -154,6 +154,7 @@
   "Open up a dired frame which closes on exit."
   (interactive)
   (switch-to-buffer (dired directory))
+  (split-window-right)
   (local-set-key
    (kbd "C-x C-c")
    (lambda ()
