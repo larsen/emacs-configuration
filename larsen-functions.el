@@ -145,8 +145,6 @@
 (setq browse-url-browser-function 'my-uzbl-open-in-new-tab
       browse-url-generic-program "uzbl-tabbed")
 
-(provide 'larsen-functions)
-
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
 
@@ -161,3 +159,5 @@
      (interactive)
      (kill-this-buffer)
      (delete-frame))))
+
+(provide 'larsen-functions)
