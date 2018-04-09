@@ -65,7 +65,7 @@
         
         ("website-pages"
          ;; :base-directory ,(personal-website-absolute-directory "")
-         :base-directory "/home/larsen/www/stefanorodighiero.net/"
+         :base-directory "~/www/stefanorodighiero.net/"
          :base-extension "org"
          :exclude "posts"
          :publishing-function org-html-publish-to-html
@@ -76,7 +76,7 @@
 
         ("website-images"
          ;; :base-directory ,(personal-website-absolute-directory "")
-         :base-directory "/home/larsen/www/stefanorodighiero.net/images/"
+         :base-directory "~/www/stefanorodighiero.net/images/"
          :base-extension "png\\|jpg\\|JPG\\|gif"
          :publishing-function org-publish-attachment
          :recursive t
