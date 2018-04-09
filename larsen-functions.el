@@ -28,7 +28,7 @@
     (mapcar* 'set-window-buffer (window-list) bufList)))
 
 (defun change-split-type-2 (&optional arg)
-  "Changes splitting from vertical to horizontal and vice-versa"
+  "Change splitting from vertical to horizontal and vice-versa"
   (interactive "P")
   (let ((split-type (lambda (&optional arg)
                       (delete-other-windows-internal)
