@@ -154,6 +154,11 @@
   (switch-to-buffer (dired directory))
   (split-window-right)
   (local-set-key
+   (kbd "TAB")
+   (lambda ()
+     (interactive)
+     (switch-window)))
+  (local-set-key
    (kbd "C-x C-c")
    (lambda ()
      (interactive)
