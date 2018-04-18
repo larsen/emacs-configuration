@@ -89,6 +89,13 @@
 ;; Projectile
 ;; (projectile-global-mode)
 
+(loop for i from 1 upto 9
+      do (define-key eyebrowse-mode-map
+           (kbd (format "M-%d" i))
+           `(lambda ()
+              (interactive)
+              (eyebrowse-switch-to-window-config ,i))))
+
 (eyebrowse-mode t)
 
 (pdf-tools-install)
