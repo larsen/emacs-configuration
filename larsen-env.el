@@ -32,6 +32,9 @@
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 
+(add-hook 'prog-mode-hook
+          (lambda () (yafolding-mode)))
+
 ;; Transpose (rotate if multiple) windows
 (defun rotate-windows ()
   "Rotate your windows"
