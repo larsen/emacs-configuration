@@ -155,8 +155,8 @@
       (my-socat (format "event NEW_TAB %s" uri)
                 socket))))
 
-(setq browse-url-browser-function 'my-uzbl-open-in-new-tab
-      browse-url-generic-program "uzbl-tabbed")
+(setq browse-url-browser-function 'browse-url-generic
+      browse-url-generic-program "chromium")
 
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
