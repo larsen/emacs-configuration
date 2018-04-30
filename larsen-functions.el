@@ -98,24 +98,37 @@
     (goto-char (+ 1 url-http-end-of-headers))
     (json-read-object)))
 
+
+;; Webjump configuration
+
 (require 'cl)
 (require 'filenotify)
 (require 'webjump)
+
+(defun get-link-and-description-from-entry (entry)
+  "Given a 'org-mode' ENTRY possibly bearing a URL, return a pair link and description."
+  (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]")
+        (item-string (cdr (assoc "ITEM" entry))))
+    (when (not (null item-string))
+      (when (string-match regex item-string)
+        `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
+
 (defun get-webjump-sites ()
+  "Scan through my list of external links and return a list of pairs <link,description>."
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
-    (with-current-buffer (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
-      (loop for i in (org-map-entries 'org-entry-properties nil 'file)
-            for item-string = (cdr (assoc "ITEM" i))
-            if (and (not (null item-string))
-                    (string-match regex item-string))
-            collect `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
+    (with-current-buffer
+        (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
+      (loop for entry in (org-map-entries 'org-entry-properties nil 'file)
+            collect (get-link-and-description-from-entry entry)))))
 
 (defun update-webjump-sites ()
+  "Update webjumb-sites using my local list of bookmarks as a 'org-mode' document."
   (interactive)
   (setq webjump-sites (get-webjump-sites)))
 
 ;; plumbing for file-notify
 (defun cb/update-webjump-sites (event)
+  "Callback function to connect change EVENT (not used) to #'update-webjump-sites."
   (update-webjump-sites))
 
 (file-notify-add-watch "~/www/stefanorodighiero.net/links.org"
