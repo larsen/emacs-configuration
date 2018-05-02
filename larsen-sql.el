@@ -23,13 +23,15 @@
             (loop for l in lines
                   collect (destructuring-bind
                               (host port db user password) (split-string l ":" nil)
-                            `(,db (sql-product 'postgres)
-                                  (sql-port ,(string-to-number port))
-                                  (sql-server ,host)
-                                  (sql-user ,user)
-                                  (sql-database ,db))))))))
+                            `(,(format "%s-%s" host db) ; label is host + db name
+                              (sql-product 'postgres)
+                              (sql-port ,(string-to-number port))
+                              (sql-server ,host)
+                              (sql-user ,user)
+                              (sql-database ,db))))))))
 
 (setq sql-mysql-program "/usr/local/mysql/bin/mysql")
+
 (defun my-sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
         (rval 'sql-product))
