@@ -46,4 +46,7 @@
                (symbol-name rval))))))
  
 (add-hook 'sql-interactive-mode-hook 'my-sql-save-history-hook)
+
+(setq sql-sqlite-program "sqlite3")
+
 (provide 'larsen-sql)
