@@ -3,16 +3,18 @@
 ;;;
 
 (set-face-attribute 'default nil
-                    :family "IBM Plex Mono"
-                    :height 120) 
+                    :family "Courier 10 Pitch"
+                    :height 140)
 
 (set-face-attribute 'font-lock-comment-face nil
-                    :family "DejaVu Serif"
-                    :height 1.1)
+                    :family "IBM Plex Mono"
+                    :height 0.8
+                    :slant 'italic)
 
 (set-face-attribute 'font-lock-doc-face nil
-                    :family "DejaVu Serif"
-                    :height 1.1)
+                    :family "IBM Plex Mono"
+                    :height 0.8
+                    :slant 'italic)
 
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a give major mode name"
