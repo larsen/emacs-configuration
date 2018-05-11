@@ -53,6 +53,7 @@
         ("http://feeds2.feedburner.com/stevelosh" lisp fp programming)
         ("http://planet.emacs-es.org/rss20.xml" lisp fp programming es)
         ("http://www.scheme.dk/planet/atom.xml" scheme)
+        ("https://lisp.sh/feed.atom" racket)
         
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
@@ -83,6 +84,7 @@
         ("http://www.masteringemacs.org/feed/" emacs)
         ("https://emacs.wordpress.com/feed/" emacs)
         ("http://pragmaticemacs.com/" emacs)
+        ("http://www.howardism.org/index.xml" emacs)
 
         ;; Vim
         ("http://howivim.com/feed.xml" vim)
