@@ -14,10 +14,11 @@
 (global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
 
 (require 'cl)
+(require 'filenotify)
 
-;; Gets PG connections details from ~/.pgpass file
-(setq sql-connection-alist
-      (with-current-buffer (find-file-noselect "~/.pgpass")
+(defun get-connection-alist (filename)
+  "Gets PG connections details from ~/.pgpass file (FILENAME)."
+  (with-current-buffer (find-file-noselect filename)
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
             (loop for l in lines
@@ -30,7 +31,13 @@
                               (sql-user ,user)
                               (sql-database ,db))))))))
 
+(setq sql-connection-alist (get-connection-alist "~/.pgpass"))
+
 (setq sql-mysql-program "/usr/local/mysql/bin/mysql")
+
+(file-notify-add-watch "~/.pgpass"
+                       '(change)
+                       (lambda (evt) (get-connection-alist "~/.pgpass")))
 
 (defun my-sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
