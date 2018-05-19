@@ -39,6 +39,22 @@
                        '(change)
                        (lambda (evt) (get-connection-alist "~/.pgpass")))
 
+(defun my/get-connection-dsn (connection-name)
+  "Return a DSN given a CONNECTION-NAME."
+  (interactive (list
+                (completing-read "Enter connection name "
+                                 sql-connection-alist)))
+  (let* ((connection-details (cdr (assoc connection-name sql-connection-alist)))
+         (connection-dsn
+          (format "postgresql://%s:PASSWORD@%s:%d/%s"
+                  (car (cdr (assoc 'sql-user connection-details)))
+                  (car (cdr (assoc 'sql-server connection-details)))
+                  (car (cdr (assoc 'sql-port connection-details)))
+                  (car (cdr (assoc 'sql-database connection-details))))))
+    (kill-new connection-dsn)
+    (message (format "DSN %s copied to kill-ring" connection-dsn))))
+
+
 (defun my-sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
         (rval 'sql-product))
