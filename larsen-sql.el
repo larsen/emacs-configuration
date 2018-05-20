@@ -1,13 +1,25 @@
 (require 'sql)
 (require 'sqlup-mode)
 
-(eval-after-load "sql"
-  (load-library "sql-indent"))
+;; sql-indent was installed from github's repo
+;; using quelpa
 
-(add-hook 'sql-mode-hook '(lambda () (setq tab-width 4 indent-tabs-mode t)))
+;; (package-initialize)
+;; (if (require 'quelpa nil t)
+;;     (quelpa-self-upgrade)
+;;   (with-temp-buffer
+;;     (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
+;;     (eval-buffer)))
 
-;; Capitalize keywords in SQL mode
+;; (quelpa '(emacs-sql-indent
+;;           :fetcher github
+;;           :repo "alex-hhh/emacs-sql-indent"))
+
+;; When in sql-mode, activate emacs-sql-indent
+(add-hook 'sql-mode-hook 'sqlind-minor-mode)
+;; and capitalize keywords in SQL mode
 (add-hook 'sql-mode-hook 'sqlup-mode)
+
 ;; Capitalize keywords in an interactive session (e.g. psql)
 (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
 ;; Set a global keyword to use sqlup on a region
