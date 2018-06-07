@@ -1,7 +1,7 @@
 (require 'sql)
 (require 'sqlup-mode)
 
-;; sql-indent was installed from github's repo
+;; emacs-sql-indent was installed from github's repo
 ;; using quelpa
 
 ;; (package-initialize)
