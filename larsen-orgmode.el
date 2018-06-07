@@ -185,7 +185,7 @@
 the range 0..6 (1 = Monday, 2 = Tuesday, ..., 0 = Sunday), returns
 the corresponding gregorian date"
   (calendar-gregorian-from-absolute
-   (calendar-iso-to-absolute (list week-number week-day 2017))))
+   (calendar-iso-to-absolute (list week-number week-day 2018))))
 
 (defun my-gregorian-date-as-string (date)
   (cl-destructuring-bind (month day year) date
