@@ -138,6 +138,7 @@
         ("https://fare.livejournal.com/data/atom" maybe)
         ("https://shitpost.plover.com/index.atom")
         ("https://grumpygamer.com/rss")
+        ("https://two-wrongs.com/feed.xml")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
