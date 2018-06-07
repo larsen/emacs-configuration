@@ -30,10 +30,13 @@
 
 ;; (setq org-agenda-files (file-expand-wildcards "~/org"))
 
-(setq org-agenda-files (list "~/org/"
-                             "~/org/personal/"
+(setq org-agenda-files (list "~/org/personal/"
                              "~/org/work/"
-                             "~/org/work/mxm/"))
+                             "~/org/work/idagio/"))
+
+(setq org-agenda-custom-commands 
+      '(("i" "Idagio TODO" tags-todo "idagio"
+         ((org-agenda-files '("~/org/work/idagio/"))))))
 
 (custom-set-variables
  '(org-twbs-htmlize-output-type 'css)
