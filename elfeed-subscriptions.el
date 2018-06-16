@@ -131,6 +131,7 @@
         ("http://regex.info/blog/feed" maybe)
         ("http://ariis.it/static/stream/rss.xml")
         ("http://babbagefiles.blogspot.com/feeds/posts/default" maybe)
+        ("https://babbagefiles.xyz/index.xml" maybe)
         ("http://bactra.org/notebooks/index.rss")
         ("http://bactra.org/weblog/index.rss")
         ("http://emacsninja.com/feed.atom")
