@@ -154,6 +154,8 @@
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((perl . t)
+        (shell . t)
+        (python . t)
         (gnuplot . t)
         (R . t)))
 
