@@ -100,6 +100,21 @@
               (interactive)
               (eyebrowse-switch-to-window-config ,i))))
 
+(let ((window-configs (eyebrowse--get 'window-configs))
+      (my-window-configs '((1 . "personal")
+                           (2 . "scratch")
+                           (3 . "org")
+                           (4 . "work")
+                           (5 . "work-2")
+                           (7 . "docs")
+                           (8 . "elfeed")
+                           (9 . "erc"))))
+  (loop for (window-config-slot . window-config-label)
+        in my-window-configs
+        when (assoc window-config-slot window-configs)
+        do (eyebrowse-rename-window-config window-config-slot
+                                           window-config-label)))
+
 (pdf-tools-install)
 
 (provide 'larsen-env)
