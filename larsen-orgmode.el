@@ -19,16 +19,6 @@
 (setq org-log-into-drawer t)
 
 (setq org-return-follows-link t)
-;(setq org-agenda-files (list "~/org/index.org"
-;                             "~/org/work.org"
-;                             "~/org/home.org"
-;                             "~/org/errand.org"
-;                             "~/org/report-2013q3.org"
-;                             "~/org/datascienza.com.org"
-;                             "~/org/stefanorodighiero.net.org"
-;                             "~/org/mxm-*.org"))
-
-;; (setq org-agenda-files (file-expand-wildcards "~/org"))
 
 (setq org-agenda-files (list "~/org/personal/"
                              "~/org/work/"
