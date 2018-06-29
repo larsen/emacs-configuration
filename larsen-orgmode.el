@@ -142,6 +142,13 @@
 
 ;; (setq org-default-notes-file (concat org-directory "/notes.org"))
 (define-key global-map "\C-cc" 'org-capture)
+
+(require 'org-capture)
+(add-to-list 'org-capture-templates
+             `("n" "Note" entry
+               (file "~/org/personal/notes.org")
+               "* %t\n%i" :immediate-finish t :empty-lines 1))
+
 (setq org-refile-targets (quote ((nil :maxlevel . 9)
                                  (org-agenda-files :maxlevel . 9))))
 (setq org-agenda-span 14)
