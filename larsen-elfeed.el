@@ -46,6 +46,18 @@
     (interactive)
     (shr-download-image)))
 
+;; override standard command "b"
+(define-key elfeed-show-mode-map "b"
+  (lambda (&optional use-generic-p)
+    (interactive "P")
+    (split-window-right)
+    (let ((link (elfeed-entry-link elfeed-show-entry)))
+      (when link
+        (message "Sent to browser: %s" link)
+        (if use-generic-p
+            (browse-url-generic link)
+          (browse-url link))))))
+
 ;; (defun my-elfeed-show-entry (buff)
 ;;   (popwin:popup-buffer buff
 ;;                        :position 'right

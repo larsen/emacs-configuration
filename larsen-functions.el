@@ -155,7 +155,7 @@
       (my-socat (format "event NEW_TAB %s" uri)
                 socket))))
 
-(setq browse-url-browser-function 'browse-url-generic
+(setq browse-url-browser-function 'eww-browse-url
       browse-url-generic-program "chromium-browser")
 
 ;; dired util
