@@ -135,6 +135,8 @@
                        '(change)
                        #'cb/update-webjump-sites)
 
+;; Initialize webjump sites when we are starting Emacs
+(update-webjump-sites)
 
 ;; uzbl interface (experimental)
 
