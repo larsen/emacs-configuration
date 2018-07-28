@@ -11,6 +11,8 @@
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
 
+(setq initial-scratch-message nil)
+
 (global-hl-line-mode 1) ; turn on highlighting current line
 (nlinum-mode)
 (global-visual-line-mode 1)
