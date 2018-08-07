@@ -161,6 +161,7 @@
         ("http://lanyrd.com/places/bologna/feed/" conferences bologna)
         ("http://onethingwell.org/rss" software)
         ("https://functionaljobs.com/jobs/search/?q=berlin&format=rss" jobs fp)
+        ("https://twobithistory.org/feed.xml")
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
