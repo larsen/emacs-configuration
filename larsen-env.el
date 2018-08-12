@@ -119,4 +119,6 @@
 
 (pdf-tools-install)
 
+(require 'forecast-configuration)
+
 (provide 'larsen-env)
