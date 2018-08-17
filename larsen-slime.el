@@ -32,8 +32,7 @@
 
 ;; (load "~/quicklisp/clhs-use-local.el" t)
 
-(load "/home/larsen/quicklisp/clhs-use-local.el" t)
+(load "~/quicklisp/clhs-use-local.el" t)
 
 (provide 'larsen-slime)
-
 
