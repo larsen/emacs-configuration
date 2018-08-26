@@ -162,7 +162,8 @@
         ("http://onethingwell.org/rss" software)
         ("https://functionaljobs.com/jobs/search/?q=berlin&format=rss" jobs fp)
         ("https://twobithistory.org/feed.xml")
-        
+        ("http://catless.ncl.ac.uk/risksrss2.xml")
+
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
         ("http://adereth.github.io/atom.xml" maybe)
