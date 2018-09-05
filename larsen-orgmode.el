@@ -57,8 +57,7 @@
          :components ("website-pages" "website-images"))
         
         ("website-pages"
-         ;; :base-directory ,(personal-website-absolute-directory "")
-         :base-directory "~/www/stefanorodighiero.net/"
+         :base-directory ,(personal-website-absolute-directory "/")
          :base-extension "org"
          :exclude "posts"
          :publishing-function org-html-publish-to-html
