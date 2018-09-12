@@ -67,8 +67,7 @@
          )
 
         ("website-images"
-         ;; :base-directory ,(personal-website-absolute-directory "")
-         :base-directory "~/www/stefanorodighiero.net/images/"
+         :base-directory ,(personal-website-absolute-directory "images/")
          :base-extension "png\\|jpg\\|JPG\\|gif"
          :publishing-function org-publish-attachment
          :recursive t
