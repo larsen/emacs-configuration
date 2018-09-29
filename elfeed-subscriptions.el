@@ -181,6 +181,8 @@
         ("http://www.nonsolo8bit.it/feed/" maybe 8bit programming)
         ("https://www.dgmlive.com/feeds/rss/diaries" maybe)
         ("http://acta-lingweenie.blogspot.com/feeds/posts/default" maybe)
+        ("https://p1k3.com/feed" maybe)
+        ("http://www.felienne.com/feed" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
