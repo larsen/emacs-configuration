@@ -14,6 +14,7 @@
    (when (featurep 'larsen-env)
      `((,(kbd "C-x C-o") rotate-layout)
        (,(kbd "C-x o") switch-window)
+       (,(kbd "M-o") other-window)
        (,(kbd "C-S-f") switch-layoout)
        (,(kbd "C-c t") (lambda () (interactive) (ansi-term "/bin/bash")))
        (,(kbd "C-c m c") mc/edit-lines)
