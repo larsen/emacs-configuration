@@ -99,5 +99,6 @@
 (add-hook 'sql-interactive-mode-hook 'my-sql-save-history-hook)
 
 (setq sql-sqlite-program "sqlite3")
+(setq sql-send-terminator t)
 
 (provide 'larsen-sql)
