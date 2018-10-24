@@ -28,12 +28,18 @@
 (require 'cl)
 (require 'filenotify)
 
+(defun is-comment? (line)
+  "Return t if LINE is a comment (it starts with #)."
+  (when (string-match "^#" line)
+    t))
+
 (defun get-connection-alist (filename)
   "Gets PG connections details from ~/.pgpass file (FILENAME)."
   (with-current-buffer (find-file-noselect filename)
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
             (loop for l in lines
+                  when (not (is-comment? l))
                   collect (destructuring-bind
                               (host port db user password) (split-string l ":" nil)
                             `(,(format "%s-%s" host db) ; label is host + db name
