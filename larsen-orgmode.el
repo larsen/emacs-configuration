@@ -154,6 +154,13 @@
         (gnuplot . t)
         (R . t)))
 
+;; See https://github.com/bruceravel/gnuplot-mode/issues/31
+(setq gnuplot-help-xpm nil
+      gnuplot-line-xpm nil
+      gnuplot-region-xpm nil
+      gnuplot-buffer-xpm nil
+      gnuplot-doc-xpm nil)
+
 (custom-set-variables
  '(org-confirm-babel-evaluate nil))
 
