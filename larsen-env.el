@@ -118,6 +118,13 @@
                                            window-config-label)))
 
 (pdf-tools-install)
+;; ansi-term
+
+;; See https://emacs.stackexchange.com/questions/39312/output-reflow-in-ansi-term
+(setq term-suppress-hard-newline t)
+
+(eval-after-load 'Term
+  '(define-key term-mode-map (kbd "C-M-y") 'helm-mini))
 
 (require 'forecast-configuration)
 
