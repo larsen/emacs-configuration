@@ -16,6 +16,13 @@
                     :height 0.8
                     :slant 'italic)
 
+(set-face-attribute 'variable-pitch nil
+                    :family "IBM Plex Serif"
+                    :height 0.9
+                    :weight 'light
+                    :slant 'normal)
+
+
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a give major mode name"
   (interactive
