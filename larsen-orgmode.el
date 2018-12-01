@@ -7,6 +7,18 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+(setq
+ ;; org-startup-indented t
+ ;; org-bullets-bullet-list '(" ") ;; no bullets, needs org-bullets package
+ org-ellipsis "  " ;; folding symbol
+ org-pretty-entities t
+ org-hide-emphasis-markers t
+ ;; show actually italicized text instead of /italicized text/
+ org-agenda-block-separator ""
+ org-fontify-whole-heading-line t
+ org-fontify-done-headline t
+ org-fontify-quote-and-verse-blocks t)
+
 (defun my-org-confirm-babel-evaluate (lang body)
             (not (string= lang "emacs-elisp")))
 (setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
