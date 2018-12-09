@@ -185,6 +185,7 @@
         ("http://acta-lingweenie.blogspot.com/feeds/posts/default" maybe)
         ("https://p1k3.com/feed" maybe)
         ("http://www.felienne.com/feed" maybe)
+        ("https://www.filfre.net/feed/" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
