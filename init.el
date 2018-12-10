@@ -73,6 +73,7 @@
         larsen-paredit
         larsen-functions
         larsen-elisp
+        larsen-ruby
         larsen-refactoring
         larsen-keys
         ))
