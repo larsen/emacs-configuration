@@ -17,9 +17,8 @@
                     :slant 'italic)
 
 (set-face-attribute 'variable-pitch nil
-                    :family "IBM Plex Serif"
-                    :height 0.9
-                    :weight 'light
+                    :family "Literata eBook"
+                    :height 0.95
                     :slant 'normal)
 
 
