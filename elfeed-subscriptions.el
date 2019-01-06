@@ -141,6 +141,7 @@
         ("https://shitpost.plover.com/index.atom")
         ("https://grumpygamer.com/rss")
         ("https://two-wrongs.com/feed.xml")
+        ("https://11011110.github.io/blog/feed.xml")
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
@@ -186,6 +187,7 @@
         ("https://p1k3.com/feed" maybe)
         ("http://www.felienne.com/feed" maybe)
         ("https://www.filfre.net/feed/" maybe)
+        ("http://export.arxiv.org/rss/cs" cs maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
