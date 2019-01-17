@@ -142,6 +142,7 @@
         ("https://grumpygamer.com/rss")
         ("https://two-wrongs.com/feed.xml")
         ("https://11011110.github.io/blog/feed.xml")
+        ("https://drewdevault.com/feed.xml" cs)
         
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
