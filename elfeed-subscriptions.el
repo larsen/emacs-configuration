@@ -25,6 +25,7 @@
         ("http://steve-yegge.blogspot.com/atom.xml" programming)
         ("http://journal.stuffwithstuff.com/atom.xml" programming)
         ("https://gbracha.blogspot.com/feeds/posts/default" programming)
+        ("https://chriskiehl.com/rss.xml" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
@@ -189,6 +190,7 @@
         ("http://www.felienne.com/feed" maybe)
         ("https://www.filfre.net/feed/" maybe)
         ("http://export.arxiv.org/rss/cs" cs maybe)
+        ("http://linesandcolors.com/feed/" art maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
