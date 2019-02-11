@@ -26,6 +26,7 @@
         ("http://journal.stuffwithstuff.com/atom.xml" programming)
         ("https://gbracha.blogspot.com/feeds/posts/default" programming)
         ("https://chriskiehl.com/rss.xml" programming)
+        ("https://queue.acm.org/rss/feeds/latestitems.xml" cs)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
@@ -45,6 +46,7 @@
         ("http://joeyh.name/blog/index.rss" haskell fp programming)
         ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
         ("http://comonad.com/reader/feed/" haskell programming cs)
+        ("https://chrispenner.ca/atom.xml" haskell programming fp)
         
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
