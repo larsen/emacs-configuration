@@ -146,7 +146,8 @@
         ("https://two-wrongs.com/feed.xml")
         ("https://11011110.github.io/blog/feed.xml")
         ("https://drewdevault.com/feed.xml" cs)
-        
+        ("https://falsemachine.blogspot.com/feeds/posts/default?alt=rss" books)
+
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
         ("http://nautil.us/rss/all")
