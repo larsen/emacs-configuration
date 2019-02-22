@@ -171,6 +171,9 @@
         ("https://twobithistory.org/feed.xml")
         ("http://catless.ncl.ac.uk/risksrss2.xml")
         ("http://tech.marksblogg.com/feeds/all.atom.xml")
+
+        ;; Data
+        ("https://caitlinhudon.com/feed/")
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
