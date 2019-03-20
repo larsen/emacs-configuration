@@ -27,6 +27,7 @@
         ("https://gbracha.blogspot.com/feeds/posts/default" programming)
         ("https://chriskiehl.com/rss.xml" programming)
         ("https://queue.acm.org/rss/feeds/latestitems.xml" cs)
+        ("https://blog.veitheller.de/feed.rss" programming)
         
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
