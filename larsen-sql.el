@@ -27,6 +27,7 @@
 
 (require 'cl)
 (require 'filenotify)
+(require 'seq)
 
 (defun is-comment? (line)
   "Return t if LINE is a comment (it starts with #)."
@@ -38,11 +39,10 @@
   (with-current-buffer (find-file-noselect filename)
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
-            (loop for l in lines
-                  when (not (is-comment? l))
+            (loop for kv in (seq-partition lines 2)
                   collect (destructuring-bind
-                              (host port db user password) (split-string l ":" nil)
-                            `(,(format "%s-%s" host db) ; label is host + db name
+                              (host port db user password) (split-string (cadr kv) ":" nil)
+                            `(,(replace-regexp-in-string "^#\s+" "" (car kv)) ; label is host + db name
                               (sql-product 'postgres)
                               (sql-port ,(string-to-number port))
                               (sql-server ,host)
