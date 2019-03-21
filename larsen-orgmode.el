@@ -163,6 +163,7 @@
       '((perl . t)
         (shell . t)
         (python . t)
+        (sql . t)
         (gnuplot . t)
         (R . t)))
 
