@@ -144,10 +144,18 @@
 (define-key global-map "\C-cc" 'org-capture)
 
 (require 'org-capture)
-(add-to-list 'org-capture-templates
-             `("n" "Note" entry
-               (file "~/org/personal/notes.org")
-               "* %t\n%i" :immediate-finish t :empty-lines 1))
+(setq org-capture-templates
+      `(("n" "Note" entry
+         (file "~/org/personal/notes.org")
+         "* %t\n%i" :immediate-finish t :empty-lines 1)
+        ("t" "Todo item" entry
+               (file+olp
+                "~/org/work/idagio/activities.org"
+                ,(my-week-heading
+                 (string-to-number (my-current-week-number)))
+                ,(my-today-heading))
+               "*** TODO %i%?"
+               :jump-to-captured t)))
 
 (setq org-refile-targets (quote ((nil :maxlevel . 2)
                                  (org-agenda-files :maxlevel . 2))))
