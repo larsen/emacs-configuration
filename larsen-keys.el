@@ -44,7 +44,8 @@
    ;; roughly inspired to how Scrivener works
    (when (featurep 'larsen-orgmode)
      `((,(kbd "C-M-l") open-subtree-in-another-window)
-       (,(kbd "C-c <right>") open-subtree-in-another-window)))
+       (,(kbd "C-c <right>") open-subtree-in-another-window)
+       (,(kbd "C-c r") org-refile)))
 
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
