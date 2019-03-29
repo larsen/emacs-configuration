@@ -210,6 +210,7 @@
 
 (require 'cal-iso)
 (require 'cl)
+(setq system-time-locale "en_US.UTF-8")
 
 (defun my-calendar-iso-day-to-gregorian (week-number week-day)
   "Given a week number and a week day (expressed as an integer in
@@ -222,16 +223,28 @@ the corresponding gregorian date"
   (cl-destructuring-bind (month day year) date
   (format "%4d-%02d-%02d" year month day)))
 
-(defun my-insert-current-week-item (week-number)
-  (interactive "P")
+(defun my-current-week-number ()
+  (format-time-string "%V" (current-time)))
+
+(defun my-week-heading (week-number)
   (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
         (week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
-    (insert (format "* Week %d (%s - %s)\n"
-                    week-number
-                    (my-gregorian-date-as-string week-begin-date)
-                    (my-gregorian-date-as-string week-end-date)))
-    (dolist (week-day-name '(Monday Tuesday Wednesday Thursday Friday Saturday Sunday))
-      (insert (format "** %s\n" week-day-name)))))
+    (format "Week %d (%s - %s)"
+            week-number
+            (my-gregorian-date-as-string week-begin-date)
+            (my-gregorian-date-as-string week-end-date))))
+
+(defun my-insert-current-week-item (week-number)
+  (interactive "P")
+  (insert (format "* %s\n" (my-week-heading week-number)))
+  (dolist (week-day-name '(Monday
+                           Tuesday
+                           Wednesday
+                           Thursday
+                           Friday
+                           Saturday
+                           Sunday))
+     (insert (format "** %s\n" week-day-name))))
 
 (defun my-org-set-item-deadline (week-number)
   (let ((week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
