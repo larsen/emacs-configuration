@@ -149,8 +149,11 @@
                (file "~/org/personal/notes.org")
                "* %t\n%i" :immediate-finish t :empty-lines 1))
 
-(setq org-refile-targets (quote ((nil :maxlevel . 9)
-                                 (org-agenda-files :maxlevel . 9))))
+(setq org-refile-targets (quote ((nil :maxlevel . 2)
+                                 (org-agenda-files :maxlevel . 2))))
+(setq org-refile-use-outline-path t)
+(setq org-outline-path-complete-in-steps nil)
+
 (setq org-agenda-span 14)
 
 ; Org Babel
