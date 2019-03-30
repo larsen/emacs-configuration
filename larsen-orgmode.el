@@ -2,54 +2,25 @@
 ;;; larsen-orgmode.el
 ;;;
 
+;; I have custom changes not yet merged into master
 (add-to-list 'load-path "~/build/org-mode/lisp/")
+
 (require 'org)
+(require 'org-capture)
+(require 'org-bullets)
+(require 'cal-iso)
+(require 'cl)
+(require 'ox)
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
-(setq org-log-done t)
-
-(setq
- ;; org-startup-indented t
- ;; org-bullets-bullet-list '(" ") ;; no bullets, needs org-bullets package
- org-ellipsis " ▹ " ;; folding symbol
- org-pretty-entities t
- org-hide-emphasis-markers t
- ;; show actually italicized text instead of /italicized text/
- org-agenda-block-separator ""
- org-fontify-whole-heading-line t
- org-fontify-done-headline t
- org-fontify-quote-and-verse-blocks t)
+(define-key global-map "\C-cc" 'org-capture)
 
 (defun my-org-confirm-babel-evaluate (lang body)
             (not (string= lang "emacs-elisp")))
-(setq org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
 
-(require 'org-bullets)
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-(setq org-todo-keywords
-      '((sequence "TODO(!)" "ANALYSED" "DELEGATED" "IN PROGRESS(!)" "|" "DONE(!)" "CANCELED(!)")))
-(setq org-log-into-drawer t)
-
-(setq org-return-follows-link t)
-
-(setq org-agenda-files (list "~/org/personal/"
-                             "~/org/work/"
-                             "~/org/work/idagio/"))
-
-(setq org-agenda-custom-commands 
-      '(("i" "Idagio TODO" tags-todo "idagio"
-         ((org-agenda-files '("~/org/work/idagio/"))))))
-
-
-;; (setq org-default-notes-file (concat org-directory "/notes.org"))
 ;; Special functions to insert week-based object entries
-
-(require 'cal-iso)
-(require 'cl)
-(setq system-time-locale "en_US.UTF-8")
 
 (defun my-calendar-iso-day-to-gregorian (week-number week-day)
   "Given a week number and a week day (expressed as an integer in
@@ -76,11 +47,44 @@ the corresponding gregorian date"
 (defun my-today-heading ()
   (format-time-string "%A" (current-time)))
 
-(require 'org-capture)
+(org-babel-do-load-languages
+      'org-babel-load-languages
+      '((perl . t)
+        (shell . t)
+        (python . t)
+        (sql . t)
+        (gnuplot . t)
+        (R . t)))
 
-(define-key global-map "\C-cc" 'org-capture)
-
-(setq org-capture-templates
+(setq
+ ;; org-startup-indented t
+ ;; org-bullets-bullet-list '(" ") ;; no bullets, needs org-bullets package
+ org-ellipsis " ▹ " ;; folding symbol
+ org-pretty-entities t
+ org-hide-emphasis-markers t
+ ;; show actually italicized text instead of /italicized text/
+ org-agenda-block-separator ""
+ org-fontify-whole-heading-line t
+ org-fontify-done-headline t
+ org-fontify-quote-and-verse-blocks t
+ org-log-done t
+ org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
+ org-log-into-drawer t
+ org-return-follows-link t
+ org-todo-keywords '((sequence "TODO(!)"
+                               "ANALYSED"
+                               "DELEGATED"
+                               "IN PROGRESS(!)"
+                               "|"
+                               "DONE(!)"
+                               "CANCELED(!)"))
+ org-agenda-files (list "~/org/personal/"
+                        "~/org/work/"
+                        "~/org/work/idagio/")
+ org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
+                               ((org-agenda-files '("~/org/work/idagio/")))))
+ system-time-locale "en_US.UTF-8"
+ org-capture-templates
       `(("n" "Note" entry
          (file "~/org/personal/notes.org")
          "* %t\n%i" :immediate-finish t :empty-lines 1)
@@ -91,35 +95,23 @@ the corresponding gregorian date"
                  (string-to-number (my-current-week-number)))
                 ,(my-today-heading))
                "*** TODO %i%?"
-               :jump-to-captured t)))
+               :jump-to-captured t))
+ org-refile-targets (quote ((nil :maxlevel . 2)
+                            (org-agenda-files :maxlevel . 2)))
+ org-refile-use-outline-path t
+ org-outline-path-complete-in-steps nil
+ org-agenda-span 14
+ org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar"
+ ;; org-default-notes-file (concat org-directory "/notes.org")
+ 
+ ;; See https://github.com/bruceravel/gnuplot-mode/issues/31
+ gnuplot-help-xpm nil
+ gnuplot-line-xpm nil
+ gnuplot-region-xpm nil
+ gnuplot-buffer-xpm nil
+ gnuplot-doc-xpm nil)
 
-(setq org-refile-targets (quote ((nil :maxlevel . 2)
-                                 (org-agenda-files :maxlevel . 2))))
-(setq org-refile-use-outline-path t)
-(setq org-outline-path-complete-in-steps nil)
-
-(setq org-agenda-span 14)
-
-; Org Babel
-
-(require 'ox)
-
-(setq org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar")
-(org-babel-do-load-languages
-      'org-babel-load-languages
-      '((perl . t)
-        (shell . t)
-        (python . t)
-        (sql . t)
-        (gnuplot . t)
-        (R . t)))
-
-;; See https://github.com/bruceravel/gnuplot-mode/issues/31
-(setq gnuplot-help-xpm nil
-      gnuplot-line-xpm nil
-      gnuplot-region-xpm nil
-      gnuplot-buffer-xpm nil
-      gnuplot-doc-xpm nil)
+(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (custom-set-variables
  '(org-confirm-babel-evaluate nil))
@@ -141,9 +133,6 @@ the corresponding gregorian date"
   (interactive)
   (org-tree-to-indirect-buffer)
   (windmove-right))
-
-
-
 
 (defun my-insert-current-week-item (week-number)
   (interactive "P")
