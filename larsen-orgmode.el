@@ -2,6 +2,9 @@
 ;;; larsen-orgmode.el
 ;;;
 
+(add-to-list 'load-path "~/build/org-mode/lisp/")
+(require 'org)
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
@@ -141,9 +144,41 @@
          :components ("stream-orgfiles" "stream-images")) ))
 
 ;; (setq org-default-notes-file (concat org-directory "/notes.org"))
-(define-key global-map "\C-cc" 'org-capture)
+;; Special functions to insert week-based object entries
+
+(require 'cal-iso)
+(require 'cl)
+(setq system-time-locale "en_US.UTF-8")
+
+(defun my-calendar-iso-day-to-gregorian (week-number week-day)
+  "Given a week number and a week day (expressed as an integer in
+the range 0..6 (1 = Monday, 2 = Tuesday, ..., 0 = Sunday), returns
+the corresponding gregorian date"
+  (calendar-gregorian-from-absolute
+   (calendar-iso-to-absolute (list week-number week-day 2019))))
+
+(defun my-gregorian-date-as-string (date)
+  (cl-destructuring-bind (month day year) date
+  (format "%4d-%02d-%02d" year month day)))
+
+(defun my-current-week-number ()
+  (format-time-string "%V" (current-time)))
+
+(defun my-week-heading (week-number)
+  (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
+        (week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
+    (format "Week %d (%s - %s)"
+            week-number
+            (my-gregorian-date-as-string week-begin-date)
+            (my-gregorian-date-as-string week-end-date))))
+
+(defun my-today-heading ()
+  (format-time-string "%A" (current-time)))
 
 (require 'org-capture)
+
+(define-key global-map "\C-cc" 'org-capture)
+
 (setq org-capture-templates
       `(("n" "Note" entry
          (file "~/org/personal/notes.org")
@@ -206,33 +241,8 @@
   (org-tree-to-indirect-buffer)
   (windmove-right))
 
-;; Special functions to insert week-based object entries
 
-(require 'cal-iso)
-(require 'cl)
-(setq system-time-locale "en_US.UTF-8")
 
-(defun my-calendar-iso-day-to-gregorian (week-number week-day)
-  "Given a week number and a week day (expressed as an integer in
-the range 0..6 (1 = Monday, 2 = Tuesday, ..., 0 = Sunday), returns
-the corresponding gregorian date"
-  (calendar-gregorian-from-absolute
-   (calendar-iso-to-absolute (list week-number week-day 2019))))
-
-(defun my-gregorian-date-as-string (date)
-  (cl-destructuring-bind (month day year) date
-  (format "%4d-%02d-%02d" year month day)))
-
-(defun my-current-week-number ()
-  (format-time-string "%V" (current-time)))
-
-(defun my-week-heading (week-number)
-  (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
-        (week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
-    (format "Week %d (%s - %s)"
-            week-number
-            (my-gregorian-date-as-string week-begin-date)
-            (my-gregorian-date-as-string week-end-date))))
 
 (defun my-insert-current-week-item (week-number)
   (interactive "P")
