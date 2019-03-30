@@ -45,7 +45,10 @@
    (when (featurep 'larsen-orgmode)
      `((,(kbd "C-M-l") open-subtree-in-another-window)
        (,(kbd "C-c <right>") open-subtree-in-another-window)
-       (,(kbd "C-c r") org-refile)))
+       (,(kbd "C-c r") org-refile)
+       (,(kbd "C-c l") org-store-link)
+       (,(kbd "C-c a") org-agenda)
+       (,(kbd "C-c c") org-capture)))
 
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)

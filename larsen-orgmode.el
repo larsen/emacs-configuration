@@ -13,9 +13,6 @@
 (require 'ox)
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
-(define-key global-map "\C-cl" 'org-store-link)
-(define-key global-map "\C-ca" 'org-agenda)
-(define-key global-map "\C-cc" 'org-capture)
 
 (defun my-org-confirm-babel-evaluate (lang body)
             (not (string= lang "emacs-elisp")))
