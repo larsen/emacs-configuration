@@ -66,6 +66,7 @@
         larsen-snippets
         larsen-auto-complete
         larsen-orgmode
+        larsen-orgmode-website
         larsen-slime
         larsen-magit
         larsen-erc
