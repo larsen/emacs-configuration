@@ -15,7 +15,7 @@
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 (defun my-org-confirm-babel-evaluate (lang body)
-            (not (string= lang "emacs-elisp")))
+  (not (string= lang "emacs-elisp")))
 
 ;; Special functions to insert week-based object entries
 
