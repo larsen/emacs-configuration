@@ -87,6 +87,18 @@ WEEK-DAY is expressed as an integer in the range 0..6:
   (org-tree-to-indirect-buffer)
   (windmove-right))
 
+(defun my-find-today-heading ()
+  (let ((m (org-find-olp `(,(my-week-heading
+                             (string-to-number (my-current-week-number)))
+                           ,(my-today-heading))
+                         ;; In current buffer, because we're using file+function
+                         t)))
+    (set-buffer (marker-buffer m))
+    (org-capture-put-target-region-and-position)
+    (widen)
+    (goto-char m)
+    (set-marker m nil)))
+
 (setq org-pretty-entities t
       org-ellipsis " ▹ " ;; folding symbol
       org-hide-emphasis-markers t
@@ -115,11 +127,8 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                (file "~/org/personal/notes.org")
                                "* %t\n%i" :immediate-finish t :empty-lines 1)
                               ("t" "Todo item" entry
-                               (file+olp
-                                "~/org/work/idagio/activities.org"
-                                ,(my-week-heading
-                                  (string-to-number (my-current-week-number)))
-                                ,(my-today-heading))
+                               (file+function "~/org/work/idagio/activities.org"
+                                              my-find-today-heading)
                                "*** TODO %i%?"
                                :jump-to-captured t))
       org-refile-targets (quote ((nil :maxlevel . 2)
