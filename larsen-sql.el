@@ -42,7 +42,7 @@
             (loop for kv in (seq-partition lines 2)
                   collect (destructuring-bind
                               (host port db user password) (split-string (cadr kv) ":" nil)
-                            `(,(replace-regexp-in-string "^#\s+" "" (car kv)) ; label is host + db name
+                            `(,(replace-regexp-in-string "^#\s+" "" (car kv))
                               (sql-product 'postgres)
                               (sql-port ,(string-to-number port))
                               (sql-server ,host)
