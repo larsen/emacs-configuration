@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: data-check
+# key: dc
+# --
+      #+begin_src sql :engine postgresql :dbconnection ${1:analytics-prod}
+      `(current-kill 0)`
+      #+end_src
