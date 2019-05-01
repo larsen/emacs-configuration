@@ -3,5 +3,5 @@
 # key: dc
 # --
       #+begin_src sql :engine postgresql :dbconnection ${1:analytics-prod}
-      `(current-kill 0)`
+      `(sqlformat-selection)`
       #+end_src

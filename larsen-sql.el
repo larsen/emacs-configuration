@@ -28,6 +28,18 @@
 (require 'cl)
 (require 'filenotify)
 (require 'seq)
+(require 'sqlformat)
+
+(setq sqlformat-args '("-k" "upper"
+                       "-i" "lower"))
+
+(defun sqlformat-selection ()
+  "Return the content of the clipboard, formatted using sqlformat."
+  (interactive)
+  (with-temp-buffer
+    (insert (current-kill 0))
+    (sqlformat-buffer)
+    (buffer-string)))
 
 (defun is-comment? (line)
   "Return t if LINE is a comment (it starts with #)."
