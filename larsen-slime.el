@@ -29,6 +29,8 @@
        slime-setup-first-change-hook))
 
 (add-hook 'lisp-mode-hook #'paredit-mode)
+(add-hook 'slime-repl-mode-hook
+          (lambda () (paredit-mode t)))
 
 ;; (load "~/quicklisp/clhs-use-local.el" t)
 
