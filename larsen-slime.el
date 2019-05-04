@@ -1,7 +1,5 @@
-; (add-to-list 'load-path "~/quicklisp/dists/quicklisp/software/slime-2.14/")
-
-(add-to-list 'load-path "~/quicklisp/dists/quicklisp/software/slime-v2.20/")
-(setq inferior-lisp-program "/usr/bin/sbcl")
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+(setq inferior-lisp-program "sbcl")
 
 ; (require 'slime)
 (require 'slime-autoloads)
