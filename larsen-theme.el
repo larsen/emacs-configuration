@@ -3,17 +3,17 @@
 ;;;
 
 (set-face-attribute 'default nil
-                    :family "Courier 10 Pitch"
+                    :family "IBM Plex Mono"
                     :height 140)
 
 (set-face-attribute 'font-lock-comment-face nil
                     :family "IBM Plex Mono"
-                    :height 0.8
+                    :height 1.0
                     :slant 'italic)
 
 (set-face-attribute 'font-lock-doc-face nil
                     :family "IBM Plex Mono"
-                    :height 0.8
+                    :height 1.0
                     :slant 'italic)
 
 (set-face-attribute 'variable-pitch nil
