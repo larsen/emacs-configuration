@@ -52,13 +52,14 @@
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
         ("https://lisp.space/feed.xml" lisp fp programming)
-        ("http://lispy.wordpress.com/feed/" lisp pf programmin)
+        ("http://lispy.wordpress.com/feed/" lisp fp programming)
         ("http://xach.livejournal.com/data/atom" lisp fp programming)
         ("http://funcall.blogspot.com/feeds/posts/default" lisp fp programming)
         ("http://feeds2.feedburner.com/stevelosh" lisp fp programming)
         ("http://planet.emacs-es.org/rss20.xml" lisp fp programming es)
         ("http://www.scheme.dk/planet/atom.xml" scheme)
         ("https://lisp.sh/feed.atom" racket)
+        ("https://recursive.games/rss.xml" lisp programming games)
         
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
