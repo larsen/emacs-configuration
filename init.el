@@ -58,6 +58,7 @@
         larsen-smarttab
         larsen-tramp
         larsen-helm
+        larsen-ibuffer
         larsen-sql
         larsen-w3m
         ; larsen-keyfreq

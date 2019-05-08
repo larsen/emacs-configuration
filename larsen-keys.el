@@ -65,6 +65,9 @@
    (when (featurep 'larsen-functions)
      `((,(kbd "M-<f1>") toggle-split-layout)
        (,(kbd "C-c j") webjump)))
+
+   (when (featurep 'larsen-ibuffer)
+     `((,(kbd "C-x C-b") ibuffer)))
    ))
 
 (my-global-set-keys (larsen-keys))
