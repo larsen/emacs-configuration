@@ -8,7 +8,7 @@
          ("Perl" (mode . cperl-mode))
          ("Python" (mode . python-mode))
          ("Org" (mode . org-mode))
-         ("Emacs Lisp" (mode . emacs-lisp))
+         ("Emacs Lisp" (mode . emacs-lisp-mode))
          ("System" (or
                    (name . "^\\*scratch\\*$")
                    (name . "^\\*Messages\\*$"))))))
