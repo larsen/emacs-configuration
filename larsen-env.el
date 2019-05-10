@@ -7,6 +7,7 @@
 (require 'rotate)
 (require 'nlinum)
 (require 'whole-line-or-region)
+(require 'switch-window)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
