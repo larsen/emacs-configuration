@@ -5,4 +5,7 @@
            ("m" . macrostep-mode)
            ("b" . eval-buffer))
 
+(add-hook 'ielm-mode-hook
+          (lambda () (paredit-mode t)))
+
 (provide 'larsen-elisp)
