@@ -23,7 +23,7 @@
 
 
 (defun increase-text-scale-in-buffer-group (major-mode-name)
-  "Increment text scale for all buffers matching a give major mode name"
+  "Increment text scale for all buffers matching a given major-mode-name."
   (interactive
    (list (intern (completing-read
                   "Select major mode from the list: "
