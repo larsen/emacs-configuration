@@ -174,6 +174,7 @@
         ("http://catless.ncl.ac.uk/risksrss2.xml")
         ("http://tech.marksblogg.com/feeds/all.atom.xml")
         ("http://www.elidedbranches.com/feeds/posts/default")
+        ("https://lethain.com/feeds/" maybe engineering management)
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
