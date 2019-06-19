@@ -28,7 +28,8 @@
         ("https://chriskiehl.com/rss.xml" programming)
         ("https://queue.acm.org/rss/feeds/latestitems.xml" cs)
         ("https://blog.veitheller.de/feed.rss" programming)
-        
+        ("https://www.hillelwayne.com/index.xml" programming)
+
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
         ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss")
