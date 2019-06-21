@@ -179,6 +179,7 @@
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
+        ("https://www.locallyoptimistic.com/index.xml")
         
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
