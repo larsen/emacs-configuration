@@ -51,10 +51,8 @@
 ;;   (when (file-directory-p path)
 ;;     (add-to-list 'custom-theme-load-path path)))
 
-;; (load-theme 'bubbleberry t)
-;; (load-theme 'danneskjold t)
-(load-theme 'zerodark t)
 (zerodark-setup-modeline-format)
+(load-theme 'constant t)
 
 (defun switch-theme (theme)
   (interactive
