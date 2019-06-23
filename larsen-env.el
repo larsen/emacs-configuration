@@ -127,6 +127,6 @@
 (eval-after-load 'Term
   '(define-key term-mode-map (kbd "C-M-y") 'helm-mini))
 
-(require 'forecast-configuration)
+(require 'forecast-configuration nil t)
 
 (provide 'larsen-env)
