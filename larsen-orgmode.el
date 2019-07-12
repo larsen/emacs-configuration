@@ -99,6 +99,11 @@ WEEK-DAY is expressed as an integer in the range 0..6:
     (goto-char m)
     (set-marker m nil)))
 
+(defun my-org-jump-to-today ()
+  "Move cursor to the heading corresponding to today."
+  (interactive)
+  (my-find-today-heading))
+
 (setq org-pretty-entities t
       org-ellipsis " ▹ " ;; folding symbol
       org-hide-emphasis-markers t
