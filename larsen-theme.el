@@ -21,6 +21,8 @@
                     :height 0.95
                     :slant 'normal)
 
+(set-face-attribute 'org-ellipsis nil
+                    :underline nil)
 
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a given major-mode-name."
