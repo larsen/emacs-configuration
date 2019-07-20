@@ -24,6 +24,25 @@
 (set-face-attribute 'org-ellipsis nil
                     :underline nil)
 
+(set-face-attribute 'flycheck-fringe-error nil
+                    :background "black"
+                    :foreground "yellow"
+                    :inverse-video nil
+                    :weight 'bold)
+
+(set-face-attribute 'flycheck-fringe-warning nil
+                    :background "black"
+                    :foreground "orange"
+                    :inverse-video nil
+                    :weight 'bold)
+
+(set-face-attribute 'flycheck-fringe-info nil
+                    :background "black"
+                    :foreground "green"
+                    :inverse-video nil
+                    :weight 'bold)
+
+
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a given major-mode-name."
   (interactive
