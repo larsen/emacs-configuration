@@ -54,7 +54,8 @@ WEEK-DAY is expressed as an integer in the range 0..6:
         (python . t)
         (sql . t)
         (gnuplot . t)
-        (R . t)))
+        (R . t)
+        (plantuml . t)))
 
 (defun my-insert-current-week-item (week-number)
   "Insert 1-week-worth structure for entering todo entries for WEEK-NUMBER."
@@ -143,8 +144,12 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
       org-agenda-span 14
       org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar"
+
+      ;; I had to switch to openjdk version "1.8.0_212"
+      ;; to make PlantUML's jar work.
+      ;; To switch (on Ubuntu): sudo update-alternatives --config java
+      org-plantuml-jar-path "~/bin/plantuml.jar"
       ;; org-default-notes-file (concat org-directory "/notes.org")
- 
       ;; See https://github.com/bruceravel/gnuplot-mode/issues/31
       gnuplot-help-xpm nil
       gnuplot-line-xpm nil
