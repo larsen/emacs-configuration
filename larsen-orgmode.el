@@ -155,12 +155,10 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       gnuplot-line-xpm nil
       gnuplot-region-xpm nil
       gnuplot-buffer-xpm nil
-      gnuplot-doc-xpm nil)
+      gnuplot-doc-xpm nil
+      org-confirm-babel-evaluate nil)
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
-
-(custom-set-variables
- '(org-confirm-babel-evaluate nil))
 
 (add-to-list 'org-latex-classes
              '("tufte-handout"
