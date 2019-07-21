@@ -37,8 +37,10 @@
   "Return the content of the clipboard, formatted using sqlformat."
   (interactive)
   (with-temp-buffer
+    (sql-mode)
     (insert (current-kill 0))
     (sqlformat-buffer)
+    (indent-region (point-min) (point-max))
     (buffer-string)))
 
 (defun is-comment? (line)
