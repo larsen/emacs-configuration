@@ -176,6 +176,7 @@
         ("http://tech.marksblogg.com/feeds/all.atom.xml")
         ("http://www.elidedbranches.com/feeds/posts/default")
         ("https://lethain.com/feeds/" maybe engineering management)
+        ("http://n-gate.com/index.rss" interesting)
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
