@@ -47,7 +47,6 @@
         larsen-env
         larsen-dired
         larsen-flycheck
-        larsen-theme
         larsen-iswitchb
         larsen-package
         larsen-spell
@@ -77,6 +76,7 @@
         larsen-elisp
         larsen-ruby
         larsen-refactoring
+        larsen-theme
         larsen-keys
         ))
 
