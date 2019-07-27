@@ -72,8 +72,9 @@
 ;;   (when (file-directory-p path)
 ;;     (add-to-list 'custom-theme-load-path path)))
 
-(zerodark-setup-modeline-format)
+; (zerodark-setup-modeline-format)
 (load-theme 'constant t)
+(doom-modeline-mode)
 
 (defun switch-theme (theme)
   (interactive

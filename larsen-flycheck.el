@@ -12,4 +12,6 @@
                (reusable-frames . visible)
                (window-height   . 0.33)))
 
+(add-hook 'elpy-mode-hook 'flycheck-mode)
+
 (provide 'larsen-flycheck)
