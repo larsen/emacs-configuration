@@ -61,7 +61,8 @@
                               (sql-port ,(string-to-number port))
                               (sql-server ,host)
                               (sql-user ,user)
-                              (sql-database ,db))))))))
+                              (sql-database ,db)
+                              (sql-password ,password))))))))
 
 (setq sql-connection-alist (get-connection-alist "~/.pgpass"))
 
@@ -71,21 +72,25 @@
                        '(change)
                        (lambda (evt) (get-connection-alist "~/.pgpass")))
 
-(defun my/get-connection-dsn (connection-name)
+(cl-defun my/get-connection-dsn (connection-name)
   "Return a DSN given a CONNECTION-NAME."
   (interactive (list
                 (completing-read "Enter connection name "
                                  sql-connection-alist)))
   (let* ((connection-details (cdr (assoc connection-name sql-connection-alist)))
          (connection-dsn
-          (format "postgresql://%s:PASSWORD@%s:%d/%s"
+          (format "postgresql://%s:%s@%s:%d/%s"
                   (car (cdr (assoc 'sql-user connection-details)))
+                  (car (cdr (assoc 'sql-password connection-details)))
                   (car (cdr (assoc 'sql-server connection-details)))
                   (car (cdr (assoc 'sql-port connection-details)))
                   (car (cdr (assoc 'sql-database connection-details))))))
+             connection-dsn))
+
+(defun my/get-connection-dsn-to-clipboard (connection-name)
+  (let ((connection-dsn (my/get-connection-dsn connection-name)))
     (kill-new connection-dsn)
     (message (format "DSN %s copied to kill-ring" connection-dsn))))
-
 
 (defun my/get-connection-dblink (connection-name)
   "Return a dblink string given a CONNECTION-NAME."
@@ -94,20 +99,20 @@
                                  sql-connection-alist)))
   (let* ((connection-details (cdr (assoc connection-name sql-connection-alist)))
          (connection-dsn
-          (format "dbname=%s\nhost=%s\nport=%s\nuser=%s\npassword=PASSWORD"
+          (format "dbname=%s\nhost=%s\nport=%s\nuser=%s\npassword=%s"
                   (car (cdr (assoc 'sql-database connection-details)))
                   (car (cdr (assoc 'sql-server connection-details)))
                   (car (cdr (assoc 'sql-port connection-details)))
-                  (car (cdr (assoc 'sql-user connection-details))))))
+                  (car (cdr (assoc 'sql-user connection-details)))
+                  (car (cdr (assoc 'sql-password connection-details))))))
     (kill-new connection-dsn)
     (message (format "dblink string %s copied to kill-ring" connection-dsn))))
-
 
 (defun my-sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
         (rval 'sql-product))
     (if (symbol-value rval)
-        (let ((filename 
+        (let ((filename
                (concat "~/.emacs.d/sql/"
                        (symbol-name (symbol-value rval))
                        "-history.sql")))
@@ -115,7 +120,7 @@
       (error
        (format "SQL history will not be saved because %s is nil"
                (symbol-name rval))))))
- 
+
 (add-hook 'sql-interactive-mode-hook 'my-sql-save-history-hook)
 
 (setq sql-sqlite-program "sqlite3")
