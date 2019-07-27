@@ -118,7 +118,8 @@
         do (eyebrowse-rename-window-config window-config-slot
                                            window-config-label)))
 
-(pdf-tools-install)
+(pdf-tools-install t)
+
 ;; ansi-term
 
 ;; See https://emacs.stackexchange.com/questions/39312/output-reflow-in-ansi-term
