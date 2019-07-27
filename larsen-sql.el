@@ -1,5 +1,9 @@
 (require 'sql)
 (require 'sqlup-mode)
+(require 'sqlformat)
+(require 'cl)
+(require 'seq)
+(require 'filenotify)
 
 ;; emacs-sql-indent was installed from github's repo
 ;; using quelpa
@@ -24,11 +28,6 @@
 (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
 ;; Set a global keyword to use sqlup on a region
 (global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
-
-(require 'cl)
-(require 'filenotify)
-(require 'seq)
-(require 'sqlformat)
 
 (setq sqlformat-args '("-k" "upper"
                        "-i" "lower"))
