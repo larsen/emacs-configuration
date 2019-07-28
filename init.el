@@ -26,7 +26,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Add .emacs.d to load-path
-(setq dotfiles-dir (file-name-directory
+(defvar dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
 (add-to-list 'load-path dotfiles-dir)
 
@@ -42,7 +42,7 @@
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
 
-(setq larsen-pkg-full
+(defvar larsen-pkg-full
       '(
         larsen-env
         larsen-dired
