@@ -73,7 +73,8 @@
 ;;     (add-to-list 'custom-theme-load-path path)))
 
 ; (zerodark-setup-modeline-format)
-(load-theme 'constant t)
+; (load-theme 'constant t)
+(load-theme 'doom-tomorrow-night t)
 (doom-modeline-mode)
 
 (defun switch-theme (theme)
