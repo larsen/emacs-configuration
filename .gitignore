@@ -2,6 +2,7 @@
 *.eld
 tramp
 ac-comphist.dat
+snippets/**/.yas-compiled-snippets.el
 url/
 elpa/
 eshell/
