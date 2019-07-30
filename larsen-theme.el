@@ -79,6 +79,7 @@
 (doom-themes-neotree-config)
 (doom-themes-visual-bell-config)
 (doom-themes-org-config)
+(setq doom-modeline-icon t)
 
 (defun switch-theme (theme)
   (interactive
