@@ -76,6 +76,9 @@
 ; (load-theme 'constant t)
 (load-theme 'doom-tomorrow-night t)
 (doom-modeline-mode)
+(doom-themes-neotree-config)
+(doom-themes-visual-bell-config)
+(doom-themes-org-config)
 
 (defun switch-theme (theme)
   (interactive
