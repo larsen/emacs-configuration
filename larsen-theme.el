@@ -6,6 +6,14 @@
                     :family "IBM Plex Mono"
                     :height 140)
 
+(set-face-attribute 'mode-line nil
+                    :family "IBM Plex Mono"
+                    :height 100)
+
+;;; FIXME should it not inherit from 'mode-line?
+(set-face-attribute 'mode-line-inactive nil
+                    :height 100)
+
 (set-face-attribute 'font-lock-comment-face nil
                     :family "IBM Plex Mono"
                     :height 1.0
@@ -79,7 +87,9 @@
 (doom-themes-neotree-config)
 (doom-themes-visual-bell-config)
 (doom-themes-org-config)
-(setq doom-modeline-icon t)
+(setq doom-modeline-icon t
+      doom-modeline-height 10
+      doom-modeline-buffer-file-name-style 'relative-to-project)
 
 (defun switch-theme (theme)
   (interactive
