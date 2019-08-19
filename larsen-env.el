@@ -8,6 +8,7 @@
 (require 'nlinum)
 (require 'whole-line-or-region)
 (require 'switch-window)
+(require 'edwin)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -94,6 +95,7 @@
 
 (require 'cl)
 
+(edwin-mode t)
 (eyebrowse-mode t)
 
 (loop for i from 1 upto 9
