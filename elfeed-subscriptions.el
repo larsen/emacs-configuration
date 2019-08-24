@@ -82,6 +82,9 @@
         ("https://mathbabe.org/feed/" math)
         ("https://terrytao.wordpress.com/feed/" math)
 
+        ;; Data
+        ("https://modern-sql.com/feed" data sql)
+
         ;; R
         ("https://4dpiecharts.com/feed/" R)
         
