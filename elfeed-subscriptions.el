@@ -181,6 +181,7 @@
         ("https://lethain.com/feeds/" maybe engineering management)
         ("http://n-gate.com/index.rss" interesting)
         ("https://thetechnicalgeekery.com/feed.xml" maybe)
+        ("https://controlaltbackspace.org/feed.xml" maybe)
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
