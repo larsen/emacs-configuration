@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: parsearg
+# key: parg
+# --
+def parse_arguments():
+    parser = argparse.ArgumentParser(
+        description='`(file-name-base (buffer-file-name))`'
+    )
+
+    parser.add_argument(
+        '--${1:help}', required=${2:False},
+        help='${3:Display this message}'
+    )
+
+    args = parser.parse_args()
+    return args
