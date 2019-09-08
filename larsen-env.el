@@ -8,7 +8,7 @@
 (require 'nlinum)
 (require 'whole-line-or-region)
 (require 'switch-window)
-(require 'edwin)
+(require 'edwina)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
