@@ -96,7 +96,7 @@
   (with-current-buffer
       (url-retrieve-synchronously url)
     (goto-char (+ 1 url-http-end-of-headers))
-    (json-read-object)))
+    (json-read)))
 
 
 ;; Webjump configuration
