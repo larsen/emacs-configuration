@@ -46,7 +46,7 @@
       '(
         larsen-env
         larsen-dired
-        larsen-flycheck
+        ;; larsen-flycheck
         larsen-iswitchb
         larsen-package
         larsen-spell
