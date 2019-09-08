@@ -182,6 +182,7 @@
         ("http://n-gate.com/index.rss" interesting)
         ("https://thetechnicalgeekery.com/feed.xml" maybe)
         ("https://controlaltbackspace.org/feed.xml" maybe)
+        ("https://apod.nasa.gov/apod.rss")
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
