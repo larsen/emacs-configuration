@@ -153,6 +153,7 @@
         ("https://11011110.github.io/blog/feed.xml")
         ("https://drewdevault.com/feed.xml" cs)
         ("https://falsemachine.blogspot.com/feeds/posts/default?alt=rss" books)
+        ("https://ww.telent.net/news.rss")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
