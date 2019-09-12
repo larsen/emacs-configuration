@@ -105,6 +105,9 @@ WEEK-DAY is expressed as an integer in the range 0..6:
   (interactive)
   (my-find-today-heading))
 
+(defun orgzly-files ()
+  (file-expand-wildcards "~/Dropbox/orgzly/*.org"))
+
 (setq org-pretty-entities t
       org-ellipsis " ▹ " ;; folding symbol
       org-hide-emphasis-markers t
@@ -138,8 +141,9 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                "*** TODO %i%?"
                                :jump-to-captured t))
       org-refile-targets (quote ((nil :maxlevel . 2)
-                                 (org-agenda-files :maxlevel . 2)))
-      org-refile-use-outline-path t
+                                 (org-agenda-files :maxlevel . 2)
+                                 (orgzly-files :level . 1)))
+      org-refile-use-outline-path 'file
       org-outline-path-complete-in-steps nil
       org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
       org-agenda-span 14
