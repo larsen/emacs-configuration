@@ -139,7 +139,11 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                (file+function "~/org/work/idagio/activities.org"
                                               my-find-today-heading)
                                "*** TODO %i%?"
-                               :jump-to-captured t))
+                               :jump-to-captured t)
+                              ("c" "Dev todo" entry
+                               (file+function "~/org/work/idagio/activities.org"
+                                              my-find-today-heading)
+                               "*** TODO %i%?\n    %a"))
       org-refile-targets (quote ((nil :maxlevel . 2)
                                  (org-agenda-files :maxlevel . 2)
                                  (orgzly-files :level . 1)))
