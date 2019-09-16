@@ -21,6 +21,7 @@
        (,(kbd "C-c e m") macrostep-mode)
        (,(kbd "C-c e r") eval-and-replace)
        (,(kbd "C-c m a") mc/mark-all-like-this)
+       (,(kbd "C-c m n") mc/mark-next-like-this)
        (,(kbd "C-c C-j") ace-jump-mode)
        (,(kbd "C-S-<mouse-1>") mc/add-cursor-on-click)))
 
