@@ -146,7 +146,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                "*** TODO %i%?\n    %a")
                               ("r" "Reading todo" entry
                                (file "~/Dropbox/orgzly/reading.org")
-                               "*** TODO %i%?\n    %a")))
+                               "*** TODO %i%?\n    %a"))
 
       org-refile-targets (quote ((nil :maxlevel . 2)
                                  (org-agenda-files :maxlevel . 2)
