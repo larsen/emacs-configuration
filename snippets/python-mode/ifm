@@ -2,5 +2,9 @@
 # name: ifmain
 # key: ifm
 # --
+def main():
+    $1
+
+
 if __name__ == '__main__':
-    ${1:main()}
+    main()
