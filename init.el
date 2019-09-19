@@ -45,6 +45,7 @@
 (defvar larsen-pkg-full
       '(
         larsen-env
+        larsen-pdf-tools
         larsen-dired
         ;; larsen-flycheck
         larsen-iswitchb
