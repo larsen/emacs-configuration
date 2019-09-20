@@ -43,7 +43,7 @@
 
 (with-eval-after-load "pdf-annot"
   (define-key pdf-annot-edit-contents-minor-mode-map
-    (kbd "<return>") 'pdf-annot-edit-contents-commit)
+    (kbd "C-<return>") 'pdf-annot-edit-contents-commit)
   ;; save after adding comment
   (advice-add 'pdf-annot-edit-contents-commit
               :after 'my/save-buffer-no-args)))
