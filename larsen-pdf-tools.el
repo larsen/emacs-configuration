@@ -46,6 +46,6 @@
     (kbd "C-<return>") 'pdf-annot-edit-contents-commit)
   ;; save after adding comment
   (advice-add 'pdf-annot-edit-contents-commit
-              :after 'my/save-buffer-no-args)))
+              :after 'my/save-buffer-no-args))
 
 (provide 'larsen-pdf-tools)
