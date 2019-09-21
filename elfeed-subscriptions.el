@@ -184,7 +184,8 @@
         ("https://thetechnicalgeekery.com/feed.xml" maybe)
         ("https://controlaltbackspace.org/feed.xml" maybe)
         ("https://apod.nasa.gov/apod.rss")
-
+        ("https://www.gatesnotes.com/rss" books)
+        
         ;; Data
         ("https://caitlinhudon.com/feed/")
         ("https://www.locallyoptimistic.com/index.xml")
