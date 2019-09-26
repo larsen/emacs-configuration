@@ -69,7 +69,7 @@
 
 (file-notify-add-watch "~/.pgpass"
                        '(change)
-                       (lambda (evt) (get-connection-alist "~/.pgpass")))
+                       (lambda (evt) (setq sql-connection-alist (get-connection-alist "~/.pgpass"))))
 
 (cl-defun my/get-connection-dsn (connection-name)
   "Return a DSN given a CONNECTION-NAME."
