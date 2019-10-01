@@ -9,6 +9,7 @@
 (require 'org-capture)
 (require 'org-bullets)
 (require 'org-agenda)
+(require 'org-super-agenda)
 (require 'org-download)
 (require 'ob-ditaa)
 (require 'cal-iso)
@@ -129,11 +130,6 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                     "|"
                                     "DONE(!)"
                                     "CANCELED(!)"))
-      org-agenda-files (list "~/org/personal/"
-                             "~/org/work/"
-                             "~/org/work/idagio/")
-      org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
-                                    ((org-agenda-files '("~/org/work/idagio/")))))
       system-time-locale "en_US.UTF-8"
       org-capture-templates `(("n" "Note" entry
                                (file "~/org/personal/notes.org")
@@ -157,7 +153,6 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       org-refile-use-outline-path 'file
       org-outline-path-complete-in-steps nil
       org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate
-      org-agenda-span 14
       org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar"
 
       ;; I had to switch to openjdk version "1.8.0_212"
@@ -172,6 +167,34 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       gnuplot-buffer-xpm nil
       gnuplot-doc-xpm nil
       org-confirm-babel-evaluate nil)
+
+(setq
+ org-agenda-skip-deadline-if-done t
+ org-agenda-start-on-weekday nil
+ org-agenda-start-day nil ;; i.e. today
+ org-agenda-span 7
+ org-agenda-files '("~/org/personal/"
+                    "~/org/work/"
+                    "~/org/work/idagio/")
+ org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
+                               ((org-agenda-files '("~/org/work/idagio/")))))
+ org-super-agenda-groups
+       '(;; Each group has an implicit boolean OR operator between its selectors.
+         (:name "Today"  ; Optionally specify section name
+                :time-grid t  ; Items that appear on the time grid
+                :todo "TODAY")  ; Items that have this TODO keyword
+         (:name "Due Today"
+                :deadline today
+                :order 2)
+         (:name "Sprint"
+                :tag "sprint"
+                :order 3)
+         (:name "Tomorrow"
+                :deadline tomorrow
+                :order 4)
+         (:name "Overdue"
+                :deadline past
+                :order 7)))
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
