@@ -196,6 +196,8 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                 :deadline past
                 :order 7)))
 
+(org-super-agenda-mode)
+
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (add-to-list 'org-latex-classes
