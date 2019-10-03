@@ -212,6 +212,7 @@
         ("https://www.filfre.net/feed/" maybe)
         ("http://export.arxiv.org/rss/cs" cs maybe)
         ("http://linesandcolors.com/feed/" art maybe)
+        ("http://www.cachestocaches.com/feed/" maybe)
         
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
