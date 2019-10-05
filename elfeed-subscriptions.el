@@ -154,6 +154,7 @@
         ("https://drewdevault.com/feed.xml" cs)
         ("https://falsemachine.blogspot.com/feeds/posts/default?alt=rss" books)
         ("https://ww.telent.net/news.rss")
+        ("http://johnj.com/feed.xml")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
