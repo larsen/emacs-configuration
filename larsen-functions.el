@@ -192,4 +192,29 @@
     (error (message "Invalid expression")
            (insert (current-kill 0)))))
 
+
+;; Caveman args list parsing
+(defun arg-resolver (arg-properties idx)
+  (cond ((eq :default (car arg-properties))
+         `(or (nth ,idx command-line-args)
+              ,(cadr arg-properties)))
+        ((eq :mandatory (car arg-properties))
+         `(or (nth ,idx command-line-args)
+              (error (or ,(cadr arg-properties)
+                         "Undefined error"))))
+        (t (nth idx command-line-args))))
+
+(defmacro with-positional-args (arglist &rest body)
+  "Execute the forms in BODY after lexically binding command line
+arguments in order, according to what is specified in ARGLIST.
+ARGLIST is the list of variables that will be bound to the
+corresponding command line argument."
+  `(let ,(loop for a in arglist
+               for idx from 3
+               collect (let ((arg-name (car a))
+                             (arg-properties (cdr a)))
+                         `(,arg-name ,(arg-resolver
+                                       arg-properties idx))))
+     ,@body))
+
 (provide 'larsen-functions)
