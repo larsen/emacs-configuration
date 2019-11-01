@@ -33,7 +33,7 @@
         ;; Programming – Perl
         ("http://pl6anet.org/atom.xml" perl programming)
         ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss")
-        
+
         ;; Programming – Haskell
         ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
         ("http://planet.haskell.org/rss20.xml" haskell fp programming)
@@ -49,7 +49,7 @@
         ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
         ("http://comonad.com/reader/feed/" haskell programming cs)
         ("https://chrispenner.ca/atom.xml" haskell programming fp)
-        
+
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
         ("https://lisp.space/feed.xml" lisp fp programming)
@@ -61,11 +61,11 @@
         ("http://www.scheme.dk/planet/atom.xml" scheme)
         ("https://lisp.sh/feed.atom" racket)
         ("https://recursive.games/rss.xml" lisp programming games)
-        
+
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
         ("http://gigasquidsoftware.com/atom.xml" clojure programming)
-        
+
         ;; Math
         ("http://blogs.ams.org/visualinsight/feed/" math)
         ("http://blogs.ams.org/blogonmathblogs/" math)
@@ -87,7 +87,7 @@
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
-        
+
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
         ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
@@ -98,10 +98,10 @@
 
         ;; Vim
         ("http://howivim.com/feed.xml" vim)
-        
+
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema interesting)
-        
+
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
         ("http://xkcd.com/atom.xml" comics dailycomic)
@@ -112,7 +112,7 @@
         ("http://abstrusegoose.com/atomfeed.xml" comics)
         ("http://www.casualvillain.com/Unsounded/feed/" comics)
         ("http://feeds.feedburner.com/zenpencils" comics)
-        
+
         ;; SF
         ("http://scifiinterfaces.wordpress.com/feed/" sf ux ui)
         ("http://www.antipope.org/charlie/blog-static/atom.xml" sf )
@@ -123,7 +123,7 @@
         ("http://www.sfsignal.com/index.rdf" sf)
         ("http://auxiliarymemory.com/feed/" sf)
         ("http://andromedasf.altervista.org/feed/" sf)
-        
+
         ;; Chess
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
 
@@ -187,11 +187,11 @@
         ("https://controlaltbackspace.org/feed.xml" maybe)
         ("https://apod.nasa.gov/apod.rss")
         ("https://www.gatesnotes.com/rss" books)
-        
+
         ;; Data
         ("https://caitlinhudon.com/feed/")
         ("https://www.locallyoptimistic.com/index.xml")
-        
+
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
         ("http://adereth.github.io/atom.xml" maybe)
@@ -232,5 +232,5 @@
         ("https://www.blogger.com/feeds/4534865332750558938/posts/default" danluu maybe)
         ;; ("http://blog.regehr.org/comments/feed" danluu maybe)
         ("https://www.snellman.net/blog/rss-index.xml" danluu maybe)
-        
+
         ))
