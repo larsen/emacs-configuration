@@ -120,6 +120,20 @@
         do (eyebrowse-rename-window-config window-config-slot
                                            window-config-label)))
 
+(defun my/initial-window-setup ()
+  "Rudimental function to setup windows.
+For now, useful only if I close emacsclient by mistake."
+  (interactive)
+  (let ((window-workspaces '((1 . ("diary.org"))
+                             (2 . ("*scratch*"))
+                             (3 . ("activities.org"))
+                             (8 . ("*elfeed-search*")))))
+    (loop for (window-slot . files-list)
+          in window-workspaces
+          do (progn (message (format "%s %s" window-slot files-list))
+                    (eyebrowse-switch-to-window-config window-slot)
+                    (switch-to-buffer (car files-list))))))
+
 (setq term-suppress-hard-newline t)
 
 (eval-after-load 'Term
