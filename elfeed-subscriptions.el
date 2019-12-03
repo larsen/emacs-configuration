@@ -187,6 +187,7 @@
         ("https://controlaltbackspace.org/feed.xml" maybe)
         ("https://apod.nasa.gov/apod.rss")
         ("https://www.gatesnotes.com/rss" books)
+        ("https://plaintextproject.online/feed.xml")
 
         ;; Data
         ("https://caitlinhudon.com/feed/")
@@ -216,6 +217,7 @@
         ("http://linesandcolors.com/feed/" art maybe)
         ("http://www.cachestocaches.com/feed/" maybe)
         ("https://adventuregamers.com/rss/" maybe games adventures)
+        ("https://acoup.blog/feed/" maybe)
 
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
