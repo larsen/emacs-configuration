@@ -79,7 +79,7 @@
   (interactive (list
                 (completing-read "Enter connection name "
                                  sql-connection-alist)))
-  (let* ((connection-details (my/get-connection-detail connection-name))
+  (let* ((connection-details (my/get-connection-details connection-name))
          (connection-dsn
           (format "postgresql://%s:%s@%s:%d/%s"
                   (car (cdr (assoc 'sql-user connection-details)))
@@ -90,10 +90,10 @@
              connection-dsn))
 
 (cl-defun my/get-connection-detail (connection-name connection-detail)
-  (cond
-   ((eql connection-detail "dsn") (my/get-connection-dsn connection-name))
-   (t (cadr (assoc connection-detail
-                        (my/get-connection-details connection-name))))))
+  (if (eql connection-detail 'dsn)
+      (my/get-connection-dsn connection-name)
+    (cadr (assoc connection-detail
+                        (my/get-connection-details connection-name)))))
 
 (defun my/get-connection-dsn-to-clipboard (connection-name)
   (let ((connection-dsn (my/get-connection-dsn connection-name)))
