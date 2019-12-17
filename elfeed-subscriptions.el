@@ -156,6 +156,7 @@
         ("https://ww.telent.net/news.rss")
         ("http://johnj.com/feed.xml")
         ("https://blog.nelhage.com/atom.xml")
+        ("http://pchiusano.github.io/feed.xml")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
