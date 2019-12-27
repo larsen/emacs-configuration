@@ -236,4 +236,6 @@
         ;; ("http://blog.regehr.org/comments/feed" danluu maybe)
         ("https://www.snellman.net/blog/rss-index.xml" danluu maybe)
 
+        ;; Biking
+        ("http://ridinggravel.com/feed/" bikes)
         ))
