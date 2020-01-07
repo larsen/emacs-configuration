@@ -102,6 +102,9 @@
         ;; Cinema
         ("http://www.i400calci.com/feed/" cinema interesting)
 
+        ;; Music
+        ("https://slippedisc.com/feed/" music classical)
+
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
         ("http://xkcd.com/atom.xml" comics dailycomic)
