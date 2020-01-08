@@ -84,6 +84,7 @@
 
         ;; Data
         ("https://modern-sql.com/feed" data sql)
+        ("https://kieranhealy.org/index.xml" data visualization R)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
