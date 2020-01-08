@@ -175,7 +175,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
  org-agenda-span 7
  org-agenda-files '("~/org/personal/"
                     "~/org/work/"
-                    "~/org/work/idagio/")
+                    "~/org/work/idagio/activities.org")
  org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
                                ((org-agenda-files '("~/org/work/idagio/")))))
  org-super-agenda-groups
