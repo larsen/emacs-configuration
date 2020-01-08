@@ -4,7 +4,7 @@
  '(org-twbs-htmlize-output-type 'css)
  '(org-html-htmlize-output-type 'css))
 
-(defvar personal-website-directory-prefix "~/Dropbox/stefanorodighiero.net/")
+(defvar personal-website-directory-prefix "~/www/stefanorodighiero.net/")
 (defun personal-website-absolute-directory (directory)
   (concat personal-website-directory-prefix directory))
 
