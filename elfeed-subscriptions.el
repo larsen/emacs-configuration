@@ -85,6 +85,7 @@
         ;; Data
         ("https://modern-sql.com/feed" data sql)
         ("https://kieranhealy.org/index.xml" data visualization R)
+        ("https://chris-said.io/" data)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
@@ -161,6 +162,7 @@
         ("http://johnj.com/feed.xml")
         ("https://blog.nelhage.com/atom.xml")
         ("http://pchiusano.github.io/feed.xml")
+        ("https://beepb00p.xyz/atom.xml")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
