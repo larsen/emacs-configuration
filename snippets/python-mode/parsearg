@@ -8,7 +8,7 @@ def parse_arguments():
     )
 
     parser.add_argument(
-        '--${1:help}', required=${2:False},
+        '--${1:opt}', required=${2:False},
         help='${3:Display this message}'
     )
 
