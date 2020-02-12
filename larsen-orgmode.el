@@ -189,6 +189,9 @@ WEEK-DAY is expressed as an integer in the range 0..6:
          (:name "Due Today"
                 :deadline today
                 :order 2)
+         (:name "Meetings"
+                :tag "meeting"
+                :order 3)
          (:name "Sprint"
                 :tag "sprint"
                 :order 3)
