@@ -38,6 +38,8 @@ WEEK-DAY is expressed as an integer in the range 0..6:
   "Return ISO8601 week number for today."
   (format-time-string "%V" (current-time)))
 
+(defvar day-properties-string ":PROPERTIES:\n:COLUMNS: %25ITEM %TAGS %PRIORITY %TODO\n:END:")
+
 (defun my-week-heading (week-number)
   "Return a string representing the heading for WEEK-NUMBER todo entries subtree."
   (let ((week-begin-date (my-calendar-iso-day-to-gregorian week-number 1))
@@ -73,7 +75,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                            Friday
                            Saturday
                            Sunday))
-     (insert (format "** %s\n" week-day-name))))
+     (insert (format "** %s\n%s\n" week-day-name day-properties-string))))
 
 (defun my-org-set-item-deadline (week-number)
   (let ((week-end-date (my-calendar-iso-day-to-gregorian week-number 5)))
