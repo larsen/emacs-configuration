@@ -57,6 +57,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
         (shell . t)
         (python . t)
         (sql . t)
+        (sqlite . t)
         (gnuplot . t)
         (R . t)
         (plantuml . t)))
