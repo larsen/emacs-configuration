@@ -52,7 +52,6 @@
                     :inverse-video nil
                     :weight 'bold)
 
-
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a given major-mode-name."
   (interactive
