@@ -9,9 +9,12 @@
 (require 'whole-line-or-region)
 (require 'switch-window)
 (require 'edwina)
+(require 'editorconfig)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
+
+(editorconfig-mode 1)
 
 (setq initial-scratch-message nil)
 
