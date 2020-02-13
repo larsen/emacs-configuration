@@ -2,12 +2,14 @@
 ;;; larsen-theme.el
 ;;;
 
+(defvar larsen/system-font "IBM Plex Mono")
+
 (set-face-attribute 'default nil
-                    :family "IBM Plex Mono"
+                    :family larsen/system-font
                     :height 140)
 
 (set-face-attribute 'mode-line nil
-                    :family "IBM Plex Mono"
+                    :family larsen/system-font
                     :height 100)
 
 ;;; FIXME should it not inherit from 'mode-line?
@@ -15,12 +17,12 @@
                     :height 100)
 
 (set-face-attribute 'font-lock-comment-face nil
-                    :family "IBM Plex Mono"
+                    :family larsen/system-font
                     :height 1.0
                     :slant 'italic)
 
 (set-face-attribute 'font-lock-doc-face nil
-                    :family "IBM Plex Mono"
+                    :family larsen/system-font
                     :height 1.0
                     :slant 'italic)
 
