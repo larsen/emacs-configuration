@@ -117,7 +117,7 @@
   "Scan through my list of external links and return a list of pairs <link,description>."
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
     (with-current-buffer
-        (find-file-noselect "~/Dropbox/stefanorodighiero.net/links.org")
+        (find-file-noselect "~/www/stefanorodighiero.net/links.org")
       (loop for entry in (org-map-entries 'org-entry-properties nil 'file)
             collect (get-link-and-description-from-entry entry)))))
 
