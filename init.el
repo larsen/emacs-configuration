@@ -76,6 +76,7 @@
         larsen-functions
         larsen-elisp
         larsen-ruby
+        larsen-python
         larsen-refactoring
         larsen-theme
         larsen-keys
