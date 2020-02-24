@@ -3,6 +3,7 @@
 (require 'elpy)
 (require 'pyvenv)
 (require 'blacken)
+(require 'sphinx-doc)
 
 (elpy-enable)
 
@@ -21,6 +22,8 @@
 
 (add-hook 'python-mode-hook 'blacken-mode)
 (add-hook 'python-mode-hook  (lambda () (flycheck-mode -1)))
+(add-hook 'python-mode-hook 'sphinx-doc-mode)
+
 
 (when (load "flycheck" t t)
   (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
