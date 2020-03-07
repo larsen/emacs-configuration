@@ -134,6 +134,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                     "DONE(!)"
                                     "CANCELED(!)"))
       system-time-locale "en_US.UTF-8"
+      org-my-anki-file "~/org/personal/anki.org"
       org-capture-templates `(("n" "Note" entry
                                (file "~/org/personal/notes.org")
                                "* %t\n%i" :immediate-finish t :empty-lines 1)
@@ -148,7 +149,11 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                                "*** TODO %i%?\n    %a")
                               ("r" "Reading todo" entry
                                (file "~/Dropbox/orgzly/reading.org")
-                               "*** TODO %i%?\n    %a"))
+                               "*** TODO %i%?\n    %a")
+                              ("a" "Anki basic"
+                               entry
+                               (file+headline org-my-anki-file "Dispatch Shelf")
+                               "* %<%H:%M>   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Basic\n:ANKI_DECK: Default\n:END:\n** Front\n%?\n** Back\n%x\n"))
 
       org-refile-targets (quote ((nil :maxlevel . 2)
                                  (org-agenda-files :maxlevel . 2)
