@@ -1,5 +1,7 @@
 ; (package-require 'dired+)
 
+(require 'dired-avfs)
+
 (setq dired-listing-switches "-lath")
 
 (setq dired-dwim-target t)
