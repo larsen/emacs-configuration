@@ -68,6 +68,7 @@
         larsen-auto-complete
         larsen-orgmode
         larsen-orgmode-website
+        larsen-anki
         larsen-slime
         larsen-magit
         larsen-erc
