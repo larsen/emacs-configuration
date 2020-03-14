@@ -61,6 +61,7 @@
         ("http://www.scheme.dk/planet/atom.xml" scheme)
         ("https://lisp.sh/feed.atom" racket)
         ("https://recursive.games/rss.xml" lisp programming games)
+        ("http://www.lispology.com/rss?JHE+3" lisp programming)
 
         ;; Programming – Clojure
         ("http://planet.clojure.in/atom.xml" clojure programming)
