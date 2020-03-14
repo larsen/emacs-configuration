@@ -1,11 +1,6 @@
 (load "~/.ercpass")
 
-(require 'erc-ring)
-(erc-ring-mode)
-
 (require 'erc-image)
-;; (add-to-list 'erc-modules 'image)
-;; (setq erc-image-inline-rescale 300)
 (erc-update-modules)
 
 (add-hook 'erc-text-matched-hook 'my-erc-notify-hook)
