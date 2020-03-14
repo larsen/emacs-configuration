@@ -122,7 +122,6 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       org-fontify-done-headline t
       org-fontify-quote-and-verse-blocks t
       ;; show actually italicized text instead of /italicized text/
-      org-agenda-block-separator ""
       org-log-done t
       org-log-into-drawer t
       org-return-follows-link t
