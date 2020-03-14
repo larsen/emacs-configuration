@@ -185,7 +185,10 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                     "~/org/work/"
                     "~/org/work/idagio/activities.org")
  org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
-                               ((org-agenda-files '("~/org/work/idagio/")))))
+                               ((org-agenda-files '("~/org/work/idagio/"))))
+                              ("w" "Weekly Agenda"
+                               ((agenda "" ((org-super-agenda-groups
+                                             '((:name "Today" :scheduled today))))))))
  org-super-agenda-groups
        '(;; Each group has an implicit boolean OR operator between its selectors.
          (:name "Today"  ; Optionally specify section name
