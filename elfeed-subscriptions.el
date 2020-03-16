@@ -167,6 +167,7 @@
         ("https://beepb00p.xyz/atom.xml")
         ("https://willschenk.com/feed.xml" maybe)
         ("https://sandymaguire.me/atom.xml")
+        ("https://reasonablypolymorphic.com/atom.xml")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
