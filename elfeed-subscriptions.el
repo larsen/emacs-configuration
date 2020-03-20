@@ -88,6 +88,7 @@
         ("https://kieranhealy.org/index.xml" data visualization R)
         ("https://chris-said.io/" data)
         ("http://datagenetics.com/feed/rss.xml" data)
+        ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
