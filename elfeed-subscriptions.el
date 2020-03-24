@@ -169,6 +169,7 @@
         ("https://willschenk.com/feed.xml" maybe)
         ("https://sandymaguire.me/atom.xml")
         ("https://reasonablypolymorphic.com/atom.xml")
+        ("http://muratbuffalo.blogspot.com/feeds/posts/default" cs distributed-systems)
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
