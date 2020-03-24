@@ -89,6 +89,8 @@
         ("https://chris-said.io/" data)
         ("http://datagenetics.com/feed/rss.xml" data)
         ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data)
+        ("https://caitlinhudon.com/feed/" data)
+        ("https://www.locallyoptimistic.com/index.xml" data)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
@@ -202,10 +204,6 @@
         ("https://apod.nasa.gov/apod.rss")
         ("https://www.gatesnotes.com/rss" books)
         ("https://plaintextproject.online/feed.xml")
-
-        ;; Data
-        ("https://caitlinhudon.com/feed/")
-        ("https://www.locallyoptimistic.com/index.xml")
 
         ;; maybe
         ("https://blog.tymoon.eu/" maybe)
