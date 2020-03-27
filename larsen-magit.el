@@ -1,5 +1,7 @@
 (require 'magit)
 
+(setq magit-save-repository-buffers 'dontask)
+
 ;; from http://whattheemacsd.com/setup-magit.el-01.html
 ;; full screen magit-status
 
