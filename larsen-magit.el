@@ -1,4 +1,4 @@
-(require 'magit)
+(use-package magit)
 
 (setq magit-save-repository-buffers 'dontask)
 

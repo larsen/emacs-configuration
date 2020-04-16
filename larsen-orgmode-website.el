@@ -1,4 +1,4 @@
-(require 'org)
+(use-package org)
 
 (custom-set-variables
  '(org-twbs-htmlize-output-type 'css)

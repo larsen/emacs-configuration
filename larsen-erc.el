@@ -1,6 +1,6 @@
 (load "~/.ercpass")
 
-(require 'erc-image)
+(use-package erc-image)
 (erc-update-modules)
 
 (add-hook 'erc-text-matched-hook 'my-erc-notify-hook)

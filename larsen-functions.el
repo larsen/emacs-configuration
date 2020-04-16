@@ -78,7 +78,7 @@
 
 ;; utility to use with shr (eww, elfeed entry view, ...)
 
-(require 'f)
+(use-package f)
 
 (defun shr-download-image ()
   "Downloads the image under point"

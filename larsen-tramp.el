@@ -2,7 +2,7 @@
 ;;; larsen-tramp.el
 ;;;
 
-(require 'tramp)
+(use-package tramp)
 (setq tramp-default-method "ssh")
 
 ; local auto-saves to speed up things

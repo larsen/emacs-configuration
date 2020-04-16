@@ -1,6 +1,6 @@
 ; (package-require 'dired+)
 
-(require 'dired-avfs)
+(use-package dired-avfs)
 
 (setq dired-listing-switches "-lath")
 

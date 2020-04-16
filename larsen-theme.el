@@ -85,8 +85,8 @@
 ; (load-theme 'constant t)
 (load-theme 'doom-tomorrow-night t)
 
-(require 'org-beautify-theme)
-(load-theme 'org-beautify-theme)
+; (use-package 'org-beautify-theme)
+; (load-theme 'org-beautify-theme)
 
 (doom-modeline-mode)
 (doom-themes-neotree-config)

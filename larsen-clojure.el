@@ -1,5 +1,5 @@
-(require 'clojure-mode)
-(require 'clj-refactor)
+(use-package clojure-mode)
+(use-package clj-refactor)
 
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojurescript-mode))

@@ -1,4 +1,4 @@
-(require 'keyfreq)
+(use-package keyfreq)
 
 (setq keyfreq-excluded-commands
       '(self-insert-command

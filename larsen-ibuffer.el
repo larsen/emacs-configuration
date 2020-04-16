@@ -1,6 +1,6 @@
-(require 'ibuffer)
-(require 'ibuffer-git)
-(require 'ibuffer-projectile)
+(use-package ibuffer)
+(use-package ibuffer-git)
+(use-package ibuffer-projectile)
 
 (setq ibuffer-saved-filter-groups
       '(("default"

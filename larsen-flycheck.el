@@ -1,6 +1,6 @@
 ;;; larsen-flycheck.el --- Flycheck configuration
 
-(require 'flycheck)
+(use-package flycheck)
 
 (global-flycheck-mode 1)
 

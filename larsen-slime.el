@@ -1,8 +1,8 @@
 (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 (setq inferior-lisp-program "sbcl")
 
-; (require 'slime)
-(require 'slime-autoloads)
+; (use-package 'slime)
+(use-package slime-autoloads)
 (slime-setup '(;; slime-fancy
                slime-repl
                slime-c-p-c

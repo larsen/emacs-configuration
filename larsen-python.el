@@ -1,9 +1,9 @@
 ;;; larsen-python
 
-(require 'elpy)
-(require 'pyvenv)
-(require 'blacken)
-(require 'sphinx-doc)
+(use-package elpy)
+(use-package pyvenv)
+(use-package blacken)
+(use-package sphinx-doc)
 
 (elpy-enable)
 

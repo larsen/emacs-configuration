@@ -1,4 +1,4 @@
-(require 'elfeed)
+(use-package elfeed)
 (setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
 (setq url-queue-timeout 30)
 (setq elfeed-use-curl t)
@@ -94,7 +94,7 @@
                     (volatile)
                     (elfeed-db-get-all-tags)))))
 
-;; (require 'elfeed-goodies)
+;; (use-package 'elfeed-goodies)
 ;; (elfeed-goodies/setup)
 
 (provide 'larsen-elfeed)

@@ -5,16 +5,16 @@
 ;; I have custom changes not yet merged into master
 (add-to-list 'load-path "~/build/org-mode/lisp/")
 
-(require 'org)
-(require 'org-capture)
-(require 'org-bullets)
-(require 'org-agenda)
-(require 'org-super-agenda)
-(require 'org-download)
-(require 'ob-ditaa)
-(require 'cal-iso)
-(require 'cl)
-(require 'ox)
+(use-package org)
+(use-package org-capture)
+(use-package org-bullets)
+(use-package org-agenda)
+(use-package org-super-agenda)
+(use-package org-download)
+(use-package ob-ditaa)
+(use-package cal-iso)
+(use-package cl)
+(use-package ox)
 
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
@@ -167,6 +167,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       ;; To switch (on Ubuntu): sudo update-alternatives --config java
       org-plantuml-jar-path "~/bin/plantuml.jar"
       ;; org-default-notes-file (concat org-directory "/notes.org")
+
       ;; See https://github.com/bruceravel/gnuplot-mode/issues/31
       gnuplot-help-xpm nil
       gnuplot-line-xpm nil

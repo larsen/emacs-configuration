@@ -2,14 +2,16 @@
 ;;; larsen-env.el
 ;;;
 
-(require 'helm)
-(require 'helm-swoop)
-(require 'rotate)
-(require 'nlinum)
-(require 'whole-line-or-region)
-(require 'switch-window)
-(require 'edwina)
-(require 'editorconfig)
+(use-package helm)
+(use-package helm-swoop)
+(use-package rotate)
+(use-package nlinum)
+(use-package whole-line-or-region)
+(use-package switch-window)
+(use-package edwina)
+(use-package editorconfig)
+(use-package crux)
+(use-package cl)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -95,8 +97,6 @@
 
 ;; Projectile
 (projectile-mode)
-
-(require 'cl)
 
 (edwin-mode t)
 (eyebrowse-mode t)

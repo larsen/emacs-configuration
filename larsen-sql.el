@@ -1,15 +1,15 @@
-(require 'sql)
-(require 'sqlup-mode)
-(require 'sqlformat)
-(require 'cl)
-(require 'seq)
-(require 'filenotify)
+(use-package sql)
+(use-package sqlup-mode)
+(use-package sqlformat)
+(use-package cl)
+(use-package seq)
+(use-package filenotify)
 
 ;; emacs-sql-indent was installed from github's repo
 ;; using quelpa
 
 ;; (package-initialize)
-;; (if (require 'quelpa nil t)
+;; (if (use-package 'quelpa nil t)
 ;;     (quelpa-self-upgrade)
 ;;   (with-temp-buffer
 ;;     (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
