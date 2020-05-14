@@ -8,6 +8,8 @@
          ("Perl" (mode . cperl-mode))
          ("Python" (mode . python-mode))
          ("Org" (mode . org-mode))
+         ("Lisp" (or (mode . lisp-mode)
+                     (name . "slime")))
          ("Emacs Lisp" (or (mode . emacs-lisp-mode)
                            (name . "^\\*ielm\\*$")))
          ("System" (or (name . "^\\*scratch\\*$")
