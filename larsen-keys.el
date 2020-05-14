@@ -16,7 +16,7 @@
        (,(kbd "C-x o") switch-window)
        (,(kbd "M-o") other-window)
        (,(kbd "C-S-f") switch-layoout)
-       (,(kbd "C-c t") (lambda () (interactive) (ansi-term "/bin/bash")))
+       (,(kbd "C-c t") (lambda () (interactive) (vterm)))
        (,(kbd "C-c m c") mc/edit-lines)
        (,(kbd "C-c e m") macrostep-mode)
        (,(kbd "C-c e r") eval-and-replace)
