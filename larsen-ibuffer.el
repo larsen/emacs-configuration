@@ -17,7 +17,7 @@
 
 (setq ibuffer-formats
       '((mark modified read-only " "
-              (name 18 18 :left :elide)
+              (name 28 28 :left :elide)
               " "
               (size 9 -1 :right)
               " "
