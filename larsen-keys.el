@@ -26,11 +26,11 @@
        (,(kbd "C-S-<mouse-1>") mc/add-cursor-on-click)
        (,(kbd "C-c f") (lambda ()
                          (interactive)
-                         (projectile-ag
+                         (helm-projectile-ag
                           (file-name-base (buffer-file-name)))))
        (,(kbd "<f6>") (lambda ()
                         (interactive)
-                        (projectile-ag)))))
+                        (helm-projectile-ag)))))
 
    ;; TAB special behaviour
    (when (featurep 'larsen-smarttab)
