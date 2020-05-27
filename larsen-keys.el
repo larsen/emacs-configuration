@@ -23,7 +23,14 @@
        (,(kbd "C-c m a") mc/mark-all-like-this)
        (,(kbd "C-c m n") mc/mark-next-like-this)
        (,(kbd "C-c SPC") ace-jump-mode)
-       (,(kbd "C-S-<mouse-1>") mc/add-cursor-on-click)))
+       (,(kbd "C-S-<mouse-1>") mc/add-cursor-on-click)
+       (,(kbd "C-c f") (lambda ()
+                         (interactive)
+                         (projectile-ag
+                          (file-name-base (buffer-file-name)))))
+       (,(kbd "<f6>") (lambda ()
+                        (interactive)
+                        (projectile-ag (thing-at-point 'word))))))
 
    ;; TAB special behaviour
    (when (featurep 'larsen-smarttab)
