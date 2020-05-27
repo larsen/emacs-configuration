@@ -30,7 +30,7 @@
                           (file-name-base (buffer-file-name)))))
        (,(kbd "<f6>") (lambda ()
                         (interactive)
-                        (projectile-ag (thing-at-point 'word))))))
+                        (projectile-ag)))))
 
    ;; TAB special behaviour
    (when (featurep 'larsen-smarttab)
