@@ -91,6 +91,7 @@
         ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data)
         ("https://caitlinhudon.com/feed/" data)
         ("https://www.locallyoptimistic.com/index.xml" data)
+        ("https://meltano.com/blog/feed/" data etl)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
@@ -172,6 +173,7 @@
         ("https://sandymaguire.me/atom.xml")
         ("https://reasonablypolymorphic.com/atom.xml")
         ("http://muratbuffalo.blogspot.com/feeds/posts/default" cs distributed-systems)
+        ("https://www.singlelunch.com/feed/" maybe)
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
@@ -230,6 +232,7 @@
         ("http://www.cachestocaches.com/feed/" maybe)
         ("https://adventuregamers.com/rss/" maybe games adventures)
         ("https://acoup.blog/feed/" maybe)
+        ("https://kiwihellenist.blogspot.com/feeds/posts/default" maybe)
 
         ;; suggested by Dan Luu -- 2016/05/03
         ("http://blog.nullspace.io/feed.xml" danluu maybe)
@@ -249,4 +252,4 @@
 
         ;; Biking
         ("http://ridinggravel.com/feed/" bikes)
-        ))
+        ("https://www.cyclingabout.com/feed/" bikes)))
