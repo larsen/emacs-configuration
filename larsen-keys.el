@@ -76,7 +76,9 @@
 
    (when (featurep 'larsen-ibuffer)
      `((,(kbd "C-x C-b") ibuffer)))
-   ))
+   
+   (when (featurep 'larsen-print)
+     `((,(kbd "M-<print>") a2ps-buffer)))))
 
 (my-global-set-keys (larsen-keys))
 

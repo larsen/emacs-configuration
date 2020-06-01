@@ -80,6 +80,7 @@
         larsen-python
         larsen-refactoring
         larsen-theme
+        larsen-print
         larsen-keys
         ))
 
