@@ -98,7 +98,7 @@
 ;; Projectile
 (projectile-mode)
 
-(edwin-mode t)
+;; (edwin-mode t)
 (eyebrowse-mode t)
 
 (loop for i from 1 upto 9
