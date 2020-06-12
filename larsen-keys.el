@@ -62,7 +62,8 @@
 
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
-       (,(kbd "C-<f12>") slime-selector)))
+       (,(kbd "C-<f12>") slime-selector)
+       (,(kbd "<f12>") slime-selector)))
 
    (when (featurep 'larsen-magit)
      `((,(kbd "C-x g") magit-status)))
