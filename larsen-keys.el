@@ -86,6 +86,6 @@
 ;; Experimental
 (key-chord-mode t)
 (key-chord-define-global ",," 'slime-selector)
-(key-chord-define-global "qq" 'helm-mini)
+(key-chord-define-global "hh" 'helm-mini)
 
 (provide 'larsen-keys)
