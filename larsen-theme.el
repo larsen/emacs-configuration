@@ -2,55 +2,51 @@
 ;;; larsen-theme.el
 ;;;
 
-(defvar larsen/system-font "IBM Plex Mono")
+(defvar larsen/system-font
+  ;; "IBM Plex Mono"
+  "Iosevka")
 
-(set-face-attribute 'default nil
-                    :family larsen/system-font
-                    :height 140)
-
-(set-face-attribute 'mode-line nil
-                    :family larsen/system-font
-                    :height 100)
-
-;;; FIXME should it not inherit from 'mode-line?
-(set-face-attribute 'mode-line-inactive nil
-                    :height 100)
-
-(set-face-attribute 'font-lock-comment-face nil
-                    :family larsen/system-font
-                    :height 1.0
-                    :slant 'italic)
-
-(set-face-attribute 'font-lock-doc-face nil
-                    :family larsen/system-font
-                    :height 1.0
-                    :slant 'italic)
-
-(set-face-attribute 'variable-pitch nil
-                    :family "Literata eBook"
-                    :height 0.95
-                    :slant 'normal)
-
-(set-face-attribute 'org-ellipsis nil
-                    :underline nil)
-
-(set-face-attribute 'flycheck-fringe-error nil
-                    :background "black"
-                    :foreground "yellow"
-                    :inverse-video nil
-                    :weight 'bold)
-
-(set-face-attribute 'flycheck-fringe-warning nil
-                    :background "black"
-                    :foreground "orange"
-                    :inverse-video nil
-                    :weight 'bold)
-
-(set-face-attribute 'flycheck-fringe-info nil
-                    :background "black"
-                    :foreground "green"
-                    :inverse-video nil
-                    :weight 'bold)
+(let ((font
+       (or nil
+           larsen/system-font)))
+  (set-face-attribute 'default nil
+                      :family font
+                      :height 140)
+  (set-face-attribute 'mode-line nil
+                      :family font
+                      :height 100)
+  ;; FIXME should it not inherit from 'mode-line?
+  (set-face-attribute 'mode-line-inactive nil
+                      :height 100)
+  (set-face-attribute 'font-lock-comment-face nil
+                      :family font
+                      :height 1.0
+                      :slant 'italic)
+  (set-face-attribute 'font-lock-doc-face nil
+                      :family font
+                      :height 1.0
+                      :slant 'italic)
+  (set-face-attribute 'variable-pitch nil
+                      :family "Literata eBook"
+                      :height 0.95
+                      :slant 'normal)
+  (set-face-attribute 'org-ellipsis nil
+                      :underline nil)
+  (set-face-attribute 'flycheck-fringe-error nil
+                      :background "black"
+                      :foreground "yellow"
+                      :inverse-video nil
+                      :weight 'bold)
+  (set-face-attribute 'flycheck-fringe-warning nil
+                      :background "black"
+                      :foreground "orange"
+                      :inverse-video nil
+                      :weight 'bold)
+  (set-face-attribute 'flycheck-fringe-info nil
+                      :background "black"
+                      :foreground "green"
+                      :inverse-video nil
+                      :weight 'bold))
 
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a given major-mode-name."
