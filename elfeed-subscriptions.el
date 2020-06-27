@@ -92,6 +92,7 @@
         ("https://caitlinhudon.com/feed/" data)
         ("https://www.locallyoptimistic.com/index.xml" data)
         ("https://meltano.com/blog/feed/" data etl)
+        ("https://planet.postgresql.org/rss20.xml" data postgresql)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
@@ -174,6 +175,7 @@
         ("https://reasonablypolymorphic.com/atom.xml")
         ("http://muratbuffalo.blogspot.com/feeds/posts/default" cs distributed-systems)
         ("https://www.singlelunch.com/feed/" maybe)
+        ("https://fluca1978.github.io/feed.xml")
 
         ;; misc stuff
         ("http://boingboing.net/index.xml" clutter)
