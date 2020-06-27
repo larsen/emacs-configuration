@@ -20,4 +20,7 @@
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
 
+(setq peep-dired-cleanup-on-disable t)
+(setq peep-dired-cleanup-eagerly nil)
+
 (provide 'larsen-dired)

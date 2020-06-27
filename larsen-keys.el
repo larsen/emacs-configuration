@@ -77,7 +77,10 @@
 
    (when (featurep 'larsen-ibuffer)
      `((,(kbd "C-x C-b") ibuffer)))
-   
+
+   (when (featurep 'larsen-dired))
+   `((,(kbd "C-x p") peep-dired))
+
    (when (featurep 'larsen-print)
      `((,(kbd "M-<print>") a2ps-buffer)))))
 
