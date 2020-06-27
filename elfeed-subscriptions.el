@@ -104,6 +104,7 @@
         ("https://emacs.wordpress.com/feed/" emacs)
         ("http://pragmaticemacs.com/" emacs)
         ("http://www.howardism.org/index.xml" emacs)
+        ("http://mbork.pl/?action=rss" emacs)
 
         ;; Vim
         ("http://howivim.com/feed.xml" vim)
