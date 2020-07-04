@@ -113,7 +113,6 @@
         ("http://www.i400calci.com/feed/" cinema interesting)
 
         ;; Music
-        ("https://slippedisc.com/feed/" music classical)
 
         ;; Comics
         ("http://www.fumettologica.it/feed/" comics)
@@ -180,8 +179,6 @@
         ("https://fluca1978.github.io/feed.xml")
 
         ;; misc stuff
-        ("http://boingboing.net/index.xml" clutter)
-        ("http://nautil.us/rss/all")
         ("http://usesthis.com/feed/" setup)
         ("http://chneukirchen.org/trivium/index.atom" links interesting)
         ("http://www.bytecellar.com/feed/" retrocomputing)
