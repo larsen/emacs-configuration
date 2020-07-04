@@ -141,6 +141,7 @@
         ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
 
         ;; Personal blogs
+        ("https://lexi-lambda.github.io/feeds/all.rss.xml")
         ("http://www.rousette.org.uk/blog/index.xml")
         ("http://cartesianfaith.com/feed/")
         ("http://jasmcole.com/feed/")
