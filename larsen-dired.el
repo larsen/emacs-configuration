@@ -1,11 +1,14 @@
 ; (package-require 'dired+)
 
+(use-package dired-x)
 (use-package dired-avfs)
 (use-package peep-dired)
 
 (setq dired-listing-switches "-lath")
 
 (setq dired-dwim-target t)
+
+(setq dired-clean-confirm-killing-deleted-buffers nil)
 
 ;; Copied from https://github.com/IvanRave/emacs-config/blob/master/init.el
 (defun mydired-sort ()
