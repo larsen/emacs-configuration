@@ -41,6 +41,12 @@
     (interactive)
     (elfeed-link-title elfeed-show-entry)))
 
+
+(define-key elfeed-show-mode-map "f"
+  (lambda ()
+    (interactive)
+    (message "Original feed: %s" (elfeed-entry-feed elfeed-show-entry))))
+
 (define-key elfeed-show-mode-map "D"
   (lambda ()
     (interactive)
