@@ -4,11 +4,17 @@
 (use-package dired-avfs)
 (use-package peep-dired)
 
-(setq dired-listing-switches "-lath")
+(setq dired-listing-switches "-GFhlv --group-directories-first --time-style=long-iso"
+      dired-dwim-target t
+      dired-recursive-deletes 'always
+      dired-recursive-copies 'always
+      dired-deletion-confirmer 'y-or-n-p
+      dired-clean-confirm-killing-deleted-buffers nil
+      dired-clean-up-buffers-too nil)
 
-(setq dired-dwim-target t)
-
-(setq dired-clean-confirm-killing-deleted-buffers nil)
+(setq peep-dired-cleanup-on-disable t
+      peep-dired-cleanup-eagerly nil
+      peep-dired-ignored-extensions '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac"))
 
 ;; Copied from https://github.com/IvanRave/emacs-config/blob/master/init.el
 (defun mydired-sort ()
