@@ -99,6 +99,7 @@
 
         ;; Emacs
         ("http://planet.emacsen.org/atom.xml" emacs)
+        ("https://planet.emacslife.com/atom.xml" emacs)
         ("https://asylum.madhouse-project.org/blog/atom.xml" emacs programming)
         ("http://www.masteringemacs.org/feed/" emacs)
         ("https://emacs.wordpress.com/feed/" emacs)
