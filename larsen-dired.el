@@ -29,5 +29,7 @@
 
 (setq peep-dired-cleanup-on-disable t)
 (setq peep-dired-cleanup-eagerly nil)
+(setq peep-dired-ignored-extensions
+      '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac"))
 
 (provide 'larsen-dired)
