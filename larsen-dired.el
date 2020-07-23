@@ -10,7 +10,11 @@
       dired-recursive-copies 'always
       dired-deletion-confirmer 'y-or-n-p
       dired-clean-confirm-killing-deleted-buffers nil
-      dired-clean-up-buffers-too nil)
+      dired-clean-up-buffers-too nil
+      dired-guess-shell-alist-user
+      	  '(("\\.pdf\\'" "evince")
+            ("\\.jpg\\'" "feh")
+            ("\\.gpx\\'" "viking")))
 
 (setq peep-dired-cleanup-on-disable t
       peep-dired-cleanup-eagerly nil
@@ -29,13 +33,5 @@
     (after dired-after-updating-hook first () activate)
   "Sort dired listings with directories first before adding marks."
   (mydired-sort))
-
-(setq dired-listing-switches
-        "-GFhlv --group-directories-first --time-style=long-iso")
-
-(setq peep-dired-cleanup-on-disable t)
-(setq peep-dired-cleanup-eagerly nil)
-(setq peep-dired-ignored-extensions
-      '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac"))
 
 (provide 'larsen-dired)
