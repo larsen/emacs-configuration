@@ -4,7 +4,7 @@
 (use-package dired-avfs)
 (use-package peep-dired)
 
-(setq dired-listing-switches "-GFhlv --group-directories-first --time-style=long-iso"
+(setq dired-listing-switches "-aGFhlv --group-directories-first --time-style=long-iso"
       dired-dwim-target t
       dired-recursive-deletes 'always
       dired-recursive-copies 'always
