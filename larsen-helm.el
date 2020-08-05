@@ -1,5 +1,3 @@
-(add-to-list 'load-path (concat dotfiles-dir "site-lisp/helm"))
-
 (use-package helm-config)
 (use-package helm-projectile)
 (use-package helm-ag)
