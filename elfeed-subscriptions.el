@@ -179,6 +179,8 @@
         ("http://muratbuffalo.blogspot.com/feeds/posts/default" cs distributed-systems)
         ("https://www.singlelunch.com/feed/" maybe)
         ("https://fluca1978.github.io/feed.xml")
+        ("https://amitp.blogspot.com/feeds/posts/default")
+        ("https://simblob.blogspot.com/feeds/posts/default")
 
         ;; misc stuff
         ("http://usesthis.com/feed/" setup)
