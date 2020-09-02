@@ -86,9 +86,9 @@
 
 (my-global-set-keys (larsen-keys))
 
-;; Experimental
 (key-chord-mode t)
 (key-chord-define-global ",," 'slime-selector)
 (key-chord-define-global "hh" 'helm-mini)
+(key-chord-define-global "jj" 'ace-jump-mode)
 
 (provide 'larsen-keys)
