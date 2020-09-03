@@ -181,6 +181,7 @@
         ("https://fluca1978.github.io/feed.xml")
         ("https://amitp.blogspot.com/feeds/posts/default")
         ("https://simblob.blogspot.com/feeds/posts/default")
+        ("https://jameshunt.us/rss-bro.xml" programming)
 
         ;; misc stuff
         ("http://usesthis.com/feed/" setup)
