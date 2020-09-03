@@ -22,15 +22,17 @@
 ;; When in sql-mode, activate emacs-sql-indent
 (add-hook 'sql-mode-hook 'sqlind-minor-mode)
 ;; and capitalize keywords in SQL mode
-(add-hook 'sql-mode-hook 'sqlup-mode)
+;; (add-hook 'sql-mode-hook 'sqlup-mode)
 
 ;; Capitalize keywords in an interactive session (e.g. psql)
-(add-hook 'sql-interactive-mode-hook 'sqlup-mode)
+;; (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
 ;; Set a global keyword to use sqlup on a region
 (global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
 
-(setq sqlformat-args '("-k" "upper"
-                       "-i" "lower"))
+(setq sqlformat-args '("-k" "lower"
+                       "-i" "lower"
+                       "-r"
+                       "--indent_width" "4"))
 
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
