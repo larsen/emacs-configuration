@@ -50,6 +50,7 @@
         ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
         ("http://comonad.com/reader/feed/" haskell programming cs)
         ("https://chrispenner.ca/atom.xml" haskell programming fp)
+        ("https://blog.poisson.chat/rss.xml" haskell programming fp)
 
         ;; Programming – Lisp
         ("http://planet.lisp.org/rss20.xml" lisp fp programming)
