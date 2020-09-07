@@ -95,6 +95,8 @@
         ("https://www.locallyoptimistic.com/index.xml" data)
         ("https://meltano.com/blog/feed/" data etl)
         ("https://planet.postgresql.org/rss20.xml" data postgresql)
+        ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data distributed-systems)
+        ("http://dbmsmusings.blogspot.com/feeds/posts/default" data distributed-systems)
 
         ;; R
         ("https://4dpiecharts.com/feed/" R)
