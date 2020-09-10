@@ -185,6 +185,7 @@
         ("https://amitp.blogspot.com/feeds/posts/default")
         ("https://simblob.blogspot.com/feeds/posts/default")
         ("https://jameshunt.us/rss-bro.xml" programming)
+        ("https://blog.jessfraz.com/post")
 
         ;; misc stuff
         ("http://usesthis.com/feed/" setup)
