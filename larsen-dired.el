@@ -14,7 +14,8 @@
       dired-guess-shell-alist-user
       	  '(("\\.pdf\\'" "evince")
             ("\\.jpg\\'" "feh")
-            ("\\.gpx\\'" "viking")))
+            ("\\.gpx\\'" "viking")
+            ("\\.kml\\'" "viking")))
 
 (setq peep-dired-cleanup-on-disable t
       peep-dired-cleanup-eagerly nil
