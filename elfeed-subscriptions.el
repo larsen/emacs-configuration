@@ -318,7 +318,6 @@
                  ("http://www.desertislesql.com/wordpress1/?feed=rss2")
                  ("http://www.sqlpassion.at/feed/")
                  ("http://feeds.feedburner.com/brent-ozar")
-                 ("https://glennsqlperformance.com/feed/")
                  ("https://www.enricovandelaar.com/feed/")
                  ("http://auntkathisql.com/feed/")
                  ("http://www.nikoport.com/feed/")
@@ -344,7 +343,6 @@
                  ("https://sqlreitse.home.blog/feed/")
                  ("http://tracyboggiano.com/feed/")
                  ("https://sqlkiwi.blogspot.com/feeds/posts/default")
-                 ("http://feeds.feedburner.com/BrentOzar-SqlServerDba")
                  ("https://social.technet.microsoft.com:443/Profile/u/activities/feed?displayName=Kevin%20Farlee%20%5BMSFT%5D")
                  ("http://sqlsunday.com/feed/")
                  ("http://blog.bartekr.net/feed/")
@@ -492,7 +490,6 @@
                  ("http://lisagb.info/feed")
                  ("https://api.reddit.com/subreddit/Database/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")
                  ("https://api.reddit.com/subreddit/SQL/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")
-                 
                  ("https://azure.microsoft.com/en-us/blog/topics/database/feed/")
                  ("https://azurecomcdn.azureedge.net/en-us/updates/feed/?product=sql-database")
                  ("http://azure.microsoft.com/en-us/updates/feed/")
