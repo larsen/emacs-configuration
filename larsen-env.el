@@ -144,4 +144,6 @@ For now, useful only if I close emacsclient by mistake."
 
 (require 'forecast-configuration nil t)
 
+(nyan-mode)
+
 (provide 'larsen-env)
