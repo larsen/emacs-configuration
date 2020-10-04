@@ -201,6 +201,7 @@
          ("https://robertheaton.com/feed.xml" maybe evans)
          ("https://www.harihareswara.net/rss.xml" maybe evans)
          ("https://vicki.substack.com/feed/" maybe evans)
+         ("https://feeds.feedburner.com/martinkl")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
