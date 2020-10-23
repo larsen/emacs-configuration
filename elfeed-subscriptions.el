@@ -141,6 +141,7 @@
          ("http://www.sfsignal.com/index.rdf" sf)
          ("http://auxiliarymemory.com/feed/" sf)
          ("http://andromedasf.altervista.org/feed/" sf)
+         ("https://www.tor.com/tag/jo-walton-reads/feed/" sf)
 
          ;; Chess
          ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
@@ -202,6 +203,7 @@
          ("https://www.harihareswara.net/rss.xml" maybe evans)
          ("https://vicki.substack.com/feed/" maybe evans)
          ("https://feeds.feedburner.com/martinkl")
+         ("https://eighty-twenty.org/index.atom")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -225,7 +227,7 @@
          ("http://tech.marksblogg.com/feeds/all.atom.xml")
          ("http://www.elidedbranches.com/feeds/posts/default")
          ("https://lethain.com/feeds/" maybe engineering management)
-         ("http://n-gate.com/index.rss" interesting)
+         ("http://n-gate.com/index.rss" interesting links)
          ("https://thetechnicalgeekery.com/feed.xml" maybe)
          ("https://controlaltbackspace.org/feed.xml" maybe)
          ("https://apod.nasa.gov/apod.rss")
@@ -252,7 +254,6 @@
          ("https://p1k3.com/feed" maybe)
          ("http://www.felienne.com/feed" maybe)
          ("https://www.filfre.net/feed/" maybe)
-         ("http://export.arxiv.org/rss/cs" cs maybe)
          ("http://linesandcolors.com/feed/" art maybe)
          ("http://www.cachestocaches.com/feed/" maybe)
          ("https://adventuregamers.com/rss/" maybe games adventures)
@@ -493,5 +494,4 @@
                  ("https://api.reddit.com/subreddit/SQL/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")
                  ("https://azure.microsoft.com/en-us/blog/topics/database/feed/")
                  ("https://azurecomcdn.azureedge.net/en-us/updates/feed/?product=sql-database")
-                 ("http://azure.microsoft.com/en-us/updates/feed/")
-                 ("https://support.microsoft.com/app/content/api/content/feeds/sap/en-us/d201c5bd-9aab-36d1-0e57-5dadf52a6dad/rss")))))
+                 ("http://azure.microsoft.com/en-us/updates/feed/")))))
