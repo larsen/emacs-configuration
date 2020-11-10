@@ -8,9 +8,17 @@
 (defun personal-website-absolute-directory (directory)
   (concat personal-website-directory-prefix directory))
 
-(defvar personal-website-remote-directory-prefix "/ssh:larsen@home:/srv/www/stefanorodighiero.net/")
+(defvar personal-website-remote-directory-prefix  "/ssh:larsen@home:/srv/www/stefanorodighiero.net/")
 (defun personal-website-remote-absolute-directory (directory)
   (concat personal-website-remote-directory-prefix directory))
+
+(defvar commonlisp-directory-prefix "~/www/commonlisp.it/")
+(defun commonlisp-absolute-directory (directory)
+  (concat commonlisp-directory-prefix directory))
+
+(defvar commonlisp-remote-directory-prefix  "/ssh:larsen@home:/srv/www/commonlisp.it/")
+(defun commonlisp-remote-absolute-directory (directory)
+  (concat commonlisp-remote-directory-prefix directory))
 
 (defvar personal-website-navigation-header
   "        <div id=\"header\">
@@ -23,11 +31,28 @@
             </div>
         </div>"  )
 
+(defvar commonlisp-navigation-header
+  "        <div id=\"header\">
+            <div id=\"logo\">
+                <a href=\"/\">commonlisp.it</a>
+            </div>
+            <div id=\"navigation\">
+            </div>
+        </div>"  )
+
 (setq org-publish-project-alist
       `(
         ("website" 
          :components ("website-pages" "website-images"))
-        
+
+        ("commonlisp-pages"
+         :base-directory ,(commonlisp-absolute-directory "/")
+         :base-extension "org"
+         :publishing-function org-html-publish-to-html
+         :publishing-directory ,(commonlisp-remote-absolute-directory "/")
+         :html-preamble ,commonlisp-navigation-header
+         )
+
         ("website-pages"
          :base-directory ,(personal-website-absolute-directory "/")
          :base-extension "org"
