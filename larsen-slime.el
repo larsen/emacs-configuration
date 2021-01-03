@@ -27,6 +27,7 @@
        slime-setup-first-change-hook))
 
 (add-hook 'lisp-mode-hook #'paredit-mode)
+(add-hook 'lisp-mode-hook #'whitespace-mode)
 (add-hook 'slime-repl-mode-hook
           (lambda () (paredit-mode t)))
 
