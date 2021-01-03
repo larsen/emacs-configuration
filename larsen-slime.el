@@ -12,7 +12,7 @@
                slime-scratch
                slime-trace-dialog
                slime-presentations
-               
+
                slime-asdf
                slime-tramp
                slime-indentation))
@@ -36,4 +36,3 @@
 (load "~/quicklisp/clhs-use-local.el" t)
 
 (provide 'larsen-slime)
-

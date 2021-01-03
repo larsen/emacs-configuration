@@ -10,7 +10,7 @@
 (defun larsen-keys ()
   (append
    ;; Generic personal environment bindings. There are likely
-   ;; to be always availble 
+   ;; to be always availble
    (when (featurep 'larsen-env)
      `((,(kbd "C-x C-o") rotate-layout)
        (,(kbd "C-x o") switch-window)
@@ -70,7 +70,7 @@
 
    (when (featurep 'larsen-perl)
      `((,(kbd "C-h P") cperl-perldoc-at-point)))
-   
+
    (when (featurep 'larsen-functions)
      `((,(kbd "M-<f1>") toggle-split-layout)
        (,(kbd "C-c j") webjump)))

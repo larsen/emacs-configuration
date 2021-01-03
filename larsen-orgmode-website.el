@@ -42,7 +42,7 @@
 
 (setq org-publish-project-alist
       `(
-        ("website" 
+        ("website"
          :components ("website-pages" "website-images"))
 
         ("commonlisp-pages"
@@ -71,7 +71,7 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "images/")
          )
 
-        ("orgfiles" 
+        ("orgfiles"
          :base-directory ,(personal-website-absolute-directory "wiki/")
          :base-extension "org"
          :publishing-directory ,(personal-website-remote-absolute-directory "wiki/")
@@ -103,7 +103,7 @@
          :publishing-function org-publish-attachment
          )
 
-        ("wiki" 
+        ("wiki"
          :components ("orgfiles" "css" "js" "images"))
 
         ("stream-orgfiles"
@@ -122,7 +122,7 @@
          :publishing-function org-publish-attachment
          )
 
-        ("stream" 
+        ("stream"
          :components ("stream-orgfiles" "stream-images")) ))
 
 (provide 'larsen-orgmode-website)
