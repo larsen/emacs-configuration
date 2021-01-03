@@ -7,17 +7,17 @@
   "Iosevka")
 
 (let ((font
-       (or nil
+       (or "Iosevka Term"
            larsen/system-font)))
   (set-face-attribute 'default nil
                       :family font
                       :height 140)
   (set-face-attribute 'mode-line nil
                       :family font
-                      :height 100)
+                      :height 120)
   ;; FIXME should it not inherit from 'mode-line?
   (set-face-attribute 'mode-line-inactive nil
-                      :height 100)
+                      :height 120)
   (set-face-attribute 'font-lock-comment-face nil
                       :family font
                       :height 1.0
