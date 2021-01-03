@@ -29,7 +29,7 @@
 ;; Add .emacs.d to load-path
 (defvar dotfiles-dir (file-name-directory
                     (or (buffer-file-name) load-file-name)))
-(add-to-list 'load-path dotfiles-dir)
+(add-to-list 'load-path dotfiles-dir t)
 
 (add-to-list 'exec-path "~/bin")
 (add-to-list 'exec-path "/usr/local/bin")
