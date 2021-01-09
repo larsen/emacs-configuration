@@ -82,6 +82,7 @@
         larsen-lsp
         larsen-refactoring
         larsen-theme
+        larsen-mu4e
         larsen-print
         larsen-keys
         ))
