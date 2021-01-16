@@ -5,34 +5,15 @@
 (use-package seq)
 (use-package filenotify)
 
-;; emacs-sql-indent was installed from github's repo
-;; using quelpa
 
-;; (package-initialize)
-;; (if (use-package 'quelpa nil t)
-;;     (quelpa-self-upgrade)
-;;   (with-temp-buffer
-;;     (url-insert-file-contents "https://raw.github.com/quelpa/quelpa/master/bootstrap.el")
-;;     (eval-buffer)))
-
-;; (quelpa '(emacs-sql-indent
-;;           :fetcher github
-;;           :repo "alex-hhh/emacs-sql-indent"))
-
-;; When in sql-mode, activate emacs-sql-indent
-(add-hook 'sql-mode-hook 'sqlind-minor-mode)
-;; and capitalize keywords in SQL mode
-;; (add-hook 'sql-mode-hook 'sqlup-mode)
-
-;; Capitalize keywords in an interactive session (e.g. psql)
-;; (add-hook 'sql-interactive-mode-hook 'sqlup-mode)
-;; Set a global keyword to use sqlup on a region
-(global-set-key (kbd "C-c u") 'sqlup-capitalize-keywords-in-region)
+;; I don't like sqlind-minor-mode, I want to make
+;; sure is not activated
+(remove-hook 'sql-mode-hook 'sql-indent-enable)
 
 (setq sqlformat-args '("-k" "lower"
                        "-i" "lower"
                        "-r"
-                       "--indent_width" "4"))
+                       "--indent_width" "2"))
 
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
