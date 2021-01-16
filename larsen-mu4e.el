@@ -1,4 +1,4 @@
-(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e" t)
+(add-to-list 'load-path "/usr/local/share/emacs/site-lisp/mu4e" t)
 (use-package mu4e)
 
 (setq mail-user-agent 'mu4e-user-agent
