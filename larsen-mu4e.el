@@ -21,12 +21,12 @@
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
 
-(setq mu4e-bookmarks
-  '(("flag:unread AND NOT flag:trashed" "Unread messages"      ?i)
-    ("date:today..now"                  "Today's messages"     ?t)
-    ("date:today..now AND flag:unread AND NOT flag:trashed" "Today's Unread messages"     ?u)
-    ("date:7d..now"                     "Last 7 days"          ?w)
-    ("mime:image/*"                     "Messages with images" ?p)))
+;; (setq mu4e-bookmarks
+;;   '(("flag:unread AND NOT flag:trashed" "Unread messages"      ?i)
+;;     ("date:today..now"                  "Today's messages"     ?t)
+;;     ("date:today..now AND flag:unread AND NOT flag:trashed" "Today's Unread messages"     ?u)
+;;     ("date:7d..now"                     "Last 7 days"          ?w)
+;;     ("mime:image/*"                     "Messages with images" ?p)))
 
 ;; (use-package mu4e-alert
 ;;   :ensure t
