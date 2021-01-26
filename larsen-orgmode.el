@@ -138,6 +138,9 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       org-capture-templates `(("n" "Note" entry
                                (file "~/org/personal/notes.org")
                                "* %t\n%i" :immediate-finish t :empty-lines 1)
+                              ("N" "Note (interactive)" entry
+                               (file "~/org/personal/notes.org")
+                               "* %t\n%?" :empty-lines 1)
                               ("t" "Todo item" entry
                                (file+function "~/org/work/idagio/activities.org"
                                               my-find-today-heading)
