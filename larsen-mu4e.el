@@ -21,6 +21,9 @@
                               :key ?u)
                        (:name "Unread messages (no ML)"
                               :query "flag:unread AND NOT flag:trashed AND NOT flag:list"
+                              :key ?M)
+                       (:name "Unread messages (only ML)"
+                              :query "flag:unread AND NOT flag:trashed AND flag:list"
                               :key ?m)
                        (:name "Today's messages"
                               :query "date:today..now"
