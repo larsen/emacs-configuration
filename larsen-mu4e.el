@@ -28,6 +28,9 @@
                        (:name "Today's messages"
                               :query "date:today..now"
                               :key ?t)
+                       (:name "Today's messages (no ML)"
+                              :query "date:today..now AND NOT flag:list"
+                              :key ?T)
                        (:name "Last 7 days"
                               :query "date:7d..now"
                               :hide-unread t
