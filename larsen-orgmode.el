@@ -63,7 +63,8 @@ WEEK-DAY is expressed as an integer in the range 0..6:
         (gnuplot . t)
         (R . t)
         (plantuml . t)
-        (http . t)))
+        (http . t)
+        (lisp . t)))
 
 (defun my-insert-current-week-item (week-number)
   "Insert 1-week-worth structure for entering todo entries for WEEK-NUMBER."
