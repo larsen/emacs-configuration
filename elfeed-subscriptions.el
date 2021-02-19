@@ -491,7 +491,4 @@
                  ("http://www.arcticdba.se/?feed=rss2")
                  ("http://lisagb.info/feed")
                  ("https://api.reddit.com/subreddit/Database/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")
-                 ("https://api.reddit.com/subreddit/SQL/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")
-                 ("https://azure.microsoft.com/en-us/blog/topics/database/feed/")
-                 ("https://azurecomcdn.azureedge.net/en-us/updates/feed/?product=sql-database")
-                 ("http://azure.microsoft.com/en-us/updates/feed/")))))
+                 ("https://api.reddit.com/subreddit/SQL/b9b4bcd6-0872-437f-91b5-5ab7e37ac8a3")))))
