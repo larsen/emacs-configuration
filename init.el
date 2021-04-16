@@ -83,6 +83,7 @@
         larsen-refactoring
         larsen-theme
         larsen-mu4e
+        larsen-eshell
         larsen-print
         larsen-keys
         ))
