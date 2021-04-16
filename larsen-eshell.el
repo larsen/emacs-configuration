@@ -29,18 +29,18 @@
           eshell-prompt-string))
 
 ;; Separator between esh-sections
-(setq esh-sep "  ")  ; or " | "
+(setq esh-sep " ")  ; or " | "
 
 ;; Separator between an esh-section icon and form
 (setq esh-section-delim " ")
 
 ;; Eshell prompt header
-(setq esh-header "\n ")  ; or "\n┌─"
+(setq esh-header "\n")  ; or "\n┌─"
 
 ;; Eshell prompt regexp and string. Unless you are varying the prompt by eg.
 ;; your login, these can be the same.
 (setq eshell-prompt-regexp " ")   ; or "└─> "
-(setq eshell-prompt-string " ")   ; or "└─> "
+(setq eshell-prompt-string "> ")   ; or "└─> "
 
 (esh-section esh-dir
              ">"  ;  (faicon folder)
