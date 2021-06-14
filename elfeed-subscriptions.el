@@ -204,6 +204,7 @@
          ("https://vicki.substack.com/feed/" maybe evans)
          ("https://feeds.feedburner.com/martinkl")
          ("https://eighty-twenty.org/index.atom")
+         ("http://www.ultimatemark.com/feed/")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
