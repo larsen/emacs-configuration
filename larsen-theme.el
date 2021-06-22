@@ -46,7 +46,10 @@
                       :background "black"
                       :foreground "green"
                       :inverse-video nil
-                      :weight 'bold))
+                      :weight 'bold)
+  (set-face-attribute 'org-block-begin-line nil
+                      :background "dim gray"
+                      :foreground "gainsboro"))
 
 (defun increase-text-scale-in-buffer-group (major-mode-name)
   "Increment text scale for all buffers matching a given major-mode-name."
