@@ -68,6 +68,7 @@
          ;; Programming – Clojure
          ("http://planet.clojure.in/atom.xml" clojure programming)
          ("http://gigasquidsoftware.com/atom.xml" clojure programming)
+         ("https://tonsky.me/blog/atom.xml" clojure programming )
 
          ;; Math
          ("http://blogs.ams.org/visualinsight/feed/" math)
@@ -147,6 +148,7 @@
          ("http://www.danamackenzie.com/blog/?feed=rss2" chess)
 
          ;; Personal blogs
+         ("https://scattered-thoughts.net/atom.xml" data programming interesting)
          ("https://lexi-lambda.github.io/feeds/all.rss.xml")
          ("http://www.rousette.org.uk/blog/index.xml")
          ("http://cartesianfaith.com/feed/")
