@@ -207,6 +207,7 @@
          ("https://feeds.feedburner.com/martinkl")
          ("https://eighty-twenty.org/index.atom")
          ("http://www.ultimatemark.com/feed/")
+         ("https://erikbern.com/atom.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
