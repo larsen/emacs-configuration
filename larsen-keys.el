@@ -60,6 +60,9 @@
        (,(kbd "C-c a") org-agenda)
        (,(kbd "C-c c") org-capture)))
 
+   (when (featurep 'larsen-org-roam)
+     `((,(kbd "C-c n f") org-roam-node-find)))
+
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
        (,(kbd "C-<f12>") slime-selector)
