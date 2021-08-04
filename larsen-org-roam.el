@@ -1,8 +1,10 @@
+(setq org-roam-v2-ack t)
+
 (use-package org-roam)
 (use-package org-roam-buffer)
 
 (setq org-roam-directory "~/org/roam/")
-(setq org-roam-v2-ack t)
+
 (org-roam-setup)
 
 (use-package websocket)
