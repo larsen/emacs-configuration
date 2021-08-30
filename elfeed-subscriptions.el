@@ -30,6 +30,7 @@
          ("https://blog.veitheller.de/feed.rss" programming)
          ("https://www.hillelwayne.com/index.xml" programming)
          ("https://henrikwarne.com/feed/" programming)
+         ("https://yurichev.com/news/rss.xml" programming math)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
@@ -64,6 +65,7 @@
          ("https://lisp.sh/feed.atom" racket)
          ("https://recursive.games/rss.xml" lisp programming games)
          ("http://www.lispology.com/rss?JHE+3" lisp programming)
+         ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
 
          ;; Programming – Clojure
          ("http://planet.clojure.in/atom.xml" clojure programming)
@@ -112,6 +114,7 @@
          ("http://pragmaticemacs.com/" emacs)
          ("http://www.howardism.org/index.xml" emacs)
          ("http://mbork.pl/?action=rss" emacs)
+         ("https://blog.tecosaur.com/tmio/rss.xml" emacs org)
 
          ;; Vim
          ("http://howivim.com/feed.xml" vim)
