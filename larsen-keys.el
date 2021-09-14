@@ -61,7 +61,8 @@
        (,(kbd "C-c c") org-capture)))
 
    (when (featurep 'larsen-org-roam)
-     `((,(kbd "C-c n f") org-roam-node-find)))
+     `((,(kbd "C-c m f") org-roam-node-find)
+       (,(kbd "C-c m b") org-roam-buffer-toggle)))
 
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
@@ -95,5 +96,6 @@
 (key-chord-define-global "//" 'isearch-forward)
 (key-chord-define-global "hh" 'helm-mini)
 (key-chord-define-global "jj" 'ace-jump-mode)
+(key-chord-define-global "ww" 'switch-window)
 
 (provide 'larsen-keys)
