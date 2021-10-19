@@ -151,7 +151,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                               ("t" "Todo item" entry
                                (file+function "~/org/work/idagio/activities.org"
                                               my-find-today-heading)
-                               "*** TODO %i%?\n     DEADLINE: %(one-week-from-today)"
+                               "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                                :jump-to-captured t)
                               ("c" "Dev todo" entry
                                (file+function "~/org/work/idagio/activities.org"
