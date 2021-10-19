@@ -53,6 +53,11 @@ WEEK-DAY is expressed as an integer in the range 0..6:
   "Return a string representing the heading for today's todo entries subtree."
   (format-time-string "%A" (current-time)))
 
+(defun one-week-from-today ()
+  (format-time-string "%Y-%m-%d"
+                    (+ (time-convert nil 'integer)
+                       (* 3600 24 7))))
+
 (org-babel-do-load-languages
       'org-babel-load-languages
       '((perl . t)
@@ -146,7 +151,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
                               ("t" "Todo item" entry
                                (file+function "~/org/work/idagio/activities.org"
                                               my-find-today-heading)
-                               "*** TODO %i%?"
+                               "*** TODO %i%?\n     DEADLINE: %(one-week-from-today)"
                                :jump-to-captured t)
                               ("c" "Dev todo" entry
                                (file+function "~/org/work/idagio/activities.org"
