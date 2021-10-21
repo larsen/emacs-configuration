@@ -212,6 +212,7 @@
          ("http://www.ultimatemark.com/feed/")
          ("https://erikbern.com/atom.xml")
          ("https://astralcodexten.substack.com/feed")
+         ("https://danluu.com/atom.xml" interesting)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
