@@ -213,6 +213,8 @@
          ("https://erikbern.com/atom.xml")
          ("https://astralcodexten.substack.com/feed")
          ("https://danluu.com/atom.xml" interesting)
+         ("https://jcs.org/rss")
+         ("https://fabiensanglard.net/rss.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
