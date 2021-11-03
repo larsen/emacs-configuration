@@ -215,6 +215,8 @@
          ("https://danluu.com/atom.xml" interesting)
          ("https://jcs.org/rss")
          ("https://fabiensanglard.net/rss.xml")
+         ("https://danpker.com/posts/index.xml")
+         ("https://work.lisk.in/atom.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
