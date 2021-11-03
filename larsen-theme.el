@@ -11,10 +11,10 @@
            larsen/system-font)))
   (set-face-attribute 'default nil
                       :family font
-                      :height 140)
+                      :height 120)
   (set-face-attribute 'mode-line nil
                       :family font
-                      :height 120)
+                      :height 100)
   ;; FIXME should it not inherit from 'mode-line?
   (set-face-attribute 'mode-line-inactive nil
                       :height 120)
