@@ -62,6 +62,8 @@
 
    (when (featurep 'larsen-org-roam)
      `((,(kbd "C-c m f") org-roam-node-find)
+       (,(kbd "<f7>") org-roam-node-find)
+       (,(kbd "C-c m i") org-roam-node-insert)
        (,(kbd "C-c m b") org-roam-buffer-toggle)))
 
    (when (featurep 'larsen-slime)
