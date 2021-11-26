@@ -66,6 +66,7 @@
          ("https://recursive.games/rss.xml" lisp programming games)
          ("http://www.lispology.com/rss?JHE+3" lisp programming)
          ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
+         ("https://www.tfeb.org/fragments/feeds/all.atom.xml" lisp programming)
 
          ;; Programming – Clojure
          ("http://planet.clojure.in/atom.xml" clojure programming)
@@ -217,6 +218,7 @@
          ("https://fabiensanglard.net/rss.xml")
          ("https://danpker.com/posts/index.xml")
          ("https://work.lisk.in/atom.xml")
+         ("https://countvajhula.com/feed/")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -247,6 +249,7 @@
          ("https://www.gatesnotes.com/rss" books)
          ("https://plaintextproject.online/feed.xml")
          ("https://www.lescienze.it/rss/all/rss2.0.xml" maybe)
+         ("https://www.boristhebrave.com/feed/" games programming interesting)
 
          ;; maybe
          ("https://blog.tymoon.eu/" maybe)
