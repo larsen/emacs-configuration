@@ -1,7 +1,6 @@
 (setq org-roam-v2-ack t)
 
 (use-package org-roam)
-(use-package org-roam-buffer)
 
 (setq org-roam-directory "~/org/roam/")
 
@@ -10,5 +9,10 @@
 (use-package websocket)
 (add-to-list 'load-path "~/.emacs.d/private/org-roam-ui")
 (use-package org-roam-ui)
+
+(setq org-roam-ui-sync-theme t
+      org-roam-ui-follow t
+      org-roam-ui-update-on-save t
+      org-roam-ui-open-on-start t)
 
 (provide 'larsen-org-roam)
