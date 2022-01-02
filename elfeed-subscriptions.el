@@ -68,6 +68,8 @@
          ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
          ("https://www.tfeb.org/fragments/feeds/all.atom.xml" lisp programming)
 
+         ("http://planet.squeak.org/" smalltalk programming)
+         
          ;; Programming – Clojure
          ("http://planet.clojure.in/atom.xml" clojure programming)
          ("http://gigasquidsoftware.com/atom.xml" clojure programming)
