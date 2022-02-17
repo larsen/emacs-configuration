@@ -15,4 +15,9 @@
       org-roam-ui-update-on-save t
       org-roam-ui-open-on-start t)
 
+(setq org-roam-mode-section-functions
+      (list #'org-roam-reflinks-section
+            #'org-roam-unlinked-references-section
+            ))
+
 (provide 'larsen-org-roam)
