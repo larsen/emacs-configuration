@@ -64,7 +64,8 @@
      `((,(kbd "C-c m f") org-roam-node-find)
        (,(kbd "<f7>") org-roam-node-find)
        (,(kbd "C-c m i") org-roam-node-insert)
-       (,(kbd "C-c m b") org-roam-buffer-toggle)))
+       (,(kbd "C-c m b") org-roam-buffer-toggle)
+       (,(kbd "C-c m t") org-roam-tag-add)))
 
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
