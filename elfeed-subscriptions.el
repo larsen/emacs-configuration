@@ -31,6 +31,7 @@
          ("https://www.hillelwayne.com/index.xml" programming)
          ("https://henrikwarne.com/feed/" programming)
          ("https://yurichev.com/news/rss.xml" programming math)
+         ("https://deprogrammaticaipsum.com/feed/" programming)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
@@ -67,6 +68,7 @@
          ("http://www.lispology.com/rss?JHE+3" lisp programming)
          ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
          ("https://www.tfeb.org/fragments/feeds/all.atom.xml" lisp programming)
+         ("https://alex-hhh.github.io/feeds/all.atom.xml" lisp programming racket)
 
          ("http://planet.squeak.org/" smalltalk programming)
          
@@ -221,6 +223,7 @@
          ("https://danpker.com/posts/index.xml")
          ("https://work.lisk.in/atom.xml")
          ("https://countvajhula.com/feed/")
+         ("https://thesephist.com/index.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -277,6 +280,8 @@
          ("https://adventuregamers.com/rss/" maybe games adventures)
          ("https://acoup.blog/feed/" maybe)
          ("https://kiwihellenist.blogspot.com/feeds/posts/default" maybe)
+         ("https://mantovauno.it/tag/castiglione/feed/" news local castiglione maybe)
+         ("https://artemis.sh/feed.xml" maybe personal)
 
          ;; suggested by Dan Luu -- 2016/05/03
          ("http://blog.nullspace.io/feed.xml" danluu maybe)
