@@ -1,5 +1,5 @@
 (setq elfeed-feeds
-      (append 
+      (append
        '(
          ;; Programming
          ("http://lambda-the-ultimate.org/rss.xml" programming cs)
@@ -71,7 +71,7 @@
          ("https://alex-hhh.github.io/feeds/all.atom.xml" lisp programming racket)
 
          ("http://planet.squeak.org/" smalltalk programming)
-         
+
          ;; Programming – Clojure
          ("http://planet.clojure.in/atom.xml" clojure programming)
          ("http://gigasquidsoftware.com/atom.xml" clojure programming)
@@ -255,6 +255,7 @@
          ("https://plaintextproject.online/feed.xml")
          ("https://www.lescienze.it/rss/all/rss2.0.xml" maybe)
          ("https://www.boristhebrave.com/feed/" games programming interesting)
+         ("https://blogs.igalia.com/itoral/feed/" maybe graphics)
 
          ;; maybe
          ("https://blog.tymoon.eu/" maybe)
@@ -305,11 +306,11 @@
          ("https://www.youtube.com/channel/UC0uTPqBCFIpZxlz_Lv1tk_g" youtube emacs programming) ; Protesilaos Stavrou
 
 
-         
+
          ;; Biking
          ("http://ridinggravel.com/feed/" bikes)
          ("https://www.cyclingabout.com/feed/" bikes))
-       
+
        ;; Brent Ozar feeds, tentative
        ;; (removed some stuff from the initial list found here: https://github.com/BrentOzar/sqlblogs)
        (mapcar (lambda (f)
