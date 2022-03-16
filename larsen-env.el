@@ -41,6 +41,8 @@
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
 (add-hook 'prog-mode-hook
           (lambda () (yafolding-mode)))
 
