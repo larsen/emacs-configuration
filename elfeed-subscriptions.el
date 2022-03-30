@@ -32,6 +32,7 @@
          ("https://henrikwarne.com/feed/" programming)
          ("https://yurichev.com/news/rss.xml" programming math)
          ("https://deprogrammaticaipsum.com/feed/" programming)
+         ("https://pavpanchekha.com/rss.xml" programming cs)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
