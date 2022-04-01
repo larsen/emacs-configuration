@@ -3,6 +3,7 @@
 (use-package dired-x)
 (use-package dired-avfs)
 (use-package peep-dired)
+(use-package diff-hl)
 
 (setq dired-listing-switches "-aGFhlv --group-directories-first --time-style=long-iso"
       dired-dwim-target t
@@ -20,6 +21,8 @@
 (setq peep-dired-cleanup-on-disable t
       peep-dired-cleanup-eagerly nil
       peep-dired-ignored-extensions '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac"))
+
+(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 
 ;; Copied from https://github.com/IvanRave/emacs-config/blob/master/init.el
 (defun mydired-sort ()
