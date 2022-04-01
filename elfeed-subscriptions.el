@@ -225,6 +225,7 @@
          ("https://work.lisk.in/atom.xml")
          ("https://countvajhula.com/feed/")
          ("https://thesephist.com/index.xml")
+         ("https://pluralistic.net/feed/" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
