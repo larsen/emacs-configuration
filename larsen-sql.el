@@ -35,7 +35,7 @@
   (with-current-buffer (find-file-noselect filename)
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
-            (loop for kv in (seq-partition lines 2)
+            (cl-loop for kv in (seq-partition lines 2)
                   collect (destructuring-bind
                               (host port db user password) (split-string (cadr kv) ":" nil)
                             `(,(replace-regexp-in-string "^#\s+" "" (car kv))

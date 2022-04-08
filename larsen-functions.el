@@ -118,7 +118,7 @@
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
     (with-current-buffer
         (find-file-noselect "~/www/stefanorodighiero.net/links.org")
-      (loop for entry in (org-map-entries 'org-entry-properties nil 'file)
+      (cl-loop for entry in (org-map-entries 'org-entry-properties nil 'file)
             collect (get-link-and-description-from-entry entry)))))
 
 (defun update-webjump-sites ()
