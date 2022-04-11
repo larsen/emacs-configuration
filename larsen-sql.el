@@ -36,7 +36,7 @@
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
             (cl-loop for kv in (seq-partition lines 2)
-                  collect (destructuring-bind
+                  collect (cl-destructuring-bind
                               (host port db user password) (split-string (cadr kv) ":" nil)
                             `(,(replace-regexp-in-string "^#\s+" "" (car kv))
                               (sql-product 'postgres)
