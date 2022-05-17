@@ -10,4 +10,8 @@
       erc-fill-static-center 16
       erc-prompt (lambda () (concat "[" (buffer-name) "]")))
 
+
+; irc.libera.chat
+; 6697
+
 (provide 'larsen-erc)

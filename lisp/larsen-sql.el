@@ -1,7 +1,6 @@
 (use-package sql)
 (use-package sqlup-mode)
 (use-package sqlformat)
-(use-package cl)
 (use-package seq)
 (use-package filenotify)
 

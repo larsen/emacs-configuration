@@ -76,6 +76,8 @@
 (setq eshell-funcs (list esh-dir esh-git))
 
 ;; Enable the new eshell prompt
-(setq eshell-prompt-function 'esh-prompt-func)
+;; (setq eshell-prompt-function 'esh-prompt-func)
 
 (provide 'larsen-eshell)
+
+(setq eshell-prompt-function nil)

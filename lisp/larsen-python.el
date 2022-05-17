@@ -9,7 +9,7 @@
 
 (setq elpy-rpc-backend "jedi"
       elpy-use-ipython t
-      elpy-rpc-virtualenv-path "~/work/idagio/.venv37/"  ; or 'current?
+      elpy-rpc-virtualenv-path "~/work/idagio/.venv/"  ; or 'current?
       elpy-modules '(elpy-module-sane-defaults
                      elpy-module-company
                      elpy-module-eldoc

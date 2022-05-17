@@ -6,6 +6,11 @@
   ;; "IBM Plex Mono"
   "Iosevka")
 
+(use-package unicode-fonts
+   :ensure t
+   :config
+   (unicode-fonts-setup))
+
 (let ((font
        (or "Iosevka Term"
            larsen/system-font)))
@@ -97,6 +102,25 @@
 (setq doom-modeline-icon t
       doom-modeline-height 10
       doom-modeline-buffer-file-name-style 'relative-to-project)
+
+
+;;  (setq doom-modeline-height 1)
+;;  (setq doom-modeline-irc t)
+;;  (setq doom-modeline-irc-stylize 'identity)
+;;  (setq doom-modeline-height 0)
+;;  (setq doom-modeline-bar-width 1)
+;;  (setq doom-modeline-major-mode-color-icon t)
+;;  (setq doom-modeline-major-mode-icon t)
+;;  (setq doom-modeline-icon *tychoish-modeline-icon-state*)
+;;  (setq doom-modeline-unicode-fallback nil)
+;; (setq doom-modeline-minor-modes t)
+;; (setq doom-modeline-enable-word-count t)
+;; (setq doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode))
+;; (setq doom-modeline-buffer-encoding nil)
+;; (setq doom-modeline-env-version t)
+;; (setq doom-modeline-github nil)
+;; (setq doom-modeline-lsp t)
+
 
 (defun switch-theme (theme)
   (interactive

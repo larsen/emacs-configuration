@@ -6,7 +6,7 @@
 (use-package helm-swoop)
 (use-package rotate)
 (use-package nlinum)
-(use-package whole-line-or-region)
+; (use-package whole-line-or-region)
 (use-package switch-window)
 (use-package edwina)
 (use-package editorconfig)
@@ -28,7 +28,7 @@
 (show-paren-mode 1) ; turn on paren match highlighting
 (setq show-paren-style 'expression) ; highlight entire bracket expression
 
-(whole-line-or-region-mode)
+; (whole-line-or-region-mode)
 
 ;; scrolling in a more Vim-like fashion
 (setq scroll-step            1
@@ -36,10 +36,11 @@
 
 ; Not sure why I need this
 (setq ansi-term-color-vector
-  [term term-color-black term-color-red term-color-green term-color-yellow 
+  [term term-color-black term-color-red term-color-green term-color-yellow
     term-color-blue term-color-magenta term-color-cyan term-color-white])
 
 (add-to-list 'exec-path "~/.cabal/bin/")
+(add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -93,6 +94,12 @@
                  (calendar-iso-from-absolute
                   (calendar-absolute-from-gregorian (list month day year)))))
         'font-lock-face 'calendar-iso-week-face))
+
+(setq calendar-holidays
+        (append holiday-general-holidays holiday-local-holidays
+                holiday-other-holidays holiday-christian-holidays
+                holiday-islamic-holidays holiday-oriental-holidays
+                holiday-solar-holidays))
 
 ;; JS2mode
 (setq-default js2-basic-offset 2)

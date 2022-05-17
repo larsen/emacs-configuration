@@ -145,7 +145,7 @@
    (format "echo '%s' | socat - unix-connect:%s" message socket)))
 
 (defun my-uzbl-socket ()
-  (first (sort 
+  (first (sort
           (directory-files "/tmp" t "uzbl_socket")
           (lambda (a b)
             (time-less-p (nth 5 (file-attributes a))
@@ -209,7 +209,7 @@
 arguments in order, according to what is specified in ARGLIST.
 ARGLIST is the list of variables that will be bound to the
 corresponding command line argument."
-  `(let ,(loop for a in arglist
+  `(let ,(cl-loop for a in arglist
                for idx from 3
                collect (let ((arg-name (car a))
                              (arg-properties (cdr a)))
@@ -232,5 +232,46 @@ their contents."
                    (pdf-view-mode)
                    (pdf-annot-getannots nil nil))))
     (mapconcat 'annotation-contents annots " ")))
+
+
+;; some dbt utils
+
+;; assuming we're in a git repository, with a dbt directory for the dbt project
+;; (which happens to be my setup)
+
+(require 'thingatpt)
+
+(defun dbt-project-for-current-buffer ()
+  (interactive)
+  (concat (s-trim (shell-command-to-string "git rev-parse --show-toplevel"))
+          "/dbt"))
+
+;; (thing-at-point 'dbt-ref)
+;; {{ source('ticketgretchen', 'orders__externalticketorderitems') }}
+
+; (put 'dbt-ref 'beginning-op 'thing-at-point--beginning-of-dbt-ref)
+; (put 'dbt-ref 'end-op 'thing-at-point--end-of-dbt-ref)
+
+(defun thing-at-point-bounds-of-dbt-ref-at-point ()
+   (let ((start (save-excursion (re-search-backward "{")))
+         (end (save-excursion (re-search-forward "}"))))
+     (cons (+ start 1)
+           (- end 1))))
+
+(put 'dbt-ref 'bounds-of-thing-at-point 'thing-at-point-bounds-of-dbt-ref-at-point)
+
+(defun reference-at-point ()
+  "Returns the name of model referenced by the expression at point."
+  )
+
+(defun compile-and-run-dbt-query ()
+  ;; Taking current buffer filename as
+  (let ((git-top-level (dbt-project-for-current-buffer))
+        (current-buffer-filename (buffer-file-name(current-buffer)))
+       )
+    ))
+
+(shell-command-to-string "git rev-parse --show-toplevel")
+
 
 (provide 'larsen-functions)
