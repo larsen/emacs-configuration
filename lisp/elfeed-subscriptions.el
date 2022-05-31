@@ -121,6 +121,7 @@
          ("http://www.howardism.org/index.xml" emacs)
          ("http://mbork.pl/?action=rss" emacs)
          ("https://blog.tecosaur.com/tmio/rss.xml" emacs org)
+         ("https://scripter.co/atom.xml" emacs org)
 
          ;; Vim
          ("http://howivim.com/feed.xml" vim)
@@ -430,7 +431,6 @@
                  ("https://codejuicer.com/feed/")
                  ("https://medium.com/feed/azure-sqldb-managed-instance")
                  ("https://sqlundercover.com/feed/")
-                 ("http://erikdarlingdata.com/feed/")
                  ("https://github.com/joesackmsft.atom")
                  ("http://anothersqlgeek.wordpress.com/feed/")
                  ("http://feeds.feedburner.com/Sqlvariations")
