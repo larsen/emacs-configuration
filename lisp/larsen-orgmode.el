@@ -133,6 +133,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
       org-log-done t
       org-log-into-drawer t
       org-return-follows-link t
+      org-export-backends '(md odt latex icalendar html ascii)
       org-todo-keywords '((sequence "TODO(!)"
                                     "ANALYSED"
                                     "DELEGATED"
