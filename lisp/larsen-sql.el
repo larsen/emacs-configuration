@@ -9,10 +9,7 @@
 ;; sure is not activated
 (remove-hook 'sql-mode-hook 'sql-indent-enable)
 
-(setq sqlformat-args '("-k" "lower"
-                       "-i" "lower"
-                       "-r"
-                       "--indent_width" "2"))
+(setq sqlformat-command 'pgformatter)
 
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
