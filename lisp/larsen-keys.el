@@ -82,6 +82,9 @@
      `((,(kbd "M-<f1>") toggle-split-layout)
        (,(kbd "C-c j") webjump)))
 
+   (when (featurep 'larsen-sql)
+     `((,(kbd "C-c C-f") sqlformat)))
+
    (when (featurep 'larsen-ibuffer)
      `((,(kbd "C-x C-b") ibuffer)))
 
