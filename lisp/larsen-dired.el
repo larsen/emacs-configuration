@@ -5,7 +5,7 @@
 (use-package peep-dired)
 (use-package diff-hl)
 
-(setq dired-listing-switches "-aGFhlv --group-directories-first --time-style=long-iso"
+(setq dired-listing-switches "-aGFhlS --group-directories-first --time-style=long-iso"
       dired-dwim-target t
       dired-recursive-deletes 'always
       dired-recursive-copies 'always
@@ -32,10 +32,5 @@
       (forward-line 2) ;; beyond dir. header
       (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
     (set-buffer-modified-p nil)))
-
-(defadvice dired-readin
-    (after dired-after-updating-hook first () activate)
-  "Sort dired listings with directories first before adding marks."
-  (mydired-sort))
 
 (provide 'larsen-dired)
