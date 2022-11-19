@@ -314,7 +314,8 @@
 
          ;; Biking
          ("http://ridinggravel.com/feed/" bikes)
-         ("https://www.cyclingabout.com/feed/" bikes))
+         ("https://www.cyclingabout.com/feed/" bikes)
+         ("https://www.bikepacking.it/feed/" bikes italian))
 
        ;; Brent Ozar feeds, tentative
        ;; (removed some stuff from the initial list found here: https://github.com/BrentOzar/sqlblogs)
