@@ -229,6 +229,7 @@
          ("https://countvajhula.com/feed/")
          ("https://thesephist.com/index.xml")
          ("https://pluralistic.net/feed/" maybe)
+         ("https://chreke.com/feeds/all.atom.xml" programming languages)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
