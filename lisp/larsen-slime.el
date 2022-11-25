@@ -35,4 +35,19 @@
 
 (load "~/quicklisp/clhs-use-local.el" t)
 
+;; At the end of everythin I redefine `slime-push-definition-stack`
+;; so that it uses xref-push-marker-stack when available.
+;; This is because slime 2.27 presents a bug in Emacs 28.1+:
+;; when using <M-.>, it raises an error
+;; "Symbol’s value as variable is void: find-tag-marker-ring"
+;; I found a patch here https://github.com/slime/slime/pull/650,
+;; but it has yet to be merged and released
+(defun slime-push-definition-stack ()
+  "Add point to find-tag-marker-ring."
+  (require 'etags)
+  ;; (ring-insert find-tag-marker-ring (point-marker))
+  (if (fboundp 'xref-push-marker-stack)
+      (xref-push-marker-stack)
+    (ring-insert find-tag-marker-ring (point-marker))))
+
 (provide 'larsen-slime)
