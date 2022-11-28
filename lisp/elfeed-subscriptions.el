@@ -230,6 +230,7 @@
          ("https://thesephist.com/index.xml")
          ("https://pluralistic.net/feed/" maybe)
          ("https://chreke.com/feeds/all.atom.xml" programming languages)
+         ("https://archiloque.net/blog/atom.xml" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
