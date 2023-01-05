@@ -23,12 +23,15 @@
 
 ;; Special functions to insert week-based object entries
 
+(defun current-year ()
+  (nth 5 (decode-time (current-time))))
+
 (defun my-calendar-iso-day-to-gregorian (week-number week-day)
   "Return gregorian day corresponding to WEEK-NUMBER and WEEK-DAY.
 WEEK-DAY is expressed as an integer in the range 0..6:
 1 = Monday, 2 = Tuesday, ..., 0 = Sunday."
   (calendar-gregorian-from-absolute
-   (calendar-iso-to-absolute (list week-number week-day 2022))))
+   (calendar-iso-to-absolute (list week-number week-day (current-year)))))
 
 (defun my-gregorian-date-as-string (date)
   (cl-destructuring-bind (month day year) date
