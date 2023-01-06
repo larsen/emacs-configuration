@@ -7,6 +7,10 @@
 (defun osx-notify (title &optional message)
   (start-process "osx-notify" nil "terminal-notifier" "-title" title "-message" (or message "")))
 
+(defun apg ()
+  (string-trim
+   (shell-command-to-string "apg -n 1 -m 32 -x 32 -M NC")))
+
 (defalias 'notify
   (if (eq system-type 'darwin)
       (apply-partially 'osx-notify)
