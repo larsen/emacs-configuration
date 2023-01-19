@@ -42,7 +42,10 @@
                slime-tramp
 
                ;; interfacing `slime-cl-indent' and SLIME.
-               slime-indentation))
+               slime-indentation
+
+               ;; Highlight edited, i.e. not yet compiled, code.
+               slime-highlight-edits))
 
 ; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
 
