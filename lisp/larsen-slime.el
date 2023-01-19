@@ -4,17 +4,44 @@
 ; (use-package 'slime)
 (use-package slime-autoloads)
 (slime-setup '(;; slime-fancy
+
+               ;; This contrib implements a Lisp Listener along with some niceties like
+               ;; a persistent history and various \"shortcut\" commands.  Nothing here
+               ;; depends on comint.el; I/O is multiplexed over SLIME's socket.
                slime-repl
+
+               ;; ILISP style Compound Prefix Completion.
+               ;; https://www.quicklisp.org/beta/UNOFFICIAL/docs/slime/doc/Compound-Completion.html
                slime-c-p-c
+
+               ;; Editing commands without server interaction.
                slime-editing-commands
+
+               ;; Fancy inspector for CLOS objects.
                slime-fancy-inspector
+
+               ;; Enhanced version of slime-trace capable of tracing local functions,
+               ;; methods, setf functions, and other entities supported by specific
+               ;; swank:swank-toggle-trace backends. Invoke via C-u C-t.
                slime-fancy-trace
+
+               ;; Imitate Emacs' *scratch* buffer
                slime-scratch
+
+               ;; Provide an interfactive trace dialog buffer for managing and
+               ;; inspecting details of traced functions. Invoke this dialog with C-c T.
                slime-trace-dialog
+
+               ;; Imitate LispM presentations.
                slime-presentations
 
+               ;; ASDF support
                slime-asdf
+
+               ;; Filename translations for tramp
                slime-tramp
+
+               ;; interfacing `slime-cl-indent' and SLIME.
                slime-indentation))
 
 ; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
