@@ -5,6 +5,10 @@
 (use-package peep-dired)
 (use-package diff-hl)
 
+
+;; Useful combo
+;; Ctrl-u s -- interactively change the 'dired-listing-switches
+
 (setq dired-listing-switches "-aGFhlS --group-directories-first --time-style=long-iso"
       dired-dwim-target t
       dired-recursive-deletes 'always
