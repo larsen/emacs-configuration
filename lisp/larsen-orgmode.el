@@ -3,7 +3,7 @@
 ;;;
 
 ;; I have custom changes not yet merged into master
-(add-to-list 'load-path "~/build/org-mode/lisp/")
+;; (add-to-list 'load-path "~/build/org-mode/lisp/")
 
 (use-package org)
 (use-package org-capture)
