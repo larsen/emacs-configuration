@@ -231,6 +231,7 @@
          ("https://pluralistic.net/feed/" maybe)
          ("https://chreke.com/feeds/all.atom.xml" programming languages)
          ("https://archiloque.net/blog/atom.xml" maybe)
+         ("https://blog.dshr.org/feeds/posts/default" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -290,6 +291,7 @@
          ("https://kiwihellenist.blogspot.com/feeds/posts/default" maybe)
          ("https://mantovauno.it/tag/castiglione/feed/" news local castiglione maybe)
          ("https://artemis.sh/feed.xml" maybe personal)
+         ("https://rwmj.wordpress.com/feed/" maybe personal)
 
          ;; suggested by Dan Luu -- 2016/05/03
          ("http://blog.nullspace.io/feed.xml" danluu maybe)
