@@ -232,6 +232,7 @@
          ("https://chreke.com/feeds/all.atom.xml" programming languages)
          ("https://archiloque.net/blog/atom.xml" maybe)
          ("https://blog.dshr.org/feeds/posts/default" maybe)
+         ("https://journal.paoloamoroso.com/feed/" programming lisp)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
