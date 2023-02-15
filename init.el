@@ -87,6 +87,7 @@
         larsen-mu4e
         larsen-eshell
         larsen-print
+        larsen-menu
         larsen-keys
         ))
 
