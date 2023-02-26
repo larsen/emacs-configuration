@@ -167,11 +167,15 @@
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
 
-(defun my-dired-frame (directory)
+(defun my-dired-frame (directory &optional directory2)
   "Open up a dired frame on DIRECTORY which closes on exit."
   (interactive)
   (switch-to-buffer (dired directory))
   (split-window-right)
+  (when directory2
+    (windmove-right)
+    (switch-to-buffer (dired directory2))
+    (windmove-left))
   (local-set-key
    (kbd "TAB")
    (lambda ()
