@@ -71,7 +71,9 @@
          ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
          ("https://www.tfeb.org/fragments/feeds/all.atom.xml" lisp programming)
          ("https://alex-hhh.github.io/feeds/all.atom.xml" lisp programming racket)
+         ("https://commonlisp-it.tumblr.com/rss" lisp programming)
 
+         ;; Programming - Smalltalk
          ("http://planet.squeak.org/" smalltalk programming)
 
          ;; Programming – Clojure
