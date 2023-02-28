@@ -235,6 +235,9 @@
          ("https://archiloque.net/blog/atom.xml" maybe)
          ("https://blog.dshr.org/feeds/posts/default" maybe)
          ("https://journal.paoloamoroso.com/feed/" programming lisp)
+         ("https://vickiboykis.com/index.xml" maybe)
+         ("https://idlewords.com/index.xml" maybe)
+         ("https://pointersgonewild.com/feed/" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
