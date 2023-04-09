@@ -238,6 +238,7 @@
          ("https://vickiboykis.com/index.xml" maybe)
          ("https://idlewords.com/index.xml" maybe)
          ("https://pointersgonewild.com/feed/" maybe)
+         ("http://feeds.kottke.org/main" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
