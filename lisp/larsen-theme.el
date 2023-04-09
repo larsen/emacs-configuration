@@ -103,6 +103,12 @@
       doom-modeline-height 10
       doom-modeline-buffer-file-name-style 'relative-to-project)
 
+(require 'doom-modeline-core)
+(require 'doom-modeline-segments)
+
+(doom-modeline-def-modeline 'pdf
+  '(bar pdf-pages window-number matches buffer-info)
+  '(compilation  misc-info major-mode process vcs time))
 
 ;;  (setq doom-modeline-height 1)
 ;;  (setq doom-modeline-irc t)
