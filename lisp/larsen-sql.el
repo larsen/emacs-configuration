@@ -10,6 +10,7 @@
 (remove-hook 'sql-mode-hook 'sql-indent-enable)
 
 (setq sqlformat-command 'pgformatter)
+(setq sqlformat-args '("-u1"))
 
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
