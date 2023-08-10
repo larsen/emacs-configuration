@@ -11,7 +11,7 @@
       elpy-use-ipython t
       elpy-rpc-virtualenv-path "~/work/idagio/.venv/"  ; or 'current?
       elpy-modules '(elpy-module-sane-defaults
-                     elpy-module-company
+                     ; elpy-module-company
                      elpy-module-eldoc
                      elpy-module-highlight-indentation
                      elpy-module-pyvenv
