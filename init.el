@@ -56,33 +56,33 @@
         larsen-clojure
         larsen-perl
         larsen-haskell
-        larsen-markdown
+        ;; larsen-markdown
         larsen-smarttab
         larsen-tramp
         larsen-helm
         larsen-ibuffer
         larsen-sql
         larsen-w3m
-        ; larsen-keyfreq
+        ;; larsen-keyfreq
         larsen-latex
-        larsen-web-mode
+        ;; larsen-web-mode
         larsen-snippets
-        larsen-auto-complete
+        ; larsen-auto-complete
         larsen-orgmode
         larsen-orgmode-website
         larsen-org-roam
         larsen-anki
         larsen-slime
         larsen-magit
-        larsen-erc
+        ;larsen-erc
         larsen-elfeed
         larsen-paredit
         larsen-functions
         larsen-elisp
-        larsen-ruby
+        ;larsen-ruby
         larsen-python
-        larsen-lsp
-        larsen-refactoring
+        ; larsen-lsp
+        ;larsen-refactoring
         larsen-theme
         larsen-mu4e
         larsen-eshell
@@ -95,4 +95,4 @@
 (dolist (file larsen-pkg-full)
   (message (pp file))
   (require file))
-
+(put 'downcase-region 'disabled nil)
