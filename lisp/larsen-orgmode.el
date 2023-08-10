@@ -16,6 +16,8 @@
 (use-package cl)
 (use-package ox)
 
+(add-to-list 'load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
+
 (add-to-list 'auto-mode-alist '("\\.org$" . org-mode))
 
 (defun my-org-confirm-babel-evaluate (lang body)
