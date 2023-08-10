@@ -46,6 +46,9 @@
 (when (fboundp 'imagemagick-register-types)
   (imagemagick-register-types))
 
+(setq mu4e-split-view 'vertical)
+(setq mu4e-view-show-images t)
+
 (use-package mu4e-alert :ensure t)
 (mu4e-alert-set-default-style 'libnotify)
 (add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
