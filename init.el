@@ -71,7 +71,7 @@
         larsen-orgmode
         larsen-orgmode-website
         larsen-org-roam
-        larsen-anki
+        ; larsen-anki
         larsen-slime
         larsen-magit
         ;larsen-erc
