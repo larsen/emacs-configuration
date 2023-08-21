@@ -34,6 +34,8 @@
 (setq scroll-step            1
       scroll-conservatively  10000)
 
+(pixel-scroll-precision-mode)
+
 ; Not sure why I need this
 (setq ansi-term-color-vector
   [term term-color-black term-color-red term-color-green term-color-yellow
