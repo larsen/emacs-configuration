@@ -95,7 +95,27 @@
 ; (use-package 'org-beautify-theme)
 ; (load-theme 'org-beautify-theme)
 
-(doom-modeline-mode)
+(use-package doom-modeline
+  :init (doom-modeline-mode 1)
+  :custom
+  (doom-modeline-buffer-file-name-style 'auto)
+  (doom-modeline-height 10)
+  (inhibit-compacting-font-caches t)
+  (doom-modeline-bar-width 1)
+  (doom-modeline-icon t)
+  (doom-modeline-major-mode-color-icon t)
+  (doom-modeline-major-mode-icon t)
+  (doom-modeline-unicode-fallback nil)
+  (doom-modeline-minor-modes t)
+  (doom-modeline-enable-word-count t)
+  (doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode))
+  (doom-modeline-buffer-encoding nil)
+  (doom-modeline-env-version t)
+  (doom-modeline-github nil)
+  (doom-modeline-lsp t)
+  (doom-modeline-irc t)
+  (doom-modeline-irc-stylize 'identity))
+
 ;; (doom-themes-neotree-config)
 ;; (doom-themes-visual-bell-config)
 ;; (doom-themes-org-config)
@@ -103,25 +123,6 @@
 ;; (doom-modeline-def-modeline 'pdf
 ;;   '(bar pdf-pages window-number matches buffer-info)
 ;;   '(compilation  misc-info major-mode process vcs time))
-
-(setq doom-modeline-buffer-file-name-style 'auto
-      doom-modeline-height 10
-      inhibit-compacting-font-caches t
-      doom-modeline-bar-width 1
-      doom-modeline-icon t
-      doom-modeline-major-mode-color-icon t
-      doom-modeline-major-mode-icon t
-
-      doom-modeline-unicode-fallback nil
-      doom-modeline-minor-modes t
-      doom-modeline-enable-word-count t
-      doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode)
-      doom-modeline-buffer-encoding nil
-      doom-modeline-env-version t
-      doom-modeline-github nil
-      doom-modeline-lsp t
-      doom-modeline-irc t
-      doom-modeline-irc-stylize 'identity)
 
 
 (defun switch-theme (theme)
