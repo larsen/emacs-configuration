@@ -35,9 +35,8 @@
 (pixel-scroll-precision-mode)
 
 ; Not sure why I need this
-(setq ansi-term-color-vector
-  [term term-color-black term-color-red term-color-green term-color-yellow
-    term-color-blue term-color-magenta term-color-cyan term-color-white])
+(setq ansi-term-color-vector [term term-color-black term-color-red term-color-green term-color-yellow
+                                   term-color-blue term-color-magenta term-color-cyan term-color-white])
 
 (add-to-list 'exec-path "~/.cabal/bin/")
 (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
