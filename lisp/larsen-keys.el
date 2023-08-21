@@ -32,20 +32,6 @@
    (when (featurep 'larsen-smarttab)
      `((,(kbd "TAB") smart-tab)))
 
-   ;; Helm related
-   (when (featurep 'larsen-helm)
-     `((,(kbd "C-c h") helm-mini)
-       (,(kbd "<s-escape>") helm-mini)
-       (,(kbd "<f13>") helm-mini)
-       (,(kbd "C-M-y") helm-mini)
-       (,(kbd "<print>") helm-mini)
-       (,(kbd "M-x") helm-M-x)
-
-       (,(kbd "C-c s") helm-swoop)
-       (,(kbd "C-c C-s") helm-swoop-projectile)
-       (,(kbd "C-c v") helm-show-kill-ring)
-       (,(kbd "C-x C-f") helm-find-files)))
-
    ;; A couple of options to activate a feature
    ;; roughly inspired to how Scrivener works
    (when (featurep 'larsen-orgmode)
