@@ -2,8 +2,6 @@
 ;;; larsen-env.el
 ;;;
 
-(use-package helm)
-(use-package helm-swoop)
 (use-package rotate)
 (use-package nlinum)
 ; (use-package whole-line-or-region)
