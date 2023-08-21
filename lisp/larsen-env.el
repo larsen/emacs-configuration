@@ -11,6 +11,12 @@
 (use-package crux)
 (use-package cl)
 
+(use-package multiple-cursors
+  :bind (("C-c m c" . mc/edit-lines)
+         ("C-c m a" . mc/mark-all-like-this)
+         ("C-c m n" . mc/mark-next-like-this)
+         ("C-S-<mouse-1>" . mc/add-cursor-on-clicko)))
+
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
 
