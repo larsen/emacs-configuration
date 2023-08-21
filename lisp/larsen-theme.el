@@ -6,10 +6,10 @@
   ;; "IBM Plex Mono"
   "Iosevka")
 
-;; (use-package unicode-fonts
-;;    :ensure t
-;;    :config
-;;    (unicode-fonts-setup))
+(use-package unicode-fonts
+   :ensure t
+   :config
+   (unicode-fonts-setup))
 
 (let ((font
        (or "Iosevka Term"
@@ -95,37 +95,33 @@
 ; (use-package 'org-beautify-theme)
 ; (load-theme 'org-beautify-theme)
 
-;(doom-modeline-mode)
-(doom-themes-neotree-config)
-(doom-themes-visual-bell-config)
-(doom-themes-org-config)
-(setq doom-modeline-icon t
+(doom-modeline-mode)
+;; (doom-themes-neotree-config)
+;; (doom-themes-visual-bell-config)
+;; (doom-themes-org-config)
+
+;; (doom-modeline-def-modeline 'pdf
+;;   '(bar pdf-pages window-number matches buffer-info)
+;;   '(compilation  misc-info major-mode process vcs time))
+
+(setq doom-modeline-buffer-file-name-style 'auto
       doom-modeline-height 10
-      doom-modeline-buffer-file-name-style 'relative-to-project)
+      inhibit-compacting-font-caches t
+      doom-modeline-bar-width 1
+      doom-modeline-icon t
+      doom-modeline-major-mode-color-icon t
+      doom-modeline-major-mode-icon t
 
-(require 'doom-modeline-core)
-(require 'doom-modeline-segments)
-
-(doom-modeline-def-modeline 'pdf
-  '(bar pdf-pages window-number matches buffer-info)
-  '(compilation  misc-info major-mode process vcs time))
-
-;;  (setq doom-modeline-height 1)
-;;  (setq doom-modeline-irc t)
-;;  (setq doom-modeline-irc-stylize 'identity)
-;;  (setq doom-modeline-height 0)
-;;  (setq doom-modeline-bar-width 1)
-;;  (setq doom-modeline-major-mode-color-icon t)
-;;  (setq doom-modeline-major-mode-icon t)
-;;  (setq doom-modeline-icon *tychoish-modeline-icon-state*)
-;;  (setq doom-modeline-unicode-fallback nil)
-;; (setq doom-modeline-minor-modes t)
-;; (setq doom-modeline-enable-word-count t)
-;; (setq doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode))
-;; (setq doom-modeline-buffer-encoding nil)
-;; (setq doom-modeline-env-version t)
-;; (setq doom-modeline-github nil)
-;; (setq doom-modeline-lsp t)
+      doom-modeline-unicode-fallback nil
+      doom-modeline-minor-modes t
+      doom-modeline-enable-word-count t
+      doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode)
+      doom-modeline-buffer-encoding nil
+      doom-modeline-env-version t
+      doom-modeline-github nil
+      doom-modeline-lsp t
+      doom-modeline-irc t
+      doom-modeline-irc-stylize 'identity)
 
 
 (defun switch-theme (theme)
