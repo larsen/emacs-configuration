@@ -76,9 +76,6 @@
 ;; (setq sml/no-confirm-load-theme t)
 ;; (sml/setup)
 
-(when (eq system-type 'darwin)
-  (setq mac-right-option-modifier 'none))
-
 (display-time-mode 1)
 
 (setq calendar-week-start-day 1)
