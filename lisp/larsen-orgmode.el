@@ -13,7 +13,7 @@
 (use-package org-download)
 (use-package ob-ditaa)
 (use-package cal-iso)
-(use-package cl)
+(use-package cl-lib)
 (use-package ox)
 
 (add-to-list 'load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")

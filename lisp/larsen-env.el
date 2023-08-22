@@ -9,7 +9,7 @@
 (use-package edwina)
 (use-package editorconfig)
 (use-package crux)
-(use-package cl)
+(use-package cl-lib)
 
 (use-package multiple-cursors
   :bind (("C-c m c" . mc/edit-lines)
