@@ -24,7 +24,6 @@
 (setq initial-scratch-message nil)
 
 (global-hl-line-mode 1) ; turn on highlighting current line
-(nlinum-mode)
 (global-visual-line-mode 1)
 (global-font-lock-mode 1)
 (delete-selection-mode 1) ; delete seleted text when typing
