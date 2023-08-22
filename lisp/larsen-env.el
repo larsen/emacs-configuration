@@ -6,9 +6,45 @@
 ; (use-package whole-line-or-region)
 (use-package switch-window)
 (use-package edwina)
-(use-package editorconfig)
 (use-package crux)
 (use-package cl-lib)
+
+(use-package eyebrowse
+  :config
+  (let ((window-configs (eyebrowse--get 'window-configs))
+        (my-window-configs '((1 . "📒")
+                             (2 . "💻")
+                             (3 . "🕒")
+                             (4 . "🔧")
+                             (5 . "🔧")
+                             (7 . "🖹")
+                             (8 . "📰")
+                             (9 . "erc"))))
+    (cl-loop for (window-config-slot . window-config-label)
+             in my-window-configs
+             when (assoc window-config-slot window-configs)
+             do (eyebrowse-rename-window-config window-config-slot
+                                                window-config-label)))
+  (cl-loop for i from 1 upto 9
+           do (define-key eyebrowse-mode-map
+                          (kbd (format "M-%d" i))
+                          `(lambda ()
+                             (interactive)
+                             (eyebrowse-switch-to-window-config ,i))))
+  (defun my/initial-window-setup ()
+    "Rudimental function to setup windows.
+For now, useful only if I close emacsclient by mistake."
+    (interactive)
+    (let ((window-workspaces '((1 . ("diary.org"))
+                               (2 . ("*scratch*"))
+                               (3 . ("activities.org"))
+                               (8 . ("*elfeed-search*")))))
+      (cl-loop for (window-slot . files-list)
+               in window-workspaces
+               do (progn (message (format "%s %s" window-slot files-list))
+                         (eyebrowse-switch-to-window-config window-slot)
+                         (switch-to-buffer (car files-list))))))
+  (eyebrowse-mode t))
 
 (use-package multiple-cursors
   :bind (("C-c m c" . mc/edit-lines)
@@ -16,10 +52,25 @@
          ("C-c m n" . mc/mark-next-like-this)
          ("C-S-<mouse-1>" . mc/add-cursor-on-clicko)))
 
+(use-package editorconfig
+  :config (editorconfig-mode 1))
+
+(use-package calendar
+  :custom
+  (calendar-week-start-day 1)
+  (calendar-intermonth-text '(propertize
+                              (format "%2d"
+                                      (car
+                                       (calendar-iso-from-absolute
+                                        (calendar-absolute-from-gregorian (list month day year)))))
+                              'font-lock-face 'calendar-iso-week-face))
+  (calendar-holidays (append holiday-general-holidays holiday-local-holidays
+                             holiday-other-holidays holiday-christian-holidays
+                             holiday-islamic-holidays holiday-oriental-holidays
+                             holiday-solar-holidays)))
+
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
-
-(editorconfig-mode 1)
 
 (setq initial-scratch-message nil)
 
@@ -82,25 +133,11 @@
 
 (display-time-mode 1)
 
-(setq calendar-week-start-day 1)
 
 ;; Week number in calendar
 (copy-face font-lock-constant-face 'calendar-iso-week-face)
 (set-face-attribute 'calendar-iso-week-face nil
                     :height 0.7)
-(setq calendar-intermonth-text
-      '(propertize
-        (format "%2d"
-                (car
-                 (calendar-iso-from-absolute
-                  (calendar-absolute-from-gregorian (list month day year)))))
-        'font-lock-face 'calendar-iso-week-face))
-
-(setq calendar-holidays
-        (append holiday-general-holidays holiday-local-holidays
-                holiday-other-holidays holiday-christian-holidays
-                holiday-islamic-holidays holiday-oriental-holidays
-                holiday-solar-holidays))
 
 ;; JS2mode
 (setq-default js2-basic-offset 2)
@@ -109,43 +146,9 @@
 (projectile-mode)
 
 ;; (edwin-mode t)
-(eyebrowse-mode t)
 
-(cl-loop for i from 1 upto 9
-      do (define-key eyebrowse-mode-map
-           (kbd (format "M-%d" i))
-           `(lambda ()
-              (interactive)
-              (eyebrowse-switch-to-window-config ,i))))
 
-(let ((window-configs (eyebrowse--get 'window-configs))
-      (my-window-configs '((1 . "📒")
-                           (2 . "💻")
-                           (3 . "🕒")
-                           (4 . "🔧")
-                           (5 . "🔧")
-                           (7 . "🖹")
-                           (8 . "📰")
-                           (9 . "erc"))))
-  (cl-loop for (window-config-slot . window-config-label)
-        in my-window-configs
-        when (assoc window-config-slot window-configs)
-        do (eyebrowse-rename-window-config window-config-slot
-                                           window-config-label)))
 
-(defun my/initial-window-setup ()
-  "Rudimental function to setup windows.
-For now, useful only if I close emacsclient by mistake."
-  (interactive)
-  (let ((window-workspaces '((1 . ("diary.org"))
-                             (2 . ("*scratch*"))
-                             (3 . ("activities.org"))
-                             (8 . ("*elfeed-search*")))))
-    (cl-loop for (window-slot . files-list)
-          in window-workspaces
-          do (progn (message (format "%s %s" window-slot files-list))
-                    (eyebrowse-switch-to-window-config window-slot)
-                    (switch-to-buffer (car files-list))))))
 
 (setq term-suppress-hard-newline t)
 
