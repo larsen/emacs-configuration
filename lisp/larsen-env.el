@@ -3,7 +3,6 @@
 ;;;
 
 (use-package rotate)
-(use-package nlinum)
 ; (use-package whole-line-or-region)
 (use-package switch-window)
 (use-package edwina)
@@ -40,7 +39,8 @@
 
 (pixel-scroll-precision-mode)
 
-; Not sure why I need this
+(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+                                        ; Not sure why I need this
 (setq ansi-term-color-vector [term term-color-black term-color-red term-color-green term-color-yellow
                                    term-color-blue term-color-magenta term-color-cyan term-color-white])
 
