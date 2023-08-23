@@ -14,9 +14,9 @@
   (helm-ff-lynx-style-map t)
   (helm-buffer-max-length 60))
 
-(use-package helm-swoop)
-(use-package helm-config)
-(use-package helm-projectile)
-(use-package helm-ag)
+(use-package helm-swoop :requires helm)
+(use-package helm-config :requires helm)
+(use-package helm-projectile :requires helm)
+(use-package helm-ag :requires helm)
 
 (provide 'larsen-helm)
