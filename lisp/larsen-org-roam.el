@@ -1,11 +1,11 @@
-(setq org-roam-v2-ack t)
-
 (use-package org-roam
   :bind (("C-c m f" . org-roam-node-find)
          ("<f7>" . org-roam-node-find)
          ("C-c m i" . org-roam-node-insert)
          ("C-c m b" . org-roam-buffer-toggle)
          ("C-c m t" . org-roam-tag-add))
+  :init
+  (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory "~/org/roam/")
   (org-roam-ui-sync-theme t)
@@ -15,10 +15,8 @@
   :config
   (org-roam-setup))
 
-(use-package websocket)
-
 (use-package org-roam-ui
-  :requires org-roam
+  :requires (org-roam websocket)
   :load-path "~/.emacs.d/private/org-roam-ui"
   :custom
   (org-roam-mode-section-functions (list #'org-roam-reflinks-section
