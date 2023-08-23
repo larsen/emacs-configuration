@@ -13,6 +13,7 @@
                                   ("\\.kml\\'" "viking"))))
 
 (use-package peep-dired
+  :bind (("C-x p" . peep-dired))
   :custom
   (peep-dired-cleanup-on-disable t)
   (peep-dired-cleanup-eagerly nil)

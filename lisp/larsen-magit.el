@@ -1,6 +1,7 @@
-(use-package magit)
-
-(setq magit-save-repository-buffers 'dontask)
+(use-package magit
+  :bind (("C-x g" . magit-status))
+  :custom
+  (magit-save-repository-buffers 'dontask))
 
 ;; from http://whattheemacsd.com/setup-magit.el-01.html
 ;; full screen magit-status

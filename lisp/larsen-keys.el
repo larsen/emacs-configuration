@@ -17,35 +17,18 @@
        (,(kbd "M-o") other-window)
        (,(kbd "C-S-f") switch-layoout)
        (,(kbd "C-c t") (lambda () (interactive) (vterm)))
-       (,(kbd "C-c e m") macrostep-mode)
+       (,(kbd "C-c e m") macrostep-moode)
        (,(kbd "C-c e r") eval-and-replace)
-       (,(kbd "C-c SPC") ace-jump-mode)
-       (,(kbd "C-c f") (lambda ()
-                         (interactive)
-                         (helm-projectile-ag
-                          (file-name-base (buffer-file-name)))))
-       (,(kbd "<f6>") (lambda ()
-                        (interactive)
-                        (helm-projectile-ag)))))
+       (,(kbd "C-c SPC") ace-jump-mode)))
 
    ;; TAB special behaviour
    (when (featurep 'larsen-smarttab)
      `((,(kbd "TAB") smart-tab)))
 
-   (when (featurep 'larsen-org-roam)
-     `((,(kbd "C-c m f") org-roam-node-find)
-       (,(kbd "<f7>") org-roam-node-find)
-       (,(kbd "C-c m i") org-roam-node-insert)
-       (,(kbd "C-c m b") org-roam-buffer-toggle)
-       (,(kbd "C-c m t") org-roam-tag-add)))
-
    (when (featurep 'larsen-slime)
      `((,(kbd "<f2>") slime-hyperspec-lookup)
        (,(kbd "C-<f12>") slime-selector)
        (,(kbd "<f12>") slime-selector)))
-
-   (when (featurep 'larsen-magit)
-     `((,(kbd "C-x g") magit-status)))
 
    (when (featurep 'larsen-perl)
      `((,(kbd "C-h P") cperl-perldoc-at-point)))
@@ -53,15 +36,6 @@
    (when (featurep 'larsen-functions)
      `((,(kbd "M-<f1>") toggle-split-layout)
        (,(kbd "C-c j") webjump)))
-
-   (when (featurep 'larsen-sql)
-     `((,(kbd "C-c C-f") sqlformat)))
-
-   (when (featurep 'larsen-ibuffer)
-     `((,(kbd "C-x C-b") ibuffer)))
-
-   (when (featurep 'larsen-dired)
-     `((,(kbd "C-x p") peep-dired)))
 
    (when (featurep 'larsen-print)
      `((,(kbd "M-<print>") a2ps-buffer)))))

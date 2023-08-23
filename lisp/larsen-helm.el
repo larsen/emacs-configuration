@@ -16,7 +16,16 @@
 
 (use-package helm-swoop :requires helm)
 (use-package helm-config :requires helm)
-(use-package helm-projectile :requires helm)
+(use-package helm-projectile
+  :requires helm
+  :bind (("C-c f" . (lambda ()
+                      (interactive)
+                      (helm-projectile-ag
+                       (file-name-base (buffer-file-name)))))
+         ("<f6>" . (lambda ()
+                     (interactive)
+                     (helm-projectile-ag)))))
+
 (use-package helm-ag :requires helm)
 
 (provide 'larsen-helm)

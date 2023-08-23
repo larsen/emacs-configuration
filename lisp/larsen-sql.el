@@ -1,6 +1,12 @@
 (use-package sql)
 (use-package sqlup-mode)
-(use-package sqlformat)
+
+(use-package sqlformat
+  :bind (("C-c C-f" . sqlformat))
+  :custom
+  (sqlformat-command 'pgformatter)
+  (sqlformat-args '("-u1")))
+
 (use-package seq)
 (use-package filenotify)
 
@@ -9,8 +15,8 @@
 ;; sure is not activated
 (remove-hook 'sql-mode-hook 'sql-indent-enable)
 
-(setq sqlformat-command 'pgformatter)
-(setq sqlformat-args '("-u1"))
+(sqlformat-command 'pgformatter)
+(sqlformat-args '("-u1"))
 
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
