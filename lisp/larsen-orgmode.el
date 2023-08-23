@@ -126,7 +126,8 @@
             :deadline past
             :order 7))))
 
-(use-package org-download)
+(use-package org-download
+  :load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
 
 (use-package ob-ditaa
   :requires org
@@ -136,8 +137,6 @@
 (use-package cal-iso)
 (use-package cl-lib)
 (use-package ox)
-
-(add-to-list 'load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
 
 (defun my-org-confirm-babel-evaluate (lang body)
   (not (string= lang "emacs-elisp")))
