@@ -32,16 +32,6 @@
    (when (featurep 'larsen-smarttab)
      `((,(kbd "TAB") smart-tab)))
 
-   ;; A couple of options to activate a feature
-   ;; roughly inspired to how Scrivener works
-   (when (featurep 'larsen-orgmode)
-     `((,(kbd "C-M-l") open-subtree-in-another-window)
-       (,(kbd "C-c <right>") open-subtree-in-another-window)
-       (,(kbd "C-c r") org-refile)
-       (,(kbd "C-c l") org-store-link)
-       (,(kbd "C-c a") org-agenda)
-       (,(kbd "C-c c") org-capture)))
-
    (when (featurep 'larsen-org-roam)
      `((,(kbd "C-c m f") org-roam-node-find)
        (,(kbd "<f7>") org-roam-node-find)
