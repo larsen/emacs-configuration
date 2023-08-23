@@ -110,7 +110,8 @@
 (require 'webjump)
 
 (defun get-link-and-description-from-entry (entry)
-  "Given a 'org-mode' ENTRY possibly bearing a URL, return a pair link and description."
+  "Given a org-mode ENTRY possibly bearing a URL,
+return a pair link and description."
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]")
         (item-string (cdr (assoc "ITEM" entry))))
     (when (not (null item-string))
@@ -118,7 +119,8 @@
         `(,(match-string 2 item-string) . ,(match-string 1 item-string))))))
 
 (defun get-webjump-sites ()
-  "Scan through my list of external links and return a list of pairs <link,description>."
+  "Scan through my list of external links and
+return a list of pairs <link,description>."
   (let ((regex "\\[\\[\\(.*\\)\\]\\[\\(.*\\)\\]\\]"))
     (with-current-buffer
         (find-file-noselect "~/www/stefanorodighiero.net/links.org")
