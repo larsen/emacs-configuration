@@ -18,15 +18,15 @@
   (peep-dired-cleanup-eagerly nil)
   (peep-dired-ignored-extensions '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac")))
 
-(use-package dired-x)
-(use-package dired-avfs)
+(use-package dired-x :requires dired)
+(use-package dired-avfs :requires dired)
 
-(use-package diff-hl)
+(use-package diff-hl
+  :requires dired
+  :hook (dired-mode-hook . diff-hl-dired-mode))
 
 ;; Useful combo
 ;; Ctrl-u s -- interactively change the 'dired-listing-switches
-
-(add-hook 'dired-mode-hook 'diff-hl-dired-mode)
 
 ;; Copied from https://github.com/IvanRave/emacs-config/blob/master/init.el
 (defun mydired-sort ()
