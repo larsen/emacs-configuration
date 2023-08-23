@@ -15,9 +15,6 @@
 ;; sure is not activated
 (remove-hook 'sql-mode-hook 'sql-indent-enable)
 
-(sqlformat-command 'pgformatter)
-(sqlformat-args '("-u1"))
-
 (defun sqlformat-selection ()
   "Return the content of the clipboard, formatted using sqlformat."
   (interactive)
