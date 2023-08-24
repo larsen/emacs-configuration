@@ -1,7 +1,7 @@
 ;;; larsen-flycheck.el --- Flycheck configuration
 
 (use-package flycheck
-  :init (elpy-mode)
+  :hook elpy-mode
   :config
   (global-flycheck-mode 1)
   (add-to-list 'display-buffer-alist
