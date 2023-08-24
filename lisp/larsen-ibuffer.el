@@ -27,13 +27,15 @@
                            " "
                            (git-status 8 8 :left)
                            " "
-                           project-relative-file))))
-
-(use-package ibuffer-git)
-(use-package ibuffer-projectile)
-
-(add-hook 'ibuffer-mode-hook
+                           project-relative-file)))
+  :config
+  (add-hook 'ibuffer-mode-hook
           (lambda ()
-            (ibuffer-switch-to-saved-filter-groups "default")))
+            (ibuffer-switch-to-saved-filter-groups "default"))))
+
+(use-package ibuffer-git :requires ibuffer)
+(use-package ibuffer-projectile :requires ibuffer)
+
+
 
 (provide 'larsen-ibuffer)
