@@ -104,6 +104,7 @@
                                                '((:name "Today" :scheduled today))))))))))
 
 (use-package org-super-agenda
+  :config (org-super-agenda-mode)
   :custom
   (org-super-agenda-groups
    '(;; Each group has an implicit boolean OR operator between its selectors.
@@ -250,7 +251,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
 
 
 
-(org-super-agenda-mode)
+
 
 (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
