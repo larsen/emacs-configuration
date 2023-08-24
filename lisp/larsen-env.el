@@ -55,6 +55,11 @@ For now, useful only if I close emacsclient by mistake."
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
+(use-package display-line-numbers
+  :hook prog-mode-hook
+  :custom
+  (display-line-numbers-width-start t))
+
 (use-package calendar
   :custom
   (calendar-week-start-day 1)
@@ -89,7 +94,7 @@ For now, useful only if I close emacsclient by mistake."
 
 (pixel-scroll-precision-mode)
 
-(add-hook 'prog-mode-hook #'display-line-numbers-mode)
+
                                         ; Not sure why I need this
 (setq ansi-term-color-vector [term term-color-black term-color-red term-color-green term-color-yellow
                                    term-color-blue term-color-magenta term-color-cyan term-color-white])
