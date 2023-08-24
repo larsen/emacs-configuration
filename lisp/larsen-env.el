@@ -5,7 +5,6 @@
 (use-package rotate)
 ; (use-package whole-line-or-region)
 (use-package switch-window)
-(use-package edwina)
 (use-package crux)
 (use-package cl-lib)
 
@@ -45,6 +44,10 @@ For now, useful only if I close emacsclient by mistake."
                          (eyebrowse-switch-to-window-config window-slot)
                          (switch-to-buffer (car files-list))))))
   (eyebrowse-mode t))
+
+(use-package projectile
+  :config
+  (projectile-mode))
 
 (use-package multiple-cursors
   :bind (("C-c m c" . mc/edit-lines)
@@ -147,13 +150,7 @@ For now, useful only if I close emacsclient by mistake."
 ;; JS2mode
 (setq-default js2-basic-offset 2)
 
-;; Projectile
-(projectile-mode)
-
 ;; (edwin-mode t)
-
-
-
 
 (setq term-suppress-hard-newline t)
 
