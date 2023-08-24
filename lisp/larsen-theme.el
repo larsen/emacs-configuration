@@ -96,7 +96,7 @@
 ; (load-theme 'org-beautify-theme)
 
 (use-package doom-modeline
-  :config t ; (doom-modeline-mode 1)
+  ; :config (doom-modeline-mode 1)
   :custom
   (doom-modeline-buffer-file-name-style 'auto)
   (doom-modeline-height 10)
