@@ -50,7 +50,6 @@
         larsen-pdf-tools
         larsen-dired
         larsen-flycheck
-        larsen-iswitchb
         larsen-package
         larsen-spell
         larsen-clojure
