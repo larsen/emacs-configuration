@@ -2,11 +2,11 @@
 ;;; larsen-env.el
 ;;;
 
-(use-package rotate)
-; (use-package whole-line-or-region)
-(use-package switch-window)
-(use-package crux)
-(use-package cl-lib)
+(use-package rotate
+  :bind (("C-x C-o" . rotate-layout)))
+
+(use-package switch-window
+  :bind (("C-x o" . switch-window)))
 
 (use-package eyebrowse
   :config
@@ -64,6 +64,11 @@ For now, useful only if I close emacsclient by mistake."
   (display-line-numbers-width-start t))
 
 (use-package calendar
+  :config
+  ;; Week number in calendar
+  (copy-face font-lock-constant-face 'calendar-iso-week-face)
+  (set-face-attribute 'calendar-iso-week-face nil
+                      :height 0.7)
   :custom
   (calendar-week-start-day 1)
   (calendar-intermonth-text '(propertize
@@ -76,6 +81,9 @@ For now, useful only if I close emacsclient by mistake."
                              holiday-other-holidays holiday-christian-holidays
                              holiday-islamic-holidays holiday-oriental-holidays
                              holiday-solar-holidays)))
+
+(use-package crux)
+(use-package cl-lib)
 
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
@@ -136,16 +144,8 @@ For now, useful only if I close emacsclient by mistake."
              (set-window-start w2 s1)
              (setq i (1+ i)))))))
 
-;; (setq sml/no-confirm-load-theme t)
-;; (sml/setup)
-
 (display-time-mode 1)
 
-
-;; Week number in calendar
-(copy-face font-lock-constant-face 'calendar-iso-week-face)
-(set-face-attribute 'calendar-iso-week-face nil
-                    :height 0.7)
 
 ;; JS2mode
 (setq-default js2-basic-offset 2)
