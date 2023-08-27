@@ -1,4 +1,24 @@
-(use-package elfeed)
+(use-package elfeed
+  :bind (:map elfeed-show-mode-map
+              ("l" . (lambda ()
+                       (interactive)
+                       (elfeed-link-title elfeed-show-entry)))
+              ("f" . (lambda ()
+                       (interactive)
+                       (message "Original feed: %s" (elfeed-entry-feed elfeed-show-entry))))
+              ("D" . (lambda ()
+                       (interactive)
+                       (shr-download-image)))
+              ("b" . (lambda (&optional use-generic-p)
+                       (interactive "P")
+                       (split-window-right)
+                       (let ((link (elfeed-entry-link elfeed-show-entry)))
+                         (when link
+                           (message "Sent to browser: %s" link)
+                           (if use-generic-p
+                               (browse-url-generic link)
+                             (browse-url link))))))))
+
 (setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
 (setq url-queue-timeout 30)
 (setq elfeed-use-curl t)
@@ -36,33 +56,6 @@
       (x-set-selection 'PRIMARY titlelink)
       (message "Yanked: %s" titlelink))))
 
-(define-key elfeed-show-mode-map "l"
-  (lambda ()
-    (interactive)
-    (elfeed-link-title elfeed-show-entry)))
-
-
-(define-key elfeed-show-mode-map "f"
-  (lambda ()
-    (interactive)
-    (message "Original feed: %s" (elfeed-entry-feed elfeed-show-entry))))
-
-(define-key elfeed-show-mode-map "D"
-  (lambda ()
-    (interactive)
-    (shr-download-image)))
-
-;; override standard command "b"
-(define-key elfeed-show-mode-map "b"
-  (lambda (&optional use-generic-p)
-    (interactive "P")
-    (split-window-right)
-    (let ((link (elfeed-entry-link elfeed-show-entry)))
-      (when link
-        (message "Sent to browser: %s" link)
-        (if use-generic-p
-            (browse-url-generic link)
-          (browse-url link))))))
 
 ;; (defun my-elfeed-show-entry (buff)
 ;;   (popwin:popup-buffer buff
