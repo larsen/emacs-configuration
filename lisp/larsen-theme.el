@@ -95,8 +95,11 @@
 ; (use-package 'org-beautify-theme)
 ; (load-theme 'org-beautify-theme)
 
+(use-package nerd-icons
+  :ensure t)
+
 (use-package doom-modeline
-  ; :config (doom-modeline-mode 1)
+  :config (doom-modeline-mode 1)
   :custom
   (doom-modeline-buffer-file-name-style 'auto)
   (doom-modeline-height 10)
