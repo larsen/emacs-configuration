@@ -1,6 +1,34 @@
 (use-package pdf-tools
   :config
   (pdf-tools-install :no-query)
+  (when (featurep 'org)
+    (defun pdf-outline-export-to-org ()
+      " Export pdf outlines as org mode "
+      (interactive)
+
+      (let* ((pdf-buffer (current-buffer))
+             (filename (file-name-sans-extension (buffer-name pdf-buffer)))
+             (org-filename (concat filename ".org"))
+             (outline-info (pdf-info-outline pdf-buffer)))
+
+        ;; Insert outline heading
+        (with-temp-buffer
+          (org-mode)
+          (insert (concat "#+TITLE: " filename "\n"))
+          (when outline-info
+            (dolist (item outline-info)
+              (let ((title (assoc-default 'title item))
+                    (page (assoc-default 'page item))
+                    (level (assoc-default 'depth item)))
+                (insert (format
+                         "%s [[pdfview:%s.pdf::%s][%s]]\n"
+                         (make-string level ?*)
+                         (concat default-directory filename)
+                         page title))
+                (org-set-property "page" (number-to-string page))
+                (org-todo 'todo)
+                ))
+            (write-file (concat default-directory org-filename)))))))
   :custom
   (pdf-tools-enabled-modes '(pdf-history-minor-mode
                              pdf-isearch-minor-mode
@@ -52,32 +80,6 @@
 
 ;; From https://github.com/politza/pdf-tools/issues/338
 ;; Export pdf outline to org file
-(defun pdf-outline-export-to-org ()
-  " Export pdf outlines as org mode "
-  (interactive)
 
-  (let* ((pdf-buffer (current-buffer))
-         (filename (file-name-sans-extension (buffer-name pdf-buffer)))
-         (org-filename (concat filename ".org"))
-         (outline-info (pdf-info-outline pdf-buffer)))
-
-    ;; Insert outline heading
-    (with-temp-buffer
-      (org-mode)
-      (insert (concat "#+TITLE: " filename "\n"))
-      (when outline-info
-        (dolist (item outline-info)
-          (let ((title (assoc-default 'title item))
-                (page (assoc-default 'page item))
-                (level (assoc-default 'depth item)))
-            (insert (format
-                     "%s [[pdfview:%s.pdf::%s][%s]]\n"
-                     (make-string level ?*)
-                     (concat default-directory filename)
-                     page title))
-            (org-set-property "page" (number-to-string page))
-            (org-todo 'todo)
-            ))
-        (write-file (concat default-directory org-filename))))))
 
 (provide 'larsen-pdf-tools)
