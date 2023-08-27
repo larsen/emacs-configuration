@@ -1,6 +1,6 @@
 ;;; larsen-markdown.el -- Markdown setup
 
-(package-require 'markdown-mode)
+(use-package markdown-mode)
 
 (setq-default markdown-command "/usr/bin/pandoc -S -s --self-contained -f markdown -t html5 --data-dir=. ")
 

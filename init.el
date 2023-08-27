@@ -18,11 +18,6 @@
 
 (require 'package)
 (package-initialize)
-(defun package-require (pkg)
-  "Install a package PKG only if it's not already installed."
-  (when (not (package-installed-p pkg))
-    (package-install pkg)))
-
 ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
 (defalias 'yes-or-no-p 'y-or-n-p)
 

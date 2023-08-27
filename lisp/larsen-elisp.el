@@ -1,4 +1,4 @@
-(package-require 'bind-key)
+(use-package bind-key)
 
 (bind-keys :prefix "C-c e"
            :prefix-map my-elisp-map
