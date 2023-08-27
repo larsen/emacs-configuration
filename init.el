@@ -34,7 +34,7 @@
         larsen-clojure
         larsen-perl
         larsen-haskell
-        ;; larsen-markdown
+        larsen-markdown
         larsen-smarttab
         larsen-tramp
         larsen-helm

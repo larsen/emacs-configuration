@@ -1,11 +1,8 @@
 ;;; larsen-markdown.el -- Markdown setup
 
-(use-package markdown-mode)
-
-(setq-default markdown-command "/usr/bin/pandoc -S -s --self-contained -f markdown -t html5 --data-dir=. ")
-
-(add-to-list 'auto-mode-alist '("\\.markdown$" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md$" . markdown-mode))
+(use-package markdown-mode
+  :mode ("\\.markdown$" "\\.md$")
+  :custom (markdown-command "/usr/bin/pandoc -s --self-contained -f markdown -t html5 --data-dir=. "))
 
 (defun my-flymd-browser-function (url)
   (let ((browse-url-browser-function 'browse-url-firefox))
