@@ -32,7 +32,7 @@
                              (eyebrowse-switch-to-window-config ,i))))
   (defun my/initial-window-setup ()
     "Rudimental function to setup windows.
-For now, useful only if I close emacsclient by mistake."
+    For now, useful only if I close emacsclient by mistake."
     (interactive)
     (let ((window-workspaces '((1 . ("diary.org"))
                                (2 . ("*scratch*"))
@@ -88,7 +88,22 @@ For now, useful only if I close emacsclient by mistake."
 (set-default 'indent-tabs-mode nil)
 (setq-default tab-width 2)
 
-(setq initial-scratch-message nil)
+(dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
+  (when (fboundp mode) (funcall mode -1)))
+(setq scroll-margin 3)
+
+;; Always ALWAYS use UTF-8
+;; (borrowed from bodil's configuration)
+(set-terminal-coding-system 'utf-8)
+(set-keyboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8)
+(setq-default buffer-file-coding-system 'utf-8-unix)
+
+;; Auto refresh buffers
+(global-auto-revert-mode 1)
+
+;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
+(defalias 'yes-or-no-p 'y-or-n-p)
 
 (global-hl-line-mode 1) ; turn on highlighting current line
 (global-visual-line-mode 1)

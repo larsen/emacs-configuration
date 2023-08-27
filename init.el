@@ -2,24 +2,8 @@
 ;;; Init.el
 ;;;
 
-(dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
-  (when (fboundp mode) (funcall mode -1)))
-(setq scroll-margin 3)
-
-;; Always ALWAYS use UTF-8
-;; (borrowed from bodil's configuration)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
-(setq-default buffer-file-coding-system 'utf-8-unix)
-
-;; Auto refresh buffers
-(global-auto-revert-mode 1)
-
 (require 'package)
 (package-initialize)
-;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Add .emacs.d to load-path
 (defvar dotfiles-dir (file-name-directory
