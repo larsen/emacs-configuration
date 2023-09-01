@@ -3,6 +3,8 @@
 ;;;
 
 (require 'package)
+(setq package-archives '(("gnu"       . "http://elpa.gnu.org/packages/")
+                         ("melpa"     . "https://melpa.org/packages/")))
 (package-initialize)
 
 ;; Add .emacs.d to load-path
@@ -29,7 +31,6 @@
         larsen-pdf-tools
         larsen-dired
         larsen-flycheck
-        larsen-package
         larsen-spell
         larsen-clojure
         larsen-perl
@@ -66,8 +67,7 @@
         larsen-eshell
         larsen-print
         larsen-menu
-        larsen-keys
-        ))
+        larsen-keys))
 
 ;; Now load other things
 (dolist (file larsen-pkg-full)
