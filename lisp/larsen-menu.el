@@ -1,5 +1,4 @@
-(add-hook 'text-mode-hook 'context-menu-mode)
-(add-hook 'shell-mode-hook 'context-menu-mode)
-(add-hook 'dired-mode-hook 'context-menu-mode)
+(use-package mouse
+  :hook ((text-mode shell-mode dired-mode) . context-menu-mode))
 
 (provide 'larsen-menu)
