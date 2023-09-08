@@ -60,7 +60,7 @@
         larsen-elisp
         ;larsen-ruby
         larsen-python
-        ; larsen-lsp
+        larsen-lsp
         ;larsen-refactoring
         larsen-theme
         larsen-mu4e
