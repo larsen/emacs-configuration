@@ -22,11 +22,6 @@
    (when (featurep 'larsen-smarttab)
      `((,(kbd "TAB") smart-tab)))
 
-   (when (featurep 'larsen-slime)
-     `((,(kbd "<f2>") slime-hyperspec-lookup)
-       (,(kbd "C-<f12>") slime-selector)
-       (,(kbd "<f12>") slime-selector)))
-
    (when (featurep 'larsen-perl)
      `((,(kbd "C-h P") cperl-perldoc-at-point)))
 
