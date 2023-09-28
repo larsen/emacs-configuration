@@ -32,16 +32,25 @@
         larsen-dired
         larsen-flycheck
         larsen-spell
-        larsen-clojure
-        larsen-racket
-        larsen-perl
-        larsen-haskell
         larsen-markdown
         larsen-smarttab
         larsen-tramp
         larsen-helm
         larsen-ibuffer
+
+        ;; Programming languages support
+        larsen-lsp
+        larsen-paredit
+        larsen-elisp
+        ;larsen-ruby
+        larsen-python
+        larsen-slime
+        larsen-clojure
+        larsen-racket
+        larsen-perl
+        larsen-haskell
         larsen-sql
+
         larsen-w3m
         ;; larsen-keyfreq
         larsen-latex
@@ -52,16 +61,10 @@
         larsen-orgmode-website
         larsen-org-roam
         ; larsen-anki
-        larsen-slime
         larsen-magit
         ;larsen-erc
         larsen-elfeed
-        larsen-paredit
         larsen-functions
-        larsen-elisp
-        ;larsen-ruby
-        larsen-python
-        larsen-lsp
         ;larsen-refactoring
         larsen-theme
         larsen-pulsar
