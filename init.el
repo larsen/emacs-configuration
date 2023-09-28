@@ -63,6 +63,7 @@
         larsen-lsp
         ;larsen-refactoring
         larsen-theme
+        larsen-pulsar
         larsen-mu4e
         larsen-eshell
         larsen-print
