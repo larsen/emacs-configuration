@@ -33,6 +33,7 @@
         larsen-flycheck
         larsen-spell
         larsen-clojure
+        larsen-racket
         larsen-perl
         larsen-haskell
         larsen-markdown
