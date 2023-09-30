@@ -12,12 +12,16 @@
                                   ("\\.gpx\\'" "viking")
                                   ("\\.kml\\'" "viking"))))
 
-(use-package peep-dired
-  :bind (("C-x p" . peep-dired))
+(use-package dired-preview
+  :requires dired
   :custom
-  (peep-dired-cleanup-on-disable t)
-  (peep-dired-cleanup-eagerly nil)
-  (peep-dired-ignored-extensions '("mkv" "iso" "mp4" "mp3" "zip" "tgz" "gz" "xz" "flac")))
+  (dired-preview-ignored-extensions-regexp
+   (concat "\\.\\("
+           (mapconcat 'symbol-name '(mkv iso mp4 mp3 zip tgz gz xz flac)
+                      "\\|")
+           "\\)"))
+  :config
+  (dired-preview-global-mode 1))
 
 (use-package dired-x :requires dired)
 (use-package dired-avfs :requires dired)
