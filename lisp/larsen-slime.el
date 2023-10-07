@@ -6,6 +6,8 @@
 ;; Let's keep around the original slime-helper.el
 ;; (load (expand-file-name "~/.quicklisp/slime-helper.el"))
 
+(load (expand-file-name "~/.quicklisp/slime-helper.el"))
+
 (use-package slime-autoloads)
 
 (use-package slime
@@ -14,8 +16,9 @@
   :bind (("<f2>" . slime-hyperspec-lookup)
          ("C-<f12>" . slime-selector)
          ("<f12>" . slive-selector))
+  :custom
+  (inferior-lisp-program "sbcl")
   :config
-  (setq inferior-lisp-program "sbcl")
   (load "~/.quicklisp/clhs-use-local.el" t)
   (slime-setup '(;; slime-fancy
 
