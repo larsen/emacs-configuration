@@ -11,9 +11,9 @@
 (use-package slime
   :after slime-autoloads
   :hook (lisp-mode . slime-mode)
-  :bind '(("<f2>" . slime-hyperspec-lookup)
-          ("C-<f12>" . slime-selector)
-          ("<f12>" . slive-selector))
+  :bind (("<f2>" . slime-hyperspec-lookup)
+         ("C-<f12>" . slime-selector)
+         ("<f12>" . slive-selector))
   :config
   (setq inferior-lisp-program "sbcl")
   (load "~/.quicklisp/clhs-use-local.el" t)
