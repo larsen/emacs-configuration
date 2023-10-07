@@ -66,6 +66,7 @@
          ("http://planet.emacs-es.org/rss20.xml" lisp fp programming es)
          ("http://www.scheme.dk/planet/atom.xml" scheme)
          ("https://lisp.sh/feed.atom" racket)
+         ("https://defn.io/index.xml" programming racket)
          ("https://recursive.games/rss.xml" lisp programming games)
          ("http://www.lispology.com/rss?JHE+3" lisp programming)
          ("https://hyperthings.garden/rss/all-posts.xml" lisp programming)
