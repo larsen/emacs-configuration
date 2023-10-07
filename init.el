@@ -67,6 +67,7 @@
         larsen-functions
         ;larsen-refactoring
         larsen-theme
+        larsen-fontaine
         larsen-pulsar
         larsen-mu4e
         larsen-eshell
