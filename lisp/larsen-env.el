@@ -46,6 +46,8 @@
   (eyebrowse-mode t))
 
 (use-package projectile
+  :custom
+  (projectile-sort-order 'recently-active)
   :config
   (projectile-mode))
 
