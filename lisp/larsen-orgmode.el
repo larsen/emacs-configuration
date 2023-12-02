@@ -257,7 +257,7 @@ WEEK-DAY is expressed as an integer in the range 0..6:
 
 (add-to-list 'org-latex-classes
              '("tufte-handout"
-               "\\documentclass{tufte-book}"
+               "\\documentclass{tufte-handout}"
                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
