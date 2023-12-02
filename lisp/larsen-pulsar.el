@@ -8,3 +8,5 @@
   (pulsar-highlight-face 'pulsar-yellow)
   :config
   (pulsar-global-mode 1))
+
+(provide 'larsen-pulsar)
