@@ -74,10 +74,6 @@
                                            my-find-today-heading)
                             "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                             :jump-to-captured t)
-                           ("c" "Dev todo" entry
-                            (file+function "~/org/work/idagio/activities.org"
-                                           my-find-today-heading)
-                            "*** TODO %i%?\n    %a")
                            ("r" "Reading todo" entry
                             (file "~/Dropbox/orgzly/reading.org")
                             "*** TODO %i%?\n    %a")
