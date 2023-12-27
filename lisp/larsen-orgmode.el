@@ -70,7 +70,7 @@
                             (file "~/org/personal/notes.org")
                             "* %t\n%?" :empty-lines 1)
                            ("t" "Todo item" entry
-                            (file+function "~/org/work/idagio/activities.org"
+                            (file+function "~/org/work/activities.org"
                                            my-find-today-heading)
                             "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                             :jump-to-captured t)
@@ -95,11 +95,8 @@
   (org-agenda-start-day nil) ;; i.e. today
   (org-agenda-span 7)
   (org-agenda-files '("~/org/personal/"
-                      "~/org/work/"
-                      "~/org/work/idagio/activities.org"))
-  (org-agenda-custom-commands '(("i" "Idagio TODO" tags-todo "idagio"
-                                 ((org-agenda-files '("~/org/work/idagio/"))))
-                                ("w" "Weekly Agenda"
+                      "~/org/work/"))
+  (org-agenda-custom-commands '(("w" "Weekly Agenda"
                                  ((agenda "" ((org-super-agenda-groups
                                                '((:name "Today" :scheduled today))))))))))
 
