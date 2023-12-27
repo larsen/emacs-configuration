@@ -89,7 +89,7 @@
   (org-agenda-skip-deadline-if-done t)
   (org-agenda-start-on-weekday nil)
   (org-agenda-start-day nil) ;; i.e. today
-  (org-agenda-span 7)
+  (org-agenda-span 14)
   (org-agenda-files '("~/org/personal/"
                       "~/org/work/"))
   (org-agenda-custom-commands '(("w" "Weekly Agenda"
