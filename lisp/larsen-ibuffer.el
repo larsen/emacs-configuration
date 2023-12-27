@@ -7,6 +7,7 @@
                                   ("Python" (mode . python-mode))
                                   ("Org" (mode . org-mode))
                                   ("Magit" (mode . magit))
+                                  ("Clojure" (mode . clojure-mode))
                                   ("Lisp" (or (mode . lisp-mode)
                                               (name . "slime")))
                                   ("Emacs Lisp" (or (mode . emacs-lisp-mode)
