@@ -69,7 +69,7 @@
         larsen-theme
         larsen-fontaine
         larsen-pulsar
-        larsen-mu4e
+        ; larsen-mu4e
         larsen-eshell
         larsen-print
         larsen-menu
