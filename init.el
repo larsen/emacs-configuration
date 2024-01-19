@@ -37,6 +37,7 @@
         larsen-tramp
         larsen-helm
         larsen-ibuffer
+        larsen-snippets
 
         ;; Programming languages support
         larsen-lsp
@@ -55,7 +56,6 @@
         ;; larsen-keyfreq
         larsen-latex
         ;; larsen-web-mode
-        larsen-snippets
         ; larsen-auto-complete
         larsen-orgmode
         larsen-orgmode-website
