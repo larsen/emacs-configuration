@@ -8,10 +8,8 @@
   (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory "~/org/roam/")
-  (org-roam-ui-sync-theme t)
-  (org-roam-ui-follow t)
-  (org-roam-ui-update-on-save t)
-  (org-roam-ui-open-on-start t)
+  (org-roam-mode-section-functions (list #'org-roam-reflinks-section
+                                         #'org-roam-unlinked-references-section))
   :config
   (org-roam-setup))
 
@@ -19,8 +17,9 @@
   :requires (org-roam websocket)
   :load-path "~/.emacs.d/private/org-roam-ui"
   :custom
-  (org-roam-mode-section-functions (list #'org-roam-reflinks-section
-                                         #'org-roam-unlinked-references-section
-                                         )))
+  (org-roam-ui-sync-theme t)
+  (org-roam-ui-follow t)
+  (org-roam-ui-update-on-save t)
+  (org-roam-ui-open-on-start nil))
 
 (provide 'larsen-org-roam)
