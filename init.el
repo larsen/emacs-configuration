@@ -37,6 +37,7 @@
         larsen-tramp
         larsen-helm
         larsen-ibuffer
+        larsen-treemacs
         larsen-snippets
 
         ;; Programming languages support
