@@ -18,10 +18,6 @@
        (,(kbd "C-c e r") eval-and-replace)
        (,(kbd "C-c SPC") ace-jump-mode)))
 
-   ;; TAB special behaviour
-   (when (featurep 'larsen-smarttab)
-     `((,(kbd "TAB") smart-tab)))
-
    (when (featurep 'larsen-perl)
      `((,(kbd "C-h P") cperl-perldoc-at-point)))
 
