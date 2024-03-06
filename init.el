@@ -33,7 +33,7 @@
         larsen-flycheck
         larsen-spell
         larsen-markdown
-        larsen-smarttab
+        larsen-company
         larsen-tramp
         larsen-helm
         larsen-ibuffer
