@@ -96,4 +96,9 @@
 ;; (use-package 'elfeed-goodies)
 ;; (elfeed-goodies/setup)
 
+(use-package elfeed-webkit
+  :ensure
+  :bind (:map elfeed-show-mode-map
+              ("%" . elfeed-webkit-toggle)))
+
 (provide 'larsen-elfeed)
