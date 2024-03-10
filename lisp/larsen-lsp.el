@@ -7,7 +7,11 @@
                           (eglot-ensure))))))
 
 (use-package eldoc-box
-  :hook (eglot-managed-mode . eldoc-box-hover-mode)
-  :after eglot)
+  :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode)
+  :after eglot
+  :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 200))))
+  :custom
+  (eldoc-box-only-multi-line t)
+  (eldoc-box-max-pixel-width 500))
 
 (provide 'larsen-lsp)
