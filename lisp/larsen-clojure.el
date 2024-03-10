@@ -8,21 +8,11 @@
 (use-package clojurescript-mode
   :mode ("\\.cljs$" . clojurescript-mode))
 
-(use-package clj-refactor)
+(use-package clj-refactor
+  :custom
+  (cljr-warn-on-eval t))
 
-; (add-to-list 'auto-mode-alist '("\\.cljs?$" . paredit-mode))
-
-;; (defun my-clojure-mode-hook ()
-;;     (clj-refactor-mode 1)
-;;     (yas-minor-mode 1) ; for adding require/use/import statements
-;;     ;; This choice of keybinding leaves cider-macroexpand-1 unbound
-;;     (cljr-add-keybindings-with-prefix "C-c C-m"))
-
-;; (add-hook 'cider-stacktrace-mode-hook
-;;           (lambda ()
-;;             (set (make-local-variable 'comment-start) ";;")
-;;             (set (make-local-variable 'comment-end) "\n")))
-
-;; (add-hook 'clojure-mode-hook #'my-clojure-mode-hook)
+(use-package cider
+  :ensure t)
 
 (provide 'larsen-clojure)
