@@ -28,6 +28,7 @@
 ;; (load-theme 'constant t)
 ;; (load-theme 'doom-tomorrow-night t)
 (load-theme 'ef-maris-light t)
+;; (load-theme 'doom-opera t)
 
 ;; (use-package 'org-beautify-theme)
 ;; (load-theme 'org-beautify-theme)
