@@ -163,7 +163,7 @@ return a list of pairs <link,description>."
       (my-socat (format "event NEW_TAB %s" uri)
                 socket))))
 
-(setq browse-url-browser-function 'eww-browse-url
+(setq browse-url-browser-function 'xwidget-webkit-browse-url ;; 'eww-browse-url
       browse-url-generic-program "chromium-browser")
 
 ;; dired util
