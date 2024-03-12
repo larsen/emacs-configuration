@@ -7,7 +7,10 @@
          ("C-M-y" . ivy-switch-buffer)
          ("<print>" . ivy-switch-buffer)
          ; ("C-c v" . helm-show-kill-ring)
-         ("C-c s" . swiper))
+         ("C-c s" . swiper)
+         :map ivy-minibuffer-map
+         ("<left>" . counsel-up-directory)
+         ("<right>" . counsel-down-directory))
   :custom
   (ivy-use-virtual-buffers t)
   (ivi-display-style 'fancy))
