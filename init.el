@@ -35,12 +35,14 @@
         larsen-markdown
         larsen-company
         larsen-tramp
-        larsen-helm
+        ;; larsen-helm
+        larsen-ivy
         larsen-ibuffer
         larsen-treemacs
         larsen-snippets
 
         ;; Programming languages support
+        larsen-treesitter
         larsen-lsp
         larsen-paredit
         larsen-elisp
