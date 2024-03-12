@@ -6,9 +6,15 @@
               ("C-x t d"   . treemacs-select-directory))
   :config
   (treemacs-load-theme "Default")
+  ;;   (treemacs-file-face                :inherit default)
+  :custom-face
+  (treemacs-root-face ((t (:inherit 'default :height 0.8))))
+  (treemacs-file-face ((t (:inherit 'default :height 0.8))))
+  (treemacs-root-face ((t (:inherit 'default :height 0.8))))
+  (treemacs-git-*-face ((t (:inherit 'default :height 0.8))))
   :custom
   (treemacs-is-never-other-window t)
-  (treemacs-text-scale 0.8))
+  (treemacs-width 25))
 
 (use-package treemacs-projectile
   :after (treemacs projectile)
