@@ -28,7 +28,7 @@
 ;; (load-theme 'constant t)
 ;; (load-theme 'doom-tomorrow-night t)
 ;; (load-theme 'ef-maris-light t)
-(load-theme 'gruber-darker-theme t)
+(load-theme 'gruber-darker t)
 ;; (load-theme 'doom-opera t)
 
 ;; (use-package 'org-beautify-theme)
