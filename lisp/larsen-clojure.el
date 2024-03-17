@@ -13,6 +13,10 @@
   (cljr-warn-on-eval t))
 
 (use-package cider
-  :ensure t)
+  :ensure t
+  :custom
+  (cider-use-tooltips nil)
+  :config
+  (remove-hook 'eldoc-documentation-functions #'cider-eldoc))
 
 (provide 'larsen-clojure)
