@@ -57,6 +57,9 @@
          ("C-c m n" . mc/mark-next-like-this)
          ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
 
+(use-package expand-region
+  :bind ("C-=" . er/expand-region))
+
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
