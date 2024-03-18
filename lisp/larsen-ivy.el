@@ -25,6 +25,11 @@
   :config
   (counsel-mode t))
 
+(use-package prescient)
+(use-package ivy-prescient
+  :config
+  (ivy-prescient-mode t))
+
 (use-package counsel-projectile
   :bind (("<f6>" . counsel-projectile-ag)))
 
