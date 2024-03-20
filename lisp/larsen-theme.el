@@ -37,6 +37,9 @@
 (use-package nerd-icons
   :ensure t)
 
+(use-package minions
+  :config (minions-mode t))
+
 (use-package doom-modeline
   :config (doom-modeline-mode 1)
   :custom
