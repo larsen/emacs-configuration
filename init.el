@@ -56,6 +56,7 @@
         larsen-sql
 
         larsen-w3m
+        larsen-hledger
         ;; larsen-keyfreq
         larsen-latex
         ;; larsen-web-mode
