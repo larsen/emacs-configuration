@@ -1,15 +1,18 @@
 (use-package eglot
+  :ensure t
   :hook ((prog-mode . (lambda ()
                         (unless (derived-mode-p 'emacs-lisp-mode
                                                 'lisp-mode
                                                 'makefile-mode
-                                                'snippet-mode)
+                                                'snippet-mode
+                                                'sql-mode)
                           (eglot-ensure))))))
 
 (use-package eldoc-box
-  :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode)
+  :ensure t
   :after eglot
-  :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 200))))
+  :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode)
+  :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 150))))
   :custom
   (eldoc-box-only-multi-line t)
   (eldoc-box-max-pixel-width 500))

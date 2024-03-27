@@ -35,19 +35,17 @@
         larsen-markdown
         larsen-company
         larsen-tramp
-        ;; larsen-helm
         larsen-ivy
         larsen-ibuffer
         larsen-treemacs
         larsen-snippets
 
         ;; Programming languages support
-        larsen-treesitter
         larsen-lsp
+        ; larsen-treesitter
         larsen-paredit
         larsen-elisp
-        ;larsen-ruby
-        larsen-python
+        ; larsen-python
         larsen-slime
         larsen-clojure
         larsen-racket
@@ -57,23 +55,17 @@
 
         larsen-w3m
         larsen-hledger
-        ;; larsen-keyfreq
+
         larsen-latex
-        ;; larsen-web-mode
-        ; larsen-auto-complete
         larsen-orgmode
         larsen-orgmode-website
         larsen-org-roam
-        ; larsen-anki
         larsen-magit
-        ;larsen-erc
         larsen-elfeed
         larsen-functions
-        ;larsen-refactoring
         larsen-theme
         larsen-fontaine
         larsen-pulsar
-        ; larsen-mu4e
         larsen-eshell
         larsen-print
         larsen-menu
