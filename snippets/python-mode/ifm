@@ -3,6 +3,7 @@
 # key: ifm
 # --
 def main():
+    pass
     $1
 
 
