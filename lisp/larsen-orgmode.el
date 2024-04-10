@@ -82,7 +82,9 @@
                             (file+headline org-my-anki-file "Dispatch Shelf")
                             "* %<%H:%M>   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Basic\n:ANKI_DECK: Default\n:END:\n** Front\n%?\n** Back\n%x\n"))))
 
-(use-package org-bullets)
+(use-package org-modern
+  :hook (org-mode . org-modern-mode))
+
 (use-package org-agenda
   :bind (("C-c a" . org-agenda))
   :custom
@@ -239,14 +241,6 @@ WEEK-DAY is expressed as an integer in the range 0..6:
 
 (defun orgzly-files ()
   (file-expand-wildcards "~/Dropbox/orgzly/*.org"))
-
-
-
-
-
-
-
-(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))
 
 (add-to-list 'org-latex-classes
              '("tufte-handout"
