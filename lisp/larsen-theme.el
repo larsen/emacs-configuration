@@ -62,7 +62,15 @@
   (doom-modeline-irc-stylize 'identity))
 
 (use-package spacious-padding
-  :config (spacious-padding-mode 1))
+  :config (spacious-padding-mode 1)
+  :custom spacious-padding-widths
+	'( :internal-border-width 15
+     :header-line-width 4
+     :mode-line-width 6
+     :tab-width 4
+     :right-divider-width 10
+     :scroll-bar-width 8
+     :fringe-width 8))
 
 ;; (doom-themes-neotree-config)
 ;; (doom-themes-visual-bell-config)
