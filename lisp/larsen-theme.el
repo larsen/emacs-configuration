@@ -61,6 +61,9 @@
   (doom-modeline-irc t)
   (doom-modeline-irc-stylize 'identity))
 
+(use-package spacious-padding
+  :config (spacious-padding-mode 1))
+
 ;; (doom-themes-neotree-config)
 ;; (doom-themes-visual-bell-config)
 ;; (doom-themes-org-config)
