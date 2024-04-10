@@ -113,6 +113,7 @@
          ("http://dbmsmusings.blogspot.com/feeds/posts/default" data distributed-systems)
          ("https://www.brentozar.com/feed/" data)
          ("https://blog.djnavarro.net/index.xml" data R)
+         ("https://www.jasoncollins.blog/index.xml" maybe)
 
          ;; R
          ("https://4dpiecharts.com/feed/" R)
@@ -258,7 +259,6 @@
          ("http://onethingwell.org/rss" software)
          ("https://functionaljobs.com/jobs/search/?q=berlin&format=rss" jobs fp)
          ("https://twobithistory.org/feed.xml")
-         ("http://catless.ncl.ac.uk/risksrss2.xml")
          ("http://tech.marksblogg.com/feeds/all.atom.xml")
          ("http://www.elidedbranches.com/feeds/posts/default")
          ("https://lethain.com/feeds/" maybe engineering management)
