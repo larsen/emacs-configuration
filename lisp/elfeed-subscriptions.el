@@ -98,6 +98,7 @@
          ("https://golem.ph.utexas.edu/category/atom11.xml" math)
          ("https://mathbabe.org/feed/" math)
          ("https://terrytao.wordpress.com/feed/" math)
+         ("https://blog.computationalcomplexity.org/feeds/posts/default" cs)
 
          ;; Data
          ("https://modern-sql.com/feed" data sql)
