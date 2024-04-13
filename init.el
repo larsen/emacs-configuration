@@ -9,7 +9,7 @@
 
 ;; Add .emacs.d to load-path
 (defvar dotfiles-dir (file-name-directory
-                    (or (buffer-file-name) load-file-name)))
+                      (or (buffer-file-name) load-file-name)))
 ;; (add-to-list 'load-path dotfiles-dir t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
@@ -27,51 +27,51 @@
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
 
 (defvar larsen-pkg-full
-      '(
-        larsen-env
-        larsen-pdf-tools
-        larsen-dired
-        larsen-flycheck
-        larsen-spell
-        larsen-markdown
-        larsen-company
-        larsen-tramp
-        larsen-ivy
-        larsen-ibuffer
-        larsen-treemacs
-        larsen-snippets
+  '(
+    larsen-env
+    larsen-pdf-tools
+    larsen-dired
+    larsen-flycheck
+    larsen-spell
+    larsen-markdown
+    larsen-company
+    larsen-tramp
+    larsen-ivy
+    larsen-ibuffer
+    larsen-treemacs
+    larsen-snippets
 
-        ;; Programming languages support
-        larsen-lsp
-        ; larsen-treesitter
-        larsen-paredit
-        larsen-elisp
-        ; larsen-python
-        larsen-slime
-        larsen-clojure
-        larsen-racket
-        larsen-perl
-        larsen-haskell
-        larsen-sql
+    ;; Programming languages support
+    larsen-lsp
+                                        ; larsen-treesitter
+    larsen-paredit
+    larsen-elisp
+                                        ; larsen-python
+    larsen-slime
+    larsen-clojure
+    larsen-racket
+    larsen-perl
+    larsen-haskell
+    larsen-sql
 
-        larsen-w3m
-        larsen-hledger
+    larsen-w3m
+    larsen-hledger
 
-        larsen-latex
-        larsen-orgmode
-        larsen-orgmode-functions ; in this order
-        larsen-orgmode-website
-        larsen-org-roam
-        larsen-magit
-        larsen-elfeed
-        larsen-functions
-        larsen-theme
-        larsen-fontaine
-        larsen-pulsar
-        larsen-eshell
-        larsen-print
-        larsen-menu
-        larsen-keys))
+    larsen-latex
+    larsen-orgmode
+    larsen-orgmode-functions            ; in this order
+    larsen-orgmode-website
+    larsen-org-roam
+    larsen-magit
+    larsen-elfeed
+    larsen-functions
+    larsen-theme
+    larsen-fontaine
+    larsen-pulsar
+    larsen-eshell
+    larsen-print
+    larsen-menu
+    larsen-keys))
 
 ;; Now load other things
 (dolist (file larsen-pkg-full)
