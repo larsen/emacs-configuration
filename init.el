@@ -13,10 +13,11 @@
 ;; (add-to-list 'load-path dotfiles-dir t)
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
-(add-to-list 'exec-path "~/bin")
-(add-to-list 'exec-path "/usr/local/bin")
-(add-to-list 'exec-path "/usr/bin")
-(add-to-list 'exec-path "~/.local/bin")
+(dolist (p '("~/bin"
+             "/usr/local/bin"
+             "/usr/bin"
+             "~/.local/bin"))
+  (add-to-list 'exec-path p))
 
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
