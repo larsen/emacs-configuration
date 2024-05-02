@@ -140,7 +140,7 @@
          ;; Music
 
          ;; Comics
-         ("http://www.fumettologica.it/feed/" comics)
+         ; ("http://www.fumettologica.it/feed/" comics)
          ("http://xkcd.com/atom.xml" comics dailycomic)
          ("http://blog.xkcd.com/feed/" comics books)
          ("http://www.smbc-comics.com/rss.php" comics)
@@ -171,7 +171,7 @@
          ("http://www.rousette.org.uk/blog/index.xml")
          ("http://cartesianfaith.com/feed/")
          ("http://jasmcole.com/feed/")
-         ("http://susan-stepney.blogspot.com/feeds/posts/default?alt=rss" books science)
+         ("https://susan-stepney.blogspot.com/feeds/posts/default" books science)
          ("http://www.joachim-breitner.de/blog_feed.rss")
          ("http://stephenramsay.us/atom.xml")
          ("https://alexschroeder.ch/wiki/feed/full/")
@@ -241,6 +241,7 @@
          ("https://vickiboykis.com/index.xml" maybe)
          ("https://idlewords.com/index.xml" maybe)
          ("https://pointersgonewild.com/feed/" maybe)
+         ("https://danlebrero.com/feed.rss" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
