@@ -242,6 +242,7 @@
          ("https://idlewords.com/index.xml" maybe)
          ("https://pointersgonewild.com/feed/" maybe)
          ("https://danlebrero.com/feed.rss" maybe)
+         ("https://dannyreviews.com/rss.xml" books)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
