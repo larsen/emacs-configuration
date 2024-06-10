@@ -61,6 +61,7 @@
     larsen-orgmode
     larsen-orgmode-functions            ; in this order
     larsen-orgmode-website
+    larsen-org-blog
     larsen-org-roam
     larsen-magit
     larsen-elfeed
