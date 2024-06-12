@@ -243,6 +243,7 @@
          ("https://pointersgonewild.com/feed/" maybe)
          ("https://danlebrero.com/feed.rss" maybe)
          ("https://dannyreviews.com/rss.xml" books)
+         ("https://stefanorodighiero.net/blog/rss.xml" me)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
