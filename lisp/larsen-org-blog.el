@@ -2,13 +2,14 @@
 
 (setq org-static-blog-publish-title "Stefano Rodighiero — Stream")
 (setq org-static-blog-publish-url "https://stefanorodighiero.net/blog/")
-(setq org-static-blog-publish-directory "~/www/stefanorodighiero.net/blog/")
-(setq org-static-blog-posts-directory "~/www/stefanorodighiero.net/blog/posts/")
-(setq org-static-blog-drafts-directory "~/www/stefanorodighiero.net/blog/drafts/")
+(setq org-static-blog-publish-directory "/home/stefano/www/stefanorodighiero.net/blog/")
+(setq org-static-blog-posts-directory "/home/stefano/www/stefanorodighiero.net/blog/posts/")
+(setq org-static-blog-drafts-directory "/home/stefano/www/stefanorodighiero.net/blog/drafts/")
 (setq org-static-blog-enable-tags t)
 (setq org-export-with-toc nil)
 (setq org-export-with-section-numbers nil)
 (setq org-static-blog-use-preview t)
+(setq org-static-blog-preview-date-first-p t)
 
 ;; This header is inserted into the <head> section of every page:
 ;;   (you will need to create the style sheet at
@@ -16,7 +17,7 @@
 ;;    and the favicon at
 ;;    ~/projects/blog/static/favicon.ico)
 (setq org-static-blog-page-header
-"<meta name=\"author\" content=\"Stefano Rodighiero\">
+      "<meta name=\"author\" content=\"Stefano Rodighiero\">
 <meta name=\"referrer\" content=\"no-referrer\">
 <link href=\"/css/notes.css\" rel=\"stylesheet\" type=\"text/css\" />
 <link rel=\"icon\" href=\"static/favicon.ico\">")
@@ -35,18 +36,4 @@
 (setq org-static-blog-index-front-matter
 "<h1> blog </h1>\n")
 
-
-;;;; convert stream into separate files as posts
-
-;; (defun process-entry ()
-;;   (let ((element (org-element-at-point))
-;;         (heading (org-get-heading t t))
-;;         (entry (org-get-entry)))
-;;     (message element)))
-
-;; (defun convert-stream ()
-;;   (let ((stream-org-file "~/www/stefanorodighiero.net/stream/index.org"))
-;;     (with-current-buffer (find-file-noselect stream-org-file)
-;;       (org-map-entries #'process-entry nil 'file ))))
-
-;; (convert-stream)
+(provide 'larsen-org-blog)
