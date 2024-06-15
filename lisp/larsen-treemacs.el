@@ -11,6 +11,7 @@
   (treemacs-root-face ((t (:inherit 'default :height 0.8))))
   (treemacs-file-face ((t (:inherit 'default :height 0.8))))
   (treemacs-root-face ((t (:inherit 'default :height 0.8))))
+  (treemacs-window-background-face ((t (:inherit 'mode-line-inactive))))
   (treemacs-git-*-face ((t (:inherit 'default :height 0.8))))
   :custom
   (treemacs-is-never-other-window t)
