@@ -27,7 +27,7 @@
             </div>
             <div id=\"navigation\">
                 <a href=\"//stefanorodighiero.net/personal.html\">About</a>
-                <a href=\"//stefanorodighiero.net/stream\">Stream</a>
+                <a href=\"//stefanorodighiero.net/blog\">Blog</a>
             </div>
         </div>"  )
 
