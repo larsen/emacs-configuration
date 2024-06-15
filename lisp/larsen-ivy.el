@@ -13,6 +13,7 @@
          ("<right>" . counsel-down-directory))
   :custom
   (ivy-use-virtual-buffers t)
+  (ivy-count-format "(%d/%d) ")
   (ivi-display-style 'fancy))
 
 (use-package smex
