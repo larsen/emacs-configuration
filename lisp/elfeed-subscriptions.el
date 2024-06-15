@@ -49,7 +49,7 @@
          ("http://sigfpe.blogspot.com/feeds/posts/default" cs programming haskell)
          ("http://matthiasnehlsen.com/atom.xml" fp programming)
          ("http://chrisdone.com/rss.xml" haskell fp programming)
-         ("https://byorgey.wordpress.com/feed/" haskell fp programming math)
+         ("https://byorgey.github.io/blog/rss.xml" haskell fp programming math)
          ("http://joeyh.name/blog/index.rss" haskell fp programming)
          ("https://pbrisbin.com/feed/index.xml" haskell fp programming)
          ("http://comonad.com/reader/feed/" haskell programming cs)
@@ -112,7 +112,7 @@
          ("https://planet.postgresql.org/rss20.xml" data postgresql)
          ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data distributed-systems)
          ("http://dbmsmusings.blogspot.com/feeds/posts/default" data distributed-systems)
-         ("https://www.brentozar.com/feed/" data)
+
          ("https://blog.djnavarro.net/index.xml" data R)
          ("https://www.jasoncollins.blog/index.xml" maybe)
 
