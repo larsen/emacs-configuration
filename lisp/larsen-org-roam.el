@@ -14,6 +14,7 @@
   (org-roam-setup))
 
 (use-package org-roam-ui
+  :after org-roam
   :requires (org-roam websocket)
   :load-path "~/.emacs.d/private/org-roam-ui"
   :custom
