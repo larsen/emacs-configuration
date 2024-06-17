@@ -489,7 +489,6 @@
                  ("http://36chambers.wordpress.com/feed/")
                  ("http://kevinekline.com/feed/")
                  ("http://www.sqlperformance.com/feed")
-                 ("http://andyleonard.blog/feed/")
                  ("https://sqltechblog.com/feed/")
                  ("http://georgestocker.com/feed/")
                  ("https://blog.sqldoch.ca/feeds/posts/default")
