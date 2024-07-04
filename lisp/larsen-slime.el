@@ -18,6 +18,7 @@
          ("<f12>" . slime-selector))
   :custom
   (inferior-lisp-program "sbcl")
+  (slime-lisp-implementations '(("sbcl" ("sbcl" "--dynamic-space-size" "8192"))))
   :config
   (load "~/.quicklisp/clhs-use-local.el" t)
   (slime-setup '(;; slime-fancy
