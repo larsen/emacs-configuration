@@ -15,7 +15,7 @@
   :hook (lisp-mode . slime-mode)
   :bind (("<f2>" . slime-hyperspec-lookup)
          ("C-<f12>" . slime-selector)
-         ("<f12>" . slive-selector))
+         ("<f12>" . slime-selector))
   :custom
   (inferior-lisp-program "sbcl")
   :config
