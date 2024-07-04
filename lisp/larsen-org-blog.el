@@ -35,4 +35,45 @@
   ;;   the blog posts
   (org-static-blog-index-front-matter "<h1> blog </h1>\n"))
 
+;; Redefining a function because there are no templates
+;; Should probably be an advice
+
+(defun org-static-blog-get-preview (post-filename)
+  "Get title, date, tags from POST-FILENAME and get the first paragraph from the rendered HTML.
+If the HTML body contains multiple paragraphs, include only the first paragraph,
+and display an ellipsis.
+Preamble and Postamble are excluded, too."
+  (with-temp-buffer
+    (insert-file-contents (org-static-blog-matching-publish-filename post-filename))
+    (let ((post-title (org-static-blog-get-title post-filename))
+          (post-date (org-static-blog-get-date post-filename))
+          (post-taglist (org-static-blog-post-taglist post-filename))
+          (post-ellipsis "")
+          (preview-region (org-static-blog--preview-region)))
+      (when (and preview-region (search-forward "<p>" nil t))
+        (setq post-ellipsis
+              (concat (when org-static-blog-preview-link-p
+                        (format "<a href=\"%s\">"
+                                (org-static-blog-get-post-url post-filename)))
+                      org-static-blog-preview-ellipsis
+                      (when org-static-blog-preview-link-p "</a>\n"))))
+      ;; Put the substrings together.
+      (let ((title-link
+             (format "<h2 class=\"post-title\"><a href=\"%s\">%s</a></h2>"
+                     (org-static-blog-get-post-url post-filename) post-title))
+            (date-link
+             (format-time-string (concat "<div class=\"post-date\">"
+                                         (org-static-blog-gettext 'date-format)
+                                         "</div>")
+                                 post-date)))
+        (concat
+         "<div class=\"post-preview\">"
+         (if org-static-blog-preview-date-first-p
+             (concat date-link title-link)
+           (concat title-link date-link))
+         preview-region
+         post-ellipsis
+         (format "<div class=\"taglist\">%s</div>" post-taglist)
+         "</div>")))))
+
 (provide 'larsen-org-blog)
