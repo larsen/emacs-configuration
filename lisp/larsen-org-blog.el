@@ -29,6 +29,8 @@
   ;;   and a licensing stub.
   (org-static-blog-page-postamble "")
 
+  (org-static-blog-post-preamble-text "<div class\"blog-post\">")
+  (org-static-blog-post-postamble-text "</div>")
   ;; this html code is inserted into the index page between the preamble and
   ;;   the blog posts
   (org-static-blog-index-front-matter "<h1> blog </h1>\n"))
