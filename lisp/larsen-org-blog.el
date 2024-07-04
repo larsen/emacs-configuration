@@ -8,7 +8,7 @@
   (org-static-blog-enable-tags t)
   (org-export-with-toc nil)
   (org-export-with-section-numbers nil)
-  (org-static-blog-use-preview t)
+  (org-static-blog-use-preview nil)
   (org-static-blog-preview-date-first-p t)
 ;; This header is inserted into the <head> section of every page:
 ;;   (you will need to create the style sheet at
