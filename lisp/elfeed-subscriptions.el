@@ -55,6 +55,7 @@
          ("http://comonad.com/reader/feed/" haskell programming cs)
          ("https://chrispenner.ca/atom.xml" haskell programming fp)
          ("https://blog.poisson.chat/rss.xml" haskell programming fp)
+         ("http://conal.net/blog/feed" haskell programming)
 
          ;; Programming – Lisp
          ("http://planet.lisp.org/rss20.xml" lisp fp programming)
@@ -435,7 +436,6 @@
                  ("http://www.jenstirrup.com/feeds/posts/default")
                  ("http://minionware.net/feed/")
                  ("http://www.bradleyschacht.com/feed/")
-                 ("http://www.straightpathsql.com/blog/atom.xml")
                  ("http://itsalljustelectrons.blogspot.com/feeds/posts/default?alt=rss")
                  ("http://skreebydba.com/feed/")
                  ("https://toddkleinhans.wordpress.com/feed/")
