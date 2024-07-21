@@ -22,6 +22,8 @@
 (setq custom-file "~/.emacs-custom.el")
 (load custom-file)
 
+(setq auth-sources '("~/.authinfo"))
+
 ;; Write backup files to own directory
 (setq backup-directory-alist
       `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
