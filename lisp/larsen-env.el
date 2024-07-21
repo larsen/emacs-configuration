@@ -10,39 +10,12 @@
 
 (use-package eyebrowse
   :config
-  (let ((window-configs (eyebrowse--get 'window-configs))
-        (my-window-configs '((1 . "📒")
-                             (2 . "💻")
-                             (3 . "🕒")
-                             (4 . "🔧")
-                             (5 . "🔧")
-                             (7 . "🖹")
-                             (8 . "📰")
-                             (9 . "erc"))))
-    (cl-loop for (window-config-slot . window-config-label)
-             in my-window-configs
-             when (assoc window-config-slot window-configs)
-             do (eyebrowse-rename-window-config window-config-slot
-                                                window-config-label)))
-  (cl-loop for i from 1 upto 9
+    (cl-loop for i from 1 upto 9
            do (define-key eyebrowse-mode-map
                           (kbd (format "M-%d" i))
                           `(lambda ()
                              (interactive)
                              (eyebrowse-switch-to-window-config ,i))))
-  (defun my/initial-window-setup ()
-    "Rudimental function to setup windows.
-    For now, useful only if I close emacsclient by mistake."
-    (interactive)
-    (let ((window-workspaces '((1 . ("diary.org"))
-                               (2 . ("*scratch*"))
-                               (3 . ("activities.org"))
-                               (8 . ("*elfeed-search*")))))
-      (cl-loop for (window-slot . files-list)
-               in window-workspaces
-               do (progn (message (format "%s %s" window-slot files-list))
-                         (eyebrowse-switch-to-window-config window-slot)
-                         (switch-to-buffer (car files-list))))))
   (eyebrowse-mode t))
 
 (use-package projectile
