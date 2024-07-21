@@ -17,22 +17,7 @@
 ;; Show column numbers in modeline
 (setq column-number-mode t)
 
-;; Set custom theme path
-;; (setq custom-theme-directory (concat dotfiles-dir "themes"))
-;; (dolist
-;;     (path (directory-files custom-theme-directory t "\\w+"))
-;;   (when (file-directory-p path)
-;;     (add-to-list 'custom-theme-load-path path)))
-
-;; (zerodark-setup-modeline-format)
-;; (load-theme 'constant t)
-;; (load-theme 'doom-tomorrow-night t)
-;; (load-theme 'ef-maris-light t)
-(load-theme 'gruber-darker t)
-;; (load-theme 'doom-opera t)
-
-;; (use-package 'org-beautify-theme)
-;; (load-theme 'org-beautify-theme)
+(load-theme 'ef-maris-light t)
 
 (use-package nerd-icons
   :ensure t)
@@ -50,7 +35,7 @@
   (doom-modeline-icon t)
   (doom-modeline-major-mode-color-icon t)
   (doom-modeline-major-mode-icon t)
-  (doom-modeline-unicode-fallback nil)
+  (doom-modeline-unicode-fallback t)
   (doom-modeline-minor-modes t)
   (doom-modeline-enable-word-count t)
   (doom-modeline-continuous-word-count-modes '(text-mode rst-mode org-mode))
@@ -58,20 +43,19 @@
   (doom-modeline-env-version t)
   (doom-modeline-github nil)
   (doom-modeline-lsp t)
-  (doom-modeline-irc t)
-  (doom-modeline-irc-stylize 'identity))
+  (doom-modeline-irc nil))
 
 (use-package spacious-padding
   :config (spacious-padding-mode 1)
   :custom spacious-padding-widths
-	'( :internal-border-width 15
+	'( :internal-border-width 8
      :header-line-width 4
      :mode-line-width 6
      :tab-width 4
-     :right-divider-width 10
-     :scroll-bar-width 8
-     :fringe-width 8))
-
+     :right-divider-width 8
+     :scroll-bar-width 0
+     :fringe-width 8)
+)
 ;; (doom-themes-neotree-config)
 ;; (doom-themes-visual-bell-config)
 ;; (doom-themes-org-config)
@@ -95,6 +79,11 @@
   "Face for folded blocks"
   :group 'yafolding)
 
+(set-face-attribute 'larsen-yafolding-hidden-face nil
+                    :background "yellow"
+                    :foreground "black"
+                    :underline t)
+
 (advice-add 'yafolding-hide-element :before
             (lambda ()
               (let* ((beg (line-beginning-position))
@@ -102,10 +91,5 @@
                      (new-overlay (make-overlay beg end)))
                 (overlay-put new-overlay 'category "yafolding")
                 (overlay-put new-overlay 'face 'larsen-yafolding-hidden-face))))
-
-(set-face-attribute 'larsen-yafolding-hidden-face nil
-                    :background "teal"
-                    :foreground "black"
-                    :underline t)
 
 (provide 'larsen-theme)
