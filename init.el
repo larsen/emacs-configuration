@@ -52,7 +52,6 @@
     larsen-slime
     larsen-clojure
     larsen-racket
-    larsen-perl
     larsen-sql
 
     larsen-hledger
