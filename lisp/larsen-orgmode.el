@@ -70,8 +70,7 @@
                             (file "~/org/personal/notes.org")
                             "* %t\n%?" :empty-lines 1)
                            ("t" "Todo item" entry
-                            (file+function "~/org/work/activities.org"
-                                           my-find-today-heading)
+                            (file "~/org/personal/todo.org")
                             "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                             :jump-to-captured t)
                            ("r" "Reading todo" entry
@@ -94,6 +93,7 @@
   (org-agenda-span 14)
   (org-agenda-files '("~/org/personal/"
                       "~/org/orgzly/errand.org"
+                      "~/org/orgzly/work.org"
                       "~/org/work/"))
   (org-agenda-custom-commands '(("w" "Weekly Agenda"
                                  ((agenda "" ((org-super-agenda-groups
