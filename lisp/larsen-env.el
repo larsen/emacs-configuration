@@ -68,6 +68,9 @@
   :custom
   (display-line-numbers-width-start t))
 
+(use-package yafolding
+  :hook prog-mode-hook)
+
 (use-package calendar
   :config
   ;; Week number in calendar
@@ -134,9 +137,6 @@
 (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
-
-(add-hook 'prog-mode-hook
-          (lambda () (yafolding-mode)))
 
 ;; Transpose (rotate if multiple) windows
 (defun rotate-windows ()
