@@ -101,8 +101,6 @@
 
 (pixel-scroll-precision-mode)
 
-
-(add-to-list 'exec-path "~/.cabal/bin/")
 (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
 
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
