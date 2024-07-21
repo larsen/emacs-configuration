@@ -19,6 +19,7 @@
    "<meta name=\"author\" content=\"Stefano Rodighiero\">
 <meta name=\"referrer\" content=\"no-referrer\">
 <link href=\"/css/notes.css\" rel=\"stylesheet\" type=\"text/css\" />
+<link rel=\"me\" href=\"https://mastodon.social/@eslr\" />
 <link rel=\"icon\" href=\"static/favicon.ico\">")
   ;; This preamble is inserted at the beginning of the <body> of every page:
   ;;   This particular HTML creates a <div> with a simple linked headline
