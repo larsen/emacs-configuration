@@ -28,7 +28,12 @@
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
   (display-time-mode 1)
-  (nyan-mode))
+  (nyan-mode)
+  :bind (("M-o" . other-window)
+         ("C-c t" . (lambda () (interactive) (vterm)))
+         ("C-c e m" . macrostep-mode)
+         ("C-c e r" . eval-and-replace)
+         ("C-c SPC" . ace-jump-mode)))
 
 (use-package crux)
 (use-package cl-lib)

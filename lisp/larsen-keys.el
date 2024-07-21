@@ -9,14 +9,6 @@
 
 (defun larsen-keys ()
   (append
-   ;; Generic personal environment bindings. There are likely
-   ;; to be always availble
-   (when (featurep 'larsen-env)
-     `((,(kbd "M-o") other-window)
-       (,(kbd "C-c t") (lambda () (interactive) (vterm)))
-       (,(kbd "C-c e m") macrostep-moode)
-       (,(kbd "C-c e r") eval-and-replace)
-       (,(kbd "C-c SPC") ace-jump-mode)))
 
    (when (featurep 'larsen-functions)
      `((,(kbd "M-<f1>") toggle-split-layout)
