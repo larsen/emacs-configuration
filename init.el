@@ -51,7 +51,6 @@
     larsen-clojure
     larsen-racket
     larsen-perl
-    larsen-haskell
     larsen-sql
 
     larsen-w3m
