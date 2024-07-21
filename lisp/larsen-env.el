@@ -4,44 +4,31 @@
 
 (use-package emacs
   :config
-  ;; Always ask for y/n keypress instead of typing out 'yes' or 'no'
   (defalias 'yes-or-no-p 'y-or-n-p)
   (set-default 'indent-tabs-mode nil)
   (setq-default tab-width 2)
-
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
   (setq scroll-margin 3)
-
-  ;; Always ALWAYS use UTF-8
-  ;; (borrowed from bodil's configuration)
   (set-terminal-coding-system 'utf-8)
   (set-keyboard-coding-system 'utf-8)
   (prefer-coding-system 'utf-8)
   (setq-default buffer-file-coding-system 'utf-8-unix)
   (setq term-suppress-hard-newline t)
-
-  ;; Auto refresh buffers
   (global-auto-revert-mode 1)
-
-  (global-hl-line-mode 1)          ; turn on highlighting current line
+  (global-hl-line-mode 1)
   (global-visual-line-mode 1)
   (global-font-lock-mode 1)
-  (delete-selection-mode 1)         ; delete seleted text when typing
-  (show-paren-mode 1)               ; turn on paren match highlighting
-  (setq show-paren-style 'expression) ; highlight entire bracket expression
-
-  ;; scrolling in a more Vim-like fashion
+  (delete-selection-mode 1)
+  (show-paren-mode 1)
+  (setq show-paren-style 'expression)
   (setq scroll-step            1
         scroll-conservatively  10000)
-
   (pixel-scroll-precision-mode)
-
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
-
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  (nyan-mode)
-  )
+  (display-time-mode 1)
+  (nyan-mode))
 
 (use-package crux)
 (use-package cl-lib)
@@ -106,38 +93,6 @@
                              holiday-other-holidays holiday-christian-holidays
                              holiday-islamic-holidays holiday-oriental-holidays
                              holiday-solar-holidays)))
-
-;; Transpose (rotate if multiple) windows
-(defun rotate-windows ()
-  "Rotate your windows"
-  (interactive)
-  (cond ((not (> (count-windows)1))
-         (message "You can't rotate a single window!"))
-        (t
-         (setq i 1)
-         (setq numWindows (count-windows))
-         (while  (< i numWindows)
-           (let* (
-                  (w1 (elt (window-list) i))
-                  (w2 (elt (window-list) (+ (% i numWindows) 1)))
-
-                  (b1 (window-buffer w1))
-                  (b2 (window-buffer w2))
-
-                  (s1 (window-start w1))
-                  (s2 (window-start w2))
-                  )
-             (set-window-buffer w1  b2)
-             (set-window-buffer w2 b1)
-             (set-window-start w1 s2)
-             (set-window-start w2 s1)
-             (setq i (1+ i)))))))
-
-(display-time-mode 1)
-
-;; (edwin-mode t)
-
-
 
 (eval-after-load 'Term
   '(define-key term-mode-map (kbd "C-M-y") 'helm-mini))
