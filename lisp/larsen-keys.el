@@ -18,9 +18,6 @@
        (,(kbd "C-c e r") eval-and-replace)
        (,(kbd "C-c SPC") ace-jump-mode)))
 
-   (when (featurep 'larsen-perl)
-     `((,(kbd "C-h P") cperl-perldoc-at-point)))
-
    (when (featurep 'larsen-functions)
      `((,(kbd "M-<f1>") toggle-split-layout)
        (,(kbd "C-c j") webjump)))
