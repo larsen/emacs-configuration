@@ -63,13 +63,13 @@
     larsen-orgmode-website
     larsen-org-blog
     larsen-org-roam
+
     larsen-magit
     larsen-elfeed
     larsen-functions
     larsen-theme
     larsen-fontaine
     larsen-pulsar
-    larsen-eshell
     larsen-print
     larsen-menu
     larsen-keys))
