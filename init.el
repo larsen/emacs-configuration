@@ -51,7 +51,6 @@
                                         ; larsen-python
     larsen-slime
     larsen-clojure
-    larsen-racket
     larsen-sql
 
     larsen-hledger
