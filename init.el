@@ -55,7 +55,6 @@
     larsen-perl
     larsen-sql
 
-    larsen-w3m
     larsen-hledger
 
     larsen-latex
