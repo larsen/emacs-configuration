@@ -126,6 +126,8 @@
 (use-package org-download
   :load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
 
+(use-package ob-lisp)
+
 (use-package ob-ditaa
   :requires org
   :custom
