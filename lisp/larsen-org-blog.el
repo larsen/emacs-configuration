@@ -1,4 +1,5 @@
 (use-package org-static-blog
+  :ensure t
   :custom
   (org-static-blog-publish-title "Stefano Rodighiero — Stream")
   (org-static-blog-publish-url "https://stefanorodighiero.net/blog/")
