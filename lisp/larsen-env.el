@@ -4,7 +4,7 @@
 
 (use-package emacs
   :config
-  (defalias 'yes-or-no-p 'y-or-n-p)
+  (setopt use-short-answers t)
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
   (setq scroll-step 1
