@@ -7,10 +7,13 @@
                          ("melpa" . "https://melpa.org/packages/")))
 (package-initialize)
 
-;; Add .emacs.d to load-path
 (defvar dotfiles-dir (file-name-directory
                       (or (buffer-file-name) load-file-name)))
-;; (add-to-list 'load-path dotfiles-dir t)
+
+;; Write backup files to own directory
+(setq backup-directory-alist
+      `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
+
 (add-to-list 'load-path "~/.emacs.d/lisp")
 
 (dolist (p '("~/bin"
@@ -23,10 +26,6 @@
 (load custom-file)
 
 (setq auth-sources '("~/.authinfo"))
-
-;; Write backup files to own directory
-(setq backup-directory-alist
-      `(("." . ,(expand-file-name (concat dotfiles-dir "bak")))))
 
 (defvar larsen-pkg-full
   '(
@@ -72,7 +71,6 @@
     larsen-menu
     larsen-keys))
 
-;; Now load other things
 (dolist (file larsen-pkg-full)
   (message (pp file))
   (require file))
