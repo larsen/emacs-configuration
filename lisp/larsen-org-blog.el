@@ -20,6 +20,12 @@
    "<meta name=\"author\" content=\"Stefano Rodighiero\">
 <meta name=\"referrer\" content=\"no-referrer\">
 <link href=\"/css/notes.css\" rel=\"stylesheet\" type=\"text/css\" />
+<script type=\"text/javascript\"
+             src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML\">
+           </script>
+           <script type=\"text/x-mathjax-config\">
+             MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],['\\\\(','\\\\)']]}});
+           </script>
 <link rel=\"me\" href=\"https://mastodon.social/@eslr\" />
 <link rel=\"icon\" href=\"static/favicon.ico\">")
   ;; This preamble is inserted at the beginning of the <body> of every page:
