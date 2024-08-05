@@ -134,7 +134,6 @@
   (org-ditaa-jar-path "/usr/share/ditaa/ditaa.jar"))
 
 (use-package cal-iso)
-(use-package cl-lib)
 (use-package ox)
 
 (provide 'larsen-orgmode)
