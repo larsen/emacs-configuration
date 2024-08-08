@@ -114,7 +114,6 @@
          ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data distributed-systems)
          ("http://dbmsmusings.blogspot.com/feeds/posts/default" data distributed-systems)
 
-         ("https://statmodeling.stat.columbia.edu/feed/" stats)
          ("https://junkcharts.typepad.com/junk_charts/atom.xml" stats)
 
          ("https://blog.djnavarro.net/index.xml" data R)
