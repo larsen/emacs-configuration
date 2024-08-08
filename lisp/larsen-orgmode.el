@@ -90,38 +90,33 @@
   (org-agenda-skip-deadline-if-done t)
   (org-agenda-start-on-weekday nil)
   (org-agenda-start-day nil) ;; i.e. today
-  (org-agenda-span 14)
+  (org-agenda-span 7)
   (org-agenda-files '("~/org/personal/"
                       "~/org/orgzly/errand.org"
                       "~/org/orgzly/work.org"
-                      "~/org/work/"))
-  (org-agenda-custom-commands '(("w" "Weekly Agenda"
-                                 ((agenda "" ((org-super-agenda-groups
-                                               '((:name "Today" :scheduled today))))))))))
+                      "~/org/work/")))
 
 (use-package org-super-agenda
   :config (org-super-agenda-mode)
   :custom
   (org-super-agenda-groups
    '(;; Each group has an implicit boolean OR operator between its selectors.
-     (:name "Today"  ; Optionally specify section name
-            :time-grid t  ; Items that appear on the time grid
-            :todo "TODAY")  ; Items that have this TODO keyword
      (:name "Due Today"
             :deadline today
+            :time-grid t
             :order 2)
+     (:name "Overdue"
+            :deadline past
+            :order 7)
      (:name "Meetings"
             :tag "meeting"
-            :order 3)
-     (:name "Sprint"
-            :tag "sprint"
             :order 3)
      (:name "Soon"
             :deadline future
             :order 4)
-     (:name "Overdue"
-            :deadline past
-            :order 7))))
+     (:name "Personal"
+            :tag "personal"
+            :order 8))))
 
 (use-package org-download
   :load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
