@@ -1,4 +1,8 @@
 (use-package pdf-tools
+  :hook
+  (pdf-view-mode . (lambda () (cua-mode 0)))
+;  :bind
+;  ("t" . pdf-annot-add-text-annotation)
   :config
   (pdf-tools-install :no-query)
   (when (featurep 'org)
@@ -30,6 +34,7 @@
                 ))
             (write-file (concat default-directory org-filename)))))))
   :custom
+  (setq-default pdf-view-display-size 'fit-page)
   (pdf-tools-enabled-modes '(pdf-history-minor-mode
                              pdf-isearch-minor-mode
                              pdf-links-minor-mode
@@ -58,14 +63,8 @@
 ;; ansi-term
 ;; See https://emacs.stackexchange.com/questions/39312/output-reflow-in-ansi-term
 
-
-(setq-default pdf-view-display-size 'fit-page)
-
 ;; Taken from http://pragmaticemacs.com/emacs/even-more-pdf-tools-tweaks/
 
-(add-hook 'pdf-view-mode-hook (lambda () (cua-mode 0)))
-
-(define-key pdf-view-mode-map (kbd "t") 'pdf-annot-add-text-annotation)
 
 (defun my/save-buffer-no-args ()
   (save-buffer))
