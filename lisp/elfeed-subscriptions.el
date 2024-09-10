@@ -100,6 +100,8 @@
          ("https://mathbabe.org/feed/" math)
          ("https://terrytao.wordpress.com/feed/" math)
          ("https://blog.computationalcomplexity.org/feeds/posts/default" cs)
+         ("https://www.logicmatters.net/feed/" math logic)
+         ("https://www.johndcook.com/blog/feed/")
 
          ;; Data
          ("https://modern-sql.com/feed" data sql)
@@ -113,11 +115,10 @@
          ("https://planet.postgresql.org/rss20.xml" data postgresql)
          ("http://www.cs.cmu.edu/~pavlo//blog/feed.xml" data distributed-systems)
          ("http://dbmsmusings.blogspot.com/feeds/posts/default" data distributed-systems)
-
          ("https://junkcharts.typepad.com/junk_charts/atom.xml" stats)
-
          ("https://blog.djnavarro.net/index.xml" data R)
          ("https://www.jasoncollins.blog/index.xml" maybe)
+         ("https://leancrew.com/all-this/feed/" data R programming)
 
          ;; R
          ("https://4dpiecharts.com/feed/" R)
@@ -143,7 +144,6 @@
          ;; Music
 
          ;; Comics
-         ; ("http://www.fumettologica.it/feed/" comics)
          ("http://xkcd.com/atom.xml" comics dailycomic)
          ("http://blog.xkcd.com/feed/" comics books)
          ("http://www.smbc-comics.com/rss.php" comics)
@@ -246,7 +246,11 @@
          ("https://pointersgonewild.com/feed/" maybe)
          ("https://danlebrero.com/feed.rss" maybe)
          ("https://dannyreviews.com/rss.xml" books)
-         ("https://stefanorodighiero.net/blog/rss.xml" me)
+         ("https://stefanorodighiero.net/blog/rss.xml" me personal)
+         ("https://philip.greenspun.com/blog/feed/")
+         ("https://huyenchip.com/feed.xml")
+         ("https://ferd.ca/feed.rss")
+         ("https://hazelweakly.me/atom.xml" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -278,6 +282,21 @@
          ("https://www.lescienze.it/rss/all/rss2.0.xml" maybe)
          ("https://www.boristhebrave.com/feed/" games programming interesting)
          ("https://blogs.igalia.com/itoral/feed/" maybe graphics)
+         ("https://thezvi.substack.com/feed" maybe)
+
+         ;; art
+         ("http://linesandcolors.com/feed/" art)
+         ("https://gurneyjourney.blogspot.com/feeds/posts/default" art)
+         ("https://thehiddenplace.wordpress.com/feed/" art)
+         ("https://stilllifeinoils.blogspot.com/feeds/posts/default" art)
+         ("http://feeds.feedburner.com/PostcardFromProvence" art)
+         ("https://carolmarine.blogspot.com/feeds/posts/default" art)
+         ("https://painting-pleinair.blogspot.com/feeds/posts/default" art)
+         ("https://inpleinair.blogspot.com/feeds/posts/default" art)
+         ("https://inpleinair.blogspot.com/feeds/posts/default" art)
+         ("https://michaelcolemanley.blogspot.com/feeds/posts/default" art)
+         ("https://illustrationart.blogspot.com/feeds/posts/default" art)
+         ("https://feeds.feedburner.com/parkablogs/new" art)
 
          ;; maybe
          ("https://blog.tymoon.eu/" maybe)
@@ -298,14 +317,13 @@
          ("https://p1k3.com/feed" maybe)
          ("http://www.felienne.com/feed" maybe)
          ("https://www.filfre.net/feed/" maybe)
-         ("http://linesandcolors.com/feed/" art maybe)
          ("http://www.cachestocaches.com/feed/" maybe)
          ("https://adventuregamers.com/rss/" maybe games adventures)
          ("https://acoup.blog/feed/" maybe)
          ("https://kiwihellenist.blogspot.com/feeds/posts/default" maybe)
          ("https://mantovauno.it/tag/castiglione/feed/" news local castiglione maybe)
-         ("https://artemis.sh/feed.xml" maybe personal)
-         ("https://rwmj.wordpress.com/feed/" maybe personal)
+         ("https://artemis.sh/feed.xml" maybe)
+         ("https://rwmj.wordpress.com/feed/" maybe)
 
          ;; suggested by Dan Luu -- 2016/05/03
          ("http://blog.nullspace.io/feed.xml" danluu maybe)
@@ -335,7 +353,7 @@
          ("https://www.bikepacking.it/feed/" bikes italian))
 
        ;; Brent Ozar feeds, tentative
-       ;; (removed some stuff from the initial list found here: https://github.com/BrentOzar/sqlblogs)
+       ;; (removed some stuff from the initial list found here: https://github.com/BrentOzarn/sqlblogs)
        (mapcar (lambda (f)
                  `(,(first f) brentozar maybe))
                '(("http://blog.2ndquadrant.com/feed/")
@@ -366,7 +384,6 @@
                  ("http://www.sqlskills.com/blogs/tim/feed/")
                  ("http://www.desertislesql.com/wordpress1/?feed=rss2")
                  ("http://www.sqlpassion.at/feed/")
-                 ("http://feeds.feedburner.com/brent-ozar")
                  ("https://www.enricovandelaar.com/feed/")
                  ("http://auntkathisql.com/feed/")
                  ("http://www.nikoport.com/feed/")
@@ -415,7 +432,6 @@
                  ("http://www.riepedia.net/feeds/posts/default")
                  ("http://cwebbbi.spaces.live.com/feed.rss")
                  ("http://www.sqlskills.com/blogs/glenn/feed/")
-                 ("http://stevestedman.com/feed/")
                  ("http://www.cathrinewilhelmsen.net/feed/")
                  ("http://www.sqlskills.com/BLOGS/jonathan/syndication.axd")
                  ("http://sqlrus.com/feed/")
