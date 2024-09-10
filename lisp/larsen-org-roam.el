@@ -8,10 +8,19 @@
   (setq org-roam-v2-ack t)
   :custom
   (org-roam-directory "~/org/roam/")
-  (org-roam-mode-section-functions (list #'org-roam-reflinks-section
-                                         #'org-roam-unlinked-references-section))
+  (org-roam-mode-sections (list #'org-roam-backlinks-section
+                                #'org-roam-reflinks-section
+                                #'org-roam-unlinked-references-section))
   :config
-  (org-roam-setup))
+  (org-roam-setup)
+  (add-to-list 'display-buffer-alist
+               '("\\*org-roam\\*"
+                 (display-buffer-in-side-window)
+                 (side . right)
+                 (slot . 0)
+                 (window-width . 0.33)
+                 (window-parameters . ((no-other-window . t)
+                                       (no-delete-other-windows . t))))))
 
 (use-package org-roam-ui
   :after org-roam
