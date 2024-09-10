@@ -64,8 +64,8 @@
     larsen-magit
     larsen-elfeed
     larsen-functions
-    larsen-theme
     larsen-fontaine
+    larsen-theme
     larsen-pulsar
     larsen-print
     larsen-menu
@@ -75,3 +75,4 @@
   (message (pp file))
   (require file))
 (put 'downcase-region 'disabled nil)
+(put 'list-threads 'disabled nil)
