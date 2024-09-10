@@ -35,10 +35,10 @@
   (with-current-buffer (find-file-noselect filename)
         (let ((lines (split-string (buffer-string) "\n" t)))
           (when lines
-            (cl-loop for kv in (seq-partition lines 2)
-                  collect (cl-destructuring-bind
-                              (host port db user password) (split-string (cadr kv) ":" nil)
-                            `(,(replace-regexp-in-string "^#\s+" "" (car kv))
+            (cl-loop for (k v) in (seq-partition lines 2)
+                  collect (cl-destructuring-bind (host port db user password)
+                              (split-string v ":" nil)
+                            `(,(replace-regexp-in-string "^#\s+" "" k)
                               (sql-product 'postgres)
                               (sql-port ,(string-to-number port))
                               (sql-server ,host)
