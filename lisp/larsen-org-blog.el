@@ -7,6 +7,7 @@
   (org-static-blog-posts-directory "/home/stefano/www/stefanorodighiero.net/blog/posts/")
   (org-static-blog-drafts-directory "/home/stefano/www/stefanorodighiero.net/blog/drafts/")
   (org-static-blog-enable-tags t)
+  (org-static-blog-enable-og-tags t)
   (org-export-with-toc nil)
   (org-export-with-section-numbers nil)
   (org-static-blog-use-preview nil)
