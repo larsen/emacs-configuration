@@ -17,7 +17,6 @@
   (set-default 'indent-tabs-mode nil)
   (setq-default tab-width 2)
   (display-time-mode 1)
-  (nyan-mode)
   (show-paren-mode 1)
   (setq show-paren-style 'expression)
   (global-auto-revert-mode 1)
