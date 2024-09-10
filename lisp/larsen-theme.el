@@ -26,10 +26,12 @@
   :config (minions-mode t))
 
 (use-package doom-modeline
-  :config (doom-modeline-mode 1)
+  :config
+  (doom-modeline-mode 1)
+  :init
   :custom
   (doom-modeline-buffer-file-name-style 'auto)
-  (doom-modeline-height 10)
+  (doom-modeline-height 35)
   (inhibit-compacting-font-caches t)
   (doom-modeline-bar-width 1)
   (doom-modeline-icon t)
@@ -43,7 +45,11 @@
   (doom-modeline-env-version t)
   (doom-modeline-github nil)
   (doom-modeline-lsp t)
-  (doom-modeline-irc nil))
+  (doom-modeline-irc nil)
+  :custom-face
+  (mode-line ((t (:family "Arial" :height 1.0))))
+  (mode-line-active ((t (:family "Arial" :height 1.0))))
+  (mode-line-inactive ((t (:family "Arial" :height 1.0)))))
 
 (use-package spacious-padding
   :config (spacious-padding-mode 1)
