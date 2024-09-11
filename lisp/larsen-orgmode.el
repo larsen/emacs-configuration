@@ -13,14 +13,12 @@
          ("C-c l" . org-store-link))
   :custom
   (org-pretty-entities t)
-  (org-ellipsis " ▹ ") ;; folding symbol
+  (org-ellipsis "…") ;; folding symbol
 
   (org-hide-emphasis-markers t)
   (org-fontify-whole-heading-line t)
   (org-fontify-done-headline t)
   (org-fontify-quote-and-verse-blocks t)
-      ;; show actually italicized text instead of /italicized text/
-
   (org-log-done t)
   (org-log-into-drawer t)
   (org-return-follows-link t)
@@ -34,8 +32,6 @@
                                  "CANCELED(!)")))
   (system-time-locale "en_US.UTF-8")
   (org-my-anki-file "~/org/personal/anki.org")
-
-
   (org-refile-targets (quote ((nil :maxlevel . 2)
                               (org-agenda-files :maxlevel . 2)
                               (orgzly-files :level . 1))))
