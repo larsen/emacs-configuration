@@ -63,6 +63,7 @@
   :bind (("C-c m c" . mc/edit-lines)
          ("C-c m a" . mc/mark-all-like-this)
          ("C-c m n" . mc/mark-next-like-this)
+         ("C-c m d" . mc/mark-all-dwim)
          ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
 
 (use-package expand-region
