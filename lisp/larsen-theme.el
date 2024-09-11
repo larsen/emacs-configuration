@@ -31,7 +31,7 @@
   :init
   :custom
   (doom-modeline-buffer-file-name-style 'auto)
-  (doom-modeline-height 35)
+  (doom-modeline-height 25)
   (inhibit-compacting-font-caches t)
   (doom-modeline-bar-width 1)
   (doom-modeline-icon t)
@@ -47,9 +47,9 @@
   (doom-modeline-lsp t)
   (doom-modeline-irc nil)
   :custom-face
-  (mode-line ((t (:family "FreeSans" :height 1.0))))
-  (mode-line-active ((t (:family "FreeSans" :height 1.0))))
-  (mode-line-inactive ((t (:family "FreeSans" :height 1.0)))))
+  (mode-line ((t (:family "FreeSans" :height 0.95))))
+  (mode-line-active ((t (:family "FreeSans" :height 0.95))))
+  (mode-line-inactive ((t (:family "FreeSans" :height 0.95)))))
 
 (use-package spacious-padding
   :config (spacious-padding-mode 1)
