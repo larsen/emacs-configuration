@@ -2,8 +2,8 @@
   :ensure t
   :defer t
   :bind (:map global-map
-              ("C-x t t"   . treemacs-select-window)
-              ("C-x t d"   . treemacs-select-directory))
+              ("C-x t t" . treemacs-select-window)
+              ("C-x t d" . treemacs-select-directory))
   :custom-face
   (treemacs-window-background-face ((t (:inherit 'mode-line-inactive))))
   :custom
