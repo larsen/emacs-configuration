@@ -20,8 +20,7 @@
            (mapconcat 'symbol-name '(mkv iso mp4 mp3 zip tgz gz xz flac)
                       "\\|")
            "\\)"))
-  :config
-  (dired-preview-global-mode 1))
+  :bind (("C-c d p" . dired-preview-mode)))
 
 (use-package dired-x :requires dired)
 (use-package dired-avfs :requires dired)
