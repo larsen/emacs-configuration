@@ -178,17 +178,11 @@ return a list of pairs <link,description>."
     (windmove-right)
     (switch-to-buffer (dired directory2))
     (windmove-left))
-  (local-set-key
-   (kbd "TAB")
-   (lambda ()
-     (interactive)
-     (switch-window)))
-  (local-set-key
-   (kbd "C-x C-c")
-   (lambda ()
-     (interactive)
-     (kill-this-buffer)
-     (delete-frame))))
+  (keymap-local-set "TAB" 'switch-window)
+  (keymap-local-set "C-x C-c" (lambda ()
+                                (interactive)
+                                (kill-this-buffer)
+                                (delete-frame))))
 
 ;; https://emacsredux.com/blog/2013/06/21/eval-and-replace/
 
