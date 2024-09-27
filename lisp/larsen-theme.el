@@ -17,6 +17,12 @@
 ;; Show column numbers in modeline
 (setq column-number-mode t)
 
+;; Some themes I like:
+;; - modus-operandi
+;; - gruber-darker
+;; - doom-opera-light
+;; - constant
+;; - leuven
 (load-theme 'ef-maris-light t)
 
 (use-package nerd-icons
