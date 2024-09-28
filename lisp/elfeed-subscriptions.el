@@ -283,6 +283,7 @@
          ("https://www.boristhebrave.com/feed/" games programming interesting)
          ("https://blogs.igalia.com/itoral/feed/" maybe graphics)
          ("https://thezvi.substack.com/feed" maybe)
+         ("https://visibleearth.nasa.gov/feeds/all.rss" data earth nasa)
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
