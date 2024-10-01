@@ -7,6 +7,7 @@
          ("C-M-y" . ivy-switch-buffer)
          ("<print>" . ivy-switch-buffer)
          ; ("C-c v" . helm-show-kill-ring)
+         ("C-s" . swiper-isearch)
          ("C-c s" . swiper)
          :map ivy-minibuffer-map
          ("<left>" . counsel-up-directory)
