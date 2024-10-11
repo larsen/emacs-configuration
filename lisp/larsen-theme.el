@@ -23,7 +23,9 @@
 ;; - doom-opera-light
 ;; - constant
 ;; - leuven
-(load-theme 'ef-maris-light t)
+
+(push "~/.emacs.d/lisp/themes/" custom-theme-load-path)
+(load-theme 'modus-operandi-larsen t)
 
 (use-package nerd-icons
   :ensure t)
