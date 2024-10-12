@@ -43,11 +43,11 @@
     larsen-snippets
 
     ;; Programming languages support
+    larsen-python
     larsen-lsp
                                         ; larsen-treesitter
     larsen-paredit
     larsen-elisp
-                                        ; larsen-python
     larsen-slime
     larsen-clojure
     larsen-sql

@@ -6,7 +6,9 @@
                                                 'makefile-mode
                                                 'snippet-mode
                                                 'sql-mode)
-                          (eglot-ensure))))))
+                          (eglot-ensure)))))
+  :config
+  (add-to-list 'eglot-server-programs '(python-ts-mode . ("pylsp"))))
 
 (use-package eldoc-box
   :ensure t
