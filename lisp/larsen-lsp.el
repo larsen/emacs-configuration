@@ -8,7 +8,7 @@
                                                 'sql-mode)
                           (eglot-ensure)))))
   :config
-  (add-to-list 'eglot-server-programs '(python-ts-mode . ("jedi-language-server"))))
+  (add-to-list 'eglot-server-programs '(python-ts-mode . ("pylsp"))))
 
 (use-package eldoc-box
   :ensure t
