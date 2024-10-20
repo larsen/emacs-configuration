@@ -2,6 +2,9 @@
 
 (add-to-list 'major-mode-remap-alist '(python-mode . python-ts-mode))
 
+(use-package python-ts-mode
+  :hook ((python-ts-mode . company-mode)))
+
 (use-package pyvenv
   :ensure t
   :config
