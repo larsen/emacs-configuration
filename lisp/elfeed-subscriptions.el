@@ -251,6 +251,7 @@
          ("https://huyenchip.com/feed.xml")
          ("https://ferd.ca/feed.rss")
          ("https://hazelweakly.me/atom.xml" maybe)
+         ("https://weeknotes.alifeee.co.uk/feed.xml" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -284,6 +285,8 @@
          ("https://blogs.igalia.com/itoral/feed/" maybe graphics)
          ("https://thezvi.substack.com/feed" maybe)
          ("https://visibleearth.nasa.gov/feeds/all.rss" data earth nasa)
+         ("https://walledculture.org/feed/" maybe)
+         ("https://feeds.feedburner.com/ftrcblog" berlin travel photo)
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
