@@ -1,4 +1,5 @@
 (use-package ibuffer
+  :ensure t
   :bind (("C-x C-b" . ibuffer))
   :custom
   (ibuffer-saved-filter-groups '(("default"
@@ -34,8 +35,13 @@
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default"))))
 
-(use-package ibuffer-git :requires ibuffer)
-(use-package ibuffer-projectile :requires ibuffer)
+(use-package ibuffer-git
+  :ensure t
+  :requires ibuffer)
+
+(use-package ibuffer-projectile
+  :ensure t
+  :requires ibuffer)
 
 
 

@@ -56,6 +56,7 @@
   (org-confirm-babel-evaluate nil))
 
 (use-package org-capture
+  :ensure t
   :requires org
   :bind (("C-c c" . org-capture))
   :custom
@@ -78,6 +79,7 @@
                             "* %<%H:%M>   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Basic\n:ANKI_DECK: Default\n:END:\n** Front\n%?\n** Back\n%x\n"))))
 
 (use-package org-modern
+  :ensure t
   :hook (org-mode . org-modern-mode))
 
 (use-package org-download

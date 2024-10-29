@@ -1,14 +1,21 @@
-(use-package sql)
-(use-package sqlup-mode)
+(use-package sql
+  :ensure t)
+
+(use-package sqlup-mode
+  :ensure t)
 
 (use-package sqlformat
+  :ensure t
   :bind (("C-c C-f" . sqlformat))
   :custom
   (sqlformat-command 'pgformatter)
   (sqlformat-args '("-u1")))
 
-(use-package seq)
-(use-package filenotify)
+(use-package seq
+  :ensure t)
+
+(use-package filenotify
+  :ensure t)
 
 
 ;; I don't like sqlind-minor-mode, I want to make

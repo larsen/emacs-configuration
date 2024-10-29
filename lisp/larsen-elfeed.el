@@ -1,4 +1,5 @@
 (use-package elfeed
+  :ensure t
   :bind (:map elfeed-show-mode-map
               ("l" . (lambda ()
                        (interactive)

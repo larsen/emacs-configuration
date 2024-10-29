@@ -15,6 +15,7 @@
   (org-agenda-date-today ((t (:inherit 'fixed-pitch :height 200)))))
 
 (use-package org-super-agenda
+  :ensure t
   :config (org-super-agenda-mode)
   :custom
   (org-super-agenda-groups

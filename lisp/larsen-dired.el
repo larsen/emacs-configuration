@@ -13,6 +13,7 @@
                                   ("\\.kml\\'" "viking"))))
 
 (use-package dired-preview
+  :ensure t
   :requires dired
   :custom
   (dired-preview-ignored-extensions-regexp
@@ -22,16 +23,21 @@
            "\\)"))
   :bind (("C-c d p" . dired-preview-mode)))
 
-(use-package dired-x :requires dired)
+(use-package dired-x
+  :ensure t
+  :requires dired)
+
 (use-package dired-avfs :requires dired)
 
 (use-package all-the-icons-dired
+  :ensure t
   :diminish
   all-the-icons-dired-mode
   :hook
   (dired-mode . all-the-icons-dired-mode))
 
 (use-package diff-hl
+  :ensure t
   :requires dired
   :hook (dired-mode-hook . diff-hl-dired-mode))
 

@@ -1,6 +1,7 @@
 ;;; larsen-flycheck.el --- Flycheck configuration
 
 (use-package flycheck
+  :ensure t
   :hook elpy-mode
   :config
   (global-flycheck-mode 1)

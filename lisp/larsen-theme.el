@@ -31,9 +31,11 @@
   :ensure t)
 
 (use-package minions
+  :ensure t
   :config (minions-mode t))
 
 (use-package doom-modeline
+  :ensure t
   :config
   (doom-modeline-mode 1)
   :init
@@ -60,6 +62,7 @@
   (mode-line-inactive ((t (:family "FreeSans" :height 0.95)))))
 
 (use-package spacious-padding
+  :ensure t
   :config (spacious-padding-mode 1)
   :custom spacious-padding-widths
 	'( :internal-border-width 8

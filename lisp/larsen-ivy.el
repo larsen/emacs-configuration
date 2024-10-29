@@ -1,4 +1,5 @@
 (use-package ivy
+  :ensure t
   :init
   (ivy-mode t)
   :bind (("C-c h" . ivy-switch-buffer)
@@ -21,21 +22,26 @@
   :ensure t)
 
 (use-package counsel
+  :ensure t
   :after smex
   :bind (("M-x" . counsel-M-x)
 	       ("C-x C-f" . counsel-find-file))
   :config
   (counsel-mode t))
 
-(use-package prescient)
+(use-package prescient
+  :ensure t)
 (use-package ivy-prescient
+  :ensure t
   :config
   (ivy-prescient-mode t))
 
 (use-package counsel-projectile
+  :ensure t
   :bind (("<f6>" . counsel-projectile-ag)))
 
 (use-package ivy-rich
+  :ensure t
   :after counsel
   :init (ivy-rich-mode 1))
 

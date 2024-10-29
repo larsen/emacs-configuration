@@ -3,6 +3,7 @@
 ;;;
 
 (use-package tramp
+  :ensure t
   :custom
   (tramp-default-method "ssh")
   ; local auto-saves to speed up things

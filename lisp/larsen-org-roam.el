@@ -1,4 +1,5 @@
 (use-package org-roam
+  :ensure t
   :bind (("C-c m f" . org-roam-node-find)
          ("<f7>" . org-roam-node-find)
          ("C-c m i" . org-roam-node-insert)
@@ -23,6 +24,7 @@
                                        (no-delete-other-windows . t))))))
 
 (use-package org-roam-ui
+  :ensure t
   :after org-roam
   :requires (org-roam websocket)
   :load-path "~/.emacs.d/private/org-roam-ui"

@@ -1,9 +1,11 @@
 (use-package magit
+  :ensure t
   :bind (("C-x g" . magit-status))
   :custom
   (magit-save-repository-buffers 'dontask))
 
 (use-package magit-todos
+  :ensure t
   :demand t
   :after magit
   :custom

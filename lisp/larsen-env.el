@@ -34,16 +34,21 @@
          ("C-c e r" . eval-and-replace)
          ("C-c SPC" . ace-jump-mode)))
 
-(use-package crux)
+(use-package crux
+  :ensure t)
+
 (use-package cl-lib)
 
 (use-package rotate
+  :ensure t
   :bind (("C-x C-o" . rotate-layout)))
 
 (use-package switch-window
+  :ensure t
   :bind (("C-x o" . switch-window)))
 
 (use-package eyebrowse
+  :ensure t
   :config
     (cl-loop for i from 1 upto 9
            do (define-key eyebrowse-mode-map
@@ -54,12 +59,14 @@
   (eyebrowse-mode t))
 
 (use-package projectile
+  :ensure t
   :custom
   (projectile-sort-order 'recently-active)
   :config
   (projectile-mode))
 
 (use-package multiple-cursors
+  :ensure t
   :bind (("C-c m c" . mc/edit-lines)
          ("C-c m a" . mc/mark-all-like-this)
          ("C-c m n" . mc/mark-next-like-this)
@@ -67,17 +74,20 @@
          ("C-S-<mouse-1>" . mc/add-cursor-on-click)))
 
 (use-package expand-region
+  :ensure t
   :bind ("C-=" . er/expand-region))
 
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
 (use-package display-line-numbers
+  :ensure t
   :hook prog-mode-hook
   :custom
   (display-line-numbers-width-start t))
 
 (use-package yafolding
+  :ensure t
   :hook prog-mode-hook)
 
 (use-package calendar
@@ -103,6 +113,5 @@
   '(define-key term-mode-map (kbd "C-M-y") 'helm-mini))
 
 (require 'forecast-configuration nil t)
-
 
 (provide 'larsen-env)
