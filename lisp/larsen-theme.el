@@ -19,6 +19,7 @@
 
 ;; Some themes I like:
 ;; - modus-operandi
+;; - danneskjold
 ;; - gruber-darker
 ;; - doom-opera-light
 ;; - constant
