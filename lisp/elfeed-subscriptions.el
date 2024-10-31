@@ -119,6 +119,7 @@
          ("https://blog.djnavarro.net/index.xml" data R)
          ("https://www.jasoncollins.blog/index.xml" maybe)
          ("https://leancrew.com/all-this/feed/" data R programming)
+         ("https://www.ergestx.com/rss/")
 
          ;; R
          ("https://4dpiecharts.com/feed/" R)
