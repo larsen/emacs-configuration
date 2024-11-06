@@ -65,7 +65,7 @@
 
         ("website-images"
          :base-directory ,(personal-website-absolute-directory "images/")
-         :base-extension "png\\|jpg\\|JPG\\|gif"
+         :base-extension "svg\\|png\\|jpg\\|JPG\\|gif"
          :publishing-function org-publish-attachment
          :recursive t
          :publishing-directory ,(personal-website-remote-absolute-directory "images/")
