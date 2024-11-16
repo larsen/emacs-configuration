@@ -9,7 +9,7 @@
   (org-agenda-files '("~/org/personal/"
                       "~/org/orgzly/errand.org"
                       "~/org/orgzly/work.org"
-                      "~/org/work/"))
+                      "~/org/work/tourlane/activities.org"))
   :custom-face
   (org-agenda-date ((t (:inherit 'fixed-pitch :height 200))))
   (org-agenda-date-today ((t (:inherit 'fixed-pitch :height 200)))))
