@@ -1,4 +1,4 @@
-(use-package hledger
+(use-package hledger-mode
   :ensure t
   :mode ("\\.journal"))
 
