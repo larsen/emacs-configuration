@@ -53,13 +53,13 @@
                               (sql-database ,db)
                               (sql-password ,password))))))))
 
-(setq sql-connection-alist (get-connection-alist "~/.pgpass"))
+(when (file-exists-p "~/.pgpass")
+  (setq sql-connection-alist (get-connection-alist "~/.pgpass"))
+  (file-notify-add-watch "~/.pgpass"
+                       '(change)
+                       (lambda (evt) (setq sql-connection-alist (get-connection-alist "~/.pgpass")))))
 
 (setq sql-mysql-program "/usr/local/mysql/bin/mysql")
-
-(file-notify-add-watch "~/.pgpass"
-                       '(change)
-                       (lambda (evt) (setq sql-connection-alist (get-connection-alist "~/.pgpass"))))
 
 (defun my/get-connection-details (connection-name)
   (cdr (assoc connection-name sql-connection-alist)))
