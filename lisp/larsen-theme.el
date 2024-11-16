@@ -2,10 +2,6 @@
 ;;; larsen-theme.el
 ;;;
 
-(defvar larsen/system-font
-  ;; "IBM Plex Mono"
-  "Iosevka")
-
 (use-package unicode-fonts
    :ensure t
    :config
