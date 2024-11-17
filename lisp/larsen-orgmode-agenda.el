@@ -5,7 +5,7 @@
   (org-agenda-include-diary t)
   (org-agenda-start-on-weekday nil)
   (org-agenda-start-day nil) ;; i.e. today
-  (org-agenda-span 7)
+  (org-agenda-span 2)
   (org-agenda-files '("~/org/personal/"
                       "~/org/orgzly/errand.org"
                       "~/org/orgzly/work.org"
