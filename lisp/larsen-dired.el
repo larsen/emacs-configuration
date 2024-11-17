@@ -1,6 +1,7 @@
 (use-package dired
   :custom
-  (dired-listing-switches "-lagGhS --group-directories-first --time-style=long-iso")
+  ;; TODO Review the params, not compatible with macOS?
+  ;; (dired-listing-switches "-lagGhS --group-directories-first --time-style=long-iso")
   (dired-dwim-target t)
   (dired-recursive-deletes 'always)
   (dired-recursive-copies 'always)
