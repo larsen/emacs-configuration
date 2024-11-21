@@ -45,7 +45,7 @@
     ;; Programming languages support
     larsen-python
     larsen-lsp
-                                        ; larsen-treesitter
+    larsen-treesitter
     larsen-paredit
     larsen-elisp
     larsen-slime
