@@ -25,7 +25,6 @@
   :bind (("C-c d p" . dired-preview-mode)))
 
 (use-package dired-x
-  :ensure t
   :requires dired)
 
 (use-package dired-avfs :requires dired)

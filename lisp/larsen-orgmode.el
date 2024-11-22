@@ -56,7 +56,6 @@
   (org-confirm-babel-evaluate nil))
 
 (use-package org-capture
-  :ensure t
   :requires org
   :bind (("C-c c" . org-capture))
   :custom
