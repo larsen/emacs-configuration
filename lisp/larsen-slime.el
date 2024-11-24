@@ -72,7 +72,6 @@
                           slime-setup-first-change-hook ; slime-autodoc--on
                           ))
 
-  (add-hook 'lisp-mode-hook #'whitespace-mode)
   (add-hook 'slime-repl-mode-hook
             (lambda () (paredit-mode t)))
 
