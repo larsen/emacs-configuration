@@ -38,7 +38,9 @@
 
 (use-package counsel-projectile
   :ensure t
-  :bind (("<f6>" . counsel-projectile-ag)))
+  :bind (("<f6>" . counsel-projectile-ag)
+         ;; This one needed on macOS
+         ("C-<f6>" . counsel-projectile-ag)))
 
 (use-package ivy-rich
   :ensure t
