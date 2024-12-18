@@ -6,6 +6,9 @@
   :ensure t
   :hook ((python-ts-mode . company-mode)))
 
+(use-package python-black
+  :hook (python-ts-mode . python-black-on-save-mode))
+
 (use-package pyvenv
   :ensure t
   :config
