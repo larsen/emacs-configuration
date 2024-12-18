@@ -13,7 +13,7 @@
 (use-package eldoc-box
   :ensure t
   :after eglot
-  :hook (eglot-managed-mode . eldoc-box-hover-at-point-mode)
+  :hook (eglot-managed-mode . eldoc-box-hover-mode)
   :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 150))))
   :custom
   (eldoc-box-only-multi-line t)
