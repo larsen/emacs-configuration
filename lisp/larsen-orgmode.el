@@ -81,6 +81,13 @@
   :ensure t
   :hook (org-mode . org-modern-mode))
 
+(use-package bug-reference
+  :requires org
+  :hook org-mode
+  :custom
+  (bug-reference-bug-regexp "\\b\\(\\([A-Za-z][A-Za-z0-9]\\{1,10\\}-[0-9]+\\)\\)")
+  (bug-reference-url-format "https://tourlane.atlassian.net/browse/%s"))
+
 (use-package org-download
   :load-path "/home/stefano/.emacs.d/elpa/org-download-20220906.1929/")
 
