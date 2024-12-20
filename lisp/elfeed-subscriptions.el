@@ -254,6 +254,7 @@
          ("https://ferd.ca/feed.rss")
          ("https://hazelweakly.me/atom.xml" maybe)
          ("https://weeknotes.alifeee.co.uk/feed.xml" maybe)
+         ("https://baty.net/index.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
