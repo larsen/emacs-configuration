@@ -24,6 +24,13 @@
            "\\)"))
   :bind (("C-c d p" . dired-preview-mode)))
 
+(use-package dired-subtree
+  :ensure t
+  :after dired
+  :bind (:map dired-mode-map
+              ("<tab>" . dired-subtree-toggle))
+  :config (setq dired-subtree-use-background nil))
+
 (use-package dired-x
   :requires dired)
 
