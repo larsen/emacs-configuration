@@ -104,9 +104,10 @@
                                        (calendar-iso-from-absolute
                                         (calendar-absolute-from-gregorian (list month day year)))))
                               'font-lock-face 'calendar-iso-week-face))
-  (calendar-holidays (append holiday-general-holidays holiday-local-holidays
-                             holiday-other-holidays holiday-christian-holidays
-                             holiday-islamic-holidays holiday-oriental-holidays
+  (calendar-holidays (append holiday-general-holidays
+                             holiday-local-holidays
+                             holiday-other-holidays
+                             holiday-christian-holidays
                              holiday-solar-holidays)))
 
 (eval-after-load 'Term
