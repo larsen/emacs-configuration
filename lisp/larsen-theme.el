@@ -18,11 +18,12 @@
 ;; - danneskjold
 ;; - gruber-darker
 ;; - doom-opera-light
+;; - doom-tomorrow-night
 ;; - constant
 ;; - leuven
 
 (push "~/.emacs.d/lisp/themes/" custom-theme-load-path)
-(load-theme 'modus-operandi-larsen t)
+(load-theme 'doom-tomorrow-night t)
 
 (use-package nerd-icons
   :ensure t)
