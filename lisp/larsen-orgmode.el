@@ -81,6 +81,9 @@
   :ensure t
   :hook (org-mode . org-modern-mode))
 
+(use-package org-sidebar
+  :ensure t)
+
 (use-package bug-reference
   :requires org
   :hook org-mode
