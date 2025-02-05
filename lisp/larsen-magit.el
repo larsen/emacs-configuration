@@ -20,4 +20,7 @@
   :config
   (magit-todos-mode t))
 
+(use-package forge
+  :after magit)
+
 (provide 'larsen-magit)
