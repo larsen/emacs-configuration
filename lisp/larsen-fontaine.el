@@ -2,9 +2,8 @@
   :ensure t
   :custom
   (fontaine-presets '((regular :default-height 100)
-                      (large :default-weight semilight
-                             :default-height 140
-                             :bold-weight extrabold)
+                      (large :default-weight regular
+                             :default-height 160)
                       (medium :default-height 130
                               :default-weigh semilight)
                       (variable :default-family "EB Garamond"
