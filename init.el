@@ -35,9 +35,9 @@
     larsen-flycheck
     larsen-spell
     larsen-markdown
-    larsen-company
+    larsen-corfu
     larsen-tramp
-    larsen-ivy
+    larsen-vertico
     larsen-ibuffer
     larsen-treemacs
     larsen-snippets
