@@ -37,6 +37,7 @@
          ("C-M-y" . consult-buffer)
          ("<print>" . consult-buffer)
          ("<f6>" . consult-ripgrep)
-         ("C-<f6>" . consult-ripgrep)))
+         ("C-<f6>" . consult-ripgrep)
+         ("C-c s" . consult-line)))
 
 (provide 'larsen-vertico)
