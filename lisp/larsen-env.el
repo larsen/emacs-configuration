@@ -4,6 +4,11 @@
 
 (use-package emacs
   :config
+  (setq enable-recursive-minibuffers t)
+  ;; Hide commands in M-x which do not work in the current mode.  Vertico
+  ;; commands are hidden in normal buffers. This setting is useful beyond
+  ;; Vertico.
+  (setq read-extended-command-predicate #'command-completion-default-include-p)
   (setopt use-short-answers t)
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
@@ -19,6 +24,7 @@
   (display-time-mode 1)
   (show-paren-mode 1)
   (setq show-paren-style 'expression)
+  (setq tab-always-indent 'complete)
   (global-auto-revert-mode 1)
   (global-hl-line-mode 1)
   (global-visual-line-mode 1)
