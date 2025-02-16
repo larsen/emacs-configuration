@@ -13,8 +13,6 @@
   :init
   (global-corfu-mode))
 
-(use-package nerd-icons-corfu
-  :init
-  (nerd-icons-corfu))
+(use-package nerd-icons-corfu)
 
 (provide 'larsen-corfu)
