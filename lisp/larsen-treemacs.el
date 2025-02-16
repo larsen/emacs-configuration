@@ -11,6 +11,10 @@
   (treemacs-space-between-root-nodes nil)
   (treemacs-width 25))
 
+(use-package treemacs-nerd-icons
+  :config
+  (treemacs-load-theme "nerd-icons"))
+
 (use-package treemacs-projectile
   :after (treemacs projectile)
   :ensure t)
