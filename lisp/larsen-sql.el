@@ -8,8 +8,8 @@
   :ensure t
   :bind (("C-c C-f" . sqlformat))
   :custom
-  (sqlformat-command 'pgformatter)
-  (sqlformat-args '("-u1")))
+  (sqlformat-command 'sqlformat)
+  (sqlformat-args '("-r --compact")))
 
 (use-package seq
   :ensure t)
