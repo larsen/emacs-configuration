@@ -34,6 +34,10 @@
          ("C-c e r" . eval-and-replace)
          ("C-c SPC" . ace-jump-mode)))
 
+(use-package prog-mode
+  :custom-face
+  (font-lock-comment-face ((t (:inherit 'variable-pitch :height 220)))))
+
 (use-package crux
   :ensure t)
 

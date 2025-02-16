@@ -55,9 +55,9 @@
   (doom-modeline-lsp t)
   (doom-modeline-irc nil)
   :custom-face
-  (mode-line ((t (:family "FreeSans" :height 0.95))))
-  (mode-line-active ((t (:family "FreeSans" :height 0.95))))
-  (mode-line-inactive ((t (:family "FreeSans" :height 0.95)))))
+  (mode-line ((t (:family "FreeSans" :height 0.98))))
+  (mode-line-active ((t (:family "FreeSans" :height 0.97))))
+  (mode-line-inactive ((t (:family "FreeSans" :height 0.97)))))
 
 (use-package spacious-padding
   :ensure t
