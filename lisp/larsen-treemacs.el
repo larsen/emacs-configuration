@@ -15,10 +15,6 @@
   :config
   (treemacs-load-theme "nerd-icons"))
 
-(use-package treemacs-projectile
-  :after (treemacs projectile)
-  :ensure t)
-
 (use-package treemacs-magit
   :after (treemacs magit)
   :ensure t)

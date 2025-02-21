@@ -71,13 +71,6 @@
                              (eyebrowse-switch-to-window-config ,i))))
   (eyebrowse-mode t))
 
-(use-package projectile
-  :ensure t
-  :custom
-  (projectile-sort-order 'recently-active)
-  :config
-  (projectile-mode))
-
 (use-package multiple-cursors
   :ensure t
   :bind (("C-c m c" . mc/edit-lines)

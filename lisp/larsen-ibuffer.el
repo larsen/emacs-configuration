@@ -39,10 +39,4 @@
   :ensure t
   :requires ibuffer)
 
-(use-package ibuffer-projectile
-  :ensure t
-  :requires ibuffer)
-
-
-
 (provide 'larsen-ibuffer)
