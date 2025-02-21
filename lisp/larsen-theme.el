@@ -82,22 +82,4 @@
   (dolist (curr custom-enabled-themes) (disable-theme curr))
   (load-theme theme))
 
-(defface larsen-yafolding-hidden-face
-  '()
-  "Face for folded blocks"
-  :group 'yafolding)
-
-(set-face-attribute 'larsen-yafolding-hidden-face nil
-                    :background "yellow"
-                    :foreground "black"
-                    :underline t)
-
-(advice-add 'yafolding-hide-element :before
-            (lambda ()
-              (let* ((beg (line-beginning-position))
-                     (end (line-end-position))
-                     (new-overlay (make-overlay beg end)))
-                (overlay-put new-overlay 'category "yafolding")
-                (overlay-put new-overlay 'face 'larsen-yafolding-hidden-face))))
-
 (provide 'larsen-theme)
