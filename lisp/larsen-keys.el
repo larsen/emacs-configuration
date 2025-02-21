@@ -1,6 +1,3 @@
-;; I like to have all key combinations defined
-;; in a single place.
-
 (defun my-global-set-keys (keys)
   "Utility to set a define a set of keybindings in one place"
   (dolist (combo keys)
