@@ -3,18 +3,22 @@
 ;;;
 
 (use-package emacs
-  :config
-  (setq enable-recursive-minibuffers t)
+  :custom
+  (enable-recursive-minibuffers t)
   ;; Hide commands in M-x which do not work in the current mode.  Vertico
   ;; commands are hidden in normal buffers. This setting is useful beyond
   ;; Vertico.
-  (setq read-extended-command-predicate #'command-completion-default-include-p)
+  (read-extended-command-predicate #'command-completion-default-include-p)
+  (scroll-step 1)
+  (scroll-margin 3)
+  (scroll-conservatively 10000)
+  (show-paren-style 'expression)
+  (tab-always-indent 'complete)
+  (term-suppress-hard-newline t)
+  :config
   (setopt use-short-answers t)
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
-  (setq scroll-step 1
-        scroll-margin 3
-        scroll-conservatively 10000)
   (pixel-scroll-precision-mode)
   (set-terminal-coding-system 'utf-8)
   (set-keyboard-coding-system 'utf-8)
@@ -23,15 +27,12 @@
   (setq-default tab-width 2)
   (display-time-mode 1)
   (show-paren-mode 1)
-  (setq show-paren-style 'expression)
-  (setq tab-always-indent 'complete)
   (global-auto-revert-mode 1)
   (global-hl-line-mode 1)
   (global-visual-line-mode 1)
   (global-font-lock-mode 1)
   (delete-selection-mode 1)
   (setq-default buffer-file-coding-system 'utf-8-unix)
-  (setq term-suppress-hard-newline t)
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
   :bind (("M-o" . other-window)

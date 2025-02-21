@@ -29,7 +29,8 @@
   :after dired
   :bind (:map dired-mode-map
               ("<tab>" . dired-subtree-toggle))
-  :config (setq dired-subtree-use-background nil))
+  :custom
+  (dired-subtree-use-background nil))
 
 (use-package dired-x
   :requires dired)
