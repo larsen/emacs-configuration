@@ -70,7 +70,8 @@
     larsen-pulsar
     larsen-print
     larsen-menu
-    larsen-keys))
+    larsen-keys
+    larsen-keychords))
 
 (dolist (file larsen-pkg-full)
   (message (pp file))
