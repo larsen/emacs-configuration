@@ -75,5 +75,3 @@
 (dolist (file larsen-pkg-full)
   (message (pp file))
   (require file))
-(put 'downcase-region 'disabled nil)
-(put 'list-threads 'disabled nil)
