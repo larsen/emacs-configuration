@@ -50,6 +50,10 @@
 (use-package crux
   :ensure t)
 
+(use-package sideline
+  :custom
+  (sideline-backends-right '(sideline-eglot)))
+
 (use-package cl-lib)
 
 (use-package rotate
@@ -92,9 +96,9 @@
   :custom
   (display-line-numbers-width-start t))
 
-(use-package yafolding
-  :ensure t
-  :hook prog-mode-hook)
+(use-package minimap
+  ;; :hook (prog-mode . minimap-mode)
+  :custom (minimap-window-location 'right))
 
 (use-package calendar
   :config
