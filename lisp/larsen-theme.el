@@ -7,12 +7,6 @@
    :config
    (unicode-fonts-setup))
 
-;; No splash screen
-(setq inhibit-startup-message t)
-
-;; Show column numbers in modeline
-(setq column-number-mode t)
-
 ;; Some themes I like:
 ;; - modus-operandi
 ;; - danneskjold
@@ -69,8 +63,7 @@
      :tab-width 4
      :right-divider-width 8
      :scroll-bar-width 0
-     :fringe-width 8)
-)
+     :fringe-width 8))
 ;; (doom-themes-neotree-config)
 ;; (doom-themes-visual-bell-config)
 ;; (doom-themes-org-config)

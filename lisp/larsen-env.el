@@ -15,6 +15,8 @@
   (show-paren-style 'expression)
   (tab-always-indent 'complete)
   (term-suppress-hard-newline t)
+  (inhibit-startup-message t)
+  (column-number-mode t)
   :config
   (setopt use-short-answers t)
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
