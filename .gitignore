@@ -8,3 +8,10 @@ elpa/
 eshell/
 site-lisp/
 themes/
+
+.cache
+.org-id-locations
+forge-database.sqlite
+image-dired/
+org-roam.db
+recentf
