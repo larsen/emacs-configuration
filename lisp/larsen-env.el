@@ -47,6 +47,10 @@
   :custom-face
   (font-lock-comment-face ((t (:inherit 'variable-pitch :height 220)))))
 
+(use-package display-line-numbers
+  :hook
+  ((prog-mode . display-line-numbers-mode)))
+
 (use-package crux
   :ensure t)
 
