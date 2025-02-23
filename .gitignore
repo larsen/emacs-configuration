@@ -15,3 +15,13 @@ forge-database.sqlite
 image-dired/
 org-roam.db
 recentf
+history
+transient/
+org-persist/
+projects
+smex-items
+tree-sitter/
+var/
+bookmarks
+eln-cache/
+.mc-lists.el
