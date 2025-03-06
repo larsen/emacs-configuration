@@ -38,10 +38,8 @@
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
   :bind (("M-o" . other-window)
-         ("C-c t" . vterm)
          ("C-c e m" . macrostep-mode)
-         ("C-c e r" . eval-and-replace)
-         ("C-c SPC" . ace-jump-mode)))
+         ("C-c e r" . eval-and-replace)))
 
 (use-package prog-mode
   :custom-face
@@ -67,6 +65,9 @@
 (use-package switch-window
   :ensure t
   :bind (("C-x o" . switch-window)))
+
+(use-package vterm
+  :bind (("C-c t" . vterm)))
 
 (use-package eyebrowse
   :ensure t
