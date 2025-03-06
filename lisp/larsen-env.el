@@ -43,7 +43,7 @@
 
 (use-package prog-mode
   :custom-face
-  (font-lock-comment-face ((t (:inherit 'variable-pitch :height 220)))))
+  (font-lock-comment-face ((t (:inherit 'variable-pitch)))))
 
 (use-package display-line-numbers
   :hook
