@@ -105,6 +105,9 @@
   ;; :hook (prog-mode . minimap-mode)
   :custom (minimap-window-location 'right))
 
+(use-package colorful
+  :custom (colorful-use-prefix t))
+
 (use-package calendar
   :config
   ;; Week number in calendar
