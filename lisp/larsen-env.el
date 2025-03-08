@@ -127,6 +127,10 @@
 (eval-after-load 'Term
   '(define-key term-mode-map (kbd "C-M-y") 'helm-mini))
 
+(use-package hideshow
+  :bind
+  (("C-<return>" . hs-toggle-hiding)))
+
 (require 'forecast-configuration nil t)
 
 (provide 'larsen-env)
