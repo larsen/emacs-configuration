@@ -92,10 +92,7 @@
   :config (editorconfig-mode 1))
 
 (use-package display-line-numbers
-  :ensure t
-  :hook prog-mode-hook
-  :custom
-  (display-line-numbers-width-start t))
+  :hook (prog-mode . display-line-numbers-mode))
 
 (use-package minimap
   ;; :hook (prog-mode . minimap-mode)
