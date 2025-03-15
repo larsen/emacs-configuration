@@ -31,6 +31,7 @@
 (defvar larsen-pkg-full
   '(
     larsen-env
+    larsen-ai
     larsen-pdf-tools
     larsen-dired
     larsen-flycheck
