@@ -42,6 +42,7 @@
     larsen-ibuffer
     larsen-treemacs
     larsen-snippets
+    larsen-fringes
 
     ;; Programming languages support
     larsen-python
