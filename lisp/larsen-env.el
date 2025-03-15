@@ -128,6 +128,19 @@
   :bind
   (("C-<return>" . hs-toggle-hiding)))
 
+(use-package flymake
+  :config
+  (define-fringe-bitmap 'my-flymake-error-bitmap
+    (vector #b00000000
+            #b00000000
+            #b00111100
+            #b01111110
+            #b01111110
+            #b00111100
+            #b00000000
+            #b00000000))
+  (setq flymake-error-bitmap '(my-flymake-error-bitmap compilation-error)))
+
 (require 'forecast-configuration nil t)
 
 (provide 'larsen-env)
