@@ -14,9 +14,9 @@
   :ensure t
   :after eglot
   :hook (eglot-managed-mode . eldoc-box-hover-mode)
-  :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 150))))
+  :custom-face (eldoc-box-body ((t (:inherit 'variable-pitch :height 200))))
   :custom
   (eldoc-box-only-multi-line t)
-  (eldoc-box-max-pixel-width 500))
+  (eldoc-box-max-pixel-width 750))
 
 (provide 'larsen-lsp)
