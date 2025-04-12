@@ -54,6 +54,10 @@
 
 (use-package cl-lib)
 
+(use-package golden-ratio
+  :config
+  (golden-ratio-mode))
+
 (use-package rotate
   :ensure t
   :bind (("C-x C-o" . rotate-layout)))
