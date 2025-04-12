@@ -35,6 +35,7 @@
          ("https://pavpanchekha.com/rss.xml" programming cs)
          ("https://novalis.org/blog/atom.xml" programming)
          ("https://explaining.software/rss" programming)
+         ("https://entropicthoughts.com/feed" programming)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
