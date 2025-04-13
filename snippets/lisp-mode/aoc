@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: aoc
+# key: aoc
+# --
+
+(in-package #:advent-of-code)
+
+(defun aoc$1/day$2/solution1 ()
+  )
+
+(defun aoc$1/day$2/solution2 ()
+  )
