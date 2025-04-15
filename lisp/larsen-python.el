@@ -14,8 +14,6 @@
                 (setq python-shell-interpreter (concat pyvenv-virtual-env "bin/python3")))))
   (setq pyvenv-post-deactivate-hooks
         (list (lambda ()
-                (setq python-shell-interpreter "python3"))))
-  :custom-face
-  (font-lock-comment-face ((t (:inherit 'variable-pitch :default-height 200)))))
+                (setq python-shell-interpreter "python3")))))
 
 (provide 'larsen-python)

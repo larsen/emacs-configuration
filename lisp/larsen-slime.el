@@ -19,8 +19,6 @@
   :custom
   (inferior-lisp-program "sbcl")
   (slime-lisp-implementations '(("sbcl" ("sbcl" "--dynamic-space-size" "8192"))))
-  :custom-face
-  (font-lock-comment-face ((t (:inherit 'variable-pitch :height 160))))
   :config
   (load "~/.quicklisp/clhs-use-local.el" t)
   (slime-setup '(;; slime-fancy
