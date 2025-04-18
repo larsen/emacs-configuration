@@ -79,7 +79,10 @@
 
 (use-package org-modern
   :ensure t
-  :hook (org-mode . org-modern-mode))
+  :hook (org-mode . org-modern-mode)
+  :custom
+  (org-modern-block-indent t)
+  (org-startup-indented t))
 
 (use-package bug-reference
   :requires org
