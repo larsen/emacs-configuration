@@ -15,9 +15,10 @@
 ;; - doom-tomorrow-night
 ;; - constant
 ;; - leuven
+;; - doric-obsidian
 
 (push "~/.emacs.d/lisp/themes/" custom-theme-load-path)
-(load-theme 'doom-tomorrow-night t)
+(load-theme 'doric-obsidian t)
 
 (use-package nerd-icons
   :ensure t)

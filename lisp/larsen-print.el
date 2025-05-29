@@ -1,4 +1,4 @@
-(load "a2ps-multibyte")
+(load "a2ps-multibyte" nil :nomessage)
 
 (setq a2ps-switches '("-P" "display"))
 

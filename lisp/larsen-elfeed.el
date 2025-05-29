@@ -2,7 +2,7 @@
   :ensure t
   :config
   (setq-default elfeed-search-filter "@1-week-ago +unread -clutter")
-  (load "elfeed-subscriptions")
+  (load "elfeed-subscriptions" nil :nomessage)
   (defun elfeed-link-title (entry)
     "Copy the entry title and URL as org link to the clipboard."
     (interactive)

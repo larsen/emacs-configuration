@@ -24,7 +24,7 @@
   (add-to-list 'exec-path p))
 
 (setq custom-file "~/.emacs-custom.el")
-(load custom-file)
+(load custom-file nil :nomessage)
 
 (setq auth-sources '("~/.authinfo"))
 
@@ -69,13 +69,13 @@
     larsen-elfeed
     larsen-functions
     larsen-fontaine
-    larsen-theme
     larsen-pulsar
     larsen-print
     larsen-menu
+    larsen-theme
     larsen-keys
     larsen-keychords))
 
 (dolist (file larsen-pkg-full)
-  (message (pp file))
+  (message (symbol-name file))
   (require file))
