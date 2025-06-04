@@ -18,6 +18,7 @@
   :ensure t
   :config (org-super-agenda-mode)
   :custom
+  (org-super-agenda-show-message nil)
   (org-super-agenda-groups
    '(;; Each group has an implicit boolean OR operator between its selectors.
      (:name "Due Today"
