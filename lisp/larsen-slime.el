@@ -20,7 +20,7 @@
   (inferior-lisp-program "sbcl")
   (slime-lisp-implementations '(("sbcl" ("sbcl" "--dynamic-space-size" "8192"))))
   :config
-  (load "~/.quicklisp/clhs-use-local.el" t)
+  (load "~/.quicklisp/clhs-use-local.el" nil :nomessage)
   (slime-setup '(;; slime-fancy
 
                  ;; This contrib implements a Lisp Listener along with some niceties like
