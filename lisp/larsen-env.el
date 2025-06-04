@@ -102,7 +102,7 @@
   ;; :hook (prog-mode . minimap-mode)
   :custom (minimap-window-location 'right))
 
-(use-package colorful
+(use-package colorful-mode
   :custom (colorful-use-prefix t))
 
 (use-package calendar
