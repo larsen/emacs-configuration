@@ -285,7 +285,6 @@
          ("https://apod.nasa.gov/apod.rss")
          ("https://www.gatesnotes.com/rss" books)
          ("https://plaintextproject.online/feed.xml")
-         ("https://www.lescienze.it/rss/all/rss2.0.xml" maybe)
          ("https://www.boristhebrave.com/feed/" games programming interesting)
          ("https://blogs.igalia.com/itoral/feed/" maybe graphics)
          ("https://thezvi.substack.com/feed" maybe)
