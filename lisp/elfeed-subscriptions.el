@@ -292,6 +292,7 @@
          ("https://walledculture.org/feed/" maybe)
          ("https://feeds.feedburner.com/ftrcblog" berlin travel photo)
          ("https://www.schneier.com/feed/atom/")
+         ("https://fi-le.net/feed.xml")
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
