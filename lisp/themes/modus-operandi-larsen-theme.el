@@ -256,7 +256,7 @@ which corresponds to a minimum contrast in relative luminance of
 
       (bracket fg-main)
       (builtin magenta-warmer)
-      (comment fg-dim)
+      (comment fg-sage)
       (constant blue-cooler)
       (delimiter fg-main)
       (docmarkup magenta-faint)
