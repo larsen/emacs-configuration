@@ -77,5 +77,5 @@
     larsen-keychords))
 
 (dolist (file larsen-pkg-full)
-  (message (symbol-name file))
+  (princ "." 'external-debugging-output)
   (require file))
