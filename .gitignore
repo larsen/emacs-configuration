@@ -8,6 +8,8 @@ elpa/
 eshell/
 site-lisp/
 themes/
+ellama/
+newsticker/
 
 .cache
 .org-id-locations
@@ -25,3 +27,4 @@ var/
 bookmarks
 eln-cache/
 .mc-lists.el
+*.sqlite
