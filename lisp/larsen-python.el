@@ -5,6 +5,8 @@
 
 (use-package pyvenv
   :ensure t
+  :custom
+  (python-interpreter "python3")
   :config
   (pyvenv-mode t)
 
