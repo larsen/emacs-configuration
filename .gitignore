@@ -10,6 +10,7 @@ site-lisp/
 themes/
 ellama/
 newsticker/
+request/
 
 .cache
 .org-id-locations
