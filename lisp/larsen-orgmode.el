@@ -31,7 +31,6 @@
                                  "DONE(!)"
                                  "CANCELED(!)")))
   (system-time-locale "en_US.UTF-8")
-  (org-my-anki-file "~/org/personal/anki.org")
   (org-refile-targets (quote ((nil :maxlevel . 2)
                               (org-agenda-files :maxlevel . 2)
                               (orgzly-files :level . 1))))
@@ -71,11 +70,7 @@
                             :jump-to-captured t)
                            ("r" "Reading todo" entry
                             (file "~/Dropbox/orgzly/reading.org")
-                            "*** TODO %i%?\n    %a")
-                           ("a" "Anki basic"
-                            entry
-                            (file+headline org-my-anki-file "Dispatch Shelf")
-                            "* %<%H:%M>   %^g\n:PROPERTIES:\n:ANKI_NOTE_TYPE: Basic\n:ANKI_DECK: Default\n:END:\n** Front\n%?\n** Back\n%x\n"))))
+                            "*** TODO %i%?\n    %a"))))
 
 (use-package org-modern
   :ensure t
