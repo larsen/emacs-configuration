@@ -52,7 +52,8 @@
   (gnuplot-region-xpm nil)
   (gnuplot-buffer-xpm nil)
   (gnuplot-doc-xpm nil)
-  (org-confirm-babel-evaluate nil))
+  (org-confirm-babel-evaluate nil)
+  (org-format-latex-options (plist-put org-format-latex-options :scale 2.0)))
 
 (use-package org-capture
   :requires org
