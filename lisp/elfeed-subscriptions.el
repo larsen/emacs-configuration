@@ -257,6 +257,7 @@
          ("https://weeknotes.alifeee.co.uk/feed.xml" maybe)
          ("https://baty.net/index.xml")
          ("https://brett.trpstra.net/brettterpstra" maybe)
+         ("https://charity.wtf/feed/")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -293,6 +294,8 @@
          ("https://feeds.feedburner.com/ftrcblog" berlin travel photo)
          ("https://www.schneier.com/feed/atom/")
          ("https://fi-le.net/feed.xml")
+         ("https://blog.alifeee.co.uk/notes/feed.xml" maybe scripts tricks)
+         ("https://www.ilmitte.com/feed/" berlin news)
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
