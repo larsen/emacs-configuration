@@ -6,7 +6,7 @@
   (org-agenda-start-on-weekday nil)
   (org-agenda-start-day nil) ;; i.e. today
   (org-agenda-span 2)
-  (org-agenda-files '("~/org/personal/"
+  (org-agenda-files '(;; "~/org/personal/"
                       "~/org/orgzly/errand.org"
                       "~/org/orgzly/work.org"
                       "~/org/work/tourlane/activities.org"))
