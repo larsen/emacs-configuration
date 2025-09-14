@@ -1,4 +1,5 @@
 (use-package ellama
+  :if (eq system-type 'darwin)  ;; Installed only on Mac
   :ensure t
   :bind ("C-c e" . ellama-transient-main-menu)
   ;; send last message in chat buffer with C-c C-c
