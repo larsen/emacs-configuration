@@ -32,8 +32,7 @@
                                  "CANCELED(!)")))
   (system-time-locale "en_US.UTF-8")
   (org-refile-targets (quote ((nil :maxlevel . 2)
-                              (org-agenda-files :maxlevel . 2)
-                              (orgzly-files :level . 1))))
+                              (org-agenda-files :maxlevel . 2))))
   (org-refile-use-outline-path 'file)
   (org-outline-path-complete-in-steps nil)
   (org-confirm-babel-evaluate 'my-org-confirm-babel-evaluate)
@@ -53,7 +52,16 @@
   (gnuplot-buffer-xpm nil)
   (gnuplot-doc-xpm nil)
   (org-confirm-babel-evaluate nil)
-  (org-format-latex-options (plist-put org-format-latex-options :scale 2.0)))
+  ; (org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
+  )
+
+(use-package org-mouse :after org)
+
+(use-package org-appear :ensure t
+  :init
+  (setq org-appear-delay 0.2)
+  :hook
+  org-mode)
 
 (use-package org-capture
   :requires org
@@ -65,10 +73,13 @@
                            ("N" "Note (interactive)" entry
                             (file "~/org/personal/notes.org")
                             "* %t\n%?" :empty-lines 1)
+
                            ("t" "Todo item" entry
-                            (file "~/org/personal/todo.org")
+                            (file+function "~/org/work/tourlane/activities.org"
+                                           my-find-today-heading)
                             "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                             :jump-to-captured t)
+
                            ("r" "Reading todo" entry
                             (file "~/Dropbox/orgzly/reading.org")
                             "*** TODO %i%?\n    %a"))))
@@ -104,26 +115,24 @@
 
 ;; From https://github.com/NapoleonWils0n/fedora-dotfiles
 
-;; yank-media--registered-handlers org mode
-(with-eval-after-load 'org
-  (setq yank-media--registered-handlers '(("image/.*" . #'org-mode--image-yank-handler))))
-
-;; org mode image yank handler
-(yank-media-handler "image/.*" #'org-mode--image-yank-handler)
-
 ;; org-mode insert image as file link from the clipboard
 (defun org-mode--image-yank-handler (type image)
   (let ((file (read-file-name (format "Save %s image to: " type))))
     (when (file-directory-p file)
-      (user-error "%s is a directory"))
+      (user-error "%s is a directory" file))
     (when (and (file-exists-p file)
                (not (yes-or-no-p (format "%s exists; overwrite?" file))))
-      (user-error "%s exists"))
+      (user-error "%s exists" emacs-lisp-compilation-parse-errors-filename-function))
     (with-temp-buffer
       (set-buffer-multibyte nil)
       (insert image)
       (write-region (point-min) (point-max) file))
     (insert (format "[[file:%s]]\n" (file-relative-name file)))))
+
+(yank-media-handler "image/.*" #'org-mode--image-yank-handler)
+
+(with-eval-after-load 'org
+  (setq yank-media--registered-handlers '(("image/.*" . #'org-mode--image-yank-handler))))
 
 
 
