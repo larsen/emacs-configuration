@@ -92,6 +92,7 @@
   (org-startup-indented t))
 
 (use-package bug-reference
+  :if (eq system-type 'darwin)  ;; Only on the work machine
   :requires org
   :hook org-mode
   :custom

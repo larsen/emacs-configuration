@@ -258,6 +258,7 @@
          ("https://baty.net/index.xml")
          ("https://brett.trpstra.net/brettterpstra" maybe)
          ("https://charity.wtf/feed/")
+         ("https://www.seangoedecke.com/rss.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -357,8 +358,6 @@
          ("https://www.youtube.com/channel/UC05HyblY4hgLPzQYUfTJhHw" youtube bikes) ; Cyclo ergo sum
          ("https://www.youtube.com/channel/UCMV8p6Lb-bd6UZtTc_QD4zA" youtube lisp programming) ; TheBaggers
          ("https://www.youtube.com/channel/UC0uTPqBCFIpZxlz_Lv1tk_g" youtube emacs programming) ; Protesilaos Stavrou
-
-
 
          ;; Biking
          ("http://ridinggravel.com/feed/" bikes)

@@ -27,8 +27,7 @@
            <script type=\"text/x-mathjax-config\">
              MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'],['\\\\(','\\\\)']]}});
            </script>
-<link rel=\"me\" href=\"https://mastodon.social/@eslr\" />
-<link rel=\"icon\" href=\"static/favicon.ico\">")
+<link rel=\"me\" href=\"https://mastodon.social/@eslr\" />")
   ;; This preamble is inserted at the beginning of the <body> of every page:
   ;;   This particular HTML creates a <div> with a simple linked headline
   (org-static-blog-page-preamble personal-website-navigation-header)
