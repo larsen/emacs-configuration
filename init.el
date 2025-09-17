@@ -40,8 +40,7 @@
     larsen-corfu
     larsen-tramp
     larsen-vertico
-    larsen-ibuffer
-    larsen-treemacs
+    larsen-buffer
     larsen-snippets
     larsen-fringes
 
@@ -74,6 +73,9 @@
     larsen-print
     larsen-menu
     larsen-theme
+
+    larsen-treemacs
+
     larsen-keys
     larsen-keychords))
 
