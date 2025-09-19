@@ -5,7 +5,8 @@
               ("C-x t t" . treemacs-select-window)
               ("C-x t d" . treemacs-select-directory))
   :custom-face
-  (treemacs-window-background-face ((t (:inherit 'mode-line-inactive))))
+  (treemacs-window-background-face
+   ((t (:background ,(face-attribute 'mode-line-inactive :background nil t)))))
   :custom
   (treemacs-is-never-other-window t)
   (treemacs-space-between-root-nodes nil)

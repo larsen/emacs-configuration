@@ -73,9 +73,7 @@
     larsen-print
     larsen-menu
     larsen-theme
-
     larsen-treemacs
-
     larsen-keys
     larsen-keychords))
 
