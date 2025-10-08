@@ -9,7 +9,15 @@
   (org-agenda-files '(;; "~/org/personal/"
                       "~/org/orgzly/errand.org"
                       "~/org/orgzly/work.org"
-                      "~/org/work/tourlane/activities.org"))
+                      "~/org/work/tourlane/activities.org"
+                      "~/org/work/tourlane/projects.org"))
+  (org-agenda-custom-commands
+   '(("trl" "Custom: next actions for Tourlane projects"
+      ((org-ql-block '(and (todo "TODO")
+                           (tags-all "tourlane" "project")
+                           (not (children (todo "TODO"))))
+                     ((org-ql-block-header "Tourlane projects -- Next Actions")))
+       (agenda)))))
   :custom-face
   (org-agenda-date ((t (:inherit 'fixed-pitch :height 200))))
   (org-agenda-date-today ((t (:inherit 'fixed-pitch :height 200)))))
@@ -37,5 +45,6 @@
      (:name "Personal"
             :tag "personal"
             :order 8))))
+
 
 (provide 'larsen-orgmode-agenda)
