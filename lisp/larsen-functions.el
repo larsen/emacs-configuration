@@ -199,26 +199,28 @@ return a list of pairs <link,description>."
 
 ;; Caveman args list parsing
 (defun arg-resolver (arg-properties idx)
-  (cond ((eq :default (car arg-properties))
-         `(or (nth ,idx command-line-args)
+  (pcase (car arg-properties)
+    (:default
+     `(or (nth ,idx command-line-args)
               ,(cadr arg-properties)))
-        ((eq :mandatory (car arg-properties))
-         `(or (nth ,idx command-line-args)
-              (error (or ,(cadr arg-properties)
-                         "Undefined error"))))
-        (t (nth idx command-line-args))))
+    (:mandatory
+     `(or (nth ,idx command-line-args)
+          (error (or ,(cadr arg-properties)
+                     "Undefined error"))))
+    (_ (nth idx command-line-args))))
 
 (defmacro with-positional-args (arglist &rest body)
-  "Execute the forms in BODY after lexically binding command line
-arguments in order, according to what is specified in ARGLIST.
-ARGLIST is the list of variables that will be bound to the
-corresponding command line argument."
-  `(let ,(cl-loop for a in arglist
-               for idx from 3
-               collect (let ((arg-name (car a))
-                             (arg-properties (cdr a)))
-                         `(,arg-name ,(arg-resolver
-                                       arg-properties idx))))
+  "Bind command-line arguments as per ARGLIST, then evaluate BODY.
+
+Each element of ARGLIST has the form: (VAR) for optional argument, (VAR
+:default VALUE) for specifying a default value when missing, (VAR
+:mandatory [MSG]) for required arguments with optional error message
+MSG."
+  (declare (indent 1))
+  `(let ,(cl-loop for (arg-name . arg-properties) in arglist
+                  for idx from 3
+                  collect `(,arg-name ,(arg-resolver
+                                        arg-properties idx)))
      ,@body))
 
 
