@@ -5,6 +5,7 @@
   (lisp-mode . enable-paredit-mode)
   (lisp-interaction-mode . enable-paredit-mode)
   (slime-repl-mode . enable-paredit-mode)
+  (sly-repl-mode . enable-paredit-mode)
   (scheme-mode . enable-paredit-mode)
   (clojure-mode . enable-paredit-mode)
   (ielm-mode . enable-paredit-mode)
