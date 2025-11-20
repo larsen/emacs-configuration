@@ -40,4 +40,17 @@
          ("C-<f6>" . consult-ripgrep)
          ("C-c s" . consult-line)))
 
+(use-package embark
+  :ensure t
+  :bind (("C-." . embark-act)))
+
+(use-package embark-consult
+  :ensure t
+  :after (embark consult))
+
+(use-package wgrep
+  :ensure t
+  :config
+  (setq wgrep-auto-save-buffer t))
+
 (provide 'larsen-vertico)
