@@ -71,6 +71,14 @@
          :publishing-directory ,(personal-website-remote-absolute-directory "images/")
          )
 
+        ("website-extras"
+         :base-directory ,(personal-website-absolute-directory "/")
+         :base-extension "gpx"
+         :publishing-function org-publish-attachment
+         :recursive t
+         :publishing-directory ,(personal-website-remote-absolute-directory "/")
+         )
+
         ("orgfiles"
          :base-directory ,(personal-website-absolute-directory "wiki/")
          :base-extension "org"
@@ -124,5 +132,16 @@
 
         ("stream"
          :components ("stream-orgfiles" "stream-images")) ))
+
+(require 'templatel)
+(cl-defun template/map-gpx (map-id gpx-url &key (width 1000) (height 600))
+  (assert (numberp width))
+  (assert (numberp height))
+  (templatel-render-file
+   "~/www/stefanorodighiero.net/var/templates/map-gpx.jinja"
+   `(("map_id" . ,map-id)
+     ("gpx_url" . ,gpx-url)
+     ("width" . ,(format "%dpx" width))
+     ("height" . ,(format "%dpx" height)))))
 
 (provide 'larsen-orgmode-website)
