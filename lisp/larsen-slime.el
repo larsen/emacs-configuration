@@ -30,7 +30,7 @@
 
                  ;; ILISP style Compound Prefix Completion.
                  ;; https://www.quicklisp.org/beta/UNOFFICIAL/docs/slime/doc/Compound-Completion.html
-;                 slime-c-p-c
+                 slime-c-p-c
 
                  ;; Editing commands without server interaction.
                  slime-editing-commands
@@ -92,5 +92,23 @@
   :after (slime company)
   :config (setq slime-company-completion 'fuzzy
                 slime-company-after-completion 'slime-company-just-one-space))
+
+;; This seems to make Corfu work with Slime
+;; found here: https://github.com/slime/slime/issues/643
+(with-eval-after-load 'slime
+  (defun my--slime-completion-at-point ()
+    (let ((slime-current-thread :repl-thread)
+          (package (slime-current-package)))
+      (when-let ((symbol (thing-at-point 'symbol)))
+        (pcase-let ((`(,beg . ,end)
+                     (bounds-of-thing-at-point 'symbol)))
+          (list beg end
+                (car (slime-eval
+                      ;; Or swank:simple-completions
+                      `(swank:fuzzy-completions
+                        ,(substring-no-properties symbol) ',package))))))))
+  (advice-add #'slime--completion-at-point
+              :override #'my--slime-completion-at-point))
+
 
 (provide 'larsen-slime)
