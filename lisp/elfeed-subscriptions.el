@@ -122,6 +122,7 @@
          ("https://www.jasoncollins.blog/index.xml" maybe)
          ("https://leancrew.com/all-this/feed/" data R programming)
          ("https://www.ergestx.com/rss/")
+         ("https://notes.eatonphil.com/rss.xml")
 
          ;; R
          ("https://4dpiecharts.com/feed/" R)
@@ -250,7 +251,6 @@
          ("https://danlebrero.com/feed.rss" maybe)
          ("https://dannyreviews.com/rss.xml" books)
          ("https://stefanorodighiero.net/blog/rss.xml" me personal)
-         ("https://philip.greenspun.com/blog/feed/")
          ("https://huyenchip.com/feed.xml")
          ("https://ferd.ca/feed.rss")
          ("https://hazelweakly.me/atom.xml" maybe)
