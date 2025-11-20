@@ -50,7 +50,7 @@
     larsen-treesitter
     larsen-paredit
     larsen-elisp
-    larsen-slime
+    larsen-sly
     larsen-clojure
     larsen-sql
 
