@@ -1,6 +1,9 @@
+
 (use-package sly
   :ensure t
   :commands (sly)
-  :config (setq inferior-lisp-program "sbcl"))
+  :custom
+  (inferior-lisp-program "sbcl")
+  (sly-lisp-implementations '(("sbcl" ("sbcl" "--dynamic-space-size" "8192")))))
 
 (provide 'larsen-sly)
