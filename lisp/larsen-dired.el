@@ -61,4 +61,25 @@
       (sort-regexp-fields t "^.*$" "[ ]*." (point) (point-max)))
     (set-buffer-modified-p nil)))
 
+
+
+(defun my/resize-image (file size)
+  "Resize the image in FILE to the specified SIZE (interpreted as a percentage). "
+  (call-process "magick" nil t nil file "-resize" (format "%d%%" size) file))
+
+(defun image-dired-thumbnail-resize-image ()
+  "Resize the image at point. The size is specified at the prompt as a percentage of the original size."
+  (interactive nil image-dired-thumbnail-mode)
+  (if (not (image-dired-image-at-point-p))
+      (message "No thumbnail at point")
+    (let* ((file (image-dired-original-file-name))
+           (defdir default-directory))
+      (with-temp-buffer
+        (setq default-directory defdir)
+        (if (eq 0 (my/resize-image file (read-number "New size (%): " 50)))
+            (message "Successfully resized image")
+          (error "Could not resize image: %s"
+                 (string-replace "\n" "" (buffer-string))))))))
+
+
 (provide 'larsen-dired)
