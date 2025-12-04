@@ -13,9 +13,9 @@
                       "~/org/work/tourlane/projects.org"))
   (org-agenda-custom-commands
    '(("trl" "Custom: next actions for Tourlane projects"
-      ((org-ql-block '(and (todo "TODO")
+      ((org-ql-block '(and (todo "TODO" "IN PROGRESS" "DELEGATED")
                            (tags-all "tourlane" "project")
-                           (not (children (todo "TODO"))))
+                           (not (children (todo "TODO" "IN PROGRESS" "DELEGATED"))))
                      ((org-ql-block-header "Tourlane projects -- Next Actions")))
        (agenda)))))
   :custom-face
