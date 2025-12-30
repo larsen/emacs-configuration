@@ -63,6 +63,30 @@
 
 
 
+(defun my/advice-remove-all (function)
+  "Remove every advice-function from FUNCTION."
+  (advice-mapc
+   (lambda (advice-function properties-alist)
+     (advice-remove function
+                    advice-function))
+   function))
+
+(my/advice-remove-all 'image-dired-format-properties-string)
+
+
+
+(defun my/image-size (file)
+  (with-temp-buffer
+    (call-process "identify" nil t nil "-format" "%wx%h" file )
+    (buffer-string)))
+
+(defun my/image-dired-enrich-properties (orig-fun buf file image-count props comment)
+  (let ((orig-str (apply orig-fun (list  buf file image-count props comment)))
+        (size (my/image-size file)))
+    (concat orig-str " " size)))
+
+(advice-add 'image-dired-format-properties-string :around #'my/image-dired-enrich-properties)
+
 (defun my/resize-image (file size)
   "Resize the image in FILE to the specified SIZE (interpreted as a percentage). "
   (call-process "magick" nil t nil file "-resize" (format "%d%%" size) file))
@@ -81,5 +105,7 @@
           (error "Could not resize image: %s"
                  (string-replace "\n" "" (buffer-string))))))))
 
+
+;; (keymap-set image-dired-thumbnail-mode-map "Z" 'image-dired-thumbnail-resize-image)
 
 (provide 'larsen-dired)
