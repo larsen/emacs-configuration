@@ -297,6 +297,8 @@
          ("https://fi-le.net/feed.xml")
          ("https://blog.alifeee.co.uk/notes/feed.xml" maybe scripts tricks)
          ("https://www.ilmitte.com/feed/" berlin news)
+         ("https://lalitm.com/index.xml" engineering)
+         ("https://www.seangoedecke.com/rss.xml" engineering)
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
