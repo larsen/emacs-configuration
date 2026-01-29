@@ -135,8 +135,8 @@
 
 (require 'templatel)
 (cl-defun template/map-gpx (map-id gpx-url &key (width 1000) (height 600))
-  (assert (numberp width))
-  (assert (numberp height))
+  (cl-assert (numberp width))
+  (cl-assert (numberp height))
   (templatel-render-file
    "~/www/stefanorodighiero.net/var/templates/map-gpx.jinja"
    `(("map_id" . ,map-id)
