@@ -48,6 +48,10 @@
 (use-package crux
   :ensure t)
 
+(use-package recentf
+  :config
+  (recentf-mode))
+
 (use-package sideline
   :custom
   (sideline-backends-right '(sideline-eglot)))
