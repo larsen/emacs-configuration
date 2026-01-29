@@ -106,8 +106,9 @@
   ;; :hook (prog-mode . minimap-mode)
   :custom (minimap-window-location 'right))
 
-(use-package colorful-mode
-  :custom (colorful-use-prefix t))
+;; Package not available anymore
+;; (use-package colorful-mode
+;;   :custom (colorful-use-prefix t))
 
 (use-package calendar
   :config
