@@ -1,17 +1,6 @@
 (use-package org-static-blog
   :ensure t
   :custom
-  (org-static-blog-publish-title "Stefano Rodighiero — Stream")
-  (org-static-blog-publish-url "https://stefanorodighiero.net/blog/")
-  (org-static-blog-publish-directory "~/www/stefanorodighiero.net/blog/")
-  (org-static-blog-posts-directory "~/www/stefanorodighiero.net/blog/posts/")
-  (org-static-blog-drafts-directory "~/www/stefanorodighiero.net/blog/drafts/")
-  (org-static-blog-enable-tags t)
-  (org-static-blog-enable-og-tags t)
-  (org-export-with-toc nil)
-  (org-export-with-section-numbers nil)
-  (org-static-blog-use-preview nil)
-  (org-static-blog-preview-date-first-p t)
 ;; This header is inserted into the <head> section of every page:
 ;;   (you will need to create the style sheet at
 ;;    ~/projects/blog/static/style.css
@@ -38,10 +27,45 @@
   (org-static-blog-page-postamble "")
 
   (org-static-blog-post-preamble-text "<div class\"blog-post\">")
-  (org-static-blog-post-postamble-text "</div>")
-  ;; this html code is inserted into the index page between the preamble and
-  ;;   the blog posts
-  (org-static-blog-index-front-matter "<h1> blog </h1>\n"))
+  (org-static-blog-post-postamble-text "</div>"))
+
+(defvar +my-blogs+
+  '((blog . ((org-static-blog-publish-title . "Stefano Rodighiero — Stream")
+             (org-static-blog-publish-url . "https://stefanorodighiero.net/blog/")
+             (org-static-blog-publish-directory . "~/www/stefanorodighiero.net/blog/")
+             (org-static-blog-posts-directory . "~/www/stefanorodighiero.net/blog/posts/")
+             (org-static-blog-drafts-directory . "~/www/stefanorodighiero.net/blog/drafts/")
+             (org-static-blog-enable-tags . t)
+             (org-static-blog-enable-og-tags . t)
+             (org-export-with-toc . nil)
+             (org-export-with-section-numbers . nil)
+             (org-static-blog-use-preview . nil)
+             (org-static-blog-preview-date-first-p . t)
+             (org-static-blog-index-front-matter . "<h1> blog </h1>\n")))
+    (linkage . ((org-static-blog-publish-title . "Stefano Rodighiero — Linkage")
+                (org-static-blog-publish-url . "https://stefanorodighiero.net/linkage/")
+                (org-static-blog-publish-directory . "~/www/stefanorodighiero.net/linkage/")
+                (org-static-blog-posts-directory . "~/www/stefanorodighiero.net/linkage/posts/")
+                (org-static-blog-drafts-directory . "~/www/stefanorodighiero.net/linkage/drafts/")
+                (org-static-blog-enable-tags . t)
+                (org-static-blog-enable-og-tags . t)
+                (org-export-with-toc . nil)
+                (org-export-with-section-numbers . nil)
+                (org-static-blog-use-preview . nil)
+                (org-static-blog-preview-date-first-p . t)
+                (org-static-blog-index-front-matter . "<h1> linkage </h1>\n")))))
+
+(defun select-active-blog (blog-name)
+  (interactive (list (intern (completing-read "Select active blog for publication: "
+                                              (mapcar #'car +my-blogs+)))))
+  (let ((blog-options (cdr (assoc blog-name +my-blogs+))))
+    (message "Setting active blog: %s" blog-name)
+    (dolist (option-name (mapcar #'car blog-options))
+      (set option-name (cdr (assoc option-name blog-options))))))
+
+
+(advice-add 'org-static-blog-publish :before (lambda (&rest _)
+                                               (call-interactively 'select-active-blog)))
 
 ;; Redefining a function because there are no templates
 ;; Should probably be an advice
