@@ -63,6 +63,16 @@
   :hook
   org-mode)
 
+(defun my/org-static-blog-new-post ()
+  (interactive)
+  (let* ((title (read-string "Post Title: "))
+         (filename
+          (read-string "Filename: ")))
+    (set-buffer (find-file-noselect
+                 (file-name-concat "~/www/stefanorodighiero.net/blog/drafts/" filename)))
+    (insert "#+title: " title)
+    (newline)))
+
 (use-package org-capture
   :requires org
   :bind (("C-c c" . org-capture))
@@ -70,6 +80,7 @@
   (org-capture-templates `(("n" "Note" entry
                             (file "~/org/personal/notes.org")
                             "* %t\n%i" :immediate-finish t :empty-lines 1)
+
                            ("N" "Note (interactive)" entry
                             (file "~/org/personal/notes.org")
                             "* %t\n%?" :empty-lines 1)
@@ -82,7 +93,13 @@
 
                            ("r" "Reading todo" entry
                             (file "~/Dropbox/orgzly/reading.org")
-                            "*** TODO %i%?\n    %a"))))
+                            "*** TODO %i%?\n    %a")
+
+                           ("b" "Blog post" plain
+                            (function my/org-static-blog-new-post)
+                            "#+date: %u
+#+filetags: \n
+%?"))))
 
 (use-package org-modern
   :ensure t
