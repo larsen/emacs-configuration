@@ -255,10 +255,12 @@
          ("https://ferd.ca/feed.rss")
          ("https://hazelweakly.me/atom.xml" maybe)
          ("https://weeknotes.alifeee.co.uk/feed.xml" maybe)
-         ("https://baty.net/index.xml")
          ("https://brett.trpstra.net/brettterpstra" maybe)
          ("https://charity.wtf/feed/")
          ("https://www.seangoedecke.com/rss.xml")
+         ("https://www.brendangregg.com/blog/rss.xml")
+         ("https://davegriffith.substack.com/feed" maybe)
+         ("https://fhur.me/feed.xml")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
