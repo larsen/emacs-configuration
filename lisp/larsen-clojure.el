@@ -1,7 +1,6 @@
 (use-package clojure-ts-mode
   :ensure t
-  :mode ("\\.clj$" . clojure-mode)
-  :hook (clojure-ts-mode . paredit-mode)
+  :mode ("\\.clj$" . clojure-ts-mode)
   :custom
   (cider-repl-use-pretty-printing t)
   (cider-prompt-for-symbol nil))
