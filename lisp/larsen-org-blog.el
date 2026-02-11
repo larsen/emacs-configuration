@@ -108,4 +108,13 @@ Preamble and Postamble are excluded, too."
          (format "<div class=\"taglist\">%s</div>" post-taglist)
          "</div>")))))
 
+
+;; Personalised CAPF to auto-complete posts tags
+(defun my-blog-tags-list ()
+  (split-string
+   (shell-command-to-string "blog-tags")
+   "\n"))
+
+
+
 (provide 'larsen-org-blog)
