@@ -134,13 +134,14 @@
          :components ("stream-orgfiles" "stream-images")) ))
 
 (require 'templatel)
-(cl-defun template/map-gpx (map-id gpx-url &key (width 1000) (height 600))
+(cl-defun template/map-gpx (map-id gpx-url &key (width 1000) (height 600) (with-elevation nil))
   (cl-assert (numberp width))
   (cl-assert (numberp height))
   (templatel-render-file
    "~/www/stefanorodighiero.net/var/templates/map-gpx.jinja"
    `(("map_id" . ,map-id)
      ("gpx_url" . ,gpx-url)
+     ("with_elevation" . ,with-elevation)
      ("width" . ,(format "%dpx" width))
      ("height" . ,(format "%dpx" height)))))
 
