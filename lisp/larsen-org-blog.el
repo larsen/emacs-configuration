@@ -41,7 +41,7 @@
              (org-export-with-section-numbers . nil)
              (org-static-blog-use-preview . nil)
              (org-static-blog-preview-date-first-p . t)
-             (org-static-blog-index-front-matter . "<h1> blog </h1>\n")))
+             (org-static-blog-index-front-matter . "")))
     (linkage . ((org-static-blog-publish-title . "Stefano Rodighiero — Linkage")
                 (org-static-blog-publish-url . "https://stefanorodighiero.net/linkage/")
                 (org-static-blog-publish-directory . "~/www/stefanorodighiero.net/linkage/")
