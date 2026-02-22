@@ -65,7 +65,6 @@
     larsen-org-blog
     larsen-org-roam
 
-    larsen-jira
     larsen-magit
     larsen-elfeed
     larsen-functions
