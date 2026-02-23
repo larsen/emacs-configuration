@@ -3,6 +3,7 @@
   (key-chord-two-keys-delay 0.05)
   :config
   (key-chord-define-global "//" 'isearch-forward)
+  (key-chord-define-global ",," 'slime-selector)
   (key-chord-define-global "hh" 'helm-mini)
   (key-chord-define-global "jj" 'ace-jump-mode)
   (key-chord-define-global "ww" 'switch-window)
