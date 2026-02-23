@@ -262,6 +262,7 @@
          ("https://davegriffith.substack.com/feed" maybe)
          ("https://fhur.me/feed.xml")
          ("https://blog.szczepan.org/feed/feed.xml" math cs emacs)
+         ("https://tante.cc/feed/" maybe)
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
