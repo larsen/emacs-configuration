@@ -51,7 +51,8 @@
     larsen-paredit
     larsen-smartparens
     larsen-elisp
-    larsen-sly
+    ;; larsen-sly
+    larsen-slime
     larsen-clojure
     larsen-sql
 
