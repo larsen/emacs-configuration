@@ -53,7 +53,7 @@
                 (org-export-with-section-numbers . nil)
                 (org-static-blog-use-preview . nil)
                 (org-static-blog-preview-date-first-p . t)
-                (org-static-blog-index-front-matter . "<h1> linkage </h1>\n")))))
+                (org-static-blog-index-front-matter . "")))))
 
 (defun select-active-blog (blog-name)
   (interactive (list (intern (completing-read "Select active blog for publication: "
@@ -63,9 +63,20 @@
     (dolist (option-name (mapcar #'car blog-options))
       (set option-name (cdr (assoc option-name blog-options))))))
 
+(defun my-rsync-blog ()
+  (call-process "rsync-blog.sh"))
 
-(advice-add 'org-static-blog-publish :before (lambda (&rest _)
-                                               (call-interactively 'select-active-blog)))
+
+;; (advice-add 'org-static-blog-publish :before (lambda (&rest _)
+;;                                                (call-interactively 'select-active-blog)))
+
+(my/advice-remove-all 'org-static-blog-publish)
+
+(advice-add 'org-static-blog-publish :around
+            (lambda (orig-fun &rest args)
+              (call-interactively 'select-active-blog)
+              (apply orig-fun args)
+              (my-rsync-blog)))
 
 ;; Redefining a function because there are no templates
 ;; Should probably be an advice
@@ -115,6 +126,13 @@ Preamble and Postamble are excluded, too."
    (shell-command-to-string "blog-tags")
    "\n"))
 
+(defun my-blog-tags-completion-at-point ()
+  (let ((bounds (bounds-of-thing-at-point 'word)))
+    (when bounds
+      (list (car bounds)
+            (cdr bounds)
+            (my-blog-tags-list)))))
 
+(add-hook 'completion-at-point-functions #'my-blog-tags-completion-at-point)
 
 (provide 'larsen-org-blog)
