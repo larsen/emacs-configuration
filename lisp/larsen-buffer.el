@@ -39,14 +39,4 @@
   :ensure t
   :requires ibuffer)
 
-
-;; Still related to buffers, I should rename this file to
-;; larsen-buffer.el or something similar
-(use-package bufferlo
-  :ensure t
-  :init
-  (bufferlo-mode))
-
-(require 'bufferlo)
-
 (provide 'larsen-buffer)
