@@ -73,14 +73,4 @@
 ;;   '(bar pdf-pages window-number matches buffer-info)
 ;;   '(compilation  misc-info major-mode process vcs time))
 
-
-(defun switch-theme (theme)
-  (interactive
-   (list
-    (intern (completing-read "Switch to custom theme: "
-                             (mapcar 'symbol-name
-                                     (custom-available-themes))))))
-  (dolist (curr custom-enabled-themes) (disable-theme curr))
-  (load-theme theme))
-
 (provide 'larsen-theme)
