@@ -36,10 +36,12 @@
          ("https://novalis.org/blog/atom.xml" programming)
          ("https://explaining.software/rss" programming)
          ("https://entropicthoughts.com/feed" programming)
+         ("https://www.ronjeffries.com/feed.xml" programming)
+         ("https://lizkeogh.com/feed/" programming bdd maybe)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
-         ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss")
+         ("https://rjbs.manxome.org/rubric/entries/user/rjbs/has_body/1?format=rss" perl)
 
          ;; Programming – Haskell
          ("http://www.haskell-ita.it/atom.xml" haskell fp programming)
@@ -257,12 +259,12 @@
          ("https://weeknotes.alifeee.co.uk/feed.xml" maybe)
          ("https://brett.trpstra.net/brettterpstra" maybe)
          ("https://charity.wtf/feed/")
-         ("https://www.seangoedecke.com/rss.xml")
          ("https://www.brendangregg.com/blog/rss.xml")
          ("https://davegriffith.substack.com/feed" maybe)
          ("https://fhur.me/feed.xml")
          ("https://blog.szczepan.org/feed/feed.xml" math cs emacs)
          ("https://tante.cc/feed/" maybe)
+         ("https://caolan.uk/feed/notes/")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
@@ -365,6 +367,10 @@
          ("https://www.youtube.com/channel/UCMV8p6Lb-bd6UZtTc_QD4zA" youtube lisp programming) ; TheBaggers
          ("https://www.youtube.com/channel/UC0uTPqBCFIpZxlz_Lv1tk_g" youtube emacs programming) ; Protesilaos Stavrou
 
+         ;; Staff+
+         ("https://larahogan.me/feed.xml" staff+)
+         ("https://www.seangoedecke.com/rss.xml" staff+)
+
          ;; Biking
          ("http://ridinggravel.com/feed/" bikes)
          ("https://www.cyclingabout.com/feed/" bikes)
@@ -458,7 +464,6 @@
                  ("http://procuresql.com/feed/")
                  ("https://bertwagner.com/feed/")
                  ("https://curiousaboutdata.com/feed/")
-                 ("http://sqlworldwide.com/feed/")
                  ("http://feeds.feedburner.com/JamesSerra")
                  ("https://www.mlakartechtalk.com/feed/")
                  ("https://timharkin.com/feed/")
@@ -475,7 +480,6 @@
                  ("http://joshthecoder.com/feed.xml")
                  ("http://feeds.feedburner.com/RyanAdamsBlog")
                  ("http://dbaduck.com/feed/")
-                 ("http://codingsight.com/feed/")
                  ("https://sqlquantumleap.com/feed/")
                  ("http://facility9.com/feed/atom/")
                  ("http://feeds.feedburner.com/SQLRockstar")
