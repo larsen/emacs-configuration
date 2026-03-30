@@ -27,16 +27,10 @@
                            " "
                            (mode 16 16 :left :elide)
                            " "
-                           (git-status 8 8 :left)
-                           " "
                            project-relative-file)))
   :config
   (add-hook 'ibuffer-mode-hook
           (lambda ()
             (ibuffer-switch-to-saved-filter-groups "default"))))
-
-(use-package ibuffer-git
-  :ensure t
-  :requires ibuffer)
 
 (provide 'larsen-buffer)
