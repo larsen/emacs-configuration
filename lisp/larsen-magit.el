@@ -2,6 +2,7 @@
   :ensure t
   :bind (("C-x g" . magit-status))
   :custom
+  (magit-git-executable "/opt/homebrew/bin/git")
   (magit-save-repository-buffers 'dontask))
 
 (use-package magit-todos

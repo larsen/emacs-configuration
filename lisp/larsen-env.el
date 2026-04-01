@@ -99,6 +99,10 @@
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
+(use-package minions
+  :ensure t
+  :config (minions-mode t))
+
 (use-package display-line-numbers
   :hook (prog-mode . display-line-numbers-mode))
 
