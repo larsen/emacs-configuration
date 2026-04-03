@@ -20,9 +20,6 @@
 (push "~/.emacs.d/lisp/themes/" custom-theme-load-path)
 (load-theme 'doom-tomorrow-night t)
 
-(use-package nerd-icons
-  :ensure t)
-
 (use-package doom-modeline
   :ensure t
   :config

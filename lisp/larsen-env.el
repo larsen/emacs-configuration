@@ -103,6 +103,9 @@
   :ensure t
   :config (minions-mode t))
 
+(use-package nerd-icons
+  :ensure t)
+
 (use-package display-line-numbers
   :hook (prog-mode . display-line-numbers-mode))
 
