@@ -109,9 +109,8 @@
 (use-package display-line-numbers
   :hook (prog-mode . display-line-numbers-mode))
 
-(use-package minimap
-  ;; :hook (prog-mode . minimap-mode)
-  :custom (minimap-window-location 'right))
+(use-package demap
+  :custom (demap-minimap-window-width 25))
 
 ;; Package not available anymore
 ;; (use-package colorful-mode
