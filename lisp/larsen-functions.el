@@ -144,28 +144,6 @@ return a list of pairs <link,description>."
 ;; Initialize webjump sites when we are starting Emacs
 (update-webjump-sites)
 
-;; uzbl interface (experimental)
-
-(defun my-socat (message socket)
-  (shell-command
-   (format "echo '%s' | socat - unix-connect:%s" message socket)))
-
-(defun my-uzbl-socket ()
-  (first (sort
-          (directory-files "/tmp" t "uzbl_socket")
-          (lambda (a b)
-            (time-less-p (nth 5 (file-attributes a))
-                         (nth 5 (file-attributes b)))))))
-
-(defun my-uzbl-open-in-new-tab (uri &optional new-window)
-  (let ((socket (my-uzbl-socket)))
-    (when socket
-      (my-socat (format "event NEW_TAB %s" uri)
-                socket))))
-
-(setq browse-url-browser-function 'xwidget-webkit-browse-url ;; 'eww-browse-url
-      browse-url-generic-program "chromium-browser")
-
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
 
