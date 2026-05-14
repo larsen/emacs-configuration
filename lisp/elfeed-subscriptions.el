@@ -78,6 +78,7 @@
          ("https://www.tfeb.org/fragments/feeds/all.atom.xml" lisp programming)
          ("https://alex-hhh.github.io/feeds/all.atom.xml" lisp programming racket)
          ("https://commonlisp-it.tumblr.com/rss" lisp programming)
+         ("https://www.stylewarning.com/posts/index.xml" lisp programming)
 
          ;; Programming - Smalltalk
          ("http://planet.squeak.org/" smalltalk programming)
@@ -539,7 +540,6 @@
                  ("http://royalsql.com/feed/")
                  ("http://blog.netnerds.net/feed/")
                  ("http://blog.sqlauthority.com/feed/")
-                 ("http://cwebbbi.wordpress.com/feed/")
                  ("https://sqlrambling.net/feed/")
                  ("http://johnsterrett.com/feed/")
                  ("http://www.databasejournal.com/icom_includes/feeds/dbjournal/xml_front-10.xml")
