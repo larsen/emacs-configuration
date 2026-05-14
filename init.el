@@ -34,7 +34,6 @@
     larsen-ai
     larsen-pdf-tools
     larsen-dired
-    larsen-flycheck
     larsen-spell
     larsen-markdown
     larsen-corfu
