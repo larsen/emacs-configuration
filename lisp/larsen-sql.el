@@ -11,13 +11,6 @@
   (sqlformat-command 'sqlformat)
   (sqlformat-args '("-r --compact")))
 
-(use-package seq
-  :ensure t)
-
-(use-package filenotify
-  :ensure t)
-
-
 ;; I don't like sqlind-minor-mode, I want to make
 ;; sure is not activated
 (remove-hook 'sql-mode-hook 'sql-indent-enable)
