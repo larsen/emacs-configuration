@@ -1,5 +1,7 @@
 ;; ERC notifications
 
+(require 'cl-lib)
+
 (defun linux-notify (title &optional message)
   (start-process "linux-notify" nil "notify-send" title (or message "")))
 
@@ -28,7 +30,7 @@
   (let ((bufList (mapcar 'window-buffer (window-list))))
     (select-window (get-largest-window))
     (funcall split-fn arg)
-    (mapcar* 'set-window-buffer (window-list) bufList)))
+    (cl-mapcar 'set-window-buffer (window-list) bufList)))
 
 (defun change-split-type-2 (&optional arg)
   "Change splitting from vertical to horizontal and vice-versa"
