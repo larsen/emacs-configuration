@@ -24,11 +24,6 @@
         (maphash (lambda (k _) (push k tags)) table)
         (cl-sort tags #'string< :key #'symbol-name))))
 
-  (defun elfeed-helm-tags ()
-    (interactive)
-    (helm :sources '(((name . "elfeed tags")
-                      (volatile)
-                      (elfeed-db-get-all-tags)))))
   :custom
   (url-queue-timeout 30)
   (elfeed-use-curl t)
