@@ -45,9 +45,6 @@
   :custom-face
   (font-lock-comment-face ((t (:inherit 'variable-pitch)))))
 
-(use-package crux
-  :ensure t)
-
 (use-package recentf
   :config
   (recentf-mode))
