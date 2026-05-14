@@ -73,16 +73,16 @@
 (use-package vterm
   :bind (("C-c t" . vterm)))
 
-(use-package eyebrowse
-  :ensure t
-  :config
-    (cl-loop for i from 1 upto 9
-           do (define-key eyebrowse-mode-map
-                          (kbd (format "M-%d" i))
-                          `(lambda ()
-                             (interactive)
-                             (eyebrowse-switch-to-window-config ,i))))
-  (eyebrowse-mode t))
+(use-package tab-bar
+  :custom
+  (tab-bar-select-tab-modifiers '(meta))   ; M-1..M-9 select tabs
+  (tab-bar-show 1)                         ; always show the bar
+  (tab-bar-tab-hints t)                    ; show numbers next to names
+  (tab-bar-close-button-show t)
+  (tab-bar-new-button-show t)
+  :init
+  (tab-bar-mode 1)
+  (tab-bar-history-mode 1))                ; C-c <left>/<right>: undo/redo layouts
 
 (use-package multiple-cursors
   :ensure t
