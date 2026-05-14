@@ -104,7 +104,6 @@
 
 ;; Webjump configuration
 
-(require 'cl)
 (require 'filenotify)
 (require 'webjump)
 
