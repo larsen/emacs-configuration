@@ -1,8 +1,7 @@
 ;; ERC notifications
 
 (defun linux-notify (title &optional message)
-  (start-process "linux-notify" nil "notify-send"
-                 "-i" "/usr/local/share/emacs/25.0.92/etc/images/icons/hicolor/48x48/apps/emacs.png" title (or message "")))
+  (start-process "linux-notify" nil "notify-send" title (or message "")))
 
 (defun osx-notify (title &optional message)
   (start-process "osx-notify" nil "terminal-notifier" "-title" title "-message" (or message "")))
