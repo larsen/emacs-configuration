@@ -10,7 +10,16 @@
   :custom
   (treemacs-is-never-other-window t)
   (treemacs-space-between-root-nodes nil)
-  (treemacs-width 25))
+  (treemacs-width 45))
+
+(with-eval-after-load 'treemacs-nerd-icons
+  (treemacs-modify-theme "nerd-icons"
+    :config
+    (treemacs-create-icon
+     :icon (format " %s\t" (nerd-icons-mdicon "nf-md-database"
+                                              :face 'nerd-icons-blue))
+     :extensions ("sqlite" "sqlite3" "db")
+     :fallback 'same-as-icon)))
 
 (use-package treemacs-nerd-icons
   :config
