@@ -54,8 +54,6 @@
   :custom
   (sideline-backends-right '(sideline-eglot)))
 
-(use-package cl-lib)
-
 (use-package golden-ratio
   :config
   (golden-ratio-mode))
