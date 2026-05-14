@@ -37,12 +37,10 @@
 
 (use-package dired-avfs :requires dired)
 
-(use-package all-the-icons-dired
+(use-package nerd-icons-dired
   :ensure t
-  :diminish
-  all-the-icons-dired-mode
   :hook
-  (dired-mode . all-the-icons-dired-mode))
+  (dired-mode . nerd-icons-dired-mode))
 
 (use-package diff-hl
   :ensure t
