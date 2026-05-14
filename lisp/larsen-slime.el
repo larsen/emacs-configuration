@@ -88,9 +88,4 @@
         (xref-push-marker-stack)
       (ring-insert find-tag-marker-ring (point-marker)))))
 
-(use-package slime-company
-  :after (slime company)
-  :config (setq slime-company-completion 'fuzzy
-                slime-company-after-completion 'slime-company-just-one-space))
-
 (provide 'larsen-slime)
