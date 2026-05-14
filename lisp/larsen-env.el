@@ -39,6 +39,7 @@
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
   :bind (("M-o" . other-window)
          ("C-c e m" . macrostep-mode)
+         ("C-c e b" . eval-buffer)
          ("C-c e r" . eval-and-replace)))
 
 (use-package prog-mode

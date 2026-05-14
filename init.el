@@ -49,7 +49,6 @@
     larsen-treesitter
     larsen-paredit
     larsen-smartparens
-    larsen-elisp
     ;; larsen-sly
     larsen-slime
     larsen-clojure
