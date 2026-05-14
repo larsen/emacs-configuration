@@ -55,8 +55,6 @@
   ; (org-format-latex-options (plist-put org-format-latex-options :scale 2.0))
   )
 
-(use-package org-mouse :after org)
-
 (use-package org-appear :ensure t
   :init
   (setq org-appear-delay 0.2)
