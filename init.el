@@ -68,7 +68,6 @@
     larsen-elfeed
     larsen-functions
     larsen-fontaine
-    larsen-pulsar
     larsen-print
     larsen-menu
     larsen-theme

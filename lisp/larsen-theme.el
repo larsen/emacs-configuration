@@ -66,4 +66,13 @@
 ;;   '(bar pdf-pages window-number matches buffer-info)
 ;;   '(compilation  misc-info major-mode process vcs time))
 
+;; Instead of pulsar
+(defun pulse-line (&rest _)
+  "Pulse the current line."
+  (pulse-momentary-highlight-one-line (point)))
+
+(dolist (command '(scroll-up-command scroll-down-command
+                                     recenter-top-bottom other-window))
+  (advice-add command :after #'pulse-line))
+
 (provide 'larsen-theme)
