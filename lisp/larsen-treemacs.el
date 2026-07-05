@@ -1,3 +1,6 @@
+;; TODO: Review after Emacs 31 install
+;; (speedbar-window)
+
 (use-package treemacs
   :ensure t
   :defer t

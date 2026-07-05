@@ -1,3 +1,4 @@
+;; TODO: Review after Emacs 31 install
 ;; (use-package treesit-auto
 ;;   :custom
 ;;   (treesit-auto-install 'prompt)

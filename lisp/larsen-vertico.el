@@ -30,6 +30,9 @@
   :init
   (savehist-mode))
 
+;; TODO: Review after Emacs 31 install
+;; I can use editable xfer buffer for bulk search and replace
+;; C-x p g
 (use-package consult
   :bind (("C-c h" . consult-buffer)
          ("<s-escape>" . consult-buffer)

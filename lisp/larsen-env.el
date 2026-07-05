@@ -51,10 +51,11 @@
   :custom
   (sideline-backends-right '(sideline-eglot)))
 
-(use-package golden-ratio
-  :config
-  (golden-ratio-mode))
-
+;; TODO: Review after Emacs 31 install
+;; ("C-x w t"   . window-layout-transpose)        ; EMACS-31
+;; ("C-x w r"   . window-layout-rotate-clockwise) ; EMACS-31
+;; ("C-x w f h" . window-layout-flip-leftright)   ; EMACS-31
+;; ("C-x w f v" . window-layout-flip-topdown)     ; EMACS-31
 (use-package rotate
   :ensure t
   :bind (("C-x C-o" . rotate-layout)))
@@ -92,6 +93,7 @@
 (use-package editorconfig
   :config (editorconfig-mode 1))
 
+;; TODO: Review after Emacs 31 install
 (use-package minions
   :ensure t
   :config (minions-mode t))
