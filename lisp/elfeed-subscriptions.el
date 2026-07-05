@@ -4,7 +4,7 @@
          ;; Programming
          ("http://lambda-the-ultimate.org/rss.xml" programming cs)
          ("http://blog.thimbleweedpark.com/rss" games programming adventures)
-         ("http://technomancy.us/feed/atom.xml" programming)
+         ("http://technomancy.us/atom.xml" programming)
          ("http://wadler.blogspot.it/atom.xml" cs fp programming)
          ("http://conscientiousprogrammer.com/atom.xml" programming)
          ("http://tratt.net/laurie/blog/entries.rss" programming)
@@ -264,7 +264,6 @@
          ("https://davegriffith.substack.com/feed" maybe)
          ("https://fhur.me/feed.xml")
          ("https://blog.szczepan.org/feed/feed.xml" math cs emacs)
-         ("https://tante.cc/feed/" maybe)
          ("https://caolan.uk/feed/notes/")
 
          ;; misc stuff
@@ -347,6 +346,7 @@
          ("https://mantovauno.it/tag/castiglione/feed/" news local castiglione maybe)
          ("https://artemis.sh/feed.xml" maybe)
          ("https://rwmj.wordpress.com/feed/" maybe)
+         ("https://utcc.utoronto.ca/~cks/space/blog/?atom" maybe programming)
 
          ;; suggested by Dan Luu -- 2016/05/03
          ("http://blog.nullspace.io/feed.xml" danluu maybe)
@@ -431,7 +431,6 @@
                  ("http://clusteringformeremortals.com/feed/")
                  ("https://pianorayk.wordpress.com/feed/")
                  ("http://dallasdbas.com/feed/")
-                 ("https://sqlreitse.home.blog/feed/")
                  ("http://tracyboggiano.com/feed/")
                  ("https://sqlkiwi.blogspot.com/feeds/posts/default")
                  ("https://social.technet.microsoft.com:443/Profile/u/activities/feed?displayName=Kevin%20Farlee%20%5BMSFT%5D")
@@ -506,7 +505,6 @@
                  ("http://sqlinthewild.co.za/index.php/feed/")
                  ("http://chrisadkin.org/feed/")
                  ("https://www.sqlmelody.com/feed/")
-                 ("http://www.sqlfingers.com/feeds/posts/default")
                  ("http://itknowledgeexchange.techtarget.com/sql-server/feed/")
                  ("http://www.sqlkohai.com/feed/")
                  ("http://www.gethynellis.com/feeds/posts/default")
@@ -539,7 +537,6 @@
                  ("http://www.bobpusateri.com/feed/")
                  ("http://royalsql.com/feed/")
                  ("http://blog.netnerds.net/feed/")
-                 ("http://blog.sqlauthority.com/feed/")
                  ("https://sqlrambling.net/feed/")
                  ("http://johnsterrett.com/feed/")
                  ("http://www.databasejournal.com/icom_includes/feeds/dbjournal/xml_front-10.xml")
