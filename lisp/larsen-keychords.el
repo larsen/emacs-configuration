@@ -4,7 +4,6 @@
   :config
   (key-chord-define-global "//" 'isearch-forward)
   (key-chord-define-global ",," 'slime-selector)
-  (key-chord-define-global "ww" 'switch-window)
   (key-chord-define-global "e-" (lambda () (interactive) (insert "€")))
   :init
   (key-chord-mode t))
