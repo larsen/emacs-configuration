@@ -31,16 +31,13 @@
   (show-paren-mode 1)
   (global-auto-revert-mode 1)
   (global-hl-line-mode 1)
-  (global-visual-line-mode 1)
+  ;; (global-visual-line-mode 1)  ;; Interferes with OSM
   (global-font-lock-mode 1)
   (delete-selection-mode 1)
   (setq-default buffer-file-coding-system 'utf-8-unix)
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  :bind (("M-o" . other-window)
-         ("C-c e m" . macrostep-mode)
-         ("C-c e b" . eval-buffer)
-         ("C-c e r" . eval-and-replace)))
+  :bind (("M-o" . other-window)))
 
 (use-package prog-mode
   :custom-face
