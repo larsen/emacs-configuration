@@ -3,7 +3,7 @@
   :custom
   (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
   (corfu-auto t)
-  (corfu-popupinfo-mode t)
+  (corfu-popupinfo-mode nil)
   (corfu-popupinfo-delay 0.5)
   :config
   (add-to-list 'corfu-margin-formatters #'nerd-icons-corfu-formatter)
