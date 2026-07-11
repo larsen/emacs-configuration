@@ -17,11 +17,16 @@
       (apply-partially 'osx-notify)
     (apply-partially 'linux-notify)))
 
-(defun my-erc-notify-hook (match-type nick message)
-  (when (eq match-type 'current-nick)
-    (unless (posix-string-match "^\\** *Users on #" message)
-      (notify (concat "ERC " (buffer-name (current-buffer)))
-       message))))
+;; used in larsen-pdf-tools
+(defun my/save-buffer-no-args ()
+  (save-buffer))
+
+;; used in larsen-dired
+(defun my/image-size (file)
+  (with-temp-buffer
+    (call-process "identify" nil t nil "-format" "%wx%h" file )
+    (buffer-string)))
+
 
 ;; Windows layout
 

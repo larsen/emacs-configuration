@@ -63,13 +63,6 @@
 
 (my/advice-remove-all 'image-dired-format-properties-string)
 
-
-
-(defun my/image-size (file)
-  (with-temp-buffer
-    (call-process "identify" nil t nil "-format" "%wx%h" file )
-    (buffer-string)))
-
 (defun my/image-dired-enrich-properties (orig-fun buf file image-count props comment)
   (let ((orig-str (apply orig-fun (list  buf file image-count props comment)))
         (size (my/image-size file)))

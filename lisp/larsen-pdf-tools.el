@@ -66,9 +66,6 @@
 ;; Taken from http://pragmaticemacs.com/emacs/even-more-pdf-tools-tweaks/
 
 
-(defun my/save-buffer-no-args ()
-  (save-buffer))
-
 (with-eval-after-load "pdf-annot"
   (define-key pdf-annot-edit-contents-minor-mode-map
     (kbd "C-<return>") 'pdf-annot-edit-contents-commit)
