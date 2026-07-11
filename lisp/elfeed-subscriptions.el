@@ -510,7 +510,6 @@
                  ("http://www.gethynellis.com/feeds/posts/default")
                  ("http://blog.waynesheffield.com/wayne/feed/")
                  ("http://sqlswimmer.wordpress.com/feed/")
-                 ("http://feeds.feedburner.com/StraightpathSolutionsSqlBlog")
                  ("https://schottsql.wordpress.com/feed/")
                  ("http://milossql.wordpress.com/feed/")
                  ("https://jesspomfret.com/feed/")
