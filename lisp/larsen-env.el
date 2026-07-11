@@ -146,7 +146,7 @@
   ;;           #b00011100
   ;;           #b00000000
   ;;           #b00000000))
-  (define-fringe-bitmap 'my-flymake-error-bitmap
+  (define-fringe-bitmap 'my/flymake-error-bitmap
     (vector #b00000000
             #b00011000
             #b00111100
@@ -155,7 +155,7 @@
             #b00111100
             #b00011000
             #b00000000))
-  (setq flymake-error-bitmap '(my-flymake-error-bitmap compilation-error)))
+  (setq flymake-error-bitmap '(my/flymake-error-bitmap compilation-error)))
 
 (require 'forecast-configuration nil t)
 
