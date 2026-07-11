@@ -36,20 +36,20 @@
 
 ;;; Utility functions to get content for the blog
 ;;; - TODO there's still some manual work to do after calling
-;;;   my/paste-org-roam-node, should be automated
+;;;   larsen/paste-org-roam-node, should be automated
 ;;; - TODO does it do something funny with footnotes?
 
-(defun my/remove-org-roam-links (buffer-as-string)
+(defun larsen/remove-org-roam-links (buffer-as-string)
   (replace-regexp-in-string
    "\\[\\[id:.*\\]\\[\\(.*\\)\\]\\]" "\\1" buffer-as-string))
 
-(defun my/paste-org-roam-node (initial-input &key no-links)
+(defun larsen/paste-org-roam-node (initial-input &key no-links)
   (interactive)
   (let* ((file (org-roam-node-file (org-roam-node-read initial-input)))
          (raw-buffer (with-current-buffer (find-file-noselect file)
                        (goto-char (point-min))
                        (buffer-string))))
-    (if no-links (my/remove-org-roam-links raw-buffer)
+    (if no-links (larsen/remove-org-roam-links raw-buffer)
       raw-buffer)))
 
 (provide 'larsen-org-roam)

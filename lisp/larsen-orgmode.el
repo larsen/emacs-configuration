@@ -35,7 +35,7 @@
                               (org-agenda-files :maxlevel . 2))))
   (org-refile-use-outline-path 'file)
   (org-outline-path-complete-in-steps nil)
-  (org-confirm-babel-evaluate 'my/org-confirm-babel-evaluate)
+  (org-confirm-babel-evaluate 'larsen/org-confirm-babel-evaluate)
 
       ;; I had to switch to openjdk version "1.8.0_212"
       ;; to make PlantUML's jar work.
@@ -61,7 +61,7 @@
   :hook
   org-mode)
 
-(defun my/org-static-blog-new-post ()
+(defun larsen/org-static-blog-new-post ()
   (interactive)
   (let* ((title (read-string "Post Title: "))
          (filename
@@ -85,7 +85,7 @@
 
                            ("t" "Todo item" entry
                             (file+function "~/org/work/tourlane/activities.org"
-                                           my/find-today-heading)
+                                           larsen/find-today-heading)
                             "*** TODO %i%?\n     DEADLINE: <%(one-week-from-today)>"
                             :jump-to-captured t)
 
@@ -94,7 +94,7 @@
                             "*** TODO %i%?\n    %a")
 
                            ("b" "Blog post" plain
-                            (function my/org-static-blog-new-post)
+                            (function larsen/org-static-blog-new-post)
                             "#+date: %u
 #+filetags: \n
 %?"))))

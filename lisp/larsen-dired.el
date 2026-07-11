@@ -61,16 +61,16 @@
 
 
 
-(my/advice-remove-all 'image-dired-format-properties-string)
+(larsen/advice-remove-all 'image-dired-format-properties-string)
 
-(defun my/image-dired-enrich-properties (orig-fun buf file image-count props comment)
+(defun larsen/image-dired-enrich-properties (orig-fun buf file image-count props comment)
   (let ((orig-str (apply orig-fun (list  buf file image-count props comment)))
-        (size (my/image-size file)))
+        (size (larsen/image-size file)))
     (concat orig-str " " size)))
 
-(advice-add 'image-dired-format-properties-string :around #'my/image-dired-enrich-properties)
+(advice-add 'image-dired-format-properties-string :around #'larsen/image-dired-enrich-properties)
 
-(defun my/resize-image (file size)
+(defun larsen/resize-image (file size)
   "Resize the image in FILE to the specified SIZE (interpreted as a percentage). "
   (call-process "magick" nil t nil file "-resize" (format "%d%%" size) file))
 
@@ -83,7 +83,7 @@
            (defdir default-directory))
       (with-temp-buffer
         (setq default-directory defdir)
-        (if (eq 0 (my/resize-image file (read-number "New size (%): " 50)))
+        (if (eq 0 (larsen/resize-image file (read-number "New size (%): " 50)))
             (message "Successfully resized image")
           (error "Could not resize image: %s"
                  (string-replace "\n" "" (buffer-string))))))))

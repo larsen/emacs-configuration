@@ -71,7 +71,7 @@
     (kbd "C-<return>") 'pdf-annot-edit-contents-commit)
   ;; save after adding comment
   (advice-add 'pdf-annot-edit-contents-commit
-              :after 'my/save-buffer-no-args))
+              :after 'larsen/save-buffer-no-args))
 
 
 ;; From https://github.com/politza/pdf-tools/issues/338

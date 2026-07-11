@@ -54,15 +54,15 @@
 
 (setq sql-mysql-program "/usr/local/mysql/bin/mysql")
 
-(defun my/get-connection-details (connection-name)
+(defun larsen/get-connection-details (connection-name)
   (cdr (assoc connection-name sql-connection-alist)))
 
-(cl-defun my/get-connection-dsn (connection-name)
+(cl-defun larsen/get-connection-dsn (connection-name)
   "Return a DSN given a CONNECTION-NAME."
   (interactive (list
                 (completing-read "Enter connection name "
                                  sql-connection-alist)))
-  (let* ((connection-details (my/get-connection-details connection-name))
+  (let* ((connection-details (larsen/get-connection-details connection-name))
          (connection-dsn
           (format "postgresql://%s:%s@%s:%d/%s"
                   (car (cdr (assoc 'sql-user connection-details)))
@@ -72,18 +72,18 @@
                   (car (cdr (assoc 'sql-database connection-details))))))
              connection-dsn))
 
-(cl-defun my/get-connection-detail (connection-name connection-detail)
+(cl-defun larsen/get-connection-detail (connection-name connection-detail)
   (if (eql connection-detail 'dsn)
-      (my/get-connection-dsn connection-name)
+      (larsen/get-connection-dsn connection-name)
     (cadr (assoc connection-detail
-                        (my/get-connection-details connection-name)))))
+                        (larsen/get-connection-details connection-name)))))
 
-(defun my/get-connection-dsn-to-clipboard (connection-name)
-  (let ((connection-dsn (my/get-connection-dsn connection-name)))
+(defun larsen/get-connection-dsn-to-clipboard (connection-name)
+  (let ((connection-dsn (larsen/get-connection-dsn connection-name)))
     (kill-new connection-dsn)
     (message (format "DSN %s copied to kill-ring" connection-dsn))))
 
-(defun my/get-connection-dblink (connection-name)
+(defun larsen/get-connection-dblink (connection-name)
   "Return a dblink string given a CONNECTION-NAME."
   (interactive (list
                 (completing-read "Enter connection name "
@@ -99,7 +99,7 @@
     (kill-new connection-dsn)
     (message (format "dblink string %s copied to kill-ring" connection-dsn))))
 
-(defun my/sql-save-history-hook ()
+(defun larsen/sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
         (rval 'sql-product))
     (if (symbol-value rval)
@@ -112,7 +112,7 @@
        (format "SQL history will not be saved because %s is nil"
                (symbol-name rval))))))
 
-(add-hook 'sql-interactive-mode-hook 'my/sql-save-history-hook)
+(add-hook 'sql-interactive-mode-hook 'larsen/sql-save-history-hook)
 
 (setq sql-sqlite-program "sqlite3")
 (setq sql-send-terminator t)

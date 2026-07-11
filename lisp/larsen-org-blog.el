@@ -63,7 +63,7 @@
     (dolist (option-name (mapcar #'car blog-options))
       (set option-name (cdr (assoc option-name blog-options))))))
 
-(defun my/rsync-blog ()
+(defun larsen/rsync-blog ()
   (interactive)
   (call-process "sh" nil nil nil "~/bin/rsync-blog.sh"))
 
@@ -71,13 +71,13 @@
 ;; (advice-add 'org-static-blog-publish :before (lambda (&rest _)
 ;;                                                (call-interactively 'select-active-blog)))
 
-(my/advice-remove-all 'org-static-blog-publish)
+(larsen/advice-remove-all 'org-static-blog-publish)
 
 (advice-add 'org-static-blog-publish :around
             (lambda (orig-fun &rest args)
               (call-interactively 'select-active-blog)
               (apply orig-fun args)
-              (my/rsync-blog)))
+              (larsen/rsync-blog)))
 
 ;; Redefining a function because there are no templates
 ;; Should probably be an advice
@@ -122,18 +122,18 @@ Preamble and Postamble are excluded, too."
 
 
 ;; Personalised CAPF to auto-complete posts tags
-(defun my/blog-tags-list ()
+(defun larsen/blog-tags-list ()
   (split-string
    (shell-command-to-string "blog-tags")
    "\n"))
 
-(defun my/blog-tags-completion-at-point ()
+(defun larsen/blog-tags-completion-at-point ()
   (let ((bounds (bounds-of-thing-at-point 'word)))
     (when bounds
       (list (car bounds)
             (cdr bounds)
-            (my/blog-tags-list)))))
+            (larsen/blog-tags-list)))))
 
-(add-hook 'completion-at-point-functions #'my/blog-tags-completion-at-point)
+(add-hook 'completion-at-point-functions #'larsen/blog-tags-completion-at-point)
 
 (provide 'larsen-org-blog)

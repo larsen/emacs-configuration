@@ -1,4 +1,4 @@
-(defun my/global-set-keys (keys)
+(defun larsen/global-set-keys (keys)
   "Utility to set a define a set of keybindings in one place"
   (dolist (combo keys)
     (when combo
@@ -14,6 +14,6 @@
    (when (featurep 'larsen-print)
      `((,(kbd "M-<print>") a2ps-buffer)))))
 
-(my/global-set-keys (larsen-keys))
+(larsen/global-set-keys (larsen-keys))
 
 (provide 'larsen-keys)

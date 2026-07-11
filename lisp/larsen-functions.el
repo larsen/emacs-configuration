@@ -18,11 +18,11 @@
     (apply-partially 'linux-notify)))
 
 ;; used in larsen-pdf-tools
-(defun my/save-buffer-no-args ()
+(defun larsen/save-buffer-no-args ()
   (save-buffer))
 
 ;; used in larsen-dired
-(defun my/image-size (file)
+(defun larsen/image-size (file)
   (with-temp-buffer
     (call-process "identify" nil t nil "-format" "%wx%h" file )
     (buffer-string)))
@@ -152,7 +152,7 @@ return a list of pairs <link,description>."
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
 
-(defun my/dired-frame (directory &optional directory2)
+(defun larsen/dired-frame (directory &optional directory2)
   "Open up a dired frame on DIRECTORY which closes on exit."
   (interactive)
   (switch-to-buffer (dired directory))
@@ -208,7 +208,7 @@ MSG."
 
 
 
-(defun my/advice-remove-all (function)
+(defun larsen/advice-remove-all (function)
   "Remove every advice-function from FUNCTION."
   (advice-mapc
    (lambda (advice-function properties-alist)
