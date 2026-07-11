@@ -31,6 +31,8 @@
 (defvar larsen-pkg-full
   '(
     larsen-env
+    larsen-functions
+
     larsen-ai
     larsen-pdf-tools
     larsen-dired
@@ -66,7 +68,6 @@
 
     larsen-magit
     larsen-elfeed
-    larsen-functions
     larsen-fontaine
     larsen-print
     larsen-menu

@@ -202,6 +202,16 @@ MSG."
      ,@body))
 
 
+
+(defun my/advice-remove-all (function)
+  "Remove every advice-function from FUNCTION."
+  (advice-mapc
+   (lambda (advice-function properties-alist)
+     (advice-remove function
+                    advice-function))
+   function))
+
+
 ;; Some PDF utils
 
 (defun annotation-contents (annot)
