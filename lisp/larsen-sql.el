@@ -99,7 +99,7 @@
     (kill-new connection-dsn)
     (message (format "dblink string %s copied to kill-ring" connection-dsn))))
 
-(defun my-sql-save-history-hook ()
+(defun my/sql-save-history-hook ()
   (let ((lval 'sql-input-ring-file-name)
         (rval 'sql-product))
     (if (symbol-value rval)
@@ -112,7 +112,7 @@
        (format "SQL history will not be saved because %s is nil"
                (symbol-name rval))))))
 
-(add-hook 'sql-interactive-mode-hook 'my-sql-save-history-hook)
+(add-hook 'sql-interactive-mode-hook 'my/sql-save-history-hook)
 
 (setq sql-sqlite-program "sqlite3")
 (setq sql-send-terminator t)

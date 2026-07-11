@@ -152,7 +152,7 @@ return a list of pairs <link,description>."
 ;; dired util
 ;; from https://www.bennee.com/~alex/blog/2018/04/07/working-with-dired/
 
-(defun my-dired-frame (directory &optional directory2)
+(defun my/dired-frame (directory &optional directory2)
   "Open up a dired frame on DIRECTORY which closes on exit."
   (interactive)
   (switch-to-buffer (dired directory))
