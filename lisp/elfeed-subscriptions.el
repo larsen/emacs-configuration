@@ -38,6 +38,7 @@
          ("https://entropicthoughts.com/feed" programming)
          ("https://www.ronjeffries.com/feed.xml" programming)
          ("https://lizkeogh.com/feed/" programming bdd maybe)
+         ("https://blog2.thimbleweedpark.com/rss" programming games interesting)
 
          ;; Programming – Perl
          ("http://pl6anet.org/atom.xml" perl programming)
