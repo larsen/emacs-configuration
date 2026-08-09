@@ -305,6 +305,7 @@
          ("https://www.ilmitte.com/feed/" berlin news)
          ("https://lalitm.com/index.xml" engineering)
          ("https://www.seangoedecke.com/rss.xml" engineering)
+         ("https://wormwoodiana.blogspot.com/feeds/posts/default" books)
 
          ;; art
          ("http://linesandcolors.com/feed/" art)
