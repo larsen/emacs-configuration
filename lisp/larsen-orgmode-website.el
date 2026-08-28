@@ -28,6 +28,7 @@
             <div id=\"navigation\">
                 <a href=\"//stefanorodighiero.net/personal.html\">About</a>
                 <a href=\"//stefanorodighiero.net/blog\">Blog</a>
+                <a href=\"//stefanorodighiero.net/linkage\">Linkage</a>
             </div>
         </div>"  )
 
