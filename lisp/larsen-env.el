@@ -33,6 +33,7 @@
   (show-paren-mode 1)
   (global-auto-revert-mode 1)
   (global-hl-line-mode 1)
+  (mode-line-collapse-minor-modes t)
   ;; (global-visual-line-mode 1)  ;; Interferes with OSM
   (global-font-lock-mode 1)
   (delete-selection-mode 1)
@@ -94,11 +95,6 @@
 
 (use-package editorconfig
   :config (editorconfig-mode 1))
-
-;; TODO: Review after Emacs 31 install
-(use-package minions
-  :ensure t
-  :config (minions-mode t))
 
 (use-package nerd-icons
   :ensure t)
