@@ -40,7 +40,12 @@
   (setq-default buffer-file-coding-system 'utf-8-unix)
   (add-to-list 'exec-path "~/.nvm/versions/node/v8.11.3/bin/")
   (add-hook 'before-save-hook 'delete-trailing-whitespace)
-  :bind (("M-o" . other-window)))
+  :bind (("M-o" . other-window)
+         ("C-x w t"   . window-layout-transpose)
+         ("C-x w r"   . window-layout-rotate-clockwise)
+         ("C-x C-o"   . window-layout-rotate-clockwise)
+         ("C-x w f h" . window-layout-flip-leftright)
+         ("C-x w f v" . window-layout-flip-topdown)))
 
 (use-package prog-mode
   :custom-face
@@ -53,15 +58,6 @@
 (use-package sideline
   :custom
   (sideline-backends-right '(sideline-eglot)))
-
-;; TODO: Review after Emacs 31 install
-;; ("C-x w t"   . window-layout-transpose)        ; EMACS-31
-;; ("C-x w r"   . window-layout-rotate-clockwise) ; EMACS-31
-;; ("C-x w f h" . window-layout-flip-leftright)   ; EMACS-31
-;; ("C-x w f v" . window-layout-flip-topdown)     ; EMACS-31
-(use-package rotate
-  :ensure t
-  :bind (("C-x C-o" . rotate-layout)))
 
 (use-package switch-window
   :ensure t
