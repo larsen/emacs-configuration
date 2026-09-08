@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package clojure-ts-mode
   :ensure t
   :mode ("\\.clj$" . clojure-ts-mode)

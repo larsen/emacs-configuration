@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;; ERC notifications
 
 (require 'cl-lib)

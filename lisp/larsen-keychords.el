@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package key-chord
   :custom
   (key-chord-two-keys-delay 0.05)

@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; larsen-markdown.el -- Markdown setup
 
 (use-package markdown-mode

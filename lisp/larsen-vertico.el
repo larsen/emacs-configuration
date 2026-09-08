@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package vertico
   :custom
   (vertico-scroll-margin 0) ;; Different scroll margin

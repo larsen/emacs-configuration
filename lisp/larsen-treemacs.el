@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;; TODO: Review after Emacs 31 install
 ;; (speedbar-window)
 

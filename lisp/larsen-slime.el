@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 
 ;; I want to copy stuff from here at some point
 ;; https://github.com/muyinliu/.emacs.d/blob/ac848ee99eea91faba822731c796af352fbe8191/lisp/init-slime.el

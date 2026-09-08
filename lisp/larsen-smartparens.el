@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package smartparens
   :ensure t
   :hook (clojure-ts-mode)

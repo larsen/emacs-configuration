@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package org-static-blog
   :ensure t
   :custom

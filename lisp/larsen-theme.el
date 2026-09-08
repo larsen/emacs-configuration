@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;;
 ;;; larsen-theme.el
 ;;;

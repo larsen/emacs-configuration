@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (load "~/.ercpass")
 
 (use-package erc-image

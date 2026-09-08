@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (setq elfeed-feeds
       (append
        '(

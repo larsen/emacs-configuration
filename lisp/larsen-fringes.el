@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package git-gutter
   :hook prog-mode)
 

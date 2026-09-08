@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package pdf-tools
   :hook
   (pdf-view-mode . (lambda () (cua-mode 0)))

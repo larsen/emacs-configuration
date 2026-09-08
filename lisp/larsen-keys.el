@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (defun larsen/global-set-keys (keys)
   "Utility to set a define a set of keybindings in one place"
   (dolist (combo keys)

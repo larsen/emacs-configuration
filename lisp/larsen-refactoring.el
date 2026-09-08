@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;; Functions to help Emacs Lisp refactoring
 
 (defun insert-new-function-definition (function-name body)
@@ -44,5 +46,3 @@ current point"
       (insert "(" function-name " )"))))
 
 (provide 'larsen-refactoring)
-
-

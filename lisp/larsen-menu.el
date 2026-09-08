@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package mouse
   :hook ((text-mode shell-mode dired-mode) . context-menu-mode))
 

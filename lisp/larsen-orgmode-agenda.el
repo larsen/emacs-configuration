@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package org-agenda
   :bind (("C-c a" . org-agenda))
   :custom

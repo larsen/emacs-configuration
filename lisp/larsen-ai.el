@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package ellama
   :if (eq system-type 'darwin)  ;; Installed only on Mac
   :ensure t

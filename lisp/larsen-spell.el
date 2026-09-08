@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 
 (if (eq system-type 'darwin)
     (setq-default ispell-program-name "/opt/homebrew/bin/aspell")

@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (setq TeX-PDF-mode t)
 (setq Tex-auto-save t)
 (setq TeX-parse-self t)

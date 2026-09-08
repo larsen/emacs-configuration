@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 ;;; larsen-python
 
 (use-package python-black

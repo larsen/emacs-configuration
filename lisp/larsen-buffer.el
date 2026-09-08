@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package ibuffer
   :ensure t
   :bind (("C-x C-b" . ibuffer))

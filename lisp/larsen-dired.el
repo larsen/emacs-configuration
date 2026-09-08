@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (use-package dired
   :custom
   ;; TODO Review the params, not compatible with macOS?

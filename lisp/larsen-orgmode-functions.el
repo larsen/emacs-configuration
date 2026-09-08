@@ -1,3 +1,5 @@
+;;; -*- lexical-binding: t -*-
+
 (defun larsen/org-confirm-babel-evaluate (lang body)
   (not (string= lang "emacs-elisp")))
 
