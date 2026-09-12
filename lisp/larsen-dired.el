@@ -72,9 +72,15 @@
 
 (advice-add 'image-dired-format-properties-string :around #'larsen/image-dired-enrich-properties)
 
+(defcustom larsen/imagemagick-executable
+  (if (eq system-type 'darwin)
+      "magick"
+    "convert")
+  "Executable file for Imagemagick")
+
 (defun larsen/resize-image (file size)
   "Resize the image in FILE to the specified SIZE (interpreted as a percentage). "
-  (call-process "magick" nil t nil file "-resize" (format "%d%%" size) file))
+  (call-process larsen/imagemagick-executable nil t nil file "-resize" (format "%d%%" size) file))
 
 (defun image-dired-thumbnail-resize-image ()
   "Resize the image at point. The size is specified at the prompt as a percentage of the original size."
