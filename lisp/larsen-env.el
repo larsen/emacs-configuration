@@ -20,6 +20,7 @@
   (inhibit-startup-message t)
   (column-number-mode t)
   (use-short-answers t)
+  (mode-line-collapse-minor-modes t)
   :config
   (dolist (mode '(scroll-bar-mode tool-bar-mode menu-bar-mode))
     (when (fboundp mode) (funcall mode -1)))
@@ -33,7 +34,6 @@
   (show-paren-mode 1)
   (global-auto-revert-mode 1)
   (global-hl-line-mode 1)
-  (mode-line-collapse-minor-modes t)
   ;; (global-visual-line-mode 1)  ;; Interferes with OSM
   (global-font-lock-mode 1)
   (delete-selection-mode 1)
