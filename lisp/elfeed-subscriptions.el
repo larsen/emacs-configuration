@@ -257,6 +257,7 @@
          ("https://danlebrero.com/feed.rss" maybe)
          ("https://dannyreviews.com/rss.xml" books)
          ("https://stefanorodighiero.net/blog/rss.xml" me personal)
+         ("https://stefanorodighiero.net/linkage/rss.xml" me personal)
          ("https://huyenchip.com/feed.xml")
          ("https://ferd.ca/feed.rss")
          ("https://hazelweakly.me/atom.xml" maybe)
