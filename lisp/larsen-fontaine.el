@@ -19,9 +19,9 @@
                          :fixed-pitch-serif-family nil
                          :fixed-pitch-serif-weight nil
                          :fixed-pitch-serif-height 1.0
-                         :variable-pitch-family "EB Garamond"
+                         :variable-pitch-family "Times New Roman"
                          :variable-pitch-weight nil
-                         :variable-pitch-height 1.3
+                         :variable-pitch-height 1.0
                          :bold-family nil
                          :bold-weight bold
                          :italic-family nil
