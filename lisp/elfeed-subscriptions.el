@@ -269,6 +269,7 @@
          ("https://fhur.me/feed.xml")
          ("https://blog.szczepan.org/feed/feed.xml" math cs emacs)
          ("https://caolan.uk/feed/notes/")
+         ("https://www.tbray.org/ongoing/ongoing.atom")
 
          ;; misc stuff
          ("http://usesthis.com/feed/" setup)
