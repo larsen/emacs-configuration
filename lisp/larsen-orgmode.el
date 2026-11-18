@@ -59,9 +59,7 @@
 
 (use-package org-appear :ensure t
   :init
-  (setq org-appear-delay 0.2)
-  :hook
-  org-mode)
+  (setq org-appear-delay 0.2))
 
 (defun larsen/org-static-blog-new-post ()
   (interactive)
