@@ -37,6 +37,11 @@
 (use-package dired-x
   :requires dired)
 
+(use-package dired-filter
+  :requires dired
+  :hook
+  (dired-mode . dired-filter-mode))
+
 (use-package dired-avfs :requires dired)
 
 (use-package nerd-icons-dired
